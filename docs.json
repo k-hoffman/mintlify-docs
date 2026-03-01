@@ -99,16 +99,30 @@
               "platform/verify",
               "platform/contract-review",
               "platform/custom-report",
-              "platform/batch-extraction",
-              "platform/batch-extraction-sftp",
-              "platform/batch-extraction-api"
+              {
+                "page": "platform/batch-extraction",
+                "pages": [
+                  "platform/batch-extraction-sftp",
+                  "platform/batch-extraction-api"
+                ]
+              }
             ]
           },
           {
             "group": "Build Your Practice",
             "pages": [
               "platform/document-vault",
-              "platform/prompt-library"
+              "platform/prompt-library",
+              "platform/branding-and-themes",
+              "platform/administration",
+              "platform/reporting"
+            ]
+          },
+          {
+            "group": "Coming Soon",
+            "pages": [
+              "platform/coming-soon/proposal-generator",
+              "platform/coming-soon/chrome-extension"
             ]
           }
         ]
