@@ -106,7 +106,14 @@
                   "platform/batch-extraction-sftp",
                   "platform/batch-extraction-api"
                 ]
-              }
+              },
+              "platform/coming-soon/proposal-generator"
+            ]
+          },
+          {
+            "group": "Automate",
+            "pages": [
+              "platform/coming-soon/chrome-extension"
             ]
           },
           {
@@ -117,13 +124,6 @@
               "platform/branding-and-themes",
               "platform/administration",
               "platform/reporting"
-            ]
-          },
-          {
-            "group": "Coming Soon",
-            "pages": [
-              "platform/coming-soon/proposal-generator",
-              "platform/coming-soon/chrome-extension"
             ]
           }
         ]
