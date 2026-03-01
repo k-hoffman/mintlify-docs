@@ -72,16 +72,14 @@
           {
             "group": "Get Answers",
             "pages": [
-              "platform/chats",
-              "platform/tips-and-best-practices"
+              "platform/chats"
             ]
           },
           {
             "group": "Research",
             "pages": [
               "platform/research/legal-search",
-              "platform/research/coverage-determination",
-              "platform/research/building-your-case"
+              "platform/research/web-search"
             ]
           },
           {
@@ -134,9 +132,16 @@
         "icon": "book-open",
         "groups": [
           {
+            "group": "Best Practices",
+            "pages": [
+              "platform/tips-and-best-practices"
+            ]
+          },
+          {
             "group": "Prospecting",
             "pages": [
-              "playbooks/prospecting/market-analysis"
+              "playbooks/prospecting/market-analysis",
+              "playbooks/servicing/portfolio-review"
             ]
           },
           {
@@ -156,7 +161,8 @@
             "group": "Servicing",
             "pages": [
               "playbooks/servicing/mid-term-coverage-check",
-              "playbooks/servicing/portfolio-review"
+              "platform/research/coverage-determination",
+              "platform/research/building-your-case"
             ]
           },
           {
