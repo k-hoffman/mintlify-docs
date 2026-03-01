@@ -98,15 +98,7 @@
               "platform/contract-review",
               "platform/coming-soon/proposal-generator",
               "platform/custom-report",
-              {
-                "group": "Batch Extraction",
-                "expanded": true,
-                "pages": [
-                  "platform/batch-extraction",
-                  "platform/batch-extraction-sftp",
-                  "platform/batch-extraction-api"
-                ]
-              }
+              "platform/batch-extraction"
             ]
           },
           {
