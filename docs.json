@@ -99,9 +99,14 @@
               "platform/verify",
               "platform/contract-review",
               "platform/custom-report",
-              "platform/batch-extraction",
-              "platform/batch-extraction-sftp",
-              "platform/batch-extraction-api"
+              {
+                "group": "Batch Extraction",
+                "pages": [
+                  "platform/batch-extraction",
+                  "platform/batch-extraction-sftp",
+                  "platform/batch-extraction-api"
+                ]
+              }
             ]
           },
           {
