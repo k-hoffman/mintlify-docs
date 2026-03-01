@@ -1,0 +1,105 @@
+---
+title: "How Qumis Reads Documents"
+description: "How Qumis's multi-agent AI system analyzes insurance documents — from reading policy language to producing attorney-grade analysis."
+icon: "file-magnifying-glass"
+---
+
+# How Qumis Reads Documents
+
+Qumis doesn't work like a chatbot that happens to read PDFs. It uses a multi-agent AI system specifically trained on insurance document analysis. This page explains how that system works and why it produces better results than general-purpose AI tools.
+
+---
+
+## Multi-agent architecture
+
+When you generate a report or ask a question, Qumis doesn't send your document to a single AI and wait for an answer. Instead, multiple specialized AI agents work together, each handling a different part of the analysis:
+
+**Reader agents** parse your document, identifying its structure — insuring agreements, conditions, exclusions, endorsements, definitions, schedules. They understand how insurance documents are organized and where to find specific types of provisions.
+
+**Analysis agents** interpret the policy language in context. They understand that "bodily injury" has a specific defined meaning, that exclusions may have exceptions, and that endorsements can modify or override base policy provisions.
+
+**Validation agents** cross-check findings against the source document, verifying that citations are accurate and that the analysis is supported by the actual policy language. This reduces errors and catches inconsistencies.
+
+**Synthesis agents** combine the analysis into a coherent, structured output — whether that's a comparison report, a coverage opinion, or an answer to a specific question.
+
+This multi-agent approach is why Qumis produces output that reads like an experienced coverage professional's work product rather than a generic summary.
+
+---
+
+## What Qumis understands about insurance documents
+
+Qumis's AI has been specifically trained on insurance document analysis. This training gives it capabilities that general-purpose AI tools lack:
+
+**Policy structure.** Qumis recognizes the standard architecture of insurance policies — declarations, insuring agreements, conditions, exclusions, definitions, endorsements — and understands how these sections interact. It knows that an endorsement modifying an exclusion changes the scope of coverage, even when the endorsement doesn't repeat the full exclusion language.
+
+**Defined terms.** When a policy defines "occurrence" or "professional services" or "insured," Qumis applies that specific definition throughout its analysis — not the common dictionary meaning, but the policy-specific meaning that controls coverage.
+
+**Coverage mechanics.** Qumis understands how coverage grants, conditions, and exclusions work together. It can trace the logical path from an insuring agreement through applicable conditions and exclusions to determine whether a particular scenario would trigger coverage.
+
+**Document comparison patterns.** When comparing policies, Qumis doesn't just diff the text. It identifies material differences — changes in limits, new exclusions, modified conditions, added or removed endorsements — and explains what those differences mean for coverage.
+
+---
+
+## How documents flow through the system
+
+<Steps>
+  <Step title="Upload and parsing">
+    When you upload a document, Qumis processes it into a structured representation. It identifies sections, headers, page breaks, tables, and text formatting. This parsing step ensures the AI can navigate the document accurately and cite specific locations.
+  </Step>
+  <Step title="Document classification">
+    Qumis identifies what type of document it's working with — a commercial general liability policy, a professional liability quote, a certificate of insurance, a contract with insurance requirements. This classification helps it apply the right analytical framework.
+  </Step>
+  <Step title="Structural mapping">
+    The AI maps the document's internal structure: which sections are coverage grants, which are exclusions, where the definitions are, how endorsements modify the base form. This map is what allows Qumis to trace relationships across the document.
+  </Step>
+  <Step title="Analysis execution">
+    Based on what you're asking — a question, a comparison, a summary, an evaluation — the appropriate agents analyze the document using the structural map. They work through the policy language systematically, the same way a coverage attorney would.
+  </Step>
+  <Step title="Citation and verification">
+    Every finding is linked back to specific policy language. The validation agents verify these citations, ensuring that the analysis is grounded in what the document actually says — not what the AI thinks it might say.
+  </Step>
+</Steps>
+
+---
+
+## Document types Qumis handles
+
+Qumis is designed to work with the full range of insurance documents you encounter in your daily work:
+
+| Document Type | Examples |
+|---|---|
+| **Policies** | CGL, professional liability, property, umbrella/excess, cyber, D&O, EPL, crime, auto |
+| **Quotes and proposals** | Carrier quotes, binders, specimen policies, indication letters |
+| **Endorsements** | Manuscript endorsements, standard ISO forms, carrier-specific modifications |
+| **Certificates** | Certificates of insurance, evidence of coverage |
+| **Contracts** | Leases, vendor agreements, loan covenants, construction contracts — any document with insurance requirements |
+| **Claims documentation** | Loss reports, claim summaries, demand letters, reservation of rights letters |
+
+<Tip>
+  **File formats:** Qumis accepts PDF, DOCX, and common image formats. For best results, upload text-based PDFs rather than scanned images. If you have a scanned document, Qumis can still process it, but text-based files produce faster and more accurate results.
+</Tip>
+
+---
+
+## Why this matters for your work
+
+Understanding how Qumis reads documents helps you use it more effectively:
+
+**Provide context.** When you tell Qumis what you're looking for — "focus on the cyber coverage provisions" or "the client is a manufacturing company with product liability exposure" — the analysis agents can prioritize the most relevant parts of the document.
+
+**Trust the citations.** Because every finding is linked to specific policy language, you can verify any point the AI makes by checking the cited provision. This is your quality control mechanism.
+
+**Ask follow-up questions.** The AI retains its understanding of the document throughout your conversation. If the initial analysis raises questions, ask them — the AI can go deeper on any point without re-reading the document.
+
+---
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Accuracy and confidence" icon="bullseye-arrow" href="/get-started/genai/accuracy-and-confidence">
+    How to evaluate AI output and when to verify
+  </Card>
+  <Card title="Data privacy and security" icon="shield-halved" href="/get-started/genai/data-privacy-and-security">
+    How Qumis protects your documents and data
+  </Card>
+</CardGroup>

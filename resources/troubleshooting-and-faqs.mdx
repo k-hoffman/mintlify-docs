@@ -1,0 +1,213 @@
+---
+title: "Troubleshooting &amp; FAQs"
+description: "Find solutions to common Qumis issues and answers to frequently asked questions"
+icon: "circle-question"
+---
+
+This page covers common issues and their solutions organized by feature area. If you don't find your answer here, [Contact Support](/resources/contact-support).
+
+## Login & Access
+
+### I Can't Log In to Qumis
+
+**Problem:** You're receiving an error when trying to log in with your credentials.
+
+**Solutions:**
+- Verify you're using the correct email address associated with your Qumis account
+- Check that your organization's SSO is properly configured if you're redirecting through an identity provider
+- Try resetting your password using the "Forgot Password" link on the login page
+- Clear your browser cache and cookies, then try again
+- Ensure you're using a supported browser (Chrome, Firefox, Safari, Edge)
+
+### SSO Is Not Working
+
+**Problem:** SSO authentication is failing or showing errors.
+
+**Solutions:**
+- Verify your identity provider is configured correctly and your account is active in that system
+- Check that you're using the correct SSO login URL provided by Qumis for your organization
+- Confirm your browser allows third-party cookies (required for SSO redirects)
+- If redirects are looping, contact your IT administrator to verify SAML configuration
+- See [Single Sign-On (SSO)](/get-started/setup/single-sign-on) for detailed setup and troubleshooting
+
+### I Didn't Receive My Invitation Email
+
+**Problem:** An admin invited you but you haven't received the welcome email.
+
+**Solutions:**
+- Check your spam or junk folder
+- Request the admin resend your invitation from the Team settings page
+- Verify the email address used for the invitation matches your email address
+- If you were added directly via SSO, you may not receive an email—try logging in with your identity provider credentials
+
+### I Can't Reset My Password
+
+**Problem:** The password reset process isn't working.
+
+**Solutions:**
+- Verify you're using the correct email address
+- Check your spam folder for the password reset email
+- If using SSO, you cannot reset your password in Qumis—manage your password through your identity provider
+- Contact [Support](/resources/contact-support) if reset emails aren't arriving
+
+## Documents
+
+### Document Upload Fails
+
+**Problem:** You're unable to upload a document to the Vault.
+
+**Solutions:**
+- Verify the file size is under the 50 MB limit (contact support for larger files)
+- Check that the file format is supported: PDF, DOCX, PPTX, TXT, XLS, XLSX
+- Try uploading from a different browser if you suspect browser issues
+- Ensure your browser has permission to upload files
+- Try a different document to rule out file-specific issues
+
+### Document Is Not Processing
+
+**Problem:** You uploaded a document but it's still showing as "Processing" after several minutes.
+
+**Solutions:**
+- Refresh your browser page—processing may be complete
+- Check document file size and complexity (large or heavily scanned documents take longer)
+- Verify your internet connection is stable
+- For scanned PDFs with poor image quality, document processing may take longer
+- Wait 5-10 minutes, then contact [Support](/resources/contact-support) if the issue persists
+
+### Unsupported File Format Error
+
+**Problem:** You're getting an error that your file format isn't supported.
+
+**Solutions:**
+- Qumis supports: PDF, DOCX, PPTX, TXT, XLS, XLSX
+- If your document is in a different format (e.g., JPG, PNG), convert it to PDF first
+- For scanned images, convert them to PDF using your device's scanner app or online tools
+- Contact [Support](/resources/contact-support) to request support for additional formats
+
+### How Do I Handle Large Files?
+
+**Problem:** Your document is larger than the standard upload limit.
+
+**Solutions:**
+- Split large documents into sections
+- Remove unnecessary attachments or images to reduce file size
+- Contact support@qumis.ai to request a temporary increase in upload limits for Enterprise customers
+
+## Chats & Analysis
+
+### Chat Responses Are Slow
+
+**Problem:** Qumis is taking a long time to respond to your questions.
+
+**Solutions:**
+- This can occur during peak usage times—try again in a few moments
+- Simplify your question or break it into smaller questions
+- Ensure you've uploaded all relevant documents before asking questions about them
+- Close other browser tabs to free up system resources
+- Check your internet connection speed
+- If slowness persists, contact [Support](/resources/contact-support)
+
+### Analysis Results Seem Unexpected or Inaccurate
+
+**Problem:** Chat responses don't match what you expected based on the documents provided.
+
+**Solutions:**
+- Verify the correct documents were uploaded and referenced in your question
+- Ask follow-up questions to clarify or dive deeper into specific aspects
+- Rephrase your question with more specific details or policy section references
+- Reference [Tips and Best Practices](/analyze/ask/tips-and-best-practices) for guidance on writing effective prompts
+- If results are clearly incorrect, include the conversation details when you [Contact Support](/resources/contact-support)
+
+### How Do I Improve the Quality of Analysis Results?
+
+**Problem:** You want better, more accurate responses from Qumis.
+
+**Solutions:**
+- Provide specific context: reference policy sections, coverage types, and claim scenarios
+- Ask one focused question at a time rather than multiple questions in one prompt
+- Use coverage-specific terminology and be precise about dates, amounts, and coverage limits
+- Include all relevant documents in your Vault before analyzing
+- See [Tips and Best Practices](/analyze/ask/tips-and-best-practices) for detailed guidance on effective prompt techniques
+
+## Reports
+
+### Report Generation Failed
+
+**Problem:** You attempted to generate a report but received an error.
+
+**Solutions:**
+- Verify you have completed sufficient analysis in the chat to generate a report from
+- Try generating the report again—temporary system issues may have caused the failure
+- Use a simpler report template if available
+- Reduce the amount of analysis content being converted to a report
+- Contact [Support](/resources/contact-support) with details about the specific chat or report
+
+### Report Has Formatting Issues
+
+**Problem:** Your exported report has layout problems, missing content, or visual issues.
+
+**Solutions:**
+- Try exporting in a different format (PDF vs. Word vs. Excel)
+- Check that all content appears in the preview before exporting
+- If exporting to Word, open the file in Microsoft Word rather than other applications
+- For PDF formatting issues, try opening in a different PDF reader
+- Contact [Support](/resources/contact-support) if formatting issues persist
+
+### Export Not Working
+
+**Problem:** You cannot export a report or it's not saving to your computer.
+
+**Solutions:**
+- Check your browser's download settings—downloads may be blocked
+- Disable browser extensions that might interfere with downloads (ad blockers, privacy extensions)
+- Try a different file format for export
+- Ensure your device has sufficient storage space
+- Try exporting from a different browser if the issue persists
+
+## Legal Search
+
+### Legal Search Returns No Results
+
+**Problem:** Your search for case law or precedents isn't finding anything relevant.
+
+**Solutions:**
+- Verify you've selected the correct jurisdiction for your search
+- Try broader search terms if you used very specific language
+- Ensure you're searching for coverage-related legal issues (not general law)
+- Try different variations of coverage type or claim scenario
+- Refine your search filters by court level or date range
+- Contact [Support](/resources/contact-support) if you believe results are missing for a common legal issue
+
+### Jurisdiction Selection
+
+**Problem:** You're unsure which jurisdiction to select or can't find your state/territory.
+
+**Solutions:**
+- Legal Search covers U.S. federal courts and state appellate courts
+- Select the specific state where the case or claim is relevant
+- For federal cases, choose "Federal" and specify the circuit court if available
+- Territory cases (Puerto Rico, Virgin Islands) are covered in their own jurisdiction section
+- Contact [Support](/resources/contact-support) to request coverage for additional jurisdictions
+
+### Search Results Don't Seem Relevant
+
+**Problem:** Results are returned but don't match what you were looking for.
+
+**Solutions:**
+- Refine your search terms to be more specific to your coverage issue
+- Check the case summary before opening full details
+- Adjust date range filters to focus on recent precedents
+- Try combining multiple search terms to narrow results
+- Contact [Support](/resources/contact-support) if you find incorrect results or citation errors
+
+## Still Need Help?
+
+If you don't find a solution above, [Contact Support](/resources/contact-support) and include:
+
+- A description of your issue
+- Steps you've already tried
+- Screenshot if relevant
+- Document or chat names (if applicable)
+- Browser type and version
+
+Our team will help you get back on track with your coverage analysis.

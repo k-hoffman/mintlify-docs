@@ -1,0 +1,151 @@
+---
+title: "Tips and Best Practices"
+description: "How to write effective prompts for insurance document analysis — with examples by document type, common mistakes, and power user patterns."
+icon: "lightbulb"
+---
+
+# Tips and Best Practices
+
+The quality of your Qumis output depends heavily on how you frame your questions. This page covers the prompting techniques that experienced users rely on — from foundational principles to power user patterns.
+
+---
+
+## The golden rule: be specific
+
+Vague questions get vague answers. Specific questions get useful analysis.
+
+| Instead of... | Try... |
+|---|---|
+| "What does this policy cover?" | "Does this CGL policy cover product liability claims arising from manufacturing defects?" |
+| "Compare these policies" | "Compare the professional liability coverage in these two quotes, focusing on prior acts coverage and defense cost provisions" |
+| "Is this good coverage?" | "What are the most significant coverage gaps in this property policy for a restaurant with outdoor seating?" |
+
+The more context you provide about what you're looking for and why, the more targeted and useful the analysis will be.
+
+---
+
+## Five prompting techniques
+
+### 1. Set the scenario
+
+Tell Qumis the business context. This helps the AI focus on what matters for your specific situation.
+
+*"My client is a mid-size general contractor that subcontracts 60% of its work. Review this CGL policy and identify any provisions that could create coverage gaps for subcontractor-related claims."*
+
+### 2. Ask follow-up questions
+
+Treat the first response as a draft. The most valuable insights often come from your second and third questions.
+
+- **Start broad:** "Summarize the key coverage provisions in this cyber policy."
+- **Then narrow:** "Focus on the social engineering fraud coverage. What are the sublimits and conditions?"
+- **Then apply:** "If an employee fell for a phishing email that resulted in a $500K wire transfer, would this policy respond?"
+
+### 3. Request a specific format
+
+Tell Qumis how you want the output structured. This saves you reformatting time and ensures you get actionable output.
+
+*"List the exclusions in this policy that could affect a construction defect claim. Format as a table with columns for: exclusion name, policy section, what it excludes, and any exceptions that might restore coverage."*
+
+### 4. Compare against a standard
+
+Give the AI a benchmark to evaluate against.
+
+*"Compare this Workers' Comp policy against standard guaranteed cost provisions. Flag any non-standard exclusions, unusual conditions, or deviations from typical guaranteed cost structure."*
+
+### 5. Request the executive version
+
+When you need to share findings with a client or colleague who doesn't want the full analysis.
+
+*"Draft a two-paragraph summary of the key differences between these quotes that I can include in an email to my client. Focus on the three most material coverage differences."*
+
+---
+
+## Prompts by document type
+
+### Policies
+
+- "What are the key exclusions that could affect [specific claim scenario]?"
+- "Walk me through the coverage trigger — is this occurrence-based or claims-made, and what are the implications?"
+- "Identify any sublimits or deductibles that apply to [specific coverage]."
+- "Does this policy have a duty to defend, and are defense costs inside or outside the limits?"
+
+### Quotes and proposals
+
+- "Compare the limits structure, deductibles, and key exclusions between these two quotes."
+- "What coverage is Quote A offering that Quote B is not?"
+- "Which quote provides better coverage for [specific risk scenario], and why?"
+
+### Endorsements
+
+- "How does this endorsement modify the base policy's coverage for [specific claim type]?"
+- "Does this endorsement broaden or restrict coverage, and in what specific ways?"
+
+### Contracts with insurance requirements
+
+- "Does the insurance program described in [attached policy] meet the requirements specified in Section [X] of this contract?"
+- "What coverage gaps exist between the contractual requirements and the actual policy?"
+
+### Claims documents
+
+- "Based on this reservation of rights letter, what coverage defenses is the carrier raising?"
+- "Given the facts in this claim report, which policy provisions are most relevant to the coverage determination?"
+
+---
+
+## Common mistakes
+
+**Asking yes/no questions when you need analysis.** Instead of "Does this policy cover cyber risks?", ask "How does this policy address cyber risks, and what are the key limitations?"
+
+**Not providing enough context.** The AI doesn't know your client's industry, risk profile, or priorities unless you tell it. Context dramatically improves output relevance.
+
+**Accepting the first response without follow-up.** The iterative dialogue is where the real value emerges. Push deeper on the findings that matter most.
+
+**Asking about information not in the document.** Qumis analyzes the documents you provide. If you need market context or pricing benchmarks, that's outside the scope of document analysis.
+
+---
+
+## Tips for your role
+
+<Tabs>
+  <Tab title="Brokers & Producers">
+    **Competitive quoting:** When comparing quotes, specify the client's primary risks and ask Qumis to evaluate each quote against those specific exposures. This produces analysis you can share directly with clients.
+
+    **Pre-meeting prep:** Before a client meeting, ask Qumis to summarize the key coverage features and any notable limitations. Request the output in a format you can reference during the conversation.
+
+    **Proposal support:** Ask Qumis to draft coverage comparison language you can include in proposals. Specify the audience (CFO, risk manager, business owner) for appropriately tailored language.
+  </Tab>
+  <Tab title="Account Managers">
+    **Renewal preparation:** Start with "Compare the expiring policy against this renewal quote and highlight every change — additions, removals, and modifications to limits, deductibles, and exclusions."
+
+    **Contract reviews:** When checking client contracts, ask Qumis to identify every insurance requirement and map it against the current coverage program.
+
+    **Client advisory:** Use Qumis to identify coverage gaps, then ask it to explain each gap in plain language suitable for a coverage letter to the client.
+  </Tab>
+  <Tab title="Claims Professionals">
+    **Coverage analysis:** Frame questions around the specific facts of the claim: "Given [specific facts], does the insuring agreement in Section [X] respond?"
+
+    **Exclusion analysis:** Ask Qumis to work through each potentially applicable exclusion: "Are there any exclusions that could bar coverage for [specific claim], and do any exceptions to those exclusions apply?"
+
+    **Legal research integration:** Combine Qumis policy analysis with Legal Search: "What does the policy say about [issue]?" then "Find case law interpreting similar policy language."
+  </Tab>
+  <Tab title="Risk Managers">
+    **Compliance verification:** Ask Qumis to check your insurance program against contractual requirements: "Review this lease and identify every insurance requirement, then check whether our current policy meets each one."
+
+    **Exposure analysis:** Ask about coverage adequacy for specific risk scenarios: "If we experienced [scenario], how would our current insurance program respond? Walk through each relevant policy."
+
+    **Board reporting:** Request executive-level summaries: "Summarize our cyber insurance coverage in two paragraphs, including limits, key exclusions, and the most significant gaps, suitable for a board presentation."
+  </Tab>
+</Tabs>
+
+---
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Prompt Library" icon="bookmark" href="/analyze/prompts/prompt-library">
+    Browse pre-built prompts for common workflows
+  </Card>
+  <Card title="Chats" icon="messages" href="/analyze/ask/chats">
+    Start a conversation with your documents
+  </Card>
+</CardGroup>

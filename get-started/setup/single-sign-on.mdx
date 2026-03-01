@@ -1,0 +1,95 @@
+---
+title: "Single Sign-On (SSO)"
+description: "Set up enterprise SSO for secure, centralized authentication to Qumis"
+icon: "key"
+---
+
+Single Sign-On (SSO) enables your organization to manage Qumis authentication through your existing identity provider, streamlining access management and enhancing security across your enterprise.
+
+## Why SSO Matters
+
+SSO provides significant advantages for enterprise deployments:
+
+- **Centralized Access Control**: Manage user authentication through your existing identity management system
+- **Enhanced Security**: Leverage your organization's security policies and multi-factor authentication requirements
+- **Simplified User Management**: Automatically sync user credentials and deactivate access when employees leave
+- **Compliance**: Meet regulatory requirements for identity governance and access controls in the insurance industry
+
+## Supported Providers
+
+Qumis supports authentication through the following identity providers:
+
+- SAML 2.0 (generic)
+- Okta
+- Azure Active Directory (Azure AD)
+- Google Workspace
+- OneLogin
+
+## Setting Up SSO
+
+Follow these steps to configure SSO for your Qumis organization:
+
+<Steps>
+<Step title="Contact Your Account Team">
+Reach out to your Qumis account team to initiate the SSO setup process. They'll verify your Enterprise plan status and gather initial requirements for your identity provider.
+</Step>
+
+<Step title="Provide Identity Provider Metadata">
+Your IT administrator should provide the following information from your identity provider:
+- Identity provider metadata URL or XML file (for SAML 2.0)
+- Entity ID
+- Single Sign-On URL
+- Single Logout URL (if available)
+- Any attribute mappings for user email and name
+</Step>
+
+<Step title="Qumis Configuration">
+The Qumis team configures SSO on the backend using your identity provider's metadata. They'll set up attribute mappings to ensure user information syncs correctly (email, name, groups, departments).
+</Step>
+
+<Step title="Testing">
+Qumis provides you with a test link to verify the SSO connection works. You and your team should test logging in through your identity provider before going live.
+</Step>
+
+<Step title="Go Live">
+Once testing is complete, Qumis enables SSO for your organization. All future logins will route through your identity provider. Existing users will log out and be prompted to log in via SSO on their next access.
+</Step>
+</Steps>
+
+<Info>
+SSO is available on Enterprise plans. Contact your Qumis account team to get started.
+</Info>
+
+## Troubleshooting SSO Issues
+
+### I Can't Log In After SSO Is Enabled
+
+**Possible causes and solutions:**
+- Verify you're using the correct login URL provided by Qumis for your organization
+- Confirm your user account exists in your identity provider and is active
+- Check that your browser allows third-party cookies (required for SSO redirects)
+- Clear your browser cache and cookies, then try logging in again
+- Contact your IT administrator to verify you have the necessary permissions in your identity provider
+
+### I'm Seeing Redirect Loops
+
+**Possible causes and solutions:**
+- There may be a configuration mismatch between your identity provider and Qumis
+- Verify that the Assertion Consumer Service (ACS) URL from Qumis exactly matches your identity provider configuration
+- Check that your identity provider is returning the correct SAML response attributes
+- Contact the Qumis support team with your identity provider details for further investigation
+
+### New Users Aren't Being Provisioned
+
+**Possible causes and solutions:**
+- Verify the new user's email address in your identity provider matches exactly how it's configured in Qumis (case-sensitive)
+- Check that user provisioning is enabled in your identity provider's application settings
+- Confirm the user's status is "active" in your identity provider
+- Some providers require group membership for access—verify the user is in the correct group
+- Contact your identity provider's support team to confirm attribute mappings are correct
+
+## Next Steps
+
+Once SSO is configured, team members can log in through your identity provider. See [Navigating the Dashboard](/get-started/setup/navigating-the-dashboard) to get familiar with Qumis after logging in.
+
+For additional support, [Contact Support](/resources/contact-support).

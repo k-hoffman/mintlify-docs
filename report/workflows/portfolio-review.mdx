@@ -1,0 +1,125 @@
+---
+title: "Portfolio Review"
+description: "Systematic review of an entire insurance program — using Compare, Evaluate, Verify, and Populate to assess coverage across multiple policies."
+icon: "chart-pie"
+---
+
+# Portfolio Review
+
+A portfolio review assesses an entire insurance program — multiple policies across multiple lines — to evaluate whether the program provides adequate, coordinated protection. This workflow is especially valuable for risk managers reviewing their own programs and for brokers conducting annual stewardship reviews.
+
+---
+
+## The portfolio review workflow
+
+<Steps>
+  <Step title="Inventory the program">
+    Upload all policies in the insurance program. Use Populate to extract key data from each policy into a structured summary:
+
+    *"From each policy, extract: carrier, policy number, effective dates, coverage type, per-occurrence limit, aggregate limit, deductible, and annual premium."*
+
+    This produces the program inventory — the foundation for everything that follows.
+
+    → [Data Extraction](/report/populate/data-extraction)
+  </Step>
+  <Step title="Analyze each policy">
+    Run a Single Policy Analysis on each major line to understand the key provisions, exclusions, and limitations:
+
+    - CGL: Focus on products-completed operations, additional insured, and contractual liability
+    - Professional liability: Focus on prior acts, defense costs, and consent to settle
+    - Property: Focus on business income, ordinance or law, and catastrophe sublimits
+    - Cyber: Focus on first-party vs. third-party, ransomware, and regulatory coverage
+    - Umbrella/excess: Focus on follow-form provisions, retained limits, and coverage gaps
+
+    → [Single Policy Analysis](/report/types/single-policy-analysis)
+  </Step>
+  <Step title="Check coverage coordination">
+    Use Compare to evaluate how policies work together:
+
+    *"Compare the CGL policy and the umbrella policy. Does the umbrella follow form? Are there any coverage gaps where the umbrella doesn't extend CGL coverage?"*
+
+    Key coordination questions:
+    - Does the umbrella/excess follow form to all underlying policies?
+    - Are there gaps between underlying limits and umbrella attachment?
+    - Are definitions consistent across the program?
+    - Do "other insurance" clauses create conflicts?
+  </Step>
+  <Step title="Verify against requirements">
+    Run Contract Compliance to check the program against contractual requirements:
+
+    *"Check this insurance program against the insurance requirements in our [top 3 contracts / standard lease / vendor agreement]."*
+
+    → [Contract Compliance](/report/verify/contract-compliance)
+  </Step>
+  <Step title="Identify gaps and overlaps">
+    Use Coverage Verification to check for specific exposures:
+
+    *"Given our company's risk profile as a [industry/description], identify coverage gaps across the entire program. Consider: [key risk exposures specific to the business]."*
+
+    Also look for overlaps — areas where multiple policies cover the same exposure, potentially creating coordination issues.
+
+    → [Coverage Verification](/report/verify/coverage-verification)
+  </Step>
+  <Step title="Generate the Coverage Table">
+    Produce a visual summary of the entire program using a Coverage Table. This becomes the executive-level view of the portfolio.
+
+    → [Coverage Table](/report/types/coverage-table)
+  </Step>
+  <Step title="Compile the review document">
+    Ask Qumis to synthesize findings across all policies:
+
+    *"Based on our analysis of all policies in this program, draft a portfolio review summary that includes: (1) program strengths, (2) coverage gaps ranked by severity, (3) coordination issues between policies, (4) compliance gaps against contractual requirements, and (5) recommendations."*
+  </Step>
+</Steps>
+
+---
+
+## Portfolio review frequency
+
+| Trigger | What to Review |
+|---|---|
+| **Annual stewardship** | Full portfolio — all policies, all requirements, all coordination |
+| **Mid-term change** | Affected policies + coordination check against umbrella/excess |
+| **New contract signed** | Contract requirements + relevant policies for compliance |
+| **Claim occurrence** | Responding policies + coordination + limits adequacy |
+| **Business change** | Risk profile impact + coverage gap assessment |
+
+---
+
+## Tips for your role
+
+<Tabs>
+  <Tab title="Brokers & Producers">
+    **Stewardship value.** A comprehensive portfolio review is one of the highest-value deliverables you can provide. It demonstrates that you're actively managing the account, not just renewing policies. Schedule annual portfolio reviews for your top accounts.
+
+    **New business tool.** Offer a free portfolio review to prospects. The gaps and coordination issues you identify become the foundation of your proposal.
+  </Tab>
+  <Tab title="Account Managers">
+    **Proactive service.** Don't wait for the annual review. Run targeted portfolio checks when clients announce business changes — new locations, new contracts, new product lines. Show them how their coverage needs to adapt.
+
+    **Cross-selling.** Portfolio reviews naturally surface gaps that represent cross-selling opportunities. Present these as risk management recommendations, not sales pitches.
+  </Tab>
+  <Tab title="Claims Professionals">
+    **Multi-policy claims.** When a loss potentially triggers multiple policies, use the portfolio review workflow to map which policies respond, how they coordinate, and where coverage gaps exist.
+
+    **Lessons learned.** After significant claims, recommend a targeted portfolio review to address any coverage gaps the claim revealed.
+  </Tab>
+  <Tab title="Risk Managers">
+    **This is your primary workflow.** An annual portfolio review is the cornerstone of your insurance risk management program. Use Qumis to produce the analytical foundation, then layer in your business context and strategic priorities.
+
+    **Board reporting.** Use the Coverage Table and portfolio summary to produce executive-level reporting on your insurance program's adequacy and cost-effectiveness.
+  </Tab>
+</Tabs>
+
+---
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Preparing a Client Presentation" icon="presentation-screen" href="/report/workflows/preparing-a-client-presentation">
+    Turn your portfolio review into a polished presentation
+  </Card>
+  <Card title="Renewal Analysis" icon="arrows-rotate" href="/report/workflows/renewal-analysis">
+    Focus on a single renewal within the portfolio
+  </Card>
+</CardGroup>

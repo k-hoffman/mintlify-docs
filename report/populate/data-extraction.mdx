@@ -1,0 +1,100 @@
+---
+title: "Data Extraction"
+description: "Turn insurance policies into structured spreadsheet data with Qumis Populate — extract limits, deductibles, coverage details, and custom fields at scale."
+icon: "table"
+---
+
+# Data Extraction (Populate)
+
+Populate turns insurance documents into structured data. Instead of manually reading through policies to extract limits, deductibles, and coverage details into spreadsheets, you upload the documents and tell Qumis what to extract. The result is clean, structured data you can use in client presentations, portfolio reviews, and management reports.
+
+---
+
+## How Populate works
+
+<Steps>
+  <Step title="Upload your documents">
+    Upload one or more insurance documents — policies, quotes, certificates, or schedules. Populate can process multiple documents in a batch.
+  </Step>
+  <Step title="Define what to extract">
+    Tell Qumis what data you need. You can use a standard extraction template or define custom fields. Common extractions include: limits by coverage type, deductibles and self-insured retentions, named insureds and additional insureds, policy periods and retroactive dates, carrier and policy numbers.
+  </Step>
+  <Step title="Review and export">
+    Qumis extracts the data and presents it in a structured format. Review the results, make any corrections, and export to spreadsheet format for use in your workflows.
+  </Step>
+</Steps>
+
+---
+
+## When to use Populate
+
+**Portfolio reviews.** Extract key data from every policy in a client's program to build a comprehensive summary spreadsheet.
+
+**Renewal management.** Extract current policy details to populate your renewal marketing submissions and coverage comparisons.
+
+**Compliance tracking.** Extract certificate data to verify that vendors, tenants, or subcontractors maintain required coverage levels.
+
+**Management reporting.** Extract premium, limits, and coverage data across your book of business for reporting and analytics.
+
+---
+
+## Standard extraction templates
+
+Qumis includes pre-built templates for common extraction scenarios:
+
+| Template | Fields Extracted |
+|---|---|
+| **Policy Summary** | Carrier, policy number, effective dates, limits, deductibles, named insured, coverage type |
+| **Certificate Verification** | Certificate holder, insured, coverage types, limits, additional insured status, policy periods |
+| **Quote Comparison** | Carrier, premium, limits by coverage, deductibles, key exclusions, notable endorsements |
+| **Claims Data** | Claim number, date of loss, claimant, coverage type, reserves, status |
+
+→ [Client Template Guide](/report/populate/client-template-guide) for creating custom extraction templates.
+
+---
+
+## Custom extractions
+
+For specialized workflows, you can define custom extraction fields. Tell Qumis exactly what to extract:
+
+*"From each policy, extract: (1) per-occurrence limit for general liability, (2) aggregate limit, (3) whether defense costs are inside or outside limits, (4) whether there is a professional liability endorsement, and (5) the retroactive date if applicable."*
+
+Qumis will structure the output to match your specified fields.
+
+---
+
+## Tips for your role
+
+<Tabs>
+  <Tab title="Brokers & Producers">
+    **Quote comparison spreadsheets:** Extract key terms from competing quotes into a structured comparison. This is faster than manual side-by-side reading and ensures you don't miss important differences.
+
+    **Marketing submissions:** Extract expiring policy details to pre-populate renewal submissions to markets.
+  </Tab>
+  <Tab title="Account Managers">
+    **Policy summaries:** Extract key data from every policy in a client's program to build the annual coverage summary spreadsheet.
+
+    **Certificate management:** Batch-extract certificate data to verify compliance across your client's vendor or tenant base.
+  </Tab>
+  <Tab title="Claims Professionals">
+    **Claims tracking:** Extract policy details relevant to open claims — limits, deductibles, coverage grants, exclusions — into a structured tracking format.
+  </Tab>
+  <Tab title="Risk Managers">
+    **Program inventory:** Extract data from every policy in your insurance program to build a comprehensive coverage inventory. This becomes your baseline for gap analysis and renewal planning.
+
+    **Board reporting:** Extract limits and premium data across your portfolio to populate executive dashboards and board presentations.
+  </Tab>
+</Tabs>
+
+---
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Client Template Guide" icon="file-spreadsheet" href="/report/populate/client-template-guide">
+    Create custom extraction templates
+  </Card>
+  <Card title="Coverage Verification" icon="circle-check" href="/report/verify/coverage-verification">
+    Verify extracted data against requirements
+  </Card>
+</CardGroup>

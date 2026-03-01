@@ -1,0 +1,99 @@
+---
+title: "How Generative AI Works"
+description: "A plain-language explanation of generative AI for insurance professionals — what it does, how it differs from traditional search, and why it matters for your work."
+icon: "microchip"
+---
+
+# How Generative AI Works
+
+This page explains the technology behind Qumis in terms that make sense for insurance professionals. No computer science background required — just the mental models you need to use AI effectively and evaluate its output with confidence.
+
+---
+
+## The big idea
+
+Traditional software follows rules you write. Generative AI learns patterns from data and uses those patterns to produce new content — summaries, comparisons, answers, analysis — that didn't exist before.
+
+When you ask Qumis to compare two policies, it isn't running a keyword search. It's reading both documents the way a coverage attorney would, understanding context and relationships, and producing original analysis based on what it finds.
+
+---
+
+## How it differs from search
+
+Search engines match keywords. You type "additional insured" and get every page where those words appear. You still have to read, interpret, and synthesize.
+
+Generative AI understands meaning. You ask "Does this policy extend coverage to additional insureds for ongoing operations?" and it reads the relevant provisions, interprets the language in context, considers exclusions that might limit the grant, and gives you a structured answer with citations.
+
+The difference matters because insurance documents are full of language where context changes meaning. An exclusion that seems broad may be narrowed by an exception three pages later. A sublimit may apply differently depending on the cause of loss. Generative AI tracks these relationships across an entire document — something keyword search can't do.
+
+---
+
+## What's happening under the hood
+
+When you upload a document and ask a question, Qumis follows a process:
+
+<Steps>
+  <Step title="Document reading">
+    The AI reads your entire document, building an understanding of its structure, provisions, defined terms, and how different sections relate to each other. This happens every time you upload — the AI works from your actual document, not a database of generic policy forms.
+  </Step>
+  <Step title="Question interpretation">
+    The AI interprets what you're actually asking — not just the keywords in your question. "Is cyber covered?" gets understood as a question about whether the policy responds to cyber-related losses, which may involve multiple coverage grants, exclusions, and endorsements.
+  </Step>
+  <Step title="Analysis and reasoning">
+    The AI identifies the relevant provisions, applies them to your question, and works through the reasoning — much like an attorney would analyze a coverage question by walking through the insuring agreement, conditions, and exclusions.
+  </Step>
+  <Step title="Response generation">
+    The AI produces a new, original response — not a copy-paste from the document. It synthesizes its analysis into a structured answer and provides citations so you can verify every finding against the source.
+  </Step>
+</Steps>
+
+---
+
+## What generative AI is good at
+
+**Reading and synthesizing large documents.** The AI can process a 200-page policy in seconds and hold the entire document in context while answering questions. It doesn't get tired, skip pages, or forget what it read on page 12 when it reaches page 180.
+
+**Identifying relationships across provisions.** Insurance policies are interconnected — a coverage grant may be modified by conditions, limited by exclusions, and expanded by endorsements. The AI tracks these relationships across the full document.
+
+**Producing structured analysis.** Rather than highlighting text for you to interpret, the AI produces organized analysis — executive summaries, comparison tables, coverage opinions — that you can review, validate, and deliver to clients.
+
+**Consistency at scale.** The AI applies the same analytical rigor to every document, every time. It doesn't have off days, and it doesn't rush through the fifth policy review of the afternoon.
+
+---
+
+## What generative AI is not good at
+
+**Judgment calls that require business context.** The AI can tell you what a policy says and how it applies to a scenario. It cannot tell you whether a client should accept a particular coverage structure — that requires knowledge of the client's business, risk tolerance, and strategic priorities that only you have.
+
+**Predicting outcomes.** The AI analyzes policy language, not litigation outcomes. It can identify how policy language applies to a set of facts, but it cannot predict how a court would rule or how a carrier would respond.
+
+**Replacing professional expertise.** The AI is a tool that amplifies your expertise — it handles the time-consuming document analysis so you can focus on strategy, relationships, and professional judgment. The analysis is a starting point for your work, not a replacement for it.
+
+→ [Accuracy and Confidence](/get-started/genai/accuracy-and-confidence) covers how to evaluate AI output and when to trust it.
+
+---
+
+## Key terms
+
+**Large Language Model (LLM).** The type of AI that powers Qumis. It's called "large" because it was trained on a vast amount of text, and "language model" because it works by understanding and generating language.
+
+**Prompt.** The question or instruction you give the AI. Better prompts produce better results — being specific about what you're looking for helps the AI focus its analysis. → [Prompts](/analyze/prompts/prompt-library)
+
+**Context window.** The amount of text the AI can consider at once. Qumis's context window is large enough to hold entire insurance policies, which is essential for accurate analysis.
+
+**Citation.** A reference to the specific section, clause, or provision in your document that supports a finding. Qumis includes citations in every response so you can verify the analysis against the source.
+
+**Hallucination.** When an AI generates content that sounds plausible but isn't supported by the source document. Qumis is specifically designed to minimize this through document-grounded analysis and citations. → [Accuracy and Confidence](/get-started/genai/accuracy-and-confidence)
+
+---
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="How Qumis reads documents" icon="file-magnifying-glass" href="/get-started/genai/how-qumis-reads-documents">
+    The specific techniques Qumis uses to analyze insurance documents
+  </Card>
+  <Card title="Accuracy and confidence" icon="bullseye-arrow" href="/get-started/genai/accuracy-and-confidence">
+    How to evaluate AI output and build a healthy verification habit
+  </Card>
+</CardGroup>

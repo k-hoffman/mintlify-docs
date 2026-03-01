@@ -1,0 +1,122 @@
+---
+title: "Security and Trust"
+description: "Qumis security architecture, compliance certifications, data handling practices, and trust documentation — designed for IT, compliance, and procurement review."
+icon: "shield-check"
+---
+
+# Security and Trust
+
+This page is designed to be shared with IT, compliance, and procurement teams evaluating Qumis. It covers our security architecture, data handling practices, and compliance posture at the level of detail these teams need to make informed decisions.
+
+---
+
+## Security architecture
+
+### Data encryption
+
+**In transit.** All data transmitted between your browser and Qumis servers is encrypted using TLS 1.2 or higher.
+
+**At rest.** All stored data — documents, analysis results, conversation history, and user data — is encrypted using AES-256 encryption.
+
+### Data isolation
+
+Each customer's data is logically isolated at every layer of the Qumis architecture. Your documents, analysis results, and usage data cannot be accessed by other customers.
+
+### Infrastructure
+
+Qumis is hosted on enterprise-grade cloud infrastructure with industry-standard security controls including network isolation, intrusion detection, and automated security patching.
+
+---
+
+## Data handling
+
+### Your documents
+
+| Principle | Detail |
+|---|---|
+| **Ownership** | You own your documents. Qumis processes them on your behalf and does not claim any rights to your content. |
+| **No model training** | Your documents are never used to train AI models. Your policy data does not become part of the AI's training data. |
+| **No cross-customer access** | Your documents are never accessible to other Qumis customers. |
+| **Retention control** | You control what stays in your Vault and what gets deleted. When you delete a document, it is permanently removed from Qumis systems. |
+| **Access logging** | All access to your documents is logged for audit purposes. |
+
+### AI processing
+
+When you upload a document and run an analysis, the AI processes your document within a secure, isolated environment. The analysis is grounded in your specific document — not in data from other customers or external sources.
+
+No customer data — documents, queries, or analysis results — is used to train or improve AI models.
+
+---
+
+## Access controls
+
+### Authentication
+
+Qumis supports Single Sign-On (SSO) integration with your organization's identity provider. This allows you to enforce your existing authentication policies (multi-factor authentication, password requirements, session management) for Qumis access.
+
+→ [SSO Setup](/get-started/setup/single-sign-on)
+
+### Authorization
+
+Organization administrators can manage user accounts, control access to shared resources, and view usage analytics. Individual users control the privacy level of their uploaded documents (Private Vault vs. Shared Vault).
+
+### Audit trail
+
+Qumis maintains logs of authentication events, document access, analysis activity, and administrative actions. These logs support your organization's compliance and audit requirements.
+
+---
+
+## Compliance
+
+Qumis maintains security and compliance practices appropriate for handling sensitive insurance data. For the most current information on specific certifications, attestations, and compliance frameworks, contact your Qumis account team.
+
+Your Qumis Customer Success Manager can provide:
+
+- SOC 2 report and related attestations
+- Completed security questionnaires (SIG, CAIQ, custom formats)
+- Architecture and data flow diagrams
+- Penetration testing summaries
+- Business continuity and disaster recovery documentation
+- Subprocessor lists
+- Data Processing Agreements (DPAs)
+
+---
+
+## Responsible AI
+
+Qumis is committed to responsible AI practices:
+
+**Transparency.** Qumis provides citations on every finding so users can verify AI analysis against source documents. → [Accuracy and Confidence](/get-started/genai/accuracy-and-confidence)
+
+**Human oversight.** Qumis is designed as a tool that amplifies professional expertise — not a replacement for human judgment. The Ascend™ implementation framework includes guidance on establishing human oversight checkpoints for coverage decisions. → [Ascend™ Overview](/get-started/ascend/overview)
+
+**Document-grounded analysis.** Qumis analysis is based on the specific documents provided, minimizing the risk of unsupported conclusions.
+
+**Governance support.** The Ascend™ toolkit includes a Responsible AI Use Policy template to help your organization establish appropriate AI governance. → [Toolkit and Templates](/get-started/ascend/toolkit-and-templates)
+
+---
+
+## For procurement and legal teams
+
+If you're evaluating Qumis and need security documentation for your review process, your Qumis account team can provide tailored responses. Common requests we accommodate:
+
+- Vendor risk assessment questionnaires (SIG, CAIQ, custom formats)
+- Data Processing Agreements and amendments
+- Information Security Policy summaries
+- Third-party audit reports
+- Insurance certificates (yes, we carry our own coverage)
+
+Contact your Qumis account team or [reach out to support](/resources/contact-support) to request documentation.
+
+---
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Data Privacy and Security" icon="shield-halved" href="/get-started/genai/data-privacy-and-security">
+    How Qumis handles documents and protects your data (user-focused)
+  </Card>
+  <Card title="Contact Support" icon="headset" href="/resources/contact-support">
+    Request security documentation or ask questions
+  </Card>
+</CardGroup>

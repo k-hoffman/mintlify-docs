@@ -1,122 +1,243 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Qumis Knowledge Base",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6366F1"
   },
-  "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Get Started",
+        "icon": "play",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Welcome",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "get-started/welcome",
+              "get-started/your-first-15-minutes"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Role Quick-Start Guides",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "get-started/quick-start/brokers-and-producers",
+              "get-started/quick-start/account-managers",
+              "get-started/quick-start/claims-professionals",
+              "get-started/quick-start/risk-managers"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "GenAI Foundations",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "get-started/genai/how-generative-ai-works",
+              "get-started/genai/how-qumis-reads-documents",
+              "get-started/genai/accuracy-and-confidence",
+              "get-started/genai/data-privacy-and-security"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Ascend\u2122 Implementation Framework",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "get-started/ascend/overview",
+              "get-started/ascend/three-success-factors",
+              "get-started/ascend/phase-1-foundations",
+              "get-started/ascend/phase-2-implementation",
+              "get-started/ascend/phase-3-scale-and-sustain",
+              "get-started/ascend/rollout-options",
+              "get-started/ascend/roles-and-responsibilities",
+              "get-started/ascend/toolkit-and-templates"
+            ]
+          },
+          {
+            "group": "Setup & Access",
+            "pages": [
+              "get-started/setup/single-sign-on",
+              "get-started/setup/navigating-the-dashboard",
+              "get-started/setup/inviting-users"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Analyze",
+        "icon": "magnifying-glass",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Overview",
             "pages": [
-              "api-reference/introduction"
+              "analyze/what-can-you-do"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Ask \u2014 Get Answers from Your Documents",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "analyze/ask/chats",
+              "analyze/ask/tips-and-best-practices"
+            ]
+          },
+          {
+            "group": "Compare \u2014 Understand What Changed",
+            "pages": [
+              "analyze/compare/comparing-documents",
+              "analyze/compare/comparison-report"
+            ]
+          },
+          {
+            "group": "Summarize \u2014 See What\u2019s Covered",
+            "pages": [
+              "analyze/summarize/policy-analysis",
+              "analyze/summarize/single-policy-report"
+            ]
+          },
+          {
+            "group": "Evaluate \u2014 Make Defensible Calls Fast",
+            "pages": [
+              "analyze/evaluate/claims-analysis",
+              "analyze/evaluate/coverage-table",
+              "analyze/evaluate/building-defensible-determinations"
+            ]
+          },
+          {
+            "group": "Vault \u2014 Upload Once, Reuse Forever",
+            "pages": [
+              "analyze/vault/document-vault"
+            ]
+          },
+          {
+            "group": "Prompts \u2014 Save Your Smartest Questions",
+            "pages": [
+              "analyze/prompts/prompt-library"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Report",
+        "icon": "file-lines",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "report/reports-overview",
+              "report/choosing-the-right-report"
+            ]
+          },
+          {
+            "group": "Report Types",
+            "pages": [
+              "report/types/claims-analysis",
+              "report/types/comparison-report",
+              "report/types/contract-review",
+              "report/types/coverage-table",
+              "report/types/single-policy-analysis",
+              "report/types/custom-report"
+            ]
+          },
+          {
+            "group": "Populate \u2014 Turn Policies into Spreadsheets",
+            "pages": [
+              "report/populate/data-extraction",
+              "report/populate/client-template-guide"
+            ]
+          },
+          {
+            "group": "Verify \u2014 Check Compliance in Seconds",
+            "pages": [
+              "report/verify/contract-compliance",
+              "report/verify/coverage-verification"
+            ]
+          },
+          {
+            "group": "Reporting Workflows",
+            "pages": [
+              "report/workflows/preparing-a-client-presentation",
+              "report/workflows/renewal-analysis",
+              "report/workflows/portfolio-review"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Research",
+        "icon": "scale-balanced",
+        "groups": [
+          {
+            "group": "Legal Search",
+            "pages": [
+              "research/legal-search",
+              "research/coverage-determination",
+              "research/building-your-case"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resources",
+        "icon": "circle-info",
+        "groups": [
+          {
+            "group": "Help & Support",
+            "pages": [
+              "resources/contact-support",
+              "resources/troubleshooting-and-faqs"
+            ]
+          },
+          {
+            "group": "Product Updates",
+            "pages": [
+              "resources/product-updates-and-release-notes"
+            ]
+          },
+          {
+            "group": "Security & Trust",
+            "pages": [
+              "resources/security-and-trust"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
+  "topbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "name": "Launch Qumis",
+        "url": "https://app.qumis.ai"
+      },
+      {
+        "name": "Request Demo",
+        "url": "https://calendly.com/qumis"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+  "redirects": [
+    { "source": "/get-started/foundations-for-success/implementing-ai", "destination": "/get-started/ascend/overview" },
+    { "source": "/get-started/foundations-for-success/identifying-use-cases", "destination": "/get-started/ascend/phase-1-foundations" },
+    { "source": "/get-started/foundations-for-success/change-management", "destination": "/get-started/ascend/overview" },
+    { "source": "/get-started/foundations-for-success/change-management-toolkit", "destination": "/get-started/ascend/toolkit-and-templates" },
+    { "source": "/get-started/setup-and-access/single-sign-on", "destination": "/get-started/setup/single-sign-on" },
+    { "source": "/get-started/setup-and-access/navigating-the-dashboard", "destination": "/get-started/setup/navigating-the-dashboard" },
+    { "source": "/get-started/setup-and-access/inviting-users", "destination": "/get-started/setup/inviting-users" },
+    { "source": "/features/chats", "destination": "/analyze/ask/chats" },
+    { "source": "/features/document-vault", "destination": "/analyze/vault/document-vault" },
+    { "source": "/features/legal-search", "destination": "/research/legal-search" },
+    { "source": "/features/prompt-library", "destination": "/analyze/prompts/prompt-library" },
+    { "source": "/features/reports", "destination": "/report/reports-overview" },
+    { "source": "/reports/claims", "destination": "/report/types/claims-analysis" },
+    { "source": "/reports/comparisons", "destination": "/report/types/comparison-report" },
+    { "source": "/reports/contract-review", "destination": "/report/types/contract-review" },
+    { "source": "/reports/coverage-table", "destination": "/report/types/coverage-table" },
+    { "source": "/reports/custom-reports", "destination": "/report/types/custom-report" },
+    { "source": "/reports/policy-analysis", "destination": "/report/types/single-policy-analysis" },
+    { "source": "/guides/data-extraction/client-template-guide", "destination": "/report/populate/client-template-guide" },
+    { "source": "/playbooks/for-account-managers", "destination": "/get-started/quick-start/account-managers" },
+    { "source": "/playbooks/for-brokers", "destination": "/get-started/quick-start/brokers-and-producers" },
+    { "source": "/playbooks/for-claims-professionals", "destination": "/get-started/quick-start/claims-professionals" },
+    { "source": "/playbooks/for-producers", "destination": "/get-started/quick-start/brokers-and-producers" },
+    { "source": "/playbooks/for-service-teams", "destination": "/get-started/quick-start/account-managers" }
+  ],
+  "seo": {
+    "indexing": "navigable"
   }
 }

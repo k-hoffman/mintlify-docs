@@ -1,0 +1,106 @@
+---
+title: "Accuracy and Confidence"
+description: "How to evaluate Qumis output, build a healthy verification habit, and understand when AI analysis is most and least reliable."
+icon: "bullseye-arrow"
+---
+
+# Accuracy and Confidence
+
+Qumis produces analysis that reads like an experienced coverage professional's work product. But like any tool — including human analysis — it has strengths and limitations. This page helps you build the judgment to use AI output effectively: when to trust it, when to verify, and how to develop a verification habit that becomes second nature.
+
+---
+
+## The right mental model
+
+Think of Qumis as a highly capable junior attorney or analyst. It reads thoroughly, works fast, doesn't miss pages, and produces well-structured analysis. But it benefits from your review, your judgment, and your domain expertise — just like a junior colleague would.
+
+The goal isn't blind trust or constant skepticism. It's informed confidence: understanding what the AI does well, where it might stumble, and how to verify efficiently.
+
+---
+
+## Where Qumis is most reliable
+
+**Identifying specific provisions.** When you ask "What is the aggregate limit?" or "Is there a professional services exclusion?", the AI is highly reliable because it's finding and citing specific language in the document.
+
+**Structural analysis.** Summarizing what a policy covers, listing exclusions, identifying sublimits and conditions — the AI handles this accurately because it's working directly from the document structure.
+
+**Side-by-side comparison.** Identifying differences between two documents — changed limits, new exclusions, modified conditions — is a strength because the AI can systematically compare every provision.
+
+**Citation accuracy.** Qumis's multi-agent validation system specifically checks that citations point to the right provisions. When the AI says "Section IV.B excludes cyber events," you can verify that citation.
+
+---
+
+## Where to apply extra scrutiny
+
+**Interpretation of ambiguous language.** Insurance policies sometimes contain language that reasonable professionals disagree about. The AI will provide an interpretation, but ambiguous provisions warrant your professional judgment.
+
+**Complex multi-document interactions.** When coverage depends on how several documents work together — a base policy, multiple endorsements, and a certificate — verify that the AI has correctly traced the chain of modifications.
+
+**Novel or unusual scenarios.** For coverage questions involving unusual fact patterns or emerging risks, the AI's analysis is a useful starting point but benefits from expert review.
+
+**Negative findings.** When the AI says a policy doesn't cover something, verify by checking the document yourself. It's easier to find something that's there than to confirm something isn't there.
+
+---
+
+## Building a verification habit
+
+The most effective Qumis users develop a consistent verification practice. Here's what that looks like:
+
+### The 3-point check
+
+For any Qumis analysis you plan to use in your work:
+
+1. **Check the citations.** Pick 2-3 key findings and verify them against the source document. Do the cited provisions actually say what the analysis claims? This takes 2-3 minutes and catches the vast majority of potential issues.
+
+2. **Test the reasoning.** Does the analytical logic make sense? If the AI concludes that a claim isn't covered, does the path from coverage grant through exclusions track logically?
+
+3. **Apply your expertise.** Does anything in the analysis surprise you? Surprises aren't necessarily wrong — sometimes the AI catches something you would have missed — but they warrant a closer look.
+
+<Tip>
+  **Start here:** When you first begin using Qumis, verify more extensively. As you build familiarity with the platform's accuracy patterns, you'll develop an efficient sense of when to do a quick check versus a deep review.
+</Tip>
+
+---
+
+## What Qumis does to ensure accuracy
+
+Qumis's architecture includes several layers designed to maximize accuracy:
+
+**Multi-agent validation.** Separate AI agents check the analysis against the source document, catching errors before they reach you.
+
+**Document-grounded analysis.** Qumis answers based on what your specific document says — not general knowledge about insurance. This prevents the AI from making assumptions about provisions that don't exist in your policy.
+
+**Citations on every finding.** Every claim in a Qumis analysis is tied to a specific location in the source document, making verification fast and straightforward.
+
+**Attorney-trained models.** Qumis's AI has been specifically trained on insurance document analysis, which means it understands policy language, coverage mechanics, and the analytical frameworks that coverage professionals use.
+
+---
+
+## When to use Qumis output directly vs. as a starting point
+
+| Scenario | Approach |
+|---|---|
+| Internal reference or pre-meeting prep | Use directly after a quick citation check |
+| Client-facing summary or recommendation | Use as a starting point; review and refine with your professional judgment |
+| Coverage determination or opinion | Use as analytical foundation; apply your judgment on ambiguous points and add business context |
+| Compliance documentation | Use the structured output; verify key findings against source documents |
+| Exploratory analysis (new account, unfamiliar line) | Use to build initial understanding; deepen your review on areas that matter most |
+
+---
+
+## A note on continuous improvement
+
+Qumis's AI models are continuously refined based on how the platform performs. The accuracy you experience today will improve over time. But the verification habit you build now is valuable regardless — it's the same professional discipline that makes experienced coverage professionals effective, whether they're reviewing AI output or a colleague's work product.
+
+---
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Data privacy and security" icon="shield-halved" href="/get-started/genai/data-privacy-and-security">
+    How Qumis protects your documents and data
+  </Card>
+  <Card title="Your First 15 Minutes" icon="play" href="/get-started/your-first-15-minutes">
+    Try the platform and see accuracy in action
+  </Card>
+</CardGroup>

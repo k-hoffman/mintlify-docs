@@ -1,0 +1,116 @@
+---
+title: "Data Privacy and Security"
+description: "How Qumis protects your documents, who can access your data, and the security architecture that keeps your information safe."
+icon: "shield-halved"
+---
+
+# Data Privacy and Security
+
+Insurance documents contain some of the most sensitive information in your organization — client data, coverage details, claims information, and proprietary business intelligence. Qumis is built from the ground up to protect this data. This page explains how.
+
+---
+
+## Core principles
+
+**Your documents are yours.** Documents you upload to Qumis are used only to provide analysis back to you. They are not used to train AI models, shared with other customers, or accessed by Qumis employees except when required for technical support with your explicit permission.
+
+**Privacy by design.** Qumis's architecture separates customer data at every layer. Your documents, analysis results, and conversation history are isolated from other customers' data.
+
+**Enterprise-grade security.** Qumis implements the security controls that enterprise insurance organizations require — encryption, access controls, audit logging, and compliance certifications.
+
+---
+
+## Document handling
+
+### What happens when you upload a document
+
+<Steps>
+  <Step title="Encrypted upload">
+    Your document is encrypted in transit using TLS 1.2+ encryption — the same standard used by banks and healthcare systems.
+  </Step>
+  <Step title="Secure storage">
+    Documents are stored with AES-256 encryption at rest. Each customer's data is logically isolated.
+  </Step>
+  <Step title="Processing">
+    When you run an analysis, your document is processed within a secure environment. The AI agents access your document only for the duration of the analysis.
+  </Step>
+  <Step title="Results storage">
+    Analysis results, reports, and conversation history are stored with the same encryption and isolation as your original documents.
+  </Step>
+</Steps>
+
+### What Qumis does NOT do with your documents
+
+- **Does not use your documents to train AI models.** Your policy data never becomes part of the AI's training data.
+- **Does not share documents across customers.** Your data is completely isolated from other organizations using Qumis.
+- **Does not retain documents beyond your control.** You control what stays in your Vault and what gets deleted.
+
+---
+
+## Access controls
+
+### Vault privacy
+
+Qumis Vault supports two levels of document access:
+
+**Private Vault.** Documents visible only to you. Other members of your organization cannot see or access these files.
+
+**Shared Vault.** Documents available to your entire Qumis team. Use this for documents that your colleagues need to reference — like active policies or standard contracts.
+
+You choose the privacy level for each document at upload time, and you can change it later.
+
+### Team permissions
+
+Organization administrators control who has access to Qumis and what they can do. This includes managing user accounts, setting default privacy levels, and viewing usage analytics.
+
+---
+
+## AI model security
+
+**No model training on your data.** Qumis uses AI models that have been trained on general and insurance-specific knowledge. Your specific documents and analysis results are never fed back into model training.
+
+**Isolated processing.** Each analysis runs in an isolated environment. One customer's analysis cannot access another customer's documents or results.
+
+**Output grounding.** Qumis's AI is specifically designed to base its analysis on your uploaded documents — not on general knowledge that might include other customers' information.
+
+---
+
+## Compliance and certifications
+
+Qumis maintains security practices and compliance standards appropriate for handling sensitive insurance data. For the most current information on specific certifications, compliance frameworks, and security documentation, contact your Qumis account team.
+
+<Info>
+  **Security documentation:** If your organization requires a security review before implementation, your Qumis Customer Success Manager can provide detailed security documentation, including architecture diagrams, compliance certifications, and responses to standard security questionnaires.
+</Info>
+
+---
+
+## For implementation teams
+
+If you're implementing Qumis at your organization, the [Ascend™ Implementation Framework](/get-started/ascend/overview) includes guidance on establishing a governance framework, including:
+
+- Creating a Responsible AI Use Policy
+- Setting up a Qumis Governance Working Group (QGWG)
+- Defining human oversight checkpoints
+- Establishing escalation procedures for coverage decisions
+
+→ [Governance and oversight guidance](/get-started/ascend/roles-and-responsibilities)
+
+---
+
+## Questions?
+
+If you have specific questions about how Qumis handles your data, contact your Customer Success Manager or reach out to Qumis support. Security is foundational to everything we build, and we're happy to provide the detail your organization needs.
+
+---
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Back to GenAI Foundations" icon="graduation-cap" href="/get-started/genai/how-generative-ai-works">
+    Return to the GenAI overview
+  </Card>
+  <Card title="Start using Qumis" icon="play" href="/get-started/your-first-15-minutes">
+    Try the platform with confidence
+  </Card>
+</CardGroup>
