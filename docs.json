@@ -60,100 +60,32 @@
         ]
       },
       {
-        "tab": "Analyze",
-        "icon": "magnifying-glass",
+        "tab": "Platform",
+        "icon": "grid-2",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Capabilities",
             "pages": [
-              "analyze/what-can-you-do"
+              "platform/what-can-you-do",
+              "platform/chats",
+              "platform/compare",
+              "platform/summarize",
+              "platform/evaluate",
+              "platform/populate",
+              "platform/verify",
+              "platform/contract-review",
+              "platform/custom-report",
+              "platform/document-vault",
+              "platform/prompt-library",
+              "platform/tips-and-best-practices"
             ]
           },
           {
-            "group": "Ask \u2014 Get Answers from Your Documents",
+            "group": "Workflows",
             "pages": [
-              "analyze/ask/chats",
-              "analyze/ask/tips-and-best-practices"
-            ]
-          },
-          {
-            "group": "Compare \u2014 Understand What Changed",
-            "pages": [
-              "analyze/compare/comparing-documents",
-              "analyze/compare/comparison-report"
-            ]
-          },
-          {
-            "group": "Summarize \u2014 See What\u2019s Covered",
-            "pages": [
-              "analyze/summarize/policy-analysis",
-              "analyze/summarize/single-policy-report"
-            ]
-          },
-          {
-            "group": "Evaluate \u2014 Make Defensible Calls Fast",
-            "pages": [
-              "analyze/evaluate/claims-analysis",
-              "analyze/evaluate/coverage-table",
-              "analyze/evaluate/building-defensible-determinations"
-            ]
-          },
-          {
-            "group": "Vault \u2014 Upload Once, Reuse Forever",
-            "pages": [
-              "analyze/vault/document-vault"
-            ]
-          },
-          {
-            "group": "Prompts \u2014 Save Your Smartest Questions",
-            "pages": [
-              "analyze/prompts/prompt-library"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Report",
-        "icon": "file-lines",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": [
-              "report/reports-overview",
-              "report/choosing-the-right-report"
-            ]
-          },
-          {
-            "group": "Report Types",
-            "pages": [
-              "report/types/claims-analysis",
-              "report/types/comparison-report",
-              "report/types/contract-review",
-              "report/types/coverage-table",
-              "report/types/single-policy-analysis",
-              "report/types/custom-report"
-            ]
-          },
-          {
-            "group": "Populate \u2014 Turn Policies into Spreadsheets",
-            "pages": [
-              "report/populate/data-extraction",
-              "report/populate/client-template-guide"
-            ]
-          },
-          {
-            "group": "Verify \u2014 Check Compliance in Seconds",
-            "pages": [
-              "report/verify/contract-compliance",
-              "report/verify/coverage-verification"
-            ]
-          },
-          {
-            "group": "Reporting Workflows",
-            "pages": [
-              "report/workflows/preparing-a-client-presentation",
-              "report/workflows/renewal-analysis",
-              "report/workflows/portfolio-review"
+              "platform/workflows/client-presentation",
+              "platform/workflows/renewal-analysis",
+              "platform/workflows/portfolio-review"
             ]
           }
         ]
@@ -219,23 +151,50 @@
     { "source": "/get-started/setup-and-access/single-sign-on", "destination": "/get-started/setup/single-sign-on" },
     { "source": "/get-started/setup-and-access/navigating-the-dashboard", "destination": "/get-started/setup/navigating-the-dashboard" },
     { "source": "/get-started/setup-and-access/inviting-users", "destination": "/get-started/setup/inviting-users" },
-    { "source": "/features/chats", "destination": "/analyze/ask/chats" },
-    { "source": "/features/document-vault", "destination": "/analyze/vault/document-vault" },
+    { "source": "/features/chats", "destination": "/platform/chats" },
+    { "source": "/features/document-vault", "destination": "/platform/document-vault" },
     { "source": "/features/legal-search", "destination": "/research/legal-search" },
-    { "source": "/features/prompt-library", "destination": "/analyze/prompts/prompt-library" },
-    { "source": "/features/reports", "destination": "/report/reports-overview" },
-    { "source": "/reports/claims", "destination": "/report/types/claims-analysis" },
-    { "source": "/reports/comparisons", "destination": "/report/types/comparison-report" },
-    { "source": "/reports/contract-review", "destination": "/report/types/contract-review" },
-    { "source": "/reports/coverage-table", "destination": "/report/types/coverage-table" },
-    { "source": "/reports/custom-reports", "destination": "/report/types/custom-report" },
-    { "source": "/reports/policy-analysis", "destination": "/report/types/single-policy-analysis" },
-    { "source": "/guides/data-extraction/client-template-guide", "destination": "/report/populate/client-template-guide" },
+    { "source": "/features/prompt-library", "destination": "/platform/prompt-library" },
+    { "source": "/features/reports", "destination": "/platform/what-can-you-do" },
+    { "source": "/reports/claims", "destination": "/platform/evaluate" },
+    { "source": "/reports/comparisons", "destination": "/platform/compare" },
+    { "source": "/reports/contract-review", "destination": "/platform/contract-review" },
+    { "source": "/reports/coverage-table", "destination": "/platform/evaluate" },
+    { "source": "/reports/custom-reports", "destination": "/platform/custom-report" },
+    { "source": "/reports/policy-analysis", "destination": "/platform/summarize" },
+    { "source": "/guides/data-extraction/client-template-guide", "destination": "/platform/populate" },
     { "source": "/playbooks/for-account-managers", "destination": "/get-started/quick-start/account-managers" },
     { "source": "/playbooks/for-brokers", "destination": "/get-started/quick-start/brokers-and-producers" },
     { "source": "/playbooks/for-claims-professionals", "destination": "/get-started/quick-start/claims-professionals" },
     { "source": "/playbooks/for-producers", "destination": "/get-started/quick-start/brokers-and-producers" },
-    { "source": "/playbooks/for-service-teams", "destination": "/get-started/quick-start/account-managers" }
+    { "source": "/playbooks/for-service-teams", "destination": "/get-started/quick-start/account-managers" },
+    { "source": "/analyze/ask/chats", "destination": "/platform/chats" },
+    { "source": "/analyze/ask/tips-and-best-practices", "destination": "/platform/tips-and-best-practices" },
+    { "source": "/analyze/what-can-you-do", "destination": "/platform/what-can-you-do" },
+    { "source": "/analyze/compare/comparing-documents", "destination": "/platform/compare" },
+    { "source": "/analyze/compare/comparison-report", "destination": "/platform/compare" },
+    { "source": "/analyze/summarize/policy-analysis", "destination": "/platform/summarize" },
+    { "source": "/analyze/summarize/single-policy-report", "destination": "/platform/summarize" },
+    { "source": "/analyze/evaluate/claims-analysis", "destination": "/platform/evaluate" },
+    { "source": "/analyze/evaluate/coverage-table", "destination": "/platform/evaluate" },
+    { "source": "/analyze/evaluate/building-defensible-determinations", "destination": "/platform/evaluate" },
+    { "source": "/analyze/vault/document-vault", "destination": "/platform/document-vault" },
+    { "source": "/analyze/prompts/prompt-library", "destination": "/platform/prompt-library" },
+    { "source": "/report/reports-overview", "destination": "/platform/what-can-you-do" },
+    { "source": "/report/choosing-the-right-report", "destination": "/platform/what-can-you-do" },
+    { "source": "/report/types/claims-analysis", "destination": "/platform/evaluate" },
+    { "source": "/report/types/comparison-report", "destination": "/platform/compare" },
+    { "source": "/report/types/contract-review", "destination": "/platform/contract-review" },
+    { "source": "/report/types/coverage-table", "destination": "/platform/evaluate" },
+    { "source": "/report/types/single-policy-analysis", "destination": "/platform/summarize" },
+    { "source": "/report/types/custom-report", "destination": "/platform/custom-report" },
+    { "source": "/report/populate/data-extraction", "destination": "/platform/populate" },
+    { "source": "/report/populate/client-template-guide", "destination": "/platform/populate" },
+    { "source": "/report/verify/contract-compliance", "destination": "/platform/verify" },
+    { "source": "/report/verify/coverage-verification", "destination": "/platform/verify" },
+    { "source": "/report/workflows/preparing-a-client-presentation", "destination": "/platform/workflows/client-presentation" },
+    { "source": "/report/workflows/renewal-analysis", "destination": "/platform/workflows/renewal-analysis" },
+    { "source": "/report/workflows/portfolio-review", "destination": "/platform/workflows/portfolio-review" }
   ],
   "seo": {
     "indexing": "navigable"
