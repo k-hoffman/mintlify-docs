@@ -1,5 +1,5 @@
 ---
-title: "Tips and Best Practices"
+title: "Best Practices"
 description: "How to write effective prompts for insurance document analysis — with examples by document type, common mistakes, and power user patterns."
 icon: "lightbulb"
 ---
@@ -14,11 +14,11 @@ The quality of your Qumis output depends heavily on how you frame your questions
 
 Vague questions get vague answers. Specific questions get useful analysis.
 
-| Instead of... | Try... |
-|---|---|
-| "What does this policy cover?" | "Does this CGL policy cover product liability claims arising from manufacturing defects?" |
-| "Compare these policies" | "Compare the professional liability coverage in these two quotes, focusing on prior acts coverage and defense cost provisions" |
-| "Is this good coverage?" | "What are the most significant coverage gaps in this property policy for a restaurant with outdoor seating?" |
+| Instead of...                  | Try...                                                                                                                         |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| "What does this policy cover?" | "Does this CGL policy cover product liability claims arising from manufacturing defects?"                                      |
+| "Compare these policies"       | "Compare the professional liability coverage in these two quotes, focusing on prior acts coverage and defense cost provisions" |
+| "Is this good coverage?"       | "What are the most significant coverage gaps in this property policy for a restaurant with outdoor seating?"                   |
 
 The more context you provide about what you're looking for and why, the more targeted and useful the analysis will be.
 
@@ -30,7 +30,7 @@ The more context you provide about what you're looking for and why, the more tar
 
 Tell Qumis the business context. This helps the AI focus on what matters for your specific situation.
 
-*"My client is a mid-size general contractor that subcontracts 60% of its work. Review this CGL policy and identify any provisions that could create coverage gaps for subcontractor-related claims."*
+_"My client is a mid-size general contractor that subcontracts 60% of its work. Review this CGL policy and identify any provisions that could create coverage gaps for subcontractor-related claims."_
 
 ### 2. Ask follow-up questions
 
@@ -38,25 +38,25 @@ Treat the first response as a draft. The most valuable insights often come from 
 
 - **Start broad:** "Summarize the key coverage provisions in this cyber policy."
 - **Then narrow:** "Focus on the social engineering fraud coverage. What are the sublimits and conditions?"
-- **Then apply:** "If an employee fell for a phishing email that resulted in a $500K wire transfer, would this policy respond?"
+- **Then apply:** "If an employee fell for a phishing email that resulted in a \$500K wire transfer, would this policy respond?"
 
 ### 3. Request a specific format
 
 Tell Qumis how you want the output structured. This saves you reformatting time and ensures you get actionable output.
 
-*"List the exclusions in this policy that could affect a construction defect claim. Format as a table with columns for: exclusion name, policy section, what it excludes, and any exceptions that might restore coverage."*
+_"List the exclusions in this policy that could affect a construction defect claim. Format as a table with columns for: exclusion name, policy section, what it excludes, and any exceptions that might restore coverage."_
 
 ### 4. Compare against a standard
 
 Give the AI a benchmark to evaluate against.
 
-*"Compare this Workers' Comp policy against standard guaranteed cost provisions. Flag any non-standard exclusions, unusual conditions, or deviations from typical guaranteed cost structure."*
+_"Compare this Workers' Comp policy against standard guaranteed cost provisions. Flag any non-standard exclusions, unusual conditions, or deviations from typical guaranteed cost structure."_
 
 ### 5. Request the executive version
 
 When you need to share findings with a client or colleague who doesn't want the full analysis.
 
-*"Draft a two-paragraph summary of the key differences between these quotes that I can include in an email to my client. Focus on the three most material coverage differences."*
+_"Draft a two-paragraph summary of the key differences between these quotes that I can include in an email to my client. Focus on the three most material coverage differences."_
 
 ---
 
@@ -142,10 +142,10 @@ When you need to share findings with a client or colleague who doesn't want the 
 ## Next steps
 
 <CardGroup cols={2}>
-  <Card title="Prompt Library" icon="bookmark" href="/platform/prompt-library">
+  <Card icon="bookmark" href="/platform/prompt-library" title="Prompt Library">
     Browse pre-built prompts for common workflows
   </Card>
-  <Card title="Chats" icon="messages" href="/platform/chats">
+  <Card icon="messages" href="/platform/chats" title="Chats">
     Start a conversation with your documents
   </Card>
 </CardGroup>
