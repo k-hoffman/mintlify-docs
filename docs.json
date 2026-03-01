@@ -37,7 +37,7 @@
             ]
           },
           {
-            "group": "Ascend\u2122 Implementation Framework",
+            "group": "Ascend™ Implementation Framework",
             "pages": [
               "get-started/ascend/overview",
               "get-started/ascend/three-success-factors",
@@ -98,16 +98,17 @@
               "platform/populate",
               "platform/verify",
               "platform/contract-review",
+              "platform/coming-soon/proposal-generator",
               "platform/custom-report",
               {
                 "group": "Batch Extraction",
+                "expanded": true,
                 "pages": [
                   "platform/batch-extraction",
                   "platform/batch-extraction-sftp",
                   "platform/batch-extraction-api"
                 ]
-              },
-              "platform/coming-soon/proposal-generator"
+              }
             ]
           },
           {
