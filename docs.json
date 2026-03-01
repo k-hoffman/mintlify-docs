@@ -64,25 +64,35 @@
         "icon": "grid-2",
         "groups": [
           {
-            "group": "Capabilities",
+            "group": "Get Answers",
             "pages": [
               "platform/what-can-you-do",
               "platform/chats",
-              "platform/compare",
-              "platform/summarize",
-              "platform/evaluate",
-              "platform/populate",
-              "platform/verify",
-              "platform/contract-review",
-              "platform/custom-report",
-              "platform/document-vault",
-              "platform/prompt-library",
               "platform/tips-and-best-practices"
             ]
           },
           {
-            "group": "Workflows",
+            "group": "Analyze Documents",
             "pages": [
+              "platform/compare",
+              "platform/summarize",
+              "platform/evaluate"
+            ]
+          },
+          {
+            "group": "Generate Deliverables",
+            "pages": [
+              "platform/populate",
+              "platform/verify",
+              "platform/contract-review",
+              "platform/custom-report"
+            ]
+          },
+          {
+            "group": "Build Your Practice",
+            "pages": [
+              "platform/document-vault",
+              "platform/prompt-library",
               "platform/workflows/client-presentation",
               "platform/workflows/renewal-analysis",
               "platform/workflows/portfolio-review"
