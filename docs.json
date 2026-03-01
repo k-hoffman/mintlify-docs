@@ -79,9 +79,9 @@
           {
             "group": "Research",
             "pages": [
-              "research/legal-search",
-              "research/coverage-determination",
-              "research/building-your-case"
+              "platform/research/legal-search",
+              "platform/research/coverage-determination",
+              "platform/research/building-your-case"
             ]
           },
           {
@@ -215,7 +215,10 @@
     { "source": "/get-started/setup-and-access/inviting-users", "destination": "/get-started/setup/inviting-users" },
     { "source": "/features/chats", "destination": "/platform/chats" },
     { "source": "/features/document-vault", "destination": "/platform/document-vault" },
-    { "source": "/features/legal-search", "destination": "/research/legal-search" },
+    { "source": "/features/legal-search", "destination": "/platform/research/legal-search" },
+    { "source": "/research/legal-search", "destination": "/platform/research/legal-search" },
+    { "source": "/research/coverage-determination", "destination": "/platform/research/coverage-determination" },
+    { "source": "/research/building-your-case", "destination": "/platform/research/building-your-case" },
     { "source": "/features/prompt-library", "destination": "/platform/prompt-library" },
     { "source": "/features/reports", "destination": "/platform/what-can-you-do" },
     { "source": "/reports/claims", "destination": "/platform/evaluate" },
