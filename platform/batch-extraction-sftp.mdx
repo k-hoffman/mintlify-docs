@@ -1,0 +1,70 @@
+---
+title: "SFTP Batch Process"
+description: "Process documents in bulk through SFTP-based file transfer with S3 directory polling for results."
+icon: "server"
+---
+
+# SFTP Batch Process
+
+The SFTP batch process lets your organization send documents to Qumis in bulk and retrieve structured extraction results from an S3 output directory. This method is ideal for scheduled batch jobs, portfolio migrations, and high-volume processing.
+
+---
+
+## Process overview
+
+<Steps>
+  <Step title="Upload to DMS">
+    An employee uploads policy documents to your Document Management System (DMS).
+  </Step>
+  <Step title="Backend picks up files">
+    Your backend job detects new documents and converts them to PDF format if needed.
+  </Step>
+  <Step title="SFTP transfer">
+    Converted PDFs are transferred via SFTP to the Qumis S3 **Batches** directory.
+  </Step>
+  <Step title="Qumis validates">
+    Qumis validates the file type is supported and checks for pre-existing records to prevent duplicate processing.
+  </Step>
+  <Step title="OCR & extraction">
+    Documents are processed through OCR (if scanned) and Qumis extracts structured policy data.
+  </Step>
+  <Step title="JSON output">
+    Extracted data is saved as structured JSON to the S3 **Output** directory. An exception report is also generated for any documents that could not be processed.
+  </Step>
+  <Step title="Backend retrieval">
+    Your backend polls the S3 Output directory, retrieves the JSON results, and loads the data into your data warehouse.
+  </Step>
+</Steps>
+
+---
+
+## Exception handling
+
+When documents fail validation or extraction, Qumis generates an **exception report** in the output directory. Your backend retrieves this report, alerts the appropriate team, and flagged documents are manually remedied before reprocessing.
+
+**Common exception reasons:**
+- Unsupported file type
+- Document already processed (duplicate detection)
+- OCR failure (poor scan quality)
+- Extraction confidence below threshold
+
+---
+
+## Integration requirements
+
+| Component | Details |
+|---|---|
+| **SFTP access** | Qumis provides SFTP credentials for your S3 Batches directory |
+| **File format** | PDF (your backend handles conversion from native formats) |
+| **S3 polling** | Your backend polls the Output directory on a schedule you define |
+| **Exception handling** | Your team monitors the exception report and handles remediation |
+
+---
+
+## Setup
+
+SFTP batch extraction is configured during implementation. Contact your Qumis account team or [reach out to support](/resources/contact-support) to get started.
+
+<Card title="Batch Extraction Overview" icon="layer-group" href="/platform/batch-extraction">
+  Compare SFTP and API integration methods
+</Card>

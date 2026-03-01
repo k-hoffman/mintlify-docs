@@ -1,0 +1,73 @@
+---
+title: "API Process"
+description: "Process documents in real time through REST API calls with webhook-based result delivery."
+icon: "webhook"
+---
+
+# API Process
+
+The API process lets your organization send documents to Qumis individually via REST API and receive results through webhook notifications. This method is ideal for real-time workflows, on-demand extraction, and event-driven architectures.
+
+---
+
+## Process overview
+
+<Steps>
+  <Step title="Upload to DMS">
+    An employee uploads policy documents to your Document Management System (DMS).
+  </Step>
+  <Step title="Backend picks up files">
+    Your backend job detects new documents and converts them to PDF format if needed.
+  </Step>
+  <Step title="API request">
+    Your backend sends a POST request to the Qumis API to generate a report, including the PDF document.
+  </Step>
+  <Step title="Report record created">
+    Qumis creates a report record and begins processing. The API returns a report ID for tracking.
+  </Step>
+  <Step title="Validation & extraction">
+    Qumis validates the document, checks for pre-existing records, runs OCR (if needed), and extracts structured policy data.
+  </Step>
+  <Step title="Webhook notification">
+    When processing completes, Qumis sends a webhook notification to your configured endpoint.
+  </Step>
+  <Step title="Retrieve results">
+    Your backend calls the Qumis API (POST) to retrieve the extraction results as structured JSON. If an error occurred, the response includes detailed error information.
+  </Step>
+  <Step title="Load to warehouse">
+    Your backend transforms the JSON data and loads it into your data warehouse.
+  </Step>
+</Steps>
+
+---
+
+## Exception handling
+
+When documents fail validation or extraction, the API response includes detailed error information. Your backend alerts the appropriate team, and flagged documents are manually remedied before resubmission.
+
+**Common error scenarios:**
+- Unsupported file type
+- Document already processed (duplicate detection)
+- OCR failure (poor scan quality)
+- Extraction confidence below threshold
+
+---
+
+## Integration requirements
+
+| Component | Details |
+|---|---|
+| **API access** | Qumis provides API credentials and endpoint documentation |
+| **File format** | PDF (your backend handles conversion from native formats) |
+| **Webhook endpoint** | Your backend exposes an HTTPS endpoint to receive completion notifications |
+| **Error handling** | Your team monitors API error responses and handles remediation |
+
+---
+
+## Setup
+
+API-based extraction is configured during implementation. Contact your Qumis account team or [reach out to support](/resources/contact-support) to get started.
+
+<Card title="Batch Extraction Overview" icon="layer-group" href="/platform/batch-extraction">
+  Compare SFTP and API integration methods
+</Card>

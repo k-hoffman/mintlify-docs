@@ -1,0 +1,54 @@
+---
+title: "Batch Extraction"
+description: "Extract policy information at scale — process entire portfolios through automated SFTP or API-based workflows."
+icon: "layer-group"
+---
+
+# Batch Extraction
+
+Extract structured policy data from large document sets without manual uploads. Qumis supports two integration methods — **SFTP batch processing** and **API-based processing** — so your team can choose the approach that fits your existing infrastructure.
+
+---
+
+## How it works
+
+Both methods follow a similar pipeline: documents are ingested, validated, converted to PDF if needed, processed through OCR and data extraction, and returned as structured JSON. The key difference is how files get to Qumis and how results get back to you.
+
+<CardGroup cols={2}>
+  <Card title="SFTP Batch Process" icon="server" href="/platform/batch-extraction-sftp">
+    File-based integration using SFTP and S3 directories. Best for organizations with existing DMS workflows that process documents in scheduled batches.
+  </Card>
+  <Card title="API Process" icon="webhook" href="/platform/batch-extraction-api">
+    Real-time API integration with webhook notifications. Best for organizations that want event-driven processing with immediate results.
+  </Card>
+</CardGroup>
+
+---
+
+## Choosing an integration method
+
+| Consideration | SFTP Batch | API |
+|---|---|---|
+| **Processing model** | Scheduled batch runs | Real-time, per-document |
+| **Result delivery** | Poll S3 output directory | Webhook notification + API retrieval |
+| **Best for** | High-volume portfolio migrations, nightly batch jobs | On-demand extraction, real-time workflows |
+| **Infrastructure** | SFTP client, S3 access | REST API client, webhook endpoint |
+| **Exception handling** | Exception report in S3 | Error response via API + team alerts |
+
+---
+
+## Common pipeline stages
+
+Regardless of integration method, every document passes through the same core processing stages:
+
+1. **File validation** — Qumis confirms the file type is supported and checks for pre-existing records to avoid duplicate processing.
+2. **OCR processing** — Scanned documents and images are converted to machine-readable text.
+3. **Data extraction** — Qumis identifies and extracts structured policy information (limits, deductibles, endorsements, exclusions, etc.).
+4. **Output generation** — Extracted data is formatted as structured JSON for downstream consumption.
+5. **Exception handling** — Any documents that fail validation or extraction are flagged with detailed error information for manual review.
+
+---
+
+## Getting started
+
+Batch extraction is configured during implementation with your Qumis team. To set up a new integration or discuss which method is right for your organization, reach out to your account team or [contact support](/resources/contact-support).

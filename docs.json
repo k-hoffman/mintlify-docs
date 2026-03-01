@@ -64,11 +64,24 @@
         "icon": "grid-2",
         "groups": [
           {
+            "group": "Overview",
+            "pages": [
+              "platform/what-can-you-do"
+            ]
+          },
+          {
             "group": "Get Answers",
             "pages": [
-              "platform/what-can-you-do",
               "platform/chats",
               "platform/tips-and-best-practices"
+            ]
+          },
+          {
+            "group": "Research",
+            "pages": [
+              "research/legal-search",
+              "research/coverage-determination",
+              "research/building-your-case"
             ]
           },
           {
@@ -85,31 +98,56 @@
               "platform/populate",
               "platform/verify",
               "platform/contract-review",
-              "platform/custom-report"
+              "platform/custom-report",
+              "platform/batch-extraction",
+              "platform/batch-extraction-sftp",
+              "platform/batch-extraction-api"
             ]
           },
           {
             "group": "Build Your Practice",
             "pages": [
               "platform/document-vault",
-              "platform/prompt-library",
-              "platform/workflows/client-presentation",
-              "platform/workflows/renewal-analysis",
-              "platform/workflows/portfolio-review"
+              "platform/prompt-library"
             ]
           }
         ]
       },
       {
-        "tab": "Research",
-        "icon": "scale-balanced",
+        "tab": "Playbooks",
+        "icon": "book-open",
         "groups": [
           {
-            "group": "Legal Search",
+            "group": "Prospecting",
             "pages": [
-              "research/legal-search",
-              "research/coverage-determination",
-              "research/building-your-case"
+              "playbooks/prospecting/market-analysis"
+            ]
+          },
+          {
+            "group": "Broking",
+            "pages": [
+              "playbooks/broking/competitive-quoting",
+              "playbooks/broking/client-presentation"
+            ]
+          },
+          {
+            "group": "Binding",
+            "pages": [
+              "playbooks/binding/pre-bind-review"
+            ]
+          },
+          {
+            "group": "Servicing",
+            "pages": [
+              "playbooks/servicing/mid-term-coverage-check",
+              "playbooks/servicing/portfolio-review"
+            ]
+          },
+          {
+            "group": "Renewing",
+            "pages": [
+              "playbooks/renewing/renewal-preparation",
+              "playbooks/renewing/renewal-analysis"
             ]
           }
         ]
@@ -202,9 +240,12 @@
     { "source": "/report/populate/client-template-guide", "destination": "/platform/populate" },
     { "source": "/report/verify/contract-compliance", "destination": "/platform/verify" },
     { "source": "/report/verify/coverage-verification", "destination": "/platform/verify" },
-    { "source": "/report/workflows/preparing-a-client-presentation", "destination": "/platform/workflows/client-presentation" },
-    { "source": "/report/workflows/renewal-analysis", "destination": "/platform/workflows/renewal-analysis" },
-    { "source": "/report/workflows/portfolio-review", "destination": "/platform/workflows/portfolio-review" }
+    { "source": "/report/workflows/preparing-a-client-presentation", "destination": "/playbooks/broking/client-presentation" },
+    { "source": "/report/workflows/renewal-analysis", "destination": "/playbooks/renewing/renewal-analysis" },
+    { "source": "/report/workflows/portfolio-review", "destination": "/playbooks/servicing/portfolio-review" },
+    { "source": "/platform/workflows/client-presentation", "destination": "/playbooks/broking/client-presentation" },
+    { "source": "/platform/workflows/renewal-analysis", "destination": "/playbooks/renewing/renewal-analysis" },
+    { "source": "/platform/workflows/portfolio-review", "destination": "/playbooks/servicing/portfolio-review" }
   ],
   "seo": {
     "indexing": "navigable"
