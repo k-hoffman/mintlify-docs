@@ -174,12 +174,20 @@
       {
         "tab": "Resources",
         "icon": "circle-info",
-        "groups": [
+        "pages": [
           {
             "group": "Help & Support",
             "pages": [
               "resources/contact-support",
               "resources/troubleshooting-and-faqs"
+            ]
+          },
+          {
+            "group": "Attend a Training",
+            "pages": [
+              "onboarding-ai",
+              "attend-a-training",
+              "mastering-prompts"
             ]
           },
           {
