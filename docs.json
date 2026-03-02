@@ -130,7 +130,7 @@
               "playbooks/best-practices/coverage-checklists",
               "playbooks/prompting/magic-wand",
               {
-                "group": "Advance Techniques",
+                "group": "Advanced Techniques",
                 "icon": "diagram-next",
                 "expanded": true,
                 "pages": [
