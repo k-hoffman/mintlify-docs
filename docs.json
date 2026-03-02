@@ -72,12 +72,7 @@
           {
             "group": "Get Answers",
             "pages": [
-              "platform/chats"
-            ]
-          },
-          {
-            "group": "Research",
-            "pages": [
+              "platform/chats",
               "platform/research/legal-search",
               "platform/research/web-search"
             ]
