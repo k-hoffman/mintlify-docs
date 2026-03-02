@@ -92,14 +92,14 @@
               "platform/verify",
               "platform/contract-review",
               "platform/coming-soon/proposal-generator",
-              "platform/custom-report",
-              "platform/batch-extraction"
+              "platform/custom-report"
             ]
           },
           {
             "group": "Automate",
             "pages": [
-              "platform/coming-soon/chrome-extension"
+              "platform/coming-soon/chrome-extension",
+              "platform/batch-extraction"
             ]
           },
           {
