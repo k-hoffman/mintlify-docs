@@ -433,12 +433,14 @@ div[class*="size-7"][class*="rounded-full"][class*="bg-gray-50"] {
   overflow: hidden !important;
 }
 
-/* Top-right arc cluster */
+/* Top-right arc cluster — fixed pixel offsets so arcs stay visible
+   regardless of page length (percentage-based offsets push arcs
+   off-screen on tall pages). */
 #content-area::before {
   content: "";
   position: absolute;
-  top: -26%;
-  right: -14%;
+  top: -240px;
+  right: -160px;
   width: 920px;
   height: 920px;
   background-image: var(--q-arcs-tr);
@@ -454,8 +456,8 @@ div[class*="size-7"][class*="rounded-full"][class*="bg-gray-50"] {
 #content-area::after {
   content: "";
   position: absolute;
-  bottom: -28%;
-  left: -16%;
+  bottom: -200px;
+  left: -180px;
   width: 760px;
   height: 760px;
   background-image: var(--q-arcs-bl);
