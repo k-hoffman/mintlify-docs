@@ -96,10 +96,11 @@ main a:not(.card):not(.sidebar-group a):hover {
   color: var(--q-ink) !important;
 }
 
-/* Active sidebar link: Rose + semi-bold weight */
+/* Active sidebar link: Rose + semi-bold weight, Paper bg instead of pink tint */
 .sidebar-group a.text-primary {
   color: var(--q-rose600) !important;
   font-weight: 600 !important;
+  background-color: var(--q-paper) !important;
 }
 
 /* ---- 5. Sidebar group labels — Inter, Ink, semi-bold ---- */
