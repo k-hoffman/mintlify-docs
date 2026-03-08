@@ -1,16 +1,12 @@
 /* ============================================================
    Qumis Knowledge Base — Custom Styles
    Palette sourced from stats.qumis.ai
-
-   Strategy: light content pane (#F1F0ED paper) with ink text,
-   dark sidebar/nav — mirrors stats.qumis.ai section approach
    ============================================================ */
 
 /* ---- Color tokens ---- */
 :root {
   --q-ink:    #242423;
   --q-paper:  #F1F0ED;
-  --q-white:  #FFFFFF;
   --q-rose:   #E11D48;
   --q-rose3:  #FDA4AF;
   --q-rose4:  #FB7185;
@@ -21,29 +17,15 @@
   --q-p100:   #DEDDD7;
 }
 
-/* ---- 1. Content pane — light paper background ---- */
-/* Target the main content area and give it a light bg */
-article,
-main,
-div[class*="ContentArea"],
-div[class*="content-area"],
-div[class*="Page"],
-div[class*="article"] {
-  background-color: var(--q-paper) !important;
-}
-
-/* The overall page wrapper — keep dark for sidebar contrast */
-body {
-  background-color: var(--q-ink) !important;
-}
-
-/* ---- 2. Wider content area — reduce right-side whitespace ---- */
+/* ---- 1. Wider content area — reduce right-side whitespace ---- */
+/* Hide table-of-contents rail to reclaim width */
 aside[class*="toc"],
 div[class*="TableOfContents"],
 nav[aria-label="Table of contents"] {
   display: none !important;
 }
 
+/* Let content fill the freed space */
 article,
 main > div > div:first-child,
 div[class*="ContentArea"],
@@ -51,88 +33,7 @@ div[class*="content-area"] {
   max-width: 100% !important;
 }
 
-/* ---- 3. Content text — dark on light ---- */
-/* Headings — ink for readability on paper */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--q-ink) !important;
-}
-
-h1 { letter-spacing: -0.035em; }
-h2 { letter-spacing: -0.025em; }
-
-/* Body copy — dark grey on paper */
-p, li, td, th, dd, dt, label, figcaption {
-  color: var(--q-p600) !important;
-}
-
-/* Strong/bold — slightly darker for emphasis */
-strong, b {
-  color: var(--q-ink) !important;
-}
-
-/* Links — indigo works on both light and dark */
-a:not([class*="Card"]):not([class*="button"]):not(nav a) {
-  color: #4F46E5 !important;
-}
-
-/* Inline code — subtle on paper */
-code:not(pre code) {
-  background: rgba(36, 36, 35, 0.06) !important;
-  color: var(--q-ink) !important;
-}
-
-/* ---- 4. Cards — white on paper, subtle borders ---- */
-[class*="Card"] a,
-.card,
-[class*="card"] {
-  background: var(--q-white) !important;
-  border-color: var(--q-p200) !important;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-[class*="Card"] a:hover,
-.card:hover,
-[class*="card"]:hover {
-  transform: translateY(-2px);
-  border-color: var(--q-p500) !important;
-  box-shadow: 0 4px 12px rgba(36, 36, 35, 0.08) !important;
-}
-
-/* Card titles — ink */
-[class*="Card"] a p:first-child,
-[class*="Card"] a [class*="title"],
-.card [class*="title"] {
-  color: var(--q-ink) !important;
-  font-family: "Inter", sans-serif !important;
-}
-
-/* Card descriptions — grey */
-[class*="Card"] a p:last-child,
-[class*="Card"] a [class*="description"],
-.card [class*="description"] {
-  color: var(--q-p600) !important;
-}
-
-/* Card icons — rose accent */
-[class*="Card"] a svg,
-[class*="Card"] a [class*="icon"] {
-  color: var(--q-rose) !important;
-}
-
-/* ---- 5. HR — gradient separator (rose → blue) ---- */
-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(225, 29, 72, 0.15),
-    rgba(96, 165, 250, 0.15),
-    transparent
-  );
-}
-
-/* ---- 6. Inter on buttons and nav group headings ---- */
+/* ---- 2. Inter on buttons and nav group headings ---- */
 button,
 a[class*="button"],
 [class*="Button"],
@@ -154,7 +55,82 @@ aside span[class*="GroupTitle"],
   color: var(--q-p500);
 }
 
-/* ---- 7. Sidebar branding — "KNOWLEDGE BASE" beneath wordmark ---- */
+/* ---- 3. Lighter colour palette ---- */
+/* Body text — softer grey instead of pure white */
+body {
+  color: var(--q-p200);
+}
+
+/* Headings — off-white for contrast without harshness */
+h1, h2, h3, h4, h5, h6 {
+  color: #F1F0ED !important;
+}
+
+h1 { letter-spacing: -0.035em; }
+h2 { letter-spacing: -0.025em; }
+
+/* Paragraph / body copy — medium grey */
+p, li, td, th, dd, dt, label, figcaption {
+  color: var(--q-p600);
+}
+
+/* Links — use the indigo primary, not pure white */
+a:not([class*="Card"]):not([class*="button"]):not(nav a) {
+  color: #818CF8;
+}
+
+/* Subtle gradient background glows (rose → blue) */
+body {
+  background-image:
+    radial-gradient(ellipse at 85% 0%, rgba(253, 164, 175, 0.04) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 100%, rgba(96, 165, 250, 0.04) 0%, transparent 55%);
+}
+
+/* Cards — lighter borders, soft glow on hover */
+[class*="Card"] a,
+.card {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+[class*="Card"] a:hover,
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Card titles — keep crisp */
+[class*="Card"] a p:first-child,
+[class*="Card"] a [class*="title"],
+.card [class*="title"] {
+  color: #F1F0ED !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+/* Card descriptions — softer */
+[class*="Card"] a p:last-child,
+[class*="Card"] a [class*="description"],
+.card [class*="description"] {
+  color: var(--q-p500) !important;
+}
+
+/* HR — gradient separator (rose → blue) */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(253, 164, 175, 0.12),
+    rgba(96, 165, 250, 0.12),
+    transparent
+  );
+}
+
+/* ---- 4. Sidebar branding — "KNOWLEDGE BASE" beneath wordmark ---- */
+/* Hide the default text-based site name */
 nav[class*="sidebar"] a[class*="logo"] span,
 aside a[class*="logo"] span,
 [class*="sidebar"] [class*="SiteName"],
@@ -162,6 +138,7 @@ aside a[class*="logo"] span,
   display: none !important;
 }
 
+/* Add "KNOWLEDGE BASE" subtitle beneath logo via ::after */
 nav[class*="sidebar"] a[class*="logo"],
 aside a[class*="logo"],
 [class*="sidebar"] a[href="/get-started/welcome"] {
@@ -184,7 +161,7 @@ aside a[class*="logo"]::after,
   text-align: center;
 }
 
-/* ---- 8. Sidebar navigation — stays dark, lighter text ---- */
+/* ---- 5. Sidebar navigation — lighter, airier ---- */
 nav[class*="sidebar"] a,
 aside[class*="sidebar"] a,
 [class*="sidebar"] a[class*="page"] {
@@ -195,28 +172,30 @@ aside[class*="sidebar"] a,
 nav[class*="sidebar"] a:hover,
 aside[class*="sidebar"] a:hover,
 [class*="sidebar"] a[class*="page"]:hover {
-  color: var(--q-paper) !important;
+  color: #F1F0ED !important;
 }
 
+/* Active page — indigo accent */
 nav[class*="sidebar"] a[class*="active"],
 aside[class*="sidebar"] a[class*="active"],
 [class*="sidebar"] a[aria-current="page"] {
   color: #818CF8 !important;
 }
 
-/* ---- 9. Top navbar — dark with subtle border ---- */
+/* ---- 6. Top navbar — softer ---- */
 #navbar,
 nav[class*="top"],
 header[class*="nav"] {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
+/* Tab labels in top nav */
 nav[class*="tabs"] a,
 [class*="TabLink"] {
   font-family: "Inter", sans-serif !important;
 }
 
-/* ---- 10. Search bar — softer border ---- */
+/* ---- 7. Search bar — softer border ---- */
 button[class*="search"],
 [class*="Search"] button,
 [class*="search-bar"] {
@@ -224,7 +203,7 @@ button[class*="search"],
   background: rgba(255, 255, 255, 0.02) !important;
 }
 
-/* ---- 11. Page eyebrow / breadcrumb — rose accent ---- */
+/* ---- 8. Page eyebrow / breadcrumb — rose accent ---- */
 [class*="eyebrow"],
 [class*="Eyebrow"],
 [class*="breadcrumb"] span:first-child {
@@ -234,31 +213,4 @@ button[class*="search"],
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-/* ---- 12. Tables — clean on paper ---- */
-table {
-  border-color: var(--q-p200) !important;
-}
-
-th {
-  background: rgba(36, 36, 35, 0.04) !important;
-  color: var(--q-ink) !important;
-  font-family: "Inter", sans-serif !important;
-  font-weight: 600;
-}
-
-td {
-  border-color: var(--q-p100) !important;
-}
-
-/* ---- 13. Callout boxes / admonitions — light treatment ---- */
-[class*="callout"],
-[class*="Callout"],
-[class*="admonition"],
-[class*="Note"],
-[class*="Tip"],
-[class*="Warning"] {
-  background: var(--q-white) !important;
-  border-color: var(--q-p200) !important;
 }
