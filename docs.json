@@ -24,7 +24,7 @@
   "fonts": {
     "heading": {
       "family": "Lora",
-      "weight": 500
+      "weight": 400
     },
     "body": {
       "family": "Inter",
