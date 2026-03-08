@@ -2,6 +2,10 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Qumis Knowledge Base",
+  "logo": {
+    "dark": "/logo-dark.svg",
+    "href": "/get-started/welcome"
+  },
   "colors": {
     "primary": "#6366F1",
     "light": "#818CF8",
