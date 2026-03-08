@@ -425,14 +425,14 @@ div[class*="size-7"][class*="rounded-full"][class*="bg-gray-50"] {
   --q-arcs-bl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 760' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='dg2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FDA4AF'/%3E%3Cstop offset='100%25' stop-color='%2360A5FA'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='380' cy='380' r='88' stroke='%23CBC9C2' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='380' cy='380' r='175' stroke='url(%23dg2)' stroke-width='0.65' opacity='0.13'/%3E%3Ccircle cx='380' cy='380' r='265' stroke='%23CBC9C2' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='380' cy='380' r='350' stroke='%23CBC9C2' stroke-width='0.3' opacity='0.18'/%3E%3Cline x1='380' y1='0' x2='380' y2='760' stroke='%23CBC9C2' stroke-width='0.3' opacity='0.18'/%3E%3Cline x1='0' y1='380' x2='760' y2='380' stroke='%23CBC9C2' stroke-width='0.3' opacity='0.18'/%3E%3Cline x1='60' y1='60' x2='700' y2='700' stroke='%23CBC9C2' stroke-width='0.3' opacity='0.18'/%3E%3Cline x1='700' y1='60' x2='60' y2='700' stroke='%23CBC9C2' stroke-width='0.3' opacity='0.18'/%3E%3C/svg%3E");
 }
 
-/* Container setup — article needs relative positioning for pseudo-elements */
-article {
+/* Container setup — #content-area needs relative positioning for pseudo-elements */
+#content-area {
   position: relative !important;
   overflow: hidden !important;
 }
 
 /* Top-right arc cluster */
-article::before {
+#content-area::before {
   content: "";
   position: absolute;
   top: -26%;
@@ -449,7 +449,7 @@ article::before {
 }
 
 /* Bottom-left arc cluster */
-article::after {
+#content-area::after {
   content: "";
   position: absolute;
   bottom: -28%;
@@ -466,7 +466,7 @@ article::after {
 }
 
 /* Content must sit above the arcs */
-article > * {
+#content-area > * {
   position: relative;
   z-index: 1;
 }
@@ -486,8 +486,8 @@ article > * {
 
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
-  article::before,
-  article::after {
+  #content-area::before,
+  #content-area::after {
     animation: none;
     opacity: 1;
   }
