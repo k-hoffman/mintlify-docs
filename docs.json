@@ -3,6 +3,7 @@
   "theme": "maple",
   "name": "Qumis Knowledge Base",
   "logo": {
+    "light": "/logo-light.svg",
     "dark": "/logo-dark.svg",
     "href": "/get-started/welcome"
   },
