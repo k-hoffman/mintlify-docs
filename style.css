@@ -103,8 +103,19 @@ main a:not(.card):not(.sidebar-group a):hover {
 }
 
 /* ---- 5. Sidebar group labels — Inter, Ink, semi-bold ---- */
+/* Override the Mintlify heading font CSS variable on sidebar containers */
+div[class*="relative lg:text-sm"],
+div[class*="sidebar-group"],
 .sidebar-group-header {
-  font-family: "Inter", sans-serif !important;
+  --font-family-headings-custom: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important;
+}
+
+.sidebar-group-header,
+div.sidebar-group-header,
+div.sidebar-group-header.font-semibold,
+div.sidebar-group-header.flex.items-center.font-semibold.text-gray-900 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important;
+  font-family: var(--font-family-body-custom, "Inter", sans-serif) !important;
   color: var(--q-ink) !important;
   font-weight: 600 !important;
   font-size: 0.8125rem !important;
@@ -320,4 +331,28 @@ button[class*="search"],
 /* Keyboard shortcut badge in search */
 .z-30 button[class*="search"] span[class*="font-semibold"] {
   color: var(--q-p500) !important;
+}
+
+/* ---- 15. Ask a Question — lighter Paper background to stand out ---- */
+.chat-assistant-floating-input {
+  background: var(--q-white) !important;
+  border-radius: 1rem;
+  padding: 0.75rem !important;
+  box-shadow: 0 2px 12px rgba(36, 36, 35, 0.08) !important;
+  border: 1px solid var(--q-p100) !important;
+}
+
+/* The input area container */
+div[class*="bg-background-light/90"].rounded-2xl {
+  background: var(--q-white) !important;
+}
+
+/* Textarea styling */
+.chat-assistant-input {
+  background: transparent !important;
+  color: var(--q-ink) !important;
+}
+
+.chat-assistant-input::placeholder {
+  color: var(--q-p400) !important;
 }
