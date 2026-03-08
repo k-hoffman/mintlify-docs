@@ -277,8 +277,21 @@ button[class*="search"],
 }
 
 /* Ask AI button in top bar */
-.z-30 button[class*="ai"],
-.z-30 button[class*="Ask"] {
+.z-30 button.group\/ai,
+.z-30 button[class*="group/ai"] {
+  background: var(--q-p900) !important;
+  border-color: var(--q-p700) !important;
+  color: var(--q-p300) !important;
+  ring-color: var(--q-p700) !important;
+}
+
+.z-30 button.group\/ai svg,
+.z-30 button[class*="group/ai"] svg {
+  color: var(--q-p400) !important;
+}
+
+.z-30 button.group\/ai span,
+.z-30 button[class*="group/ai"] span {
   color: var(--q-p300) !important;
 }
 
