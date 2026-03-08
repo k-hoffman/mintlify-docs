@@ -82,7 +82,7 @@ a:not([class*="Card"]):not([class*="button"]):not(nav a):hover {
   color: var(--q-rose700);
 }
 
-/* ---- 4. Cards — White on Paper, Paper 200 borders ---- */
+/* ---- 4. Cards — White on Paper, subtle borders, clean styling ---- */
 [class*="Card"] a,
 .card,
 [class*="card"] {
@@ -99,6 +99,15 @@ a:not([class*="Card"]):not([class*="button"]):not(nav a):hover {
   box-shadow: 0 4px 12px rgba(36, 36, 35, 0.06) !important;
 }
 
+/* Card icon area — remove dark backgrounds, use subtle Paper tint */
+[class*="Card"] [class*="icon"],
+[class*="card"] [class*="icon"],
+.card [class*="icon"] {
+  background: var(--q-p50) !important;
+  color: var(--q-rose600) !important;
+}
+
+/* Card titles — Ink, Inter medium */
 [class*="Card"] a p:first-child,
 [class*="Card"] a [class*="title"],
 .card [class*="title"] {
@@ -107,13 +116,14 @@ a:not([class*="Card"]):not([class*="button"]):not(nav a):hover {
   font-weight: 500;
 }
 
+/* Card descriptions — Paper 600 */
 [class*="Card"] a p:last-child,
 [class*="Card"] a [class*="description"],
 .card [class*="description"] {
   color: var(--q-p600) !important;
 }
 
-/* ---- 5. Buttons — Inter, Rose accent ---- */
+/* ---- 5. Buttons — Inter, clean styling ---- */
 button,
 a[class*="button"],
 [class*="Button"],
@@ -135,63 +145,37 @@ aside span[class*="GroupTitle"],
   color: var(--q-p500);
 }
 
-/* ---- 7. Sidebar "KNOWLEDGE BASE" beneath wordmark ---- */
-nav[class*="sidebar"] a[class*="logo"] span,
-aside a[class*="logo"] span,
-[class*="sidebar"] [class*="SiteName"],
-[class*="sidebar"] [class*="site-name"] {
-  display: none !important;
-}
-
-nav[class*="sidebar"] a[class*="logo"],
-aside a[class*="logo"],
-[class*="sidebar"] a[href="/get-started/welcome"] {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-}
-
-nav[class*="sidebar"] a[class*="logo"]::after,
-aside a[class*="logo"]::after,
-[class*="sidebar"] a[href="/get-started/welcome"]::after {
-  content: "KNOWLEDGE BASE";
-  display: block;
-  font-family: "Inter", sans-serif;
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  color: var(--q-rose600);
-  margin-top: 4px;
-  text-align: center;
-}
-
-/* ---- 8. Sidebar links ---- */
+/* ---- 7. Sidebar links — default state ---- */
 nav[class*="sidebar"] a,
 aside[class*="sidebar"] a,
 [class*="sidebar"] a[class*="page"] {
-  color: var(--q-p600) !important;
+  color: var(--q-p700) !important;
   font-family: "Inter", sans-serif !important;
+  font-weight: 400 !important;
 }
 
+/* Sidebar links — hover */
 nav[class*="sidebar"] a:hover,
 aside[class*="sidebar"] a:hover,
 [class*="sidebar"] a[class*="page"]:hover {
   color: var(--q-ink) !important;
 }
 
+/* Sidebar links — active/selected page: Rose + heavier weight */
 nav[class*="sidebar"] a[class*="active"],
 aside[class*="sidebar"] a[class*="active"],
 [class*="sidebar"] a[aria-current="page"] {
   color: var(--q-rose600) !important;
+  font-weight: 600 !important;
 }
 
-/* ---- 9. Top nav tabs — Inter ---- */
+/* ---- 8. Top nav tabs — Inter ---- */
 nav[class*="tabs"] a,
 [class*="TabLink"] {
   font-family: "Inter", sans-serif !important;
 }
 
-/* ---- 10. Breadcrumbs / eyebrow — Rose accent ---- */
+/* ---- 9. Breadcrumbs / eyebrow — Rose accent ---- */
 [class*="eyebrow"],
 [class*="Eyebrow"],
 [class*="breadcrumb"] span:first-child {
@@ -203,7 +187,7 @@ nav[class*="tabs"] a,
   text-transform: uppercase;
 }
 
-/* ---- 11. HR — subtle Dawn gradient ---- */
+/* ---- 10. HR — subtle gradient ---- */
 hr {
   border: none;
   height: 1px;
@@ -215,7 +199,7 @@ hr {
   );
 }
 
-/* ---- 12. Tables — clean on Paper ---- */
+/* ---- 11. Tables — clean on Paper ---- */
 table {
   border-color: var(--q-p200) !important;
 }
@@ -231,13 +215,13 @@ td {
   border-color: var(--q-p100) !important;
 }
 
-/* ---- 13. Code blocks — Ink on Paper 100 ---- */
+/* ---- 12. Code blocks — Ink on Paper 100 ---- */
 code:not(pre code) {
   background: var(--q-p100) !important;
   color: var(--q-ink) !important;
 }
 
-/* ---- 14. Callouts / admonitions ---- */
+/* ---- 13. Callouts / admonitions ---- */
 [class*="callout"],
 [class*="Callout"],
 [class*="admonition"],
@@ -248,7 +232,7 @@ code:not(pre code) {
   border-color: var(--q-p200) !important;
 }
 
-/* ---- 15. Search bar ---- */
+/* ---- 14. Search bar ---- */
 button[class*="search"],
 [class*="Search"] button,
 [class*="search-bar"] {
