@@ -124,19 +124,22 @@ main a:not(.card):not(.sidebar-group a):hover {
   box-shadow: 0 4px 12px rgba(36, 36, 35, 0.06) !important;
 }
 
-/* Card icon — rose colored, transparent background */
-.card svg {
-  color: var(--q-rose600) !important;
-  fill: var(--q-rose600) !important;
-  background-color: transparent !important;
+/* Card icons use CSS mask — bg-color shows through the mask shape.
+   The SVG with .bg-primary needs background-color as its "fill".
+   The parent div with .fill-gray-800 wraps the masked SVG. */
+.card svg.bg-primary,
+.card svg.dark\:bg-primary-light {
+  background-color: var(--q-rose600) !important;
 }
 
-/* Card icon container — rose icon on transparent bg */
-.card .h-6.w-6,
-.card [class*="fill-gray"] {
+/* Arrow/link icon in card — keep rose */
+.card svg.lucide {
   color: var(--q-rose600) !important;
-  fill: var(--q-rose600) !important;
-  background-color: transparent !important;
+}
+
+/* The wrapper div around the masked icon SVG */
+.card .h-6.w-6.fill-gray-800 {
+  color: var(--q-ink) !important;
 }
 
 /* Card titles — Ink color */
