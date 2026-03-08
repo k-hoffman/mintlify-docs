@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "mint",
   "name": "Qumis Knowledge Base",
   "logo": {
     "light": "/logo-light.svg",
@@ -8,20 +8,23 @@
     "href": "/get-started/welcome"
   },
   "colors": {
-    "primary": "#6366F1",
+    "primary": "#FDA4AF",
     "light": "#818CF8",
     "dark": "#4F46E5"
   },
   "appearance": {
-    "default": "dark",
+    "default": "system",
     "strict": true
   },
   "background": {
     "color": {
       "dark": "#242423"
-    }
+    },
+    "decoration": "grid"
   },
   "fonts": {
+    "family": "Inter",
+    "weight": 200,
     "heading": {
       "family": "Lora",
       "weight": 400
@@ -305,5 +308,8 @@
   ],
   "seo": {
     "indexing": "navigable"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
   }
 }
