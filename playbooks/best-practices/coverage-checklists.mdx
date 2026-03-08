@@ -1,4 +1,304 @@
 ---
-title: "Coverage Checklists"
+title: "Checklist Template Guide"
+description: "Learn how to write checklist templates for Coverage Table reports, including repeating groups, nesting, and line-of-business examples"
 icon: "list-check"
 ---
+
+<Info>
+  A template is a list of fields you want extracted from insurance policy documents. You write it as a simple text outline, and the system reads your uploaded documents to fill in the values for each field.
+  Templates are entered in the **Additional Notes** field when creating a checklist or policy comparison report.
+</Info>
+
+---
+
+## Basic rules
+
+1. **One field per line** — each line is something you want extracted
+2. **Indentation shows grouping** — indent child fields under their parent with spaces
+3. **Flat fields get one value** — fields like "Policy Number" produce a single extracted value per document
+4. **List fields expand automatically** — fields like "Locations" or "Vehicles" will repeat based on how many the system finds in each document
+
+---
+
+## A simple template (no repeating items)
+
+If you just need single values from each policy:
+
+```plaintext  theme={null}
+Named Insureds
+ERISA Name
+DBA
+Mailing Address
+Policy Number
+Effective Date
+Expiration Date
+Property Premium
+```
+
+Each field produces one row in the output, with a value extracted from each document.
+
+---
+
+## Templates with repeating items
+
+When a policy has multiple locations, buildings, vehicles, etc., you need the template to handle a variable number of items. You do this by **indenting the detail fields under the repeating group**.
+
+### Commercial Property example
+
+```plaintext  theme={null}
+Named Insureds
+ERISA Name
+Insureds Others
+DBA
+Mailing Address
+Policy Number
+Effective Date
+Expiration Date
+Property Premium
+Number of Locations
+Locations
+  Premises Information
+  Premises Description
+  Buildings
+    Address
+    Limit
+    Cause of Loss
+    Deductible
+    Coinsurance
+    Valuation
+    BPP Limit
+    BPP Cause of Loss
+    BPP Deductible
+    BPP Coinsurance
+    BPP Valuation
+    Business Income Limit
+    Extra Expense Coverage
+    Business Income Cause of Loss
+    Business Income Deductible
+    Business Income Coinsurance
+    Business Income Valuation
+```
+
+**What happens:** The system reads each document and figures out how many locations exist, then how many buildings are at each location. It creates a row for every combination automatically.
+
+For example, if a policy has 2 locations and Location 1 has 2 buildings while Location 2 has 1 building, you get:
+
+* Location 1 > Premises Information
+* Location 1 > Premises Description
+* Location 1 > Building 1 > Address
+* Location 1 > Building 1 > Limit
+* Location 1 > Building 1 > Deductible
+* ...all other building fields for Building 1...
+* Location 1 > Building 2 > Address
+* Location 1 > Building 2 > Limit
+* ...all other building fields for Building 2...
+* Location 2 > Premises Information
+* Location 2 > Premises Description
+* Location 2 > Building 1 > Address
+* Location 2 > Building 1 > Limit
+* ...and so on
+
+<Tip>
+  You do not need to know the count ahead of time. Just define the structure once and the system discovers the actual number from each document.
+</Tip>
+
+---
+
+## Which fields repeat automatically?
+
+The system recognizes these as repeating groups when they have indented fields beneath them:
+
+* Locations
+* Buildings
+* Vehicles
+* Drivers
+* Items
+* Equipment
+* Premises
+* Properties
+* Vessels
+* Aircraft
+* Trailers
+* Units
+* Schedules
+
+<Warning>
+  The name must match exactly. "Buildings" is recognized as a repeating group, but "Building Information" or "Building Details" would not be — those are treated as regular single-value fields.
+</Warning>
+
+---
+
+## Using the \[] marker for any repeating group
+
+If you need a field to repeat that is not in the list above, add `[]` after the name:
+
+```plaintext  theme={null}
+Named Insureds[]
+  Name
+  Role
+  Address
+```
+
+This tells the system explicitly: "there can be more than one of these." The `[]` is removed from the output — you'll see "Named Insureds" in your results, not "Named Insureds\[]".
+
+You can also use `[]` on recognized fields for extra clarity:
+
+```plaintext  theme={null}
+Locations[]
+  Premises Description
+  Buildings[]
+    Address
+    Limit
+    Valuation
+```
+
+Both approaches work. The `[]` marker simply removes any ambiguity.
+
+---
+
+## More template examples
+
+<AccordionGroup>
+  <Accordion title="Auto / Fleet Policy">
+    ```plaintext  theme={null}
+    Named Insured
+    Policy Number
+    Effective Date
+    Expiration Date
+    Liability Limit - CSL
+    Liability Limit - BI Per Person
+    Liability Limit - BI Per Accident
+    Liability Limit - PD
+    Uninsured Motorist
+    Underinsured Motorist
+    Medical Payments
+    Vehicles
+      Year
+      Make
+      Model
+      VIN
+      Garage Location
+      Liability Premium
+      Comprehensive Deductible
+      Collision Deductible
+    Drivers
+      Name
+      Date of Birth
+      License Number
+      Driver Status
+    ```
+    The system finds all vehicles and drivers in the document and creates rows for each one.
+  </Accordion>
+  <Accordion title="Property Policy with Equipment">
+    ```plaintext  theme={null}
+    Named Insured
+    Policy Number
+    Effective Date
+    Expiration Date
+    Blanket Limit
+    Blanket Deductible
+    Locations
+      Address
+      Premises Description
+      Occupancy
+      Buildings
+        Building Number
+        Construction Type
+        Year Built
+        Square Footage
+        Building Limit
+        Building Valuation
+        Building Cause of Loss
+        Building Deductible
+        Building Coinsurance
+        BPP Limit
+        BPP Valuation
+        BPP Cause of Loss
+        BPP Deductible
+        Business Income Limit
+        Extra Expense Limit
+      Equipment
+        Description
+        Serial Number
+        Value
+        Deductible
+    ```
+    This template has three levels of nesting: Locations contain Buildings and Equipment. Each location's buildings and equipment are tracked separately.
+  </Accordion>
+  <Accordion title="Workers Compensation">
+    ```plaintext  theme={null}
+    Named Insured
+    Policy Number
+    Effective Date
+    Expiration Date
+    Part One - Workers Compensation
+    Part Two - Employers Liability
+      Each Accident
+      Disease - Policy Limit
+      Disease - Each Employee
+    Locations[]
+      State
+      Class Code
+      Description
+      Rate
+      Premium
+    Experience Modification Factor
+    ```
+  </Accordion>
+  <Accordion title="Directors & Officers (D&O)">
+    ```plaintext  theme={null}
+    Named Insured
+    Policy Number
+    Effective Date
+    Expiration Date
+    Aggregate Limit
+    Retention
+    Coverage A - Directors & Officers Limit
+    Coverage B - Corporate Reimbursement Limit
+    Coverage C - Entity Coverage Limit
+    Defense Cost Treatment
+    Pending and Prior Litigation Date
+    Continuity Date
+    ```
+    This is a flat template with no repeating groups — every field returns one value per document.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Fields that do NOT repeat
+
+These common fields are always treated as single values, even though they sound plural:
+
+* Named Insureds (unless you add `[]`)
+* Coverages
+* Exclusions
+* Endorsements
+* Each Occurrence
+* Per Claim Retention
+* Aggregate Limit
+* Premium
+
+If you need any of these to repeat, add the `[]` marker.
+
+---
+
+## Tips
+
+* **Put policy-level fields at the top** with no indentation (policy number, dates, limits)
+* **Put repeating groups below** with their detail fields indented underneath
+* **Use consistent indentation** — 2 or 4 spaces, just be consistent
+* **You only define the structure once** — the system figures out how many locations, buildings, vehicles, etc. exist in each document
+* **Nesting works to any depth** — Locations > Buildings > Equipment is fully supported
+* **When comparing policies**, upload multiple documents and use the same template. The system extracts values from each document side by side
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Coverage Table" icon="table" href="/reports/coverage-table">
+    Create side-by-side coverage comparisons using your templates
+  </Card>
+  <Card title="Prompt Library" icon="book" href="/features/prompt-library">
+    Save and reuse your checklist templates
+  </Card>
+</CardGroup>
