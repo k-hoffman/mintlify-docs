@@ -428,8 +428,8 @@ div[class*="size-7"][class*="rounded-full"][class*="bg-gray-50"] {
   background-size: 28px 28px;
   pointer-events: none;
   z-index: 0;
-  -webkit-mask-image: linear-gradient(to right, transparent, black);
-  mask-image: linear-gradient(to right, transparent, black);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
 
 /* ---- 18. Qumis icon watermark — bottom-right of page ---- */
