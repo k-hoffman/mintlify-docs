@@ -1,0 +1,43 @@
+/* Qumis Knowledge Base — custom styles to match stats.qumis.ai */
+
+/* Subtle gradient glow on the page background */
+body {
+  background-image:
+    radial-gradient(ellipse at 80% 0%, rgba(253, 164, 175, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 100%, rgba(96, 165, 250, 0.05) 0%, transparent 60%);
+}
+
+/* Cards — subtle borders with slight hover lift */
+[class*="Card"] a,
+.card {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+[class*="Card"] a:hover,
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* Tighter heading letter-spacing like stats.qumis.ai */
+h1 {
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  letter-spacing: -0.025em;
+}
+
+/* Horizontal rules — subtle gradient separator */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(253, 164, 175, 0.15),
+    rgba(96, 165, 250, 0.15),
+    transparent
+  );
+}
