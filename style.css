@@ -1,31 +1,56 @@
 /* ============================================================
-   Qumis Knowledge Base — Custom Styles
-   Palette sourced from stats.qumis.ai
+   Qumis Knowledge Base — Brand Book v2.5 Compliant Styles
+
+   Primary palette: Paper #F1F0ED, Ink #242423, White #FFFFFF
+   Accent: Rose 600 #E11D48, Dawn gradient #FDA4AF → #60A5FA
+   Display: Lora Medium | Text: Inter Regular
+   Icons: Lucide
    ============================================================ */
 
-/* ---- Color tokens ---- */
 :root {
-  --q-ink:    #242423;
-  --q-paper:  #F1F0ED;
-  --q-rose:   #E11D48;
-  --q-rose3:  #FDA4AF;
-  --q-rose4:  #FB7185;
-  --q-blue:   #60A5FA;
-  --q-p600:   #767575;
-  --q-p500:   #8A8A89;
-  --q-p200:   #CBC9C2;
-  --q-p100:   #DEDDD7;
+  /* Brand primaries */
+  --q-white:   #FFFFFF;
+  --q-paper:   #F1F0ED;
+  --q-ink:     #242423;
+
+  /* Paper scale */
+  --q-p50:     #F1F0ED;
+  --q-p100:    #DEDDD7;
+  --q-p200:    #CBC9C2;
+  --q-p300:    #B6B4AE;
+  --q-p400:    #A19F9B;
+  --q-p500:    #8A8A89;
+  --q-p600:    #767575;
+  --q-p700:    #616161;
+  --q-p800:    #4D4D4C;
+  --q-p900:    #383838;
+  --q-p950:    #242424;
+
+  /* Rose scale */
+  --q-rose50:  #FFF1F2;
+  --q-rose100: #FFE4E6;
+  --q-rose200: #FECDD3;
+  --q-rose300: #FDA4AF;
+  --q-rose400: #FB7185;
+  --q-rose500: #E11D48;
+  --q-rose600: #E11D48;
+  --q-rose700: #BE123C;
+  --q-rose800: #9F1239;
+
+  /* Blue scale */
+  --q-blue300: #93C5FD;
+  --q-blue400: #60A5FA;
+  --q-blue500: #3B82F6;
+  --q-blue600: #2563EB;
 }
 
-/* ---- 1. Wider content area — reduce right-side whitespace ---- */
-/* Hide table-of-contents rail to reclaim width */
+/* ---- 1. Hide TOC rail — widen content ---- */
 aside[class*="toc"],
 div[class*="TableOfContents"],
 nav[aria-label="Table of contents"] {
   display: none !important;
 }
 
-/* Let content fill the freed space */
 article,
 main > div > div:first-child,
 div[class*="ContentArea"],
@@ -33,7 +58,62 @@ div[class*="content-area"] {
   max-width: 100% !important;
 }
 
-/* ---- 2. Inter on buttons and nav group headings ---- */
+/* ---- 2. Typography — Ink headings, Paper 600 body ---- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--q-ink) !important;
+}
+
+h1 { letter-spacing: -0.035em; }
+h2 { letter-spacing: -0.025em; }
+
+p, li, td, th, dd, dt, label, figcaption {
+  color: var(--q-p600);
+}
+
+strong, b {
+  color: var(--q-ink) !important;
+}
+
+/* ---- 3. Links — Rose 600 accent ---- */
+a:not([class*="Card"]):not([class*="button"]):not(nav a) {
+  color: var(--q-rose600);
+}
+a:not([class*="Card"]):not([class*="button"]):not(nav a):hover {
+  color: var(--q-rose700);
+}
+
+/* ---- 4. Cards — White on Paper, Paper 200 borders ---- */
+[class*="Card"] a,
+.card,
+[class*="card"] {
+  background: var(--q-white) !important;
+  border: 1px solid var(--q-p100) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[class*="Card"] a:hover,
+.card:hover,
+[class*="card"]:hover {
+  transform: translateY(-2px);
+  border-color: var(--q-p200) !important;
+  box-shadow: 0 4px 12px rgba(36, 36, 35, 0.06) !important;
+}
+
+[class*="Card"] a p:first-child,
+[class*="Card"] a [class*="title"],
+.card [class*="title"] {
+  color: var(--q-ink) !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500;
+}
+
+[class*="Card"] a p:last-child,
+[class*="Card"] a [class*="description"],
+.card [class*="description"] {
+  color: var(--q-p600) !important;
+}
+
+/* ---- 5. Buttons — Inter, Rose accent ---- */
 button,
 a[class*="button"],
 [class*="Button"],
@@ -41,7 +121,7 @@ input[type="submit"] {
   font-family: "Inter", sans-serif !important;
 }
 
-/* Sidebar group labels */
+/* ---- 6. Sidebar nav group labels — Inter uppercase ---- */
 nav span[class*="group"],
 nav p[class*="group"],
 nav div[class*="group"] > span,
@@ -55,82 +135,7 @@ aside span[class*="GroupTitle"],
   color: var(--q-p500);
 }
 
-/* ---- 3. Lighter colour palette ---- */
-/* Body text — softer grey instead of pure white */
-body {
-  color: var(--q-p200);
-}
-
-/* Headings — off-white for contrast without harshness */
-h1, h2, h3, h4, h5, h6 {
-  color: #F1F0ED !important;
-}
-
-h1 { letter-spacing: -0.035em; }
-h2 { letter-spacing: -0.025em; }
-
-/* Paragraph / body copy — medium grey */
-p, li, td, th, dd, dt, label, figcaption {
-  color: var(--q-p600);
-}
-
-/* Links — use the indigo primary, not pure white */
-a:not([class*="Card"]):not([class*="button"]):not(nav a) {
-  color: #818CF8;
-}
-
-/* Subtle gradient background glows (rose → blue) */
-body {
-  background-image:
-    radial-gradient(ellipse at 85% 0%, rgba(253, 164, 175, 0.04) 0%, transparent 55%),
-    radial-gradient(ellipse at 15% 100%, rgba(96, 165, 250, 0.04) 0%, transparent 55%);
-}
-
-/* Cards — lighter borders, soft glow on hover */
-[class*="Card"] a,
-.card {
-  border-color: rgba(255, 255, 255, 0.06) !important;
-  background: rgba(255, 255, 255, 0.02) !important;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-}
-
-[class*="Card"] a:hover,
-.card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.12) !important;
-  background: rgba(255, 255, 255, 0.04) !important;
-}
-
-/* Card titles — keep crisp */
-[class*="Card"] a p:first-child,
-[class*="Card"] a [class*="title"],
-.card [class*="title"] {
-  color: #F1F0ED !important;
-  font-family: "Inter", sans-serif !important;
-}
-
-/* Card descriptions — softer */
-[class*="Card"] a p:last-child,
-[class*="Card"] a [class*="description"],
-.card [class*="description"] {
-  color: var(--q-p500) !important;
-}
-
-/* HR — gradient separator (rose → blue) */
-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(253, 164, 175, 0.12),
-    rgba(96, 165, 250, 0.12),
-    transparent
-  );
-}
-
-/* ---- 4. Sidebar branding — "KNOWLEDGE BASE" beneath wordmark ---- */
-/* Hide the default text-based site name */
+/* ---- 7. Sidebar "KNOWLEDGE BASE" beneath wordmark ---- */
 nav[class*="sidebar"] a[class*="logo"] span,
 aside a[class*="logo"] span,
 [class*="sidebar"] [class*="SiteName"],
@@ -138,7 +143,6 @@ aside a[class*="logo"] span,
   display: none !important;
 }
 
-/* Add "KNOWLEDGE BASE" subtitle beneath logo via ::after */
 nav[class*="sidebar"] a[class*="logo"],
 aside a[class*="logo"],
 [class*="sidebar"] a[href="/get-started/welcome"] {
@@ -156,61 +160,98 @@ aside a[class*="logo"]::after,
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.14em;
-  color: var(--q-rose);
+  color: var(--q-rose600);
   margin-top: 4px;
   text-align: center;
 }
 
-/* ---- 5. Sidebar navigation — lighter, airier ---- */
+/* ---- 8. Sidebar links ---- */
 nav[class*="sidebar"] a,
 aside[class*="sidebar"] a,
 [class*="sidebar"] a[class*="page"] {
-  color: var(--q-p500) !important;
+  color: var(--q-p600) !important;
   font-family: "Inter", sans-serif !important;
 }
 
 nav[class*="sidebar"] a:hover,
 aside[class*="sidebar"] a:hover,
 [class*="sidebar"] a[class*="page"]:hover {
-  color: #F1F0ED !important;
+  color: var(--q-ink) !important;
 }
 
-/* Active page — indigo accent */
 nav[class*="sidebar"] a[class*="active"],
 aside[class*="sidebar"] a[class*="active"],
 [class*="sidebar"] a[aria-current="page"] {
-  color: #818CF8 !important;
+  color: var(--q-rose600) !important;
 }
 
-/* ---- 6. Top navbar — softer ---- */
-#navbar,
-nav[class*="top"],
-header[class*="nav"] {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-}
-
-/* Tab labels in top nav */
+/* ---- 9. Top nav tabs — Inter ---- */
 nav[class*="tabs"] a,
 [class*="TabLink"] {
   font-family: "Inter", sans-serif !important;
 }
 
-/* ---- 7. Search bar — softer border ---- */
-button[class*="search"],
-[class*="Search"] button,
-[class*="search-bar"] {
-  border-color: rgba(255, 255, 255, 0.06) !important;
-  background: rgba(255, 255, 255, 0.02) !important;
-}
-
-/* ---- 8. Page eyebrow / breadcrumb — rose accent ---- */
+/* ---- 10. Breadcrumbs / eyebrow — Rose accent ---- */
 [class*="eyebrow"],
 [class*="Eyebrow"],
 [class*="breadcrumb"] span:first-child {
-  color: var(--q-rose) !important;
+  color: var(--q-rose600) !important;
   font-family: "Inter", sans-serif !important;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* ---- 11. HR — subtle Dawn gradient ---- */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--q-p200),
+    transparent
+  );
+}
+
+/* ---- 12. Tables — clean on Paper ---- */
+table {
+  border-color: var(--q-p200) !important;
+}
+
+th {
+  background: var(--q-white) !important;
+  color: var(--q-ink) !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 600;
+}
+
+td {
+  border-color: var(--q-p100) !important;
+}
+
+/* ---- 13. Code blocks — Ink on Paper 100 ---- */
+code:not(pre code) {
+  background: var(--q-p100) !important;
+  color: var(--q-ink) !important;
+}
+
+/* ---- 14. Callouts / admonitions ---- */
+[class*="callout"],
+[class*="Callout"],
+[class*="admonition"],
+[class*="Note"],
+[class*="Tip"],
+[class*="Warning"] {
+  background: var(--q-white) !important;
+  border-color: var(--q-p200) !important;
+}
+
+/* ---- 15. Search bar ---- */
+button[class*="search"],
+[class*="Search"] button,
+[class*="search-bar"] {
+  border-color: var(--q-p200) !important;
+  background: var(--q-white) !important;
 }

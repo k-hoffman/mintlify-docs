@@ -8,31 +8,31 @@
     "href": "/get-started/welcome"
   },
   "colors": {
-    "primary": "#FDA4AF",
-    "light": "#818CF8",
-    "dark": "#4F46E5"
+    "primary": "#E11D48",
+    "light": "#FB7185",
+    "dark": "#BE123C"
   },
   "appearance": {
-    "default": "system",
+    "default": "light",
     "strict": true
   },
   "background": {
     "color": {
-      "dark": "#242423"
-    },
-    "decoration": "grid"
+      "light": "#F1F0ED"
+    }
   },
   "fonts": {
-    "family": "Inter",
-    "weight": 200,
     "heading": {
       "family": "Lora",
-      "weight": 400
+      "weight": 500
     },
     "body": {
       "family": "Inter",
       "weight": 400
     }
+  },
+  "icons": {
+    "library": "lucide"
   },
   "navigation": {
     "tabs": [
