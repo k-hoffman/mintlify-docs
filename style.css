@@ -385,9 +385,9 @@ button[class*="search"],
   box-shadow: none !important;
 }
 
-/* The actual input area wrapper — white with subtle shadow for floating effect */
+/* The actual input area wrapper — white to match cards */
 div[class*="bg-background-light/90"].rounded-2xl {
-  background: var(--q-paper) !important;
+  background: var(--q-white) !important;
   border: 1px solid var(--q-p100) !important;
   box-shadow: 0 -4px 16px rgba(36, 36, 35, 0.06) !important;
 }
