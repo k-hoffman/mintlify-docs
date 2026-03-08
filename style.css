@@ -5,7 +5,7 @@
    Primary palette: Paper #F1F0ED, Ink #242423, White #FFFFFF
    Accent: Rose 600 #E11D48, Dawn gradient #FDA4AF → #60A5FA
    Display: Lora Medium | Text: Inter Regular
-   Icons: Lucide
+   Icons: Font Awesome
    ============================================================ */
 
 :root {
@@ -223,4 +223,88 @@ button[class*="search"],
 [class*="search-bar"] {
   border-color: var(--q-p200) !important;
   background: var(--q-white) !important;
+}
+
+/* ---- 14. Top nav bar — Ink background, light text ---- */
+
+/* Main top bar container */
+.z-30.fixed,
+.z-30.lg\:sticky {
+  background-color: var(--q-ink) !important;
+}
+
+/* Backdrop blur child — make it Ink instead of transparent */
+.z-30 > div.backdrop-blur,
+.z-30 > div[class*="backdrop-blur"] {
+  background-color: var(--q-ink) !important;
+}
+
+/* Bottom border — subtle dark tone instead of light gray */
+.z-30 > div[class*="border-b"] {
+  border-bottom-color: var(--q-p800) !important;
+}
+
+/* Tab navigation links — white/light text */
+.nav-tabs-item {
+  color: var(--q-p300) !important;
+}
+
+.nav-tabs-item:hover {
+  color: var(--q-white) !important;
+}
+
+/* Active tab — white text */
+.nav-tabs-item[class*="text-gray-800"],
+.nav-tabs-item:not([class*="text-gray-600"]) {
+  color: var(--q-white) !important;
+}
+
+/* Active tab underline — Rose accent */
+.nav-tabs-item::after {
+  background-color: var(--q-rose600) !important;
+}
+
+/* Top bar icons (tab icons) — light color */
+.nav-tabs-item svg {
+  color: inherit !important;
+}
+
+/* Search button in top bar — dark styling */
+.z-30 button[class*="search"] {
+  background: var(--q-p900) !important;
+  border-color: var(--q-p700) !important;
+  color: var(--q-p400) !important;
+}
+
+/* Ask AI button in top bar */
+.z-30 button[class*="ai"],
+.z-30 button[class*="Ask"] {
+  color: var(--q-p300) !important;
+}
+
+/* Top bar text links (Launch Qumis, Request Demo) */
+.z-30 a[href*="app.qumis"],
+.z-30 a[href*="calendly"] {
+  color: var(--q-p200) !important;
+}
+.z-30 a[href*="app.qumis"]:hover,
+.z-30 a[href*="calendly"]:hover {
+  color: var(--q-white) !important;
+}
+
+/* Logo — force white version via brightness filter */
+.z-30 a.select-none img,
+.z-30 a.select-none svg {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* All other text in the top bar — light */
+.z-30 span:not(.sr-only),
+.z-30 p {
+  color: var(--q-p300) !important;
+}
+
+/* Keyboard shortcut badge in search */
+.z-30 button[class*="search"] span[class*="font-semibold"] {
+  color: var(--q-p500) !important;
 }
