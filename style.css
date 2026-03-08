@@ -308,9 +308,12 @@ button[class*="search"],
   color: var(--q-white) !important;
 }
 
-/* Active tab underline — Rose accent */
+/* Active tab underline — Rose accent, thicker bar */
 .nav-tabs-item::after {
   background-color: var(--q-rose600) !important;
+}
+.nav-tabs-item > div.bg-primary {
+  height: 2.5px !important;
 }
 
 /* Top bar icons (tab icons) — light color */
