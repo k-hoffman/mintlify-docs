@@ -153,10 +153,14 @@ div.sidebar-group-header.flex.items-center.font-semibold.text-gray-900 {
   color: var(--q-ink) !important;
 }
 
-/* Card titles — Ink color */
+/* Card titles — Ink color, Inter font (override Lora heading font) */
 .card h2,
+.card h2.not-prose,
+.card h2.font-semibold,
 .card [class*="font-semibold"] {
   color: var(--q-ink) !important;
+  --font-family-headings-custom: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important;
 }
 
 /* Card descriptions — Paper 600 */
@@ -198,20 +202,22 @@ hr {
   );
 }
 
-/* ---- 10. Tables — clean on Paper ---- */
+/* ---- 10. Tables — Paper bg headers, vertically centered ---- */
 table {
   border-color: var(--q-p200) !important;
 }
 
 th {
-  background: var(--q-white) !important;
+  background: var(--q-paper) !important;
   color: var(--q-ink) !important;
   font-family: "Inter", sans-serif !important;
   font-weight: 600;
+  vertical-align: middle !important;
 }
 
 td {
   border-color: var(--q-p100) !important;
+  vertical-align: middle !important;
 }
 
 /* ---- 11. Code blocks — Ink on Paper 100 ---- */
@@ -220,12 +226,43 @@ code:not(pre code) {
   color: var(--q-ink) !important;
 }
 
-/* ---- 12. Callouts / admonitions ---- */
-[class*="callout"],
+/* ---- 12. Callouts / admonitions — lighter shade of icon color ---- */
+/* Default (neutral/info) callout — light blue-gray */
+div.callout {
+  background: #F0F4F8 !important;
+  border-color: #D2D8E0 !important;
+}
+
+/* Green/success/tip callouts */
+div.callout[class*="border-green"] {
+  background: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+}
+
+/* Yellow/warning callouts */
+div.callout[class*="border-yellow"],
+div.callout[class*="border-amber"] {
+  background: #FFFBEB !important;
+  border-color: #FDE68A !important;
+}
+
+/* Red/error/danger callouts */
+div.callout[class*="border-red"] {
+  background: #FEF2F2 !important;
+  border-color: #FECACA !important;
+}
+
+/* Blue/info callouts */
+div.callout[class*="border-blue"] {
+  background: #EFF6FF !important;
+  border-color: #BFDBFE !important;
+}
+
+/* Fallback for any other callout-like elements */
 [class*="Callout"],
 [class*="admonition"] {
-  background: var(--q-white) !important;
-  border-color: var(--q-p200) !important;
+  background: #F0F4F8 !important;
+  border-color: #D2D8E0 !important;
 }
 
 /* ---- 13. Search bar ---- */
@@ -333,18 +370,26 @@ button[class*="search"],
   color: var(--q-p500) !important;
 }
 
-/* ---- 15. Ask a Question — lighter Paper background to stand out ---- */
-.chat-assistant-floating-input {
-  background: var(--q-white) !important;
-  border-radius: 1rem;
-  padding: 0.75rem !important;
-  box-shadow: 0 2px 12px rgba(36, 36, 35, 0.08) !important;
-  border: 1px solid var(--q-p100) !important;
+/* ---- 15. Ask a Question — floating seamlessly on the page ---- */
+
+/* Hide the two-toned ::before background panel */
+.chat-assistant-floating-input::before {
+  background: transparent !important;
+  border: none !important;
 }
 
-/* The input area container */
+/* Remove any background/border on the floating input container itself */
+.chat-assistant-floating-input {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* The actual input area wrapper — white with subtle shadow for floating effect */
 div[class*="bg-background-light/90"].rounded-2xl {
-  background: var(--q-white) !important;
+  background: var(--q-paper) !important;
+  border: 1px solid var(--q-p100) !important;
+  box-shadow: 0 -4px 16px rgba(36, 36, 35, 0.06) !important;
 }
 
 /* Textarea styling */
@@ -355,4 +400,11 @@ div[class*="bg-background-light/90"].rounded-2xl {
 
 .chat-assistant-input::placeholder {
   color: var(--q-p400) !important;
+}
+
+/* ---- 16. Step number circles — white background instead of rose-tinted ---- */
+div.rounded-full.bg-gray-50,
+div[class*="size-7"][class*="rounded-full"][class*="bg-gray-50"] {
+  background-color: var(--q-white) !important;
+  border: 1px solid var(--q-p200);
 }
