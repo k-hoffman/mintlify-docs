@@ -146,6 +146,12 @@
         "icon": "book-open",
         "groups": [
           {
+            "group": "Overview",
+            "pages": [
+              "playbooks/overview"
+            ]
+          },
+          {
             "group": "Prompting",
             "pages": [
               "playbooks/prompting/best-practices",
