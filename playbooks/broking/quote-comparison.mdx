@@ -1,0 +1,266 @@
+---
+title: "Playbook: Quote Comparison"
+description: "Replace manual spreadsheet comparisons with structured, citation-backed quote analysis that catches what pricing tables miss."
+icon: "scale-balanced"
+---
+
+## The strategy
+
+Quote comparison is one of the most time-consuming and error-prone parts of broking. The traditional approach is a spreadsheet: carrier name across the top, coverage terms down the side, and a broker manually reading each quote to populate the cells. On a simple monoline account with three quotes, this takes an hour. On a complex placement with eight carriers quoting across multiple lines, it can take a full day or more.
+
+The bigger problem isn't time. It's accuracy. Spreadsheet comparisons tend to focus on the terms that are easy to compare: limits, deductibles, and premium. The differences that actually matter — like how broadly an exclusion is drafted, whether a sublimit is adequate, or whether an endorsement in one quote narrows coverage that another quote provides — get missed because they require reading and interpreting policy language, not just copying numbers into cells.
+
+Qumis changes this by analyzing the actual policy language across all quotes simultaneously. It doesn't just tell you that Carrier A's premium is lower. It tells you why Carrier B's form provides broader coverage despite the higher price, with citations to the specific language in each quote. This turns quote comparison from a data-entry task into a coverage analysis.
+
+The result is a recommendation your client can trust, backed by evidence they can see.
+
+## Prerequisites
+
+<Info>
+  This playbook assumes you've already marketed the account and received quotes from carriers. If you haven't yet, start with the [Marketing the Account](/playbooks/broking/marketing-account) playbook first.
+</Info>
+
+Before running this playbook, you should have:
+
+- Two or more carrier quotes (proposals, quote letters, specimen forms, or indication letters) for the same placement
+- The expiring policy (ideally already in the Document Vault from your pre-marketing audit)
+- Access to Qumis Chats, Reports, and Visual Analysis features
+
+## The Qumis workflow
+
+<Steps>
+  <Step title="Upload all quotes to Document Vault">
+    Create a subfolder within the account folder for the quoting round (e.g., `Acme Corp - 2026 Renewal / Quotes`). Upload every carrier quote, including proposals, specimen forms, endorsement schedules, and quote letters.
+
+    Name files clearly so you can reference them by carrier in your analysis:
+    ```
+    Quotes/
+    ├── Hartford-GL-Quote-2026.pdf
+    ├── Travelers-GL-Quote-2026.pdf
+    ├── Chubb-GL-Quote-2026.pdf
+    ├── Zurich-GL-Quote-2026.pdf
+    └── Expiring-GL-Policy-2025.pdf
+    ```
+
+    Include the expiring policy in the same working set. The most useful comparison isn't just quote vs. quote. It's each quote vs. the expiring, so you can see what improves and what gets worse.
+
+    <Tip>
+      If a carrier sends a quote letter referencing a specimen form rather than including the actual form, ask for the specimen. Qumis can only analyze language it can see. A quote letter that says "coverage per ISO CG 00 01 04 13" doesn't give you enough to compare against a carrier that sent the full manuscript form.
+    </Tip>
+  </Step>
+
+  <Step title="Run a structured quote comparison using Chats">
+    Open a Chat session with all quote documents and the expiring loaded. Run a comparison prompt that evaluates every quote on the dimensions that actually matter for placement decisions.
+
+    **Comprehensive quote comparison prompt:**
+    ```
+    Compare all uploaded carrier quotes against each other and against
+    the expiring policy. For each of the following dimensions, analyze
+    how each carrier's quote differs:
+
+    1. LIMITS AND STRUCTURE: Per-occurrence, aggregate, and any
+       sublimits. Flag any carrier with limits lower than the
+       expiring or with sublimits not present in the expiring.
+
+    2. DEDUCTIBLES AND RETENTIONS: Compare all deductible/SIR
+       structures. Flag any carrier with higher deductibles than
+       the expiring without a corresponding premium reduction.
+
+    3. COVERAGE GRANTS: Identify any coverage that one or more
+       carriers include that others exclude. Focus on the breadth
+       of the insuring agreement, not just whether a coverage
+       section exists.
+
+    4. EXCLUSIONS: Compare exclusions across all quotes. Flag any
+       carrier with exclusions broader than the expiring or broader
+       than competing quotes. Pay special attention to exclusions
+       unique to one carrier.
+
+    5. ENDORSEMENTS: Identify endorsements that broaden or restrict
+       coverage. Compare the scope of additional insured, waiver of
+       subrogation, and primary/noncontributory endorsements across
+       all quotes.
+
+    6. CONDITIONS: Compare notice requirements, cancellation
+       provisions, other insurance clauses, and any conditions
+       that could affect the insured's ability to recover.
+
+    7. PREMIUM: Show the premium for each carrier, the premium
+       change from expiring, and the rate per unit of exposure
+       if calculable.
+
+    For every finding, cite the specific policy language from each
+    carrier's quote. Organize the output as a structured comparison,
+    not carrier-by-carrier summaries.
+    ```
+
+    <Warning>
+      Don't rely solely on the Chat output for your client presentation. The Chat gives you the analytical foundation. You'll refine and format the key findings into a Report in the next step.
+    </Warning>
+  </Step>
+
+  <Step title="Use Visual Analysis and QumisScore to identify key differences">
+    After running the text-based comparison, use the Visual Analysis feature to see a visual representation of how the quotes differ. The QumisScore provides a proprietary accuracy and coverage quality indicator that helps you quickly identify which quotes are strongest and where the most significant differences lie.
+
+    Use the visual output to identify the two to three findings that will matter most to your client. These are typically:
+
+    - A coverage gap in the cheapest quote that the client wouldn't have noticed
+    - A coverage enhancement in a mid-priced quote that justifies the premium difference
+    - An exclusion in one quote that doesn't appear in any other, creating a unique risk
+
+    These become the centerpiece of your recommendation.
+  </Step>
+
+  <Step title="Generate a client-ready comparison Report">
+    Generate a Report that presents your analysis in a format your client can review and share with their internal stakeholders (CFO, general counsel, risk committee).
+
+    Structure the Report in two sections:
+
+    **Section 1: Executive summary and recommendation**
+    - Which carrier you recommend and why (three to four sentences)
+    - The total premium for each option
+    - The one to two coverage differences that drove your recommendation
+
+    **Section 2: Detailed comparison**
+    - Side-by-side findings organized by coverage dimension
+    - Citations to specific policy language for each finding
+    - Visual Analysis output for key differences
+
+    **Report generation prompt:**
+    ```
+    Based on the quote comparison analysis, generate a client-facing
+    report that presents our recommendation. Lead with a clear
+    recommendation of which carrier to bind and the top three reasons
+    why, supported by citations to the policy language. Then provide
+    a detailed comparison organized by coverage dimension (limits,
+    deductibles, coverage grants, exclusions, endorsements,
+    conditions, premium). For each dimension, show what each carrier
+    offers and highlight material differences. The tone should be
+    professional and advisory. The audience is a risk manager and
+    CFO who need to approve the placement.
+    ```
+
+    <Tip>
+      The most effective client presentations lead with the recommendation, not the comparison. Your client wants to know what you think they should do and why. The detailed comparison is there for validation, not discovery. Structure the report accordingly.
+    </Tip>
+  </Step>
+
+  <Step title="Save your comparison prompts to the Prompt Library">
+    As with the marketing playbook, save your most effective comparison prompts to the Prompt Library. Organize them by line of business, since the comparison dimensions that matter for a GL placement are different from those for a cyber or D&O placement.
+
+    Example naming convention:
+    - `Quote Comparison - General Liability - Full Comparison`
+    - `Quote Comparison - Cyber Liability - First/Third Party Focus`
+    - `Quote Comparison - Excess Tower - Follow-Form Analysis`
+  </Step>
+</Steps>
+
+## Comparison prompts by scenario
+
+<Tabs>
+  <Tab title="Two-quote comparison">
+    When you only have two quotes (common for specialty lines or incumbent-vs-challenger situations), use a focused head-to-head prompt:
+
+    ```
+    Compare these two carrier quotes head-to-head. For every material
+    difference in coverage, show the exact language from both quotes
+    side by side. Organize findings from most impactful to least
+    impactful. At the end, provide a clear recommendation with the
+    top three reasons to choose one over the other.
+    ```
+  </Tab>
+
+  <Tab title="Quote vs. expiring only">
+    When you're evaluating a renewal offer from the incumbent with no competing quotes:
+
+    ```
+    Compare this renewal quote against the expiring policy. Identify
+    everything that changed: terms that improved, terms that got
+    worse, coverage that was added, coverage that was removed, and
+    any new exclusions or conditions. For every change, cite the
+    specific language in both the renewal and the expiring. Flag
+    any changes that narrow coverage without a corresponding
+    premium reduction.
+    ```
+  </Tab>
+
+  <Tab title="Excess tower comparison">
+    When comparing quotes for a layered excess program:
+
+    ```
+    Compare these excess/umbrella quotes across the full tower
+    structure. For each layer, analyze: (1) whether the layer is
+    true follow-form or has its own terms, (2) any exclusions in
+    the excess layer that don't exist in the underlying or in
+    competing excess quotes, (3) drop-down provisions and triggers,
+    (4) defense cost treatment at each layer, (5) any gaps between
+    layers where coverage doesn't attach. Map the full tower
+    structure for each competing program and highlight where they
+    diverge.
+    ```
+  </Tab>
+
+  <Tab title="Multi-line program comparison">
+    When comparing bundled programs across multiple lines:
+
+    ```
+    Compare these multi-line program quotes. For each line of
+    business included (GL, property, auto, umbrella, etc.), run
+    a separate comparison of terms, limits, deductibles, and
+    coverage scope. Then evaluate the program-level considerations:
+    (1) cross-line premium allocation, (2) common policy period
+    alignment, (3) consistency of named insured and additional
+    insured across all lines, (4) aggregate sharing across lines,
+    and (5) whether bundling with one carrier creates gaps that
+    a best-of-breed approach would avoid.
+    ```
+  </Tab>
+</Tabs>
+
+## Common comparison pitfalls Qumis helps you avoid
+
+<AccordionGroup>
+  <Accordion title="Comparing limits without comparing scope">
+    Two quotes can both say "$1M per occurrence / $2M aggregate" and still provide vastly different coverage. One carrier's definition of "occurrence" might be broader. One might include defense costs inside the limit. One might have sublimits that effectively reduce the aggregate for certain loss types. Qumis compares the language behind the numbers, not just the numbers themselves.
+  </Accordion>
+
+  <Accordion title="Missing endorsements that restrict the base form">
+    Carrier quotes often include endorsements that narrow the base form coverage. A quote that looks strong on the dec page might have an endorsement buried on page 47 that excludes a key exposure. Qumis reads every endorsement and flags any that restrict coverage, so nothing gets missed in the comparison.
+  </Accordion>
+
+  <Accordion title="Overlooking condition differences">
+    Coverage conditions like notice requirements, voluntary payment clauses, and other insurance provisions rarely make it into broker comparison spreadsheets. But they can determine whether a claim gets paid. Qumis includes conditions in the comparison so you can see whether one carrier's notice requirement is 30 days while another's is "as soon as practicable," which is a meaningful difference when a late-reported claim is at stake.
+  </Accordion>
+
+  <Accordion title="Focusing on premium without risk-adjusting">
+    The cheapest quote isn't always the best value if it carries broader exclusions or lower sublimits. Qumis helps you build a risk-adjusted comparison by highlighting what coverage you're giving up for a lower premium. This lets you present the client with a true cost-of-coverage analysis rather than a price-only comparison.
+  </Accordion>
+</AccordionGroup>
+
+## Presenting the comparison to your client
+
+The way you present the comparison matters as much as the analysis itself. Here's a framework for the client conversation:
+
+**Opening (2 minutes):** Start with your recommendation. "We received [X] quotes and our recommendation is [Carrier]. Here's why."
+
+**Top findings (10 minutes):** Walk through the two to three coverage differences that drove your recommendation. Use the Qumis Report as a visual aid, pointing to the specific citations. Don't read the report to your client. Use it as a reference while you explain the findings in your own words.
+
+**Premium context (3 minutes):** Present the premium comparison, but frame it relative to coverage. "Carrier A is $12K less, but here's what you'd be giving up for that savings. In our view, the broader products-completed operations coverage in Carrier B's form is worth the difference."
+
+**Client questions (10 minutes):** This is where the Qumis citations pay off. When a client asks "why does this matter?" or "are you sure about this difference?", you can point directly to the policy language in the report. No hedging, no "let me get back to you."
+
+**Decision and next steps (5 minutes):** Confirm the client's selection and outline the binding process.
+
+<Note>
+  The Qumis-powered comparison report becomes part of the client's permanent file. It documents your recommendation and the reasoning behind it. This is valuable for E&O defense, renewal benchmarking, and demonstrating the depth of your brokerage service at QBRs and stewardship reviews.
+</Note>
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Qumis-powered comparisons completed | Percentage of placements with a Qumis analysis vs. manual spreadsheet | 80%+ of placements above $15K premium |
+| Time to compare | Average hours from last quote received to comparison delivered to client | 50% reduction vs. baseline |
+| Coverage findings per comparison | Number of material differences identified beyond pricing | 3–5 per placement |
+| Client questions answered on the spot | Percentage of client questions resolved during the presentation vs. requiring follow-up | 90%+ |
+| E&O documentation | Percentage of placements with a documented recommendation and rationale on file | 100% |

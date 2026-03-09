@@ -1,0 +1,277 @@
+---
+title: "Playbook: Binding and Policy Review"
+description: "Verify that binders and issued policies match what was quoted and negotiated, catching discrepancies before they become E&O exposure."
+icon: "file-shield"
+---
+
+## The strategy
+
+Binding is where a broker's E&O exposure is highest. The client has selected a carrier, terms have been negotiated, and the binder or policy needs to be issued accurately. Every discrepancy between what was agreed upon and what shows up in the binder is a potential claim waiting to happen.
+
+The traditional approach is a manual side-by-side review: a broker sits with the binder in one window and their notes or the quote letter in another, checking line by line that everything matches. On a simple monoline policy, this is manageable. On a complex placement with manuscript endorsements, layered programs, and negotiated terms across multiple submissions, it's a process where things get missed. And when they do get missed, the broker may not find out until a claim is filed and the policy doesn't respond the way everyone expected.
+
+Qumis changes binding review from a checklist exercise into a structured verification. You upload the binder or issued policy alongside the quote that was accepted, and Qumis identifies every difference between the two, with citations to the exact language in both documents. Discrepancies surface immediately rather than months later when a claim hits.
+
+This protects the client, protects the brokerage, and creates a documented audit trail that proves the review was thorough.
+
+## The Qumis workflow
+
+<Steps>
+  <Step title="Upload the binder or issued policy to Document Vault">
+    When the binder or issued policy arrives from the carrier, upload it to the account's folder in the Document Vault. Create a subfolder for the bound program (e.g., `Acme Corp - 2026 Renewal / Bound Policy`).
+
+    Upload every component:
+
+    - Binder or policy declaration pages
+    - All endorsements (individually if possible)
+    - The policy form itself
+    - Any side letters or confirmation of coverage letters
+
+    Make sure the accepted quote is also in the Vault (it should already be there from the quote comparison stage). You'll need both documents loaded to run the verification.
+
+    <Warning>
+      Don't wait for the full issued policy to start your review. Run the verification on the binder as soon as it arrives. If there's a discrepancy, it's far easier to correct at the binder stage than after the policy has been issued and delivered to the client.
+    </Warning>
+  </Step>
+
+  <Step title="Run a binder-to-quote verification">
+    Open a Chat session with both the accepted quote and the binder/issued policy loaded. Run a verification prompt that checks every material term.
+
+    **Binder verification prompt:**
+    ```
+    Compare this binder (or issued policy) against the accepted
+    carrier quote. Identify every difference between the two
+    documents, including:
+
+    1. NAMED INSURED: Verify the named insured matches exactly,
+       including entity type and any scheduled additional insureds.
+
+    2. POLICY PERIOD: Confirm effective and expiration dates match
+       the quote.
+
+    3. LIMITS AND SUBLIMITS: Check that every limit, sublimit, and
+       aggregate in the binder matches the quote. Flag any
+       discrepancy, even if it appears minor.
+
+    4. DEDUCTIBLES AND RETENTIONS: Verify all deductible and SIR
+       amounts match.
+
+    5. PREMIUM: Confirm the premium matches the quoted amount,
+       including any installment or financing terms.
+
+    6. ENDORSEMENTS: List every endorsement on the binder and
+       confirm each was included in the quote. Flag any endorsement
+       that appears on the binder but was not in the quote, or any
+       endorsement that was in the quote but is missing from the
+       binder.
+
+    7. COVERAGE TERMS: Identify any language in the binder that
+       differs from the quoted form, including changes to
+       definitions, insuring agreements, exclusions, or conditions.
+
+    8. NEGOTIATED MODIFICATIONS: If any manuscript changes or
+       negotiated terms were agreed upon during placement, verify
+       they are reflected in the binder.
+
+    For every discrepancy found, cite the exact language from both
+    the quote and the binder. Categorize each discrepancy as:
+    - CRITICAL (affects coverage scope, limits, or could result in
+      claim denial)
+    - MODERATE (affects terms or conditions but unlikely to affect
+      claim outcomes)
+    - MINOR (administrative, formatting, or non-substantive)
+    ```
+  </Step>
+
+  <Step title="Review endorsement-level details">
+    Endorsements are where the most consequential discrepancies hide. Run a dedicated endorsement review that goes deeper than the initial verification.
+
+    **Endorsement review prompt:**
+    ```
+    For every endorsement on this binder or issued policy:
+
+    1. Identify whether it broadens or restricts coverage relative
+       to the base form.
+    2. Confirm it matches the version referenced in the accepted
+       quote (check form numbers and edition dates).
+    3. Flag any endorsement where the language differs from what
+       was quoted, even if the form number is the same.
+    4. For any additional insured, waiver of subrogation, or
+       primary/noncontributory endorsements, verify the schedule
+       is complete and accurate.
+    5. Flag any endorsement that was not discussed during placement
+       and appears to have been added by the carrier.
+
+    Cite the specific language for every finding.
+    ```
+
+    <Tip>
+      Pay special attention to endorsement edition dates. Carriers sometimes issue a policy with a newer edition of an endorsement than what was quoted. A different edition date can mean different coverage terms, even if the form number is the same.
+    </Tip>
+  </Step>
+
+  <Step title="Cross-check certificates of insurance requirements">
+    If the client has contractual obligations that require specific coverage terms on their certificates of insurance (additional insured status, waiver of subrogation, primary and noncontributory language, minimum limits), verify that the bound policy supports those requirements.
+
+    **Certificate compliance prompt:**
+    ```
+    Based on this bound policy and its endorsements, confirm whether
+    the following certificate requirements can be met:
+
+    1. Additional insured status for [specify parties or "all parties
+       required by written contract"]
+    2. Waiver of subrogation in favor of [specify or "as required
+       by written contract"]
+    3. Primary and noncontributory status
+    4. Minimum limits of [specify if known]
+    5. 30-day notice of cancellation to certificate holders
+
+    For each requirement, cite the specific endorsement or policy
+    language that satisfies it. If any requirement cannot be met
+    by the current policy, explain why and recommend a solution.
+    ```
+
+    <Note>
+      Certificate compliance issues are one of the most common post-binding problems. Running this check before delivering the policy prevents the scramble of discovering a missing endorsement when the client's contractor demands a certificate.
+    </Note>
+  </Step>
+
+  <Step title="Generate a binding review Report and issue resolution requests">
+    Generate a Report that documents your complete binding review. This serves two purposes: it gives you a clear punch list for resolving discrepancies with the carrier, and it creates a permanent record that the review was conducted.
+
+    **Report generation prompt:**
+    ```
+    Generate a binding review report that includes:
+
+    1. VERIFICATION SUMMARY: A pass/fail status for each major
+       category (named insured, policy period, limits, deductibles,
+       premium, endorsements, coverage terms, negotiated
+       modifications).
+
+    2. DISCREPANCIES FOUND: A prioritized list of all discrepancies,
+       categorized as Critical, Moderate, or Minor, with citations
+       to both the quote and the binder.
+
+    3. RESOLUTION ACTIONS: For each discrepancy, recommend the
+       specific correction needed and who needs to action it
+       (carrier, broker, or client).
+
+    4. CERTIFICATE READINESS: Confirm whether the bound policy
+       supports the client's known certificate requirements.
+
+    Format this as a professional internal document. The audience
+    is the servicing team and the broker of record.
+    ```
+
+    For any Critical or Moderate discrepancies, send the resolution request to the carrier immediately. Attach the relevant section of the Qumis report so the carrier can see exactly what language needs to change.
+  </Step>
+</Steps>
+
+## Common discrepancies Qumis catches
+
+<AccordionGroup>
+  <Accordion title="Endorsement version mismatches">
+    The quote referenced form CG 20 10 04 13 (additional insured, ongoing operations). The binder attached CG 20 10 07 04, which is an older version with narrower coverage. This happens more often than it should because carrier systems sometimes default to the version loaded in their library rather than the version the underwriter quoted.
+  </Accordion>
+
+  <Accordion title="Missing negotiated manuscript endorsements">
+    During placement, the underwriter agreed to add a manuscript amendment to the pollution exclusion. The binder arrives without it. The underwriter's intent doesn't matter if the endorsement isn't on the policy. Qumis flags the absence by comparing the endorsement schedule against the quote.
+  </Accordion>
+
+  <Accordion title="Sublimit discrepancies">
+    The quote showed a $500K sublimit for water damage. The binder shows $250K. On a dec page with 30 line items, a sublimit change is easy to miss in a manual review. Qumis checks every number.
+  </Accordion>
+
+  <Accordion title="Named insured errors">
+    The quote listed the named insured as "Acme Construction Group, LLC and its subsidiaries." The binder lists "Acme Construction Group, LLC." The missing subsidiary language could mean affiliated entities aren't covered. Qumis compares the named insured language verbatim.
+  </Accordion>
+
+  <Accordion title="Defense cost treatment changes">
+    The quote provided defense outside the limits. The issued policy includes an endorsement making defense costs inside the limits, effectively reducing available coverage by the cost of litigation. This is a critical change that's easy to miss when the endorsement is buried deep in the policy.
+  </Accordion>
+
+  <Accordion title="Retroactive date shifts">
+    On claims-made policies, the binder shows a different retroactive date than the quote. Moving the retro date forward creates a gap in prior acts coverage. Qumis catches date discrepancies by comparing every date field across both documents.
+  </Accordion>
+</AccordionGroup>
+
+## Carrier communication templates
+
+<Tabs>
+  <Tab title="Discrepancy resolution email">
+    **Subject:** Binder correction needed — [Account Name] — [Policy Number]
+
+    > Hi [Underwriter Name],
+    >
+    > We've completed our review of the binder for [Account Name] (Policy #[number], effective [date]) and identified the following discrepancies against the accepted quote dated [date]:
+    >
+    > **Critical:**
+    > - [Finding, e.g., "The additional insured endorsement is CG 20 10 07 04; the quoted form was CG 20 10 04 13. The 04 13 edition provides broader coverage for ongoing operations and we need this version to meet the insured's contractual requirements."]
+    >
+    > **Moderate:**
+    > - [Finding, e.g., "The water damage sublimit is $250K; the quote showed $500K. Please correct to match the quoted terms."]
+    >
+    > Can you issue a corrected binder reflecting the quoted terms? Happy to jump on a call if it's easier to walk through these.
+  </Tab>
+
+  <Tab title="Missing endorsement follow-up">
+    **Subject:** Missing endorsement — [Account Name] — [Policy Number]
+
+    > Hi [Underwriter Name],
+    >
+    > The binder for [Account Name] is missing the following endorsement that was included in the accepted quote:
+    >
+    > - [Endorsement description, e.g., "Manuscript amendment to the absolute pollution exclusion providing an exception for hostile fire events, as agreed in your email dated [date]."]
+    >
+    > Can you confirm this will be added to the policy? We can provide the agreed-upon language from our placement correspondence if that's helpful.
+  </Tab>
+
+  <Tab title="Policy issuance confirmation to client">
+    > Hi [Client Name],
+    >
+    > Your [policy type] has been bound with [Carrier] effective [date]. We've completed a full review of the binder against the terms we negotiated and confirmed that all coverage terms, limits, and endorsements match what was agreed upon.
+    >
+    > [If discrepancies were found and resolved:] During our review we identified [X] items that needed correction, and those have been resolved with the carrier. The corrected binder is attached.
+    >
+    > Your certificates of insurance are ready to issue. Let us know if you need any certs sent to specific parties and we'll get those out immediately.
+    >
+    > The full issued policy will follow in approximately [X] weeks. We'll conduct a second review at that point to confirm everything is consistent with the binder.
+  </Tab>
+</Tabs>
+
+## Building the review into your binding workflow
+
+The binding review should happen at two points in the placement lifecycle, not just one.
+
+<AccordionGroup>
+  <Accordion title="Review 1: Binder stage (immediately after binding)">
+    Run the full verification workflow as soon as the binder arrives. This is your highest-priority review because corrections are easiest to make at this stage. The carrier hasn't issued the full policy yet, and any changes can typically be made with a simple request to the underwriter.
+
+    **Turnaround target:** Complete the review and send any correction requests within 48 hours of receiving the binder.
+  </Accordion>
+
+  <Accordion title="Review 2: Issued policy stage (when full policy arrives)">
+    Run the verification again when the full issued policy arrives (typically four to eight weeks after binding). Compare the issued policy against both the binder and the original quote. Carriers sometimes introduce changes between binder and issuance, especially on endorsement language.
+
+    **Turnaround target:** Complete the review within five business days of receiving the issued policy. Send correction requests immediately for any discrepancies.
+
+    <Tip>
+      Save the binder-stage Qumis Report in the Document Vault. When the issued policy arrives, you can load the binder report alongside the new policy to quickly see whether the corrections you requested were implemented.
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Binding reviews completed | Percentage of placements with a Qumis-powered binder review | 100% of all placements |
+| Discrepancies caught | Number of discrepancies identified per binding review | Track per placement (expect 1–3 on average) |
+| Critical discrepancies caught | Number of coverage-affecting discrepancies found before policy delivery | Every one matters; 0 missed is the goal |
+| Time to review | Hours from binder receipt to completed review | Under 2 hours for standard placements |
+| Resolution turnaround | Days from discrepancy identification to carrier correction | Under 5 business days |
+| E&O incident rate | Binding errors that result in E&O claims or near-misses | Zero |
+
+<Warning>
+  The binding review is not optional. Every discrepancy that goes undetected is E&O exposure for your brokerage and a coverage gap for your client. The 1–2 hours invested in a Qumis-powered review is the highest-ROI activity in the entire placement lifecycle when measured against the cost of a single E&O claim.
+</Warning>
