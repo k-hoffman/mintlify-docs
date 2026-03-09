@@ -8,97 +8,178 @@ The quality of your Qumis output depends heavily on how you frame your questions
 
 ---
 
-## The golden rule: be specific
+## The prompt formula
 
-Vague questions get vague answers. Specific questions get useful analysis.
+Every strong prompt follows the same structure:
 
-| Instead of...                  | Try...                                                                                                                         |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| "What does this policy cover?" | "Does this CGL policy cover product liability claims arising from manufacturing defects?"                                      |
-| "Compare these policies"       | "Compare the professional liability coverage in these two quotes, focusing on prior acts coverage and defense cost provisions" |
-| "Is this good coverage?"       | "What are the most significant coverage gaps in this property policy for a restaurant with outdoor seating?"                   |
+**Role + Action + Document + Purpose**
 
-The more context you provide about what you're looking for and why, the more targeted and useful the analysis will be.
+> You're a senior broker helping renew a client. Compare these two quotes focusing on liability limits for my client proposal.
+
+This formula works because it gives Qumis everything it needs to deliver a useful answer: who you are, what you want done, which documents to analyze, and how you'll use the output.
+
+| Component    | What it does                                    | Example                                                       |
+| ------------ | ----------------------------------------------- | ------------------------------------------------------------- |
+| **Role**     | Sets your perspective and expertise level        | "You're a junior producer," "You're a senior claims adjuster" |
+| **Action**   | Tells Qumis what to do                          | "Compare," "Summarize," "Identify gaps in"                    |
+| **Document** | Points to the documents you want analyzed        | "these two quotes," "this CGL policy," "the attached binder"  |
+| **Purpose**  | Explains how you'll use the output               | "for my client proposal," "for a board presentation," "to prepare for a renewal meeting" |
+
+You don't need all four every time — but the more context you provide, the more targeted and useful the analysis will be.
 
 ---
 
-## Five prompting techniques
+## Six rules for better prompts
 
-### 1. Set the scenario
+### 1. Be specific
 
-Tell Qumis the business context. This helps the AI focus on what matters for your specific situation.
+Name the coverage, limit, or section you need. Vague questions get vague answers.
 
-_"My client is a mid-size general contractor that subcontracts 60% of its work. Review this CGL policy and identify any provisions that could create coverage gaps for subcontractor-related claims."_
+| Instead of...                  | Try...                                                                                                                         |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| "What does this policy say?"   | "Summarize the key limits, deductibles, and exclusions in this policy"                                                          |
+| "Compare these"                | "Compare these quotes side-by-side, focusing on coverage differences"                                                           |
+| "Is this covered?"             | "Does this policy cover water damage? Cite the relevant language"                                                               |
+| "Help with this claim"         | "Based on the policy, is this slip-and-fall likely covered?"                                                                    |
+| "Is this good coverage?"       | "What are the most significant coverage gaps in this property policy for a restaurant with outdoor seating?"                    |
 
-### 2. Ask follow-up questions
+### 2. State your goal
 
-Treat the first response as a draft. The most valuable insights often come from your second and third questions.
+Tell Qumis what you're trying to accomplish. A prompt with purpose produces better analysis than a generic question.
+
+- _"I'm preparing a renewal recommendation for my client. Summarize the key changes between the expiring policy and this renewal quote."_
+- _"I need to check whether our client's insurance meets the requirements in this contract. Map each requirement against the current coverage."_
+
+### 3. Request the format
+
+Tell Qumis how you want the output structured. This saves you reformatting time and ensures you get actionable output.
+
+- _"Format as a table with columns for: exclusion name, policy section, what it excludes, and any exceptions that might restore coverage."_
+- _"Give me a two-paragraph executive summary suitable for a client email."_
+- _"List the differences as bullet points, grouped by coverage type."_
+
+### 4. Use insurance terms
+
+Qumis is built for insurance professionals and understands industry language. You don't need to simplify your terminology — use the same language you'd use with a colleague.
+
+- _"Does this CGL policy provide products-completed operations coverage?"_
+- _"Is the professional liability coverage claims-made or occurrence, and what is the retroactive date?"_
+- _"What are the sublimits and SIRs under the cyber liability section?"_
+
+### 5. Ask follow-up questions
+
+Treat the first response as a starting point. The most valuable insights often come from your second and third questions.
 
 - **Start broad:** "Summarize the key coverage provisions in this cyber policy."
 - **Then narrow:** "Focus on the social engineering fraud coverage. What are the sublimits and conditions?"
 - **Then apply:** "If an employee fell for a phishing email that resulted in a \$500K wire transfer, would this policy respond?"
 
-### 3. Request a specific format
+### 6. Name and save your prompt
 
-Tell Qumis how you want the output structured. This saves you reformatting time and ensures you get actionable output.
+When a prompt works well, save it to your [Prompt Library](/platform/prompt-library) with a clear, descriptive name. "Extract CGL Sublimits" is easier to find than "Policy Question" — and a well-named library makes your team more efficient over time.
 
-_"List the exclusions in this policy that could affect a construction defect claim. Format as a table with columns for: exclusion name, policy section, what it excludes, and any exceptions that might restore coverage."_
+---
 
-### 4. Compare against a standard
+## Quick starters
 
-Give the AI a benchmark to evaluate against.
+Not sure where to begin? These prompts work across most document types and cover the most common workflows:
 
-_"Compare this Workers' Comp policy against standard guaranteed cost provisions. Flag any non-standard exclusions, unusual conditions, or deviations from typical guaranteed cost structure."_
+- _"Summarize the key terms of this policy, including limits, deductibles, and major exclusions."_
+- _"Compare these documents, highlighting differences in coverage, limits, and conditions."_
+- _"Does this policy meet the insurance requirements in this contract?"_
+- _"Explain [coverage type] in plain language for my client."_
+- _"What exclusions apply to [specific situation]?"_
+- _"Identify any sublimits or deductibles that apply to [specific coverage]."_
 
-### 5. Request the executive version
+---
 
-When you need to share findings with a client or colleague who doesn't want the full analysis.
+## Set the scenario
 
-_"Draft a two-paragraph summary of the key differences between these quotes that I can include in an email to my client. Focus on the three most material coverage differences."_
+Beyond the formula, one of the most powerful techniques is giving Qumis business context. When you describe the specific situation, the AI focuses on what matters for your case — not just what's in the document.
+
+_"My client is a mid-size general contractor that subcontracts 60% of its work. Review this CGL policy and identify any provisions that could create coverage gaps for subcontractor-related claims."_
+
+_"We're preparing for a renewal meeting with a manufacturing client who had two product liability claims last year. Summarize how this renewal quote addresses their loss history."_
+
+The more Qumis understands about the insured, the risk, and the business context, the more relevant the analysis becomes.
+
+---
+
+## Tailor output with a reference file
+
+When you need Qumis to match a specific format — a coverage summary template, an internal spreadsheet layout, or a checklist your team already uses — upload the reference file alongside your documents and point to it in your prompt.
+
+_"Refer to the Excel file named 'Coverage_Summary_Template.xlsx' as the model. Create a summary table for these policies using the same column headers and layout."_
+
+This technique is especially useful for:
+
+- **Internal templates** — match your firm's coverage summary format without re-creating it from scratch
+- **Client deliverables** — produce output that fits directly into an existing report or proposal
+- **Consistency across your team** — everyone produces the same structured output by referencing the same template
+
+<Tip>
+  When referencing a template, be explicit about what to replicate: column headers, row structure, formatting style, and what content to include in each field. The more precise your instructions, the closer the output will match your template.
+</Tip>
 
 ---
 
 ## Prompts by document type
 
-### Policies
+<AccordionGroup>
+  <Accordion title="Policies">
+    - "What are the key exclusions that could affect [specific claim scenario]?"
+    - "Walk me through the coverage trigger — is this occurrence-based or claims-made, and what are the implications?"
+    - "Identify any sublimits or deductibles that apply to [specific coverage]."
+    - "Does this policy have a duty to defend, and are defense costs inside or outside the limits?"
+  </Accordion>
 
-- "What are the key exclusions that could affect [specific claim scenario]?"
-- "Walk me through the coverage trigger — is this occurrence-based or claims-made, and what are the implications?"
-- "Identify any sublimits or deductibles that apply to [specific coverage]."
-- "Does this policy have a duty to defend, and are defense costs inside or outside the limits?"
+  <Accordion title="Quotes and proposals">
+    - "Compare the limits structure, deductibles, and key exclusions between these two quotes."
+    - "What coverage is Quote A offering that Quote B is not?"
+    - "Which quote provides better coverage for [specific risk scenario], and why?"
+  </Accordion>
 
-### Quotes and proposals
+  <Accordion title="Endorsements">
+    - "How does this endorsement modify the base policy's coverage for [specific claim type]?"
+    - "Does this endorsement broaden or restrict coverage, and in what specific ways?"
+  </Accordion>
 
-- "Compare the limits structure, deductibles, and key exclusions between these two quotes."
-- "What coverage is Quote A offering that Quote B is not?"
-- "Which quote provides better coverage for [specific risk scenario], and why?"
+  <Accordion title="Contracts with insurance requirements">
+    - "Does the insurance program described in [attached policy] meet the requirements specified in Section [X] of this contract?"
+    - "What coverage gaps exist between the contractual requirements and the actual policy?"
+  </Accordion>
 
-### Endorsements
-
-- "How does this endorsement modify the base policy's coverage for [specific claim type]?"
-- "Does this endorsement broaden or restrict coverage, and in what specific ways?"
-
-### Contracts with insurance requirements
-
-- "Does the insurance program described in [attached policy] meet the requirements specified in Section [X] of this contract?"
-- "What coverage gaps exist between the contractual requirements and the actual policy?"
-
-### Claims documents
-
-- "Based on this reservation of rights letter, what coverage defenses is the carrier raising?"
-- "Given the facts in this claim report, which policy provisions are most relevant to the coverage determination?"
+  <Accordion title="Claims documents">
+    - "Based on this reservation of rights letter, what coverage defenses is the carrier raising?"
+    - "Given the facts in this claim report, which policy provisions are most relevant to the coverage determination?"
+  </Accordion>
+</AccordionGroup>
 
 ---
 
 ## Common mistakes
 
-**Asking yes/no questions when you need analysis.** Instead of "Does this policy cover cyber risks?", ask "How does this policy address cyber risks, and what are the key limitations?"
+<AccordionGroup>
+  <Accordion title="Asking yes/no questions when you need analysis">
+    Instead of "Does this policy cover cyber risks?", ask "How does this policy address cyber risks, and what are the key limitations?" Open-ended questions produce more useful analysis than binary ones.
+  </Accordion>
 
-**Not providing enough context.** The AI doesn't know your client's industry, risk profile, or priorities unless you tell it. Context dramatically improves output relevance.
+  <Accordion title="Not providing enough context">
+    Qumis doesn't know your client's industry, risk profile, or priorities unless you tell it. Adding even one sentence of context — "My client is a restaurant chain with 12 locations" — dramatically improves output relevance.
+  </Accordion>
 
-**Accepting the first response without follow-up.** The iterative dialogue is where the real value emerges. Push deeper on the findings that matter most.
+  <Accordion title="Accepting the first response without follow-up">
+    The iterative dialogue is where the real value emerges. Your second and third questions can push deeper on the findings that matter most and uncover details the initial summary might not surface.
+  </Accordion>
 
-**Asking about information not in the document.** Qumis analyzes the documents you provide. If you need market context or pricing benchmarks, that's outside the scope of document analysis.
+  <Accordion title="Asking about information not in the document">
+    Qumis analyzes the documents you provide. If you need market context, pricing benchmarks, or information from documents that aren't uploaded, those answers are outside the scope of the analysis.
+  </Accordion>
+
+  <Accordion title="Writing prompts that are too short">
+    A one-line prompt like "Review this policy" gives Qumis no direction. Add your role, the specific question, and how you'll use the output. Even two or three extra sentences of context can significantly improve the response.
+  </Accordion>
+</AccordionGroup>
 
 ---
 
@@ -141,9 +222,15 @@ _"Draft a two-paragraph summary of the key differences between these quotes that
 
 <CardGroup cols={2}>
   <Card icon="bookmark" href="/platform/prompt-library" title="Prompt Library">
-    Browse pre-built prompts for common workflows
+    Save and organize your most effective prompts
   </Card>
   <Card icon="messages" href="/platform/chats" title="Chats">
     Start a conversation with your documents
+  </Card>
+  <Card icon="file-pen" href="/platform/custom-report" title="Custom Report">
+    Build a tailored report with custom prompts
+  </Card>
+  <Card icon="compass" href="/platform/what-can-you-do" title="Choosing the Right Report">
+    Not sure which tool to use? Start here
   </Card>
 </CardGroup>
