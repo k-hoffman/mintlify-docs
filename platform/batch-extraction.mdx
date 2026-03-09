@@ -12,7 +12,9 @@ Extract structured policy data from large document sets without manual uploads. 
 
 ---
 
-## How it works
+## How the system works
+
+### Processing pipeline
 
 Documents are ingested, validated, converted to PDF if needed, processed through OCR and data extraction, and returned as structured JSON. Every document passes through the same processing stages:
 
@@ -22,9 +24,7 @@ Documents are ingested, validated, converted to PDF if needed, processed through
 4. **Output generation** — Extracted data is formatted as structured JSON for downstream consumption.
 5. **Exception handling** — Any documents that fail validation or extraction are flagged with detailed error information for manual review.
 
----
-
-## API process
+### API integration flow
 
 The API process lets your organization send documents to Qumis individually via REST API and receive results through webhook notifications. This method is ideal for real-time workflows, on-demand extraction, and event-driven architectures.
 
@@ -55,7 +55,7 @@ The API process lets your organization send documents to Qumis individually via 
   </Step>
 </Steps>
 
-### API integration requirements
+### Integration requirements
 
 | Component | Details |
 |---|---|
@@ -64,9 +64,7 @@ The API process lets your organization send documents to Qumis individually via 
 | **Webhook endpoint** | Your backend exposes an HTTPS endpoint to receive completion notifications |
 | **Error handling** | Your team monitors API error responses and handles remediation |
 
----
-
-## Exception handling
+### Exception handling
 
 When documents fail validation or extraction, Qumis flags them with detailed error information in the API error response. Your team reviews flagged documents and remedies them before reprocessing.
 
@@ -74,7 +72,11 @@ Common exception reasons include unsupported file types, duplicate documents, OC
 
 ---
 
-## Configure your extraction template
+## Configuring your extraction template
+
+This section covers everything you need to define, validate, and submit a custom extraction template. Qumis uses this template to determine which fields to pull from each document — so the more precise your template, the better your results.
+
+### Setup steps
 
 Define your own data extraction template to control which fields Qumis pulls from each document. Fill out the spreadsheet template below and submit it to your Qumis representative to configure your custom extraction list.
 
@@ -90,9 +92,7 @@ Define your own data extraction template to control which fields Qumis pulls fro
   </Step>
 </Steps>
 
----
-
-## Template columns
+### Template columns
 
 | Column | Required | Description |
 |---|---|---|
@@ -103,11 +103,9 @@ Define your own data extraction template to control which fields Qumis pulls fro
 | **mapping** | Yes | Value type: `1` (single), `M` (multiple), or `C` (complex) |
 | **category** | No | Optional grouping for organizing fields in reports |
 
----
+### Value types (mapping)
 
-## Value types (mapping)
-
-### Type `1` — Single value
+#### Type `1` — Single value
 
 Use for fields that have exactly one value — policy numbers, dates, names, single amounts (premium, deductible), or yes/no fields.
 
@@ -124,7 +122,7 @@ Use for fields that have exactly one value — policy numbers, dates, names, sin
 | Premium Amount | `{"premium": 125000}` |
 | Insured Name | `{"insured_name": "Acme Construction Inc."}` |
 
-### Type `M` — Multiple values
+#### Type `M` — Multiple values
 
 Use for fields that return a list of simple values — lists of perils, exclusions, locations, multiple selections, or tags.
 
@@ -141,7 +139,7 @@ Use for fields that return a list of simple values — lists of perils, exclusio
 | Named Insureds | `["ABC Corp", "XYZ Holdings", "Smith LLC"]` |
 | Locations | `["Toronto, ON", "Vancouver, BC"]` |
 
-### Type `C` — Complex object
+#### Type `C` — Complex object
 
 Use for fields that return structured data with multiple properties — tables or grids, items with multiple attributes, or nested information.
 
@@ -160,26 +158,24 @@ Use for fields that return structured data with multiple properties — tables o
 | Sublimits | `[{"peril": "Flood", "amount": 500000}, {"peril": "Earthquake", "amount": 250000}]` |
 | Named Insureds with Role | `[{"name": "ABC Corp", "role": "Primary"}, {"name": "XYZ Inc", "role": "Additional"}]` |
 
----
-
-## Writing good instructions
+### Writing good instructions
 
 The **instructions** field tells the AI how to find and extract the value. Good instructions lead to accurate extractions.
 
-### Best practices
+**Best practices:**
 
 - **Be specific** — Describe exactly what to look for.
 - **List alternative names** — Include different terms that might be used.
 - **Specify format** — Tell the AI how to format the output.
 - **Provide context** — Explain where to look in the document.
 
-### Instruction template
+**Instruction template:**
 
 <Note>
   Extract [what to find]. [Where to look]. [Format instructions]. [Alternative terms].
 </Note>
 
-### Examples
+**Examples:**
 
 | Field | Good Instruction |
 |---|---|
@@ -188,9 +184,7 @@ The **instructions** field tells the AI how to find and extract the value. Good 
 | **Deductible** | "Extract the per-occurrence deductible amount as a number without currency symbols. Look in the deductible schedule or declarations. May be labeled as 'Deductible', 'Retention', or 'Self-Insured Retention (SIR)'." |
 | **Covered Perils** | "Extract all perils explicitly covered by the policy as an array. Look in the 'Covered Causes of Loss' or 'Insured Perils' section. Include both named perils and any 'all-risk' designation." |
 
----
-
-## Sample template
+### Sample template
 
 Below is a complete sample template showing all required columns. You can use this as a starting point for your custom extraction list.
 
@@ -209,9 +203,7 @@ Below is a complete sample template showing all required columns. You can use th
 | `sublimits` | Sublimits by Peril | Extract sublimits as objects with peril and amount. Look in sublimit schedule. | `[{"peril": "Flood", "amount": 500000}, {"peril": "Earthquake", "amount": 250000}]` | `C` | Coverage |
 | `additional_insureds` | Additional Insureds | Extract all additional insureds with their interest type. | `[{"name": "XYZ Bank", "interest": "Mortgagee"}, {"name": "City of Toronto", "interest": "Certificate Holder"}]` | `C` | Parties |
 
----
-
-## Complete field reference examples
+### Complete field reference
 
 <AccordionGroup>
   <Accordion title="Policy information fields">
@@ -249,9 +241,7 @@ Below is a complete sample template showing all required columns. You can use th
   </Accordion>
 </AccordionGroup>
 
----
-
-## Common mistakes to avoid
+### Common mistakes to avoid
 
 <Warning>
   Review these common pitfalls to ensure your template is configured correctly.
@@ -265,9 +255,7 @@ Below is a complete sample template showing all required columns. You can use th
 | Missing example | No example provided | Always provide a realistic example |
 | Inconsistent JSON | `{'key': 'value'}` | Use double quotes: `{"key": "value"}` |
 
----
-
-## Validation checklist
+### Validation checklist
 
 Before submitting your template, verify:
 
