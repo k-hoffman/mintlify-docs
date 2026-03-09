@@ -168,7 +168,7 @@
             ]
           },
           {
-            "group": "Prospecting",
+            "group": "Prospecting Playbooks",
             "pages": [
               "playbooks/prospecting/overview",
               "playbooks/prospecting/referral-mining",
@@ -177,7 +177,7 @@
             ]
           },
           {
-            "group": "Broking",
+            "group": "Broking Playbooks",
             "pages": [
               "playbooks/broking/overview",
               "playbooks/broking/marketing-account",
@@ -186,16 +186,16 @@
             ]
           },
           {
-            "group": "Servicing",
+            "group": "Servicing Playbooks",
             "pages": [
-              "playbooks/servicing/mid-term-coverage-check",
-              "playbooks/servicing/portfolio-review",
-              "platform/research/coverage-determination",
-              "platform/research/building-your-case"
+              "playbooks/servicing/overview",
+              "playbooks/servicing/stewardship",
+              "playbooks/servicing/contracts-certificates",
+              "playbooks/servicing/coverage-questions"
             ]
           },
           {
-            "group": "Renewing",
+            "group": "Renewing Playbooks",
             "pages": [
               "playbooks/renewing/renewal-preparation",
               "playbooks/renewing/renewal-analysis"
@@ -311,7 +311,9 @@
     { "source": "/platform/workflows/portfolio-review", "destination": "/playbooks/servicing/portfolio-review" },
     { "source": "/playbooks/broking/competitive-quoting", "destination": "/playbooks/broking/quote-comparison" },
     { "source": "/playbooks/broking/client-presentation", "destination": "/playbooks/broking/overview" },
-    { "source": "/playbooks/binding/pre-bind-review", "destination": "/playbooks/broking/binding-review" }
+    { "source": "/playbooks/binding/pre-bind-review", "destination": "/playbooks/broking/binding-review" },
+    { "source": "/playbooks/servicing/mid-term-coverage-check", "destination": "/playbooks/servicing/stewardship" },
+    { "source": "/playbooks/servicing/portfolio-review", "destination": "/playbooks/servicing/overview" }
   ],
   "seo": {
     "indexing": "navigable"

@@ -1,0 +1,318 @@
+---
+title: "Stewardship Meetings"
+description: "Transform stewardship reviews from status updates into strategic coverage conversations that demonstrate ongoing value and surface expansion opportunities."
+icon: "chart-line"
+---
+
+## The strategy
+
+Most stewardship meetings follow the same script: the broker reviews the program summary, walks through the claims history, gives a market update, and asks if there are any questions. The client sits through it politely, says "looks good," and the meeting ends. Neither side learned anything new. Neither side left more committed to the relationship.
+
+The problem isn't the meeting itself. It's that the content is backward-looking and passive. A claims summary tells the client what already happened. A market update tells them what they already read in an industry newsletter. There's nothing in the typical stewardship deck that makes the client think "I'm glad we have this broker."
+
+Qumis changes stewardship by letting you bring forward-looking, coverage-specific intelligence to every review. Instead of reporting on what happened, you analyze what could happen. You show the client where their program has evolved since binding, where new exposures may have emerged, and where the coverage they have today might not respond the way they expect. This turns stewardship from an obligation into a strategic conversation, and it's the single best retention tool available to a servicing team.
+
+It also surfaces expansion opportunities naturally. When you identify a gap in a client's program during a stewardship review, the next step is a conversation about filling it — which means additional premium and deeper account penetration.
+
+## The Qumis workflow
+
+<Steps>
+  <Step title="Assemble the client's full program in Document Vault">
+    Before the stewardship meeting, make sure the client's complete current program is uploaded and organized in the Document Vault. This should include every active policy, all endorsements, the certificate holder list, and any contracts with insurance requirements.
+
+    If you ran Qumis-powered analysis during placement (using the [Broking Playbooks](/playbooks/broking/overview)), the documents are already there. If not, upload them now.
+
+    **Recommended folder structure:**
+    ```
+    Acme Corp/
+    ├── Active Program/
+    │   ├── GL-Policy-2025-2026.pdf
+    │   ├── Property-Policy-2025-2026.pdf
+    │   ├── Umbrella-Policy-2025-2026.pdf
+    │   ├── Auto-Policy-2025-2026.pdf
+    │   ├── Cyber-Policy-2025-2026.pdf
+    │   └── WC-Policy-2025-2026.pdf
+    ├── Contracts/
+    │   ├── Lease-Agreement-Main-Office.pdf
+    │   └── Vendor-Agreement-Template.pdf
+    └── Stewardship/
+        ├── Q1-2026-Review.pdf
+        └── Q3-2025-Review.pdf
+    ```
+
+    <Tip>
+      Upload contracts and lease agreements alongside policies. Stewardship is the right time to verify that the current program still satisfies the client's contractual insurance requirements. Changes in leases, vendor agreements, or customer contracts can create new coverage needs that the client hasn't thought to mention.
+    </Tip>
+  </Step>
+
+  <Step title="Run a mid-term coverage health check">
+    Open a Chat session with the client's full active program loaded and run a health check prompt. This produces the core analytical content for your stewardship meeting.
+
+    **Coverage health check prompt:**
+    ```
+    Review this complete commercial insurance program and produce a
+    mid-term coverage health check. Analyze:
+
+    1. PROGRAM COHERENCE: Do all policies work together as an
+       integrated program? Identify any gaps between policies where
+       an exposure falls through (e.g., coverage excluded by GL
+       but not picked up by a separate policy). Check that the
+       umbrella/excess follows form properly to all underlying
+       policies.
+
+    2. COVERAGE ADEQUACY: Based on the risk profile implied by the
+       policies (industry, operations, size), flag any limits or
+       sublimits that appear inadequate. Identify any areas where
+       the insured may have outgrown their current program
+       structure.
+
+    3. EMERGING EXPOSURES: Based on current trends in this class
+       of business, identify exposures that may not have existed or
+       been significant when the program was placed but should be
+       reviewed now. Examples include evolving cyber risk, AI
+       liability, PFAS/environmental exposure, social inflation
+       impact on limits adequacy, or regulatory changes.
+
+    4. ENDORSEMENT REVIEW: Identify any endorsements that restrict
+       coverage in ways the insured should be aware of, and any
+       endorsements that should be added based on the current risk
+       profile.
+
+    5. CONTRACTUAL COMPLIANCE: If contracts or lease agreements are
+       uploaded, verify that the current program meets all stated
+       insurance requirements.
+
+    For each finding, cite specific policy language and categorize
+    the finding as: IMMEDIATE ACTION (address before next renewal),
+    DISCUSSION ITEM (review with client at stewardship), or
+    MONITOR (track for future renewal consideration).
+    ```
+  </Step>
+
+  <Step title="Add market intelligence context">
+    Supplement the coverage health check with market context that's relevant to the client's industry. Use a follow-up Chat prompt to frame your findings within the broader market.
+
+    **Market context prompt:**
+    ```
+    Based on the findings from the coverage health check, provide
+    market context for each IMMEDIATE ACTION and DISCUSSION ITEM.
+    For each finding, explain:
+
+    1. Whether this is an issue specific to this insured or an
+       industry-wide pattern.
+    2. How carriers are currently responding to this exposure
+       (tightening terms, adding exclusions, requiring higher
+       retentions).
+    3. What the client should expect at the next renewal regarding
+       this coverage area.
+
+    Keep the market context concise. Two to three sentences per
+    finding is sufficient.
+    ```
+
+    <Note>
+      Market intelligence is what separates a stewardship meeting from a policy review. The client can read their own policy. They can't see what's happening across the market unless their broker tells them. This is the value-add that drives retention.
+    </Note>
+  </Step>
+
+  <Step title="Use Legal Search for high-impact discussion items">
+    For the one to two findings that will anchor your stewardship conversation, use Legal Search to find relevant case law or regulatory developments. This adds a layer of urgency and credibility to your recommendations.
+
+    **Example Legal Search queries by topic:**
+    ```
+    Recent court decisions on cyber policy war exclusions applied
+    to ransomware claims
+    ```
+    ```
+    Cases where inadequate umbrella limits led to personal exposure
+    for corporate officers after judgment exceeding the tower
+    ```
+    ```
+    Regulatory developments affecting pollution liability coverage
+    for PFAS contamination claims in 2025-2026
+    ```
+
+    You don't need legal references for every finding. Pick the one or two that are most relevant to the client's business and use the case law to make the conversation tangible. "This isn't theoretical. Here's a company in your industry where this exact issue resulted in [outcome]."
+  </Step>
+
+  <Step title="Generate the stewardship Report">
+    Package everything into a Report that serves as both the meeting document and the leave-behind. Structure it for a 30-minute conversation with 10 minutes of Q&A.
+
+    **Report structure prompt:**
+    ```
+    Generate a stewardship review report for this client with the
+    following structure:
+
+    1. PROGRAM SNAPSHOT: One-page summary of the current program
+       showing all active policies, carriers, limits, and key
+       dates. This is the reference page the client keeps.
+
+    2. COVERAGE HEALTH CHECK FINDINGS: Present each finding from
+       the health check, organized by priority (Immediate Action
+       first, then Discussion Items, then Monitor items). For each
+       finding, include the coverage issue, the policy language,
+       the market context, and your recommendation.
+
+    3. EMERGING RISK BRIEFING: A half-page section on one to two
+       emerging risks relevant to the client's industry, with
+       legal or regulatory context where available.
+
+    4. RECOMMENDED ACTIONS: A clear list of next steps, each with
+       an owner (broker, client, or carrier) and a suggested
+       timeline.
+
+    5. RENEWAL OUTLOOK: A brief preview of what to expect at the
+       next renewal based on current market conditions and the
+       findings in this review.
+
+    The tone should be advisory and forward-looking. The audience
+    is the client's risk manager, CFO, or business owner.
+    ```
+
+    <Tip>
+      Print or PDF the report and bring it to the meeting. Even if you present on screen, the physical document signals that this is a substantive deliverable, not a slide deck the client will forget. It also becomes the artifact that travels internally to the client's leadership.
+    </Tip>
+  </Step>
+
+  <Step title="Deliver the stewardship meeting">
+    Run the meeting using the report as your guide. Here's the recommended flow:
+
+    **Meeting agenda (30 minutes + 10 Q&A):**
+
+    1. **Program snapshot review** (3 min): Quick confirmation that the program overview is accurate. Ask if anything has changed in the business since last review (new locations, acquisitions, headcount, contracts).
+
+    2. **Coverage health check walkthrough** (15 min): Walk through the top three to five findings. For each one, explain the issue, show the policy language, share the market context, and give your recommendation. Let the client react before moving to the next finding.
+
+    3. **Emerging risk briefing** (5 min): Present the one to two emerging risks with legal context. This is the "things you might not have thought about" section that demonstrates forward-looking expertise.
+
+    4. **Recommended actions and next steps** (5 min): Review the action items, assign owners, and set timelines.
+
+    5. **Q&A** (10 min): Open the floor. The coverage health check typically generates questions that lead to deeper conversations about the client's evolving needs.
+  </Step>
+</Steps>
+
+## Stewardship prompts by client segment
+
+<Tabs>
+  <Tab title="Middle market ($25K–$100K premium)">
+    Middle-market clients typically have straightforward program structures but limited internal risk management resources. They rely heavily on their broker for guidance.
+
+    **Tailored health check prompt:**
+    ```
+    Review this mid-market commercial insurance program. Focus on:
+    (1) whether limits are adequate for a business of this size and
+    type, (2) any gaps where a common claim scenario might not be
+    covered, (3) whether the client has coverage they may not need
+    (over-insured areas that could be restructured to save premium),
+    and (4) any endorsements that a business owner should understand
+    but probably doesn't. Keep findings practical and actionable.
+    The audience is a business owner, not a risk manager.
+    ```
+  </Tab>
+
+  <Tab title="Large accounts ($100K–$500K premium)">
+    Large accounts often have risk managers or CFOs who understand insurance. They expect data, specificity, and market insight.
+
+    **Tailored health check prompt:**
+    ```
+    Review this large commercial insurance program with a focus on:
+    (1) program architecture and whether the tower structure is
+    optimized for the current risk profile, (2) coordination
+    between primary and excess layers including follow-form gaps,
+    (3) adequacy of limits relative to current loss trends and
+    social inflation benchmarks, (4) manuscript endorsement scope
+    and whether any negotiated terms should be updated, and
+    (5) emerging liability exposures specific to this industry
+    vertical. The audience is a risk manager and CFO who will
+    evaluate the analysis critically.
+    ```
+  </Tab>
+
+  <Tab title="Complex / specialty accounts ($500K+ premium)">
+    Complex accounts require deep technical analysis across multiple lines, often with layered towers, captive components, and global program structures.
+
+    **Tailored health check prompt:**
+    ```
+    Review this complex commercial insurance program including all
+    layers and lines. Analyze: (1) tower integrity across the
+    full excess stack, including any gaps in follow-form language
+    or exclusion mismatches between layers, (2) program-wide
+    consistency of named insured, additional insured, and
+    territory provisions, (3) adequacy of aggregate limits given
+    the full portfolio of exposures, (4) interaction between
+    different coverage lines (e.g., GL vs. professional liability
+    vs. cyber) for overlapping claim scenarios, (5) any captive
+    or self-insured retention layers and how they interact with
+    the commercial program, and (6) regulatory and jurisdictional
+    considerations for any international operations. Provide
+    detailed citations for every finding.
+    ```
+  </Tab>
+</Tabs>
+
+## Turning stewardship findings into expansion opportunities
+
+The coverage health check will frequently surface gaps that represent new business opportunities. Here's how to handle each type.
+
+<AccordionGroup>
+  <Accordion title="Coverage gaps that need a new policy">
+    When the health check identifies an exposure not addressed by any current policy (e.g., the client has no standalone cyber coverage, no EPLI, or no fiduciary liability), this is a straightforward cross-sell conversation.
+
+    **Transition language:**
+    > "This is something your current program doesn't address. We'd recommend getting a dedicated [policy type] quote to close this gap. We can have options for you within two weeks so you don't have to wait for renewal."
+
+    Don't wait for renewal. Mid-term policy additions demonstrate urgency and responsiveness.
+  </Accordion>
+
+  <Accordion title="Limits that appear inadequate">
+    When the analysis shows that current limits may not be sufficient given the client's growth, industry loss trends, or contractual requirements, the conversation is about increasing limits on existing policies or adding excess layers.
+
+    **Transition language:**
+    > "Based on where your business is today versus when this program was placed, we think the [coverage type] limit should be reviewed. The current $[X] may not be sufficient given [specific reason]. We can model what an increase looks like and what it would cost."
+  </Accordion>
+
+  <Accordion title="Endorsements that should be added">
+    When the review identifies endorsements that would improve the program (broader AI coverage, updated cyber endorsements, enhanced business interruption provisions), the conversation is about policy modifications.
+
+    **Transition language:**
+    > "There's an endorsement available that would address this exposure. It's typically a modest additional premium. We'd recommend adding it now rather than waiting for renewal so you're covered immediately."
+  </Accordion>
+
+  <Accordion title="Program restructuring opportunities">
+    Sometimes the health check reveals that the overall program structure could be improved. Maybe the client is over-insured in one area and under-insured in another. Maybe consolidating carriers would improve coordination. Maybe a different retention strategy would reduce premium.
+
+    **Transition language:**
+    > "Looking at the full program, there's an opportunity to restructure that could improve coverage and potentially reduce overall cost. We'd like to model a few alternatives and present them to you before renewal kicks off."
+  </Accordion>
+</AccordionGroup>
+
+## Stewardship cadence
+
+<Info>
+  The right stewardship frequency depends on the account size and complexity. More frequent touchpoints don't just improve retention — they create more opportunities to identify coverage needs and demonstrate value.
+</Info>
+
+| Account segment | Review frequency | Format | Depth |
+|---|---|---|---|
+| $25K–$100K premium | Semi-annual (2x/year) | Virtual or in-person, 30 min | Health check + top 3 findings |
+| $100K–$500K premium | Quarterly (4x/year) | In-person preferred, 45 min | Full health check + market context + legal references |
+| $500K+ premium | Quarterly + ad hoc | In-person, 60 min | Full analysis + emerging risk briefing + program architecture review |
+
+<Tip>
+  Schedule the first stewardship meeting 90 days after binding. This is early enough that the client remembers the placement process and can see continuity between the coverage analysis you did during broking and the ongoing value you deliver in servicing. It also catches any post-binding issues (certificate problems, endorsement corrections, contractual compliance gaps) before they become emergencies.
+</Tip>
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Stewardship meetings delivered | Percentage of accounts that received at least one Qumis-powered stewardship review in the current policy period | 100% of accounts above $25K |
+| Findings per review | Number of coverage health check findings presented to the client | 3–5 per review |
+| Expansion opportunities identified | Number of stewardship findings that led to a cross-sell, upsell, or program modification conversation | 1–2 per review |
+| Revenue from stewardship-sourced opportunities | Additional premium generated from mid-term actions identified during stewardship | Track quarterly |
+| Client NPS or satisfaction post-meeting | Client feedback on stewardship quality | Improve quarter-over-quarter |
+| Retention rate for stewardship accounts | Renewal rate for accounts that received regular Qumis-powered stewardship vs. those that didn't | 5–10% higher than non-stewardship accounts |
+
+<Note>
+  Stewardship is the single highest-leverage retention activity available to a servicing team. A client who sees new, actionable insight from their broker every quarter has almost no reason to entertain a competitor. The investment is two to three hours of prep per account per quarter. The return is a client who renews, expands, and refers.
+</Note>

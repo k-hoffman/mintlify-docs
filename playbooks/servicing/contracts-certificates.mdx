@@ -1,0 +1,354 @@
+---
+title: "Contracts & Certificates"
+description: "Review insurance requirements in contracts and issue accurate certificates of insurance without the back-and-forth that bogs down your servicing team."
+icon: "file-certificate"
+---
+
+## The strategy
+
+Contract reviews and certificates of insurance are the highest-volume servicing activity in most brokerages. A single mid-market account might generate 20–50 certificate requests per year. A large account with active construction, real estate, or vendor operations can generate hundreds.
+
+The traditional workflow is slow and error-prone. A client sends a contract with insurance requirements. An account manager reads through the contract, extracts the insurance provisions, compares them against the current program, identifies any gaps, flags them with the producer, waits for a response, and then issues the certificate. When the requirements don't match the current program, the back-and-forth between the client, the brokerage, and the carrier can stretch the process from days to weeks.
+
+Qumis compresses this workflow by analyzing the contract's insurance requirements against the client's actual policies in minutes. It identifies every requirement, checks whether the current program satisfies it, cites the specific policy language that does or doesn't comply, and flags the gaps. The account manager goes from "let me review this and get back to you" to "here's exactly where you stand, here's what's covered, and here's what we need to address" in a single conversation.
+
+This speed and precision is a direct retention driver. Clients judge their broker's responsiveness on how quickly they can get a certificate issued and how often the certificate is right the first time.
+
+## The Qumis workflow: Contract review
+
+<Steps>
+  <Step title="Upload the contract to Document Vault">
+    When a client sends a contract for insurance review, upload it to their folder in the Document Vault alongside their active policies. If you don't have a dedicated contracts subfolder, create one.
+
+    ```
+    Acme Corp/
+    ├── Active Program/
+    │   ├── GL-Policy.pdf
+    │   ├── Property-Policy.pdf
+    │   ├── Umbrella-Policy.pdf
+    │   ├── Auto-Policy.pdf
+    │   └── WC-Policy.pdf
+    └── Contracts/
+        ├── Vendor-Agreement-XYZ-Corp.pdf    ← NEW
+        └── Lease-Agreement-Main-Office.pdf
+    ```
+
+    <Tip>
+      Keep every contract you review in the Vault. Over time, this builds a library of the client's contractual insurance obligations that you can reference during stewardship reviews and renewals. It also means you can quickly check whether a program change will affect compliance with existing contracts.
+    </Tip>
+  </Step>
+
+  <Step title="Run an insurance requirements extraction">
+    Open a Chat session with the contract loaded and run a requirements extraction prompt. This pulls every insurance-related obligation out of the contract and organizes them into a structured checklist.
+
+    **Requirements extraction prompt:**
+    ```
+    Review this contract and extract every insurance-related
+    requirement. For each requirement, identify:
+
+    1. COVERAGE TYPE: What type of insurance is required (e.g.,
+       commercial general liability, professional liability, auto,
+       workers' comp, umbrella, cyber, pollution, etc.)
+
+    2. MINIMUM LIMITS: The specific limits required, including per
+       occurrence, aggregate, and any sublimits.
+
+    3. ENDORSEMENT REQUIREMENTS: Any specific endorsements required,
+       including additional insured status, waiver of subrogation,
+       primary and noncontributory language, and notice of
+       cancellation provisions.
+
+    4. CERTIFICATE REQUIREMENTS: Any specific certificate of
+       insurance requirements, including who must be listed as
+       certificate holder, additional insured, or loss payee.
+
+    5. TIMING: Any deadlines for providing proof of insurance or
+       maintaining coverage.
+
+    6. OTHER CONDITIONS: Any other insurance-related conditions
+       such as carrier rating requirements (AM Best), deductible
+       limits, claims-made vs. occurrence form requirements, or
+       tail coverage provisions.
+
+    Present the requirements as a structured checklist organized
+    by coverage type. Include the exact contract language for each
+    requirement with page and section references.
+    ```
+  </Step>
+
+  <Step title="Run a compliance check against the active program">
+    Now load the client's active policies alongside the contract and run a compliance check. This is the core analysis that tells you whether the client can sign the contract with their current program or whether modifications are needed.
+
+    **Compliance check prompt:**
+    ```
+    Compare the insurance requirements extracted from this contract
+    against the client's active insurance program. For each
+    requirement, determine:
+
+    1. COMPLIANT: The current program meets or exceeds the
+       requirement. Cite the specific policy language, endorsement,
+       or limit that satisfies the requirement.
+
+    2. PARTIALLY COMPLIANT: The current program addresses the
+       requirement but falls short in some way (e.g., limits are
+       close but below the minimum, additional insured endorsement
+       exists but may not extend to the specific relationship
+       described in the contract). Explain the gap and what would
+       need to change.
+
+    3. NON-COMPLIANT: The current program does not address this
+       requirement at all. Explain what coverage or endorsement
+       would need to be added.
+
+    For every finding, cite the contract requirement and the
+    corresponding policy language (or absence thereof). Organize
+    the output as a compliance matrix with a clear status for each
+    line item.
+    ```
+
+    <Warning>
+      The compliance check is an analysis tool, not legal advice. Always note that the client should have their legal counsel review any contractual insurance provisions alongside your analysis. Your role is to identify whether the insurance program can satisfy the requirements, not to interpret the broader contractual obligations.
+    </Warning>
+  </Step>
+
+  <Step title="Communicate results and resolve gaps">
+    Based on the compliance check, communicate the results to the client immediately. Don't wait to resolve gaps before sharing what you've found. Speed matters.
+
+    For **compliant** requirements: confirm you can issue certificates as-is.
+
+    For **partially compliant** requirements: explain the gap and recommend a solution (endorsement modification, limit increase, or carrier negotiation).
+
+    For **non-compliant** requirements: outline the options. Can the gap be filled with a policy modification? Does the client need a new policy? Can the client negotiate the contract requirement down?
+
+    <Tip>
+      When you find non-compliance, present the solution alongside the problem. "Your current GL limit is $1M per occurrence; the contract requires $2M. We can get an endorsement to increase the limit or adjust the umbrella to drop down. I'll have pricing within 48 hours." This turns a problem into a demonstration of responsiveness.
+    </Tip>
+  </Step>
+</Steps>
+
+## The Qumis workflow: Certificate issuance
+
+<Steps>
+  <Step title="Verify certificate accuracy before issuance">
+    Before issuing any certificate, run a quick verification prompt to confirm that what you're about to put on the certificate is actually supported by the policy. This prevents the most common certificate errors: listing endorsements that don't exist, overstating limits, or naming additional insureds without a supporting endorsement.
+
+    **Certificate verification prompt:**
+    ```
+    I need to issue a certificate of insurance for this client
+    with the following specifications:
+
+    - Certificate holder: [Name and address]
+    - Additional insured: [Yes/No, specify party]
+    - Waiver of subrogation: [Yes/No]
+    - Primary and noncontributory: [Yes/No]
+    - Minimum limits: [Specify per the contract]
+    - Notice of cancellation: [Specify days]
+
+    For each specification, verify whether the current policy and
+    endorsements support it. Cite the specific endorsement or
+    policy language that authorizes each item. Flag anything that
+    cannot be certified based on the current policy.
+    ```
+  </Step>
+
+  <Step title="Handle common certificate complications">
+    Certificates often involve complications that slow down issuance. Use Qumis to resolve them quickly.
+
+    <Tabs>
+      <Tab title="Additional insured by contract">
+        Many policies provide additional insured status "as required by written contract." The question is whether the specific contract relationship falls within the endorsement's scope.
+
+        **Verification prompt:**
+        ```
+        The client needs to add [party name] as an additional insured
+        based on [contract type, e.g., "a vendor services agreement"].
+        Review the additional insured endorsement(s) on the current
+        GL policy. Determine: (1) whether the endorsement provides
+        blanket additional insured status for parties required by
+        written contract, (2) whether the specific relationship
+        described in the contract falls within the endorsement's
+        scope, and (3) whether there are any limitations or
+        conditions that might affect coverage for this additional
+        insured. Cite the endorsement language.
+        ```
+      </Tab>
+
+      <Tab title="Waiver of subrogation conflicts">
+        Some policies include blanket waiver of subrogation endorsements; others require specific scheduling. Conflicts arise when the policy's waiver doesn't extend to the party named in the contract.
+
+        **Verification prompt:**
+        ```
+        The client needs a waiver of subrogation in favor of
+        [party name] per their contract. Review all waiver of
+        subrogation endorsements on the current program (GL,
+        property, auto, WC, umbrella). For each line, confirm
+        whether the waiver is blanket (applies to all parties
+        required by written contract) or scheduled (only applies
+        to named parties). Flag any line where the waiver may
+        not extend to this specific party.
+        ```
+      </Tab>
+
+      <Tab title="Limits stacking across the tower">
+        Contracts sometimes require aggregate limits that exceed the primary policy. The question is whether the umbrella or excess layers provide the additional capacity and whether they follow form to the required coverage.
+
+        **Verification prompt:**
+        ```
+        The contract requires minimum combined limits of $[amount]
+        for [coverage type]. The primary policy provides $[primary
+        limits]. Review the umbrella/excess policies to determine:
+        (1) whether they provide sufficient additional limits to
+        meet the contract requirement, (2) whether they follow form
+        to the primary for this coverage type, and (3) whether there
+        are any exclusions in the excess layers that could reduce
+        available limits for this specific exposure. Cite the
+        relevant language in each layer.
+        ```
+      </Tab>
+
+      <Tab title="Notice of cancellation requirements">
+        Contracts frequently require 30 or 60 days' notice of cancellation to certificate holders. Policies may or may not include this provision, and the standard ACORD certificate language has limitations.
+
+        **Verification prompt:**
+        ```
+        The contract requires [X] days' notice of cancellation to
+        the certificate holder. Review the cancellation provisions
+        in the current policy. Determine: (1) whether the policy
+        includes a notice of cancellation endorsement that extends
+        to certificate holders, (2) the number of days' notice
+        provided, and (3) whether the notice provision meets the
+        contract requirement. If the policy doesn't include this
+        provision, recommend options for compliance.
+        ```
+      </Tab>
+    </Tabs>
+  </Step>
+
+  <Step title="Document the certificate basis">
+    After issuing the certificate, save the Qumis verification output in the Document Vault as a record of the analysis that supported the certificate. This creates an audit trail showing that every item on the certificate was verified against the actual policy.
+
+    This documentation is valuable for:
+
+    - E&O protection if a certificate is later questioned
+    - Renewal reference when checking whether program changes affect existing certificates
+    - Stewardship reviews when assessing the client's full contractual obligation landscape
+  </Step>
+</Steps>
+
+## Common contract review scenarios
+
+<AccordionGroup>
+  <Accordion title="Lease agreements">
+    Commercial leases typically require the tenant to carry GL, property (for tenant improvements), umbrella, and sometimes professional liability. Key issues to check: whether the landlord is properly named as additional insured, whether the property coverage extends to tenant improvements and betterments, and whether the waiver of subrogation runs in both directions.
+
+    **Quick-start prompt:**
+    ```
+    Extract all insurance requirements from this commercial lease
+    and check compliance against the tenant's active program. Pay
+    special attention to tenant improvement coverage, landlord
+    additional insured status, and mutual waiver of subrogation
+    requirements.
+    ```
+  </Accordion>
+
+  <Accordion title="Construction subcontracts">
+    Subcontracts often have the most demanding insurance requirements: high limits, specific additional insured endorsement versions, primary and noncontributory language, completed operations coverage, and sometimes wrap-up program compliance. Errors here can result in contract disputes or claims denial.
+
+    **Quick-start prompt:**
+    ```
+    Extract all insurance requirements from this subcontract and
+    check compliance against the subcontractor's active program.
+    Focus on: additional insured for ongoing and completed
+    operations (check endorsement form number and edition date),
+    primary and noncontributory status, per-project aggregate
+    if required, and any wrap-up or OCIP enrollment requirements.
+    ```
+  </Accordion>
+
+  <Accordion title="Vendor and service agreements">
+    Vendor agreements vary widely but commonly require GL, professional liability or E&O, cyber liability, and workers' comp. The key issue is often whether the vendor's professional liability or cyber policy is broad enough to cover the specific services described in the contract.
+
+    **Quick-start prompt:**
+    ```
+    Extract all insurance requirements from this vendor services
+    agreement and check compliance against the vendor's active
+    program. Pay special attention to whether the professional
+    liability policy's definition of covered services encompasses
+    the scope of work described in the contract, and whether the
+    cyber liability coverage addresses the data handling
+    obligations in the agreement.
+    ```
+  </Accordion>
+
+  <Accordion title="Loan and financing agreements">
+    Lenders require property insurance covering the collateral, often with specific requirements around loss payee status, replacement cost valuation, and agreed amount endorsements. Failure to comply can trigger loan covenant violations.
+
+    **Quick-start prompt:**
+    ```
+    Extract all insurance requirements from this loan agreement
+    and check compliance against the borrower's active property
+    program. Focus on: loss payee and mortgagee clause status,
+    valuation basis (replacement cost vs. actual cash value),
+    coinsurance or agreed amount provisions, and any lender-
+    specific endorsement requirements.
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Client communication templates
+
+<Tabs>
+  <Tab title="Compliant: ready to issue">
+    > Hi [Client Name],
+    >
+    > We've reviewed the insurance requirements in the [contract type] with [counterparty]. Your current program meets all requirements. We can issue the certificate immediately.
+    >
+    > Here's a summary of what we verified:
+    > - GL: $[limits] with [counterparty] as additional insured per your blanket AI endorsement
+    > - Umbrella: $[limits], follows form to GL
+    > - Workers' comp: Statutory limits with waiver of subrogation
+    > - [Other lines as applicable]
+    >
+    > We'll send the certificate to [recipient] today. Let us know if the contact information for the certificate holder needs to change.
+  </Tab>
+
+  <Tab title="Gaps identified: action needed">
+    > Hi [Client Name],
+    >
+    > We've reviewed the insurance requirements in the [contract type] with [counterparty]. Most requirements are met by your current program, but we found [X] items that need attention:
+    >
+    > **Covered as-is:**
+    > - [List compliant items]
+    >
+    > **Needs action:**
+    > - [Describe gap, e.g., "The contract requires $5M umbrella limits; your current umbrella is $3M. We can get a quote for the increase."]
+    > - [Describe gap, e.g., "The contract requires cyber liability with $2M limits. You don't currently carry a standalone cyber policy. We recommend adding one."]
+    >
+    > We can start working on solutions for the gap items today. In the meantime, do you want us to issue a certificate showing current coverage and note that modifications are in process? Or would you prefer to wait until the gaps are resolved?
+  </Tab>
+
+  <Tab title="Rush certificate request">
+    > Hi [Client Name],
+    >
+    > Got it. We've run the contract requirements against your current program and confirmed everything checks out. Certificate is being issued now and will be sent to [recipient] within the hour.
+    >
+    > Quick summary: your current program covers all requirements including the additional insured, waiver of subrogation, and primary/noncontributory provisions. No modifications needed.
+    >
+    > Let us know if you need anything else.
+  </Tab>
+</Tabs>
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Contract review turnaround | Time from client request to compliance analysis delivered | Under 4 hours for standard contracts |
+| Certificate issuance turnaround | Time from request to certificate sent | Under 2 hours for compliant accounts; under 24 hours when modifications are needed |
+| First-time accuracy | Percentage of certificates issued correctly without revision | 95%+ |
+| Compliance gaps identified proactively | Number of gaps found in contract reviews that the client didn't know about | Track per review |
+| Mid-term policy modifications from contract reviews | Endorsements or coverage additions triggered by contract requirements | Track quarterly |
+| Documentation completeness | Percentage of issued certificates with a Qumis verification record in the Vault | 100% |
+
+<Note>
+  Speed on certificates is one of the most visible measures of service quality from the client's perspective. Every hour you shave off the turnaround and every revision you avoid by getting it right the first time reinforces the client's confidence in your team. Qumis makes both possible by eliminating the manual comparison step that creates delays and errors.
+</Note>

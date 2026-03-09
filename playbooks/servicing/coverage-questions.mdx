@@ -1,0 +1,305 @@
+---
+title: "Coverage Questions"
+description: "Answer client coverage questions in minutes with citations to the actual policy language, eliminating the 'let me get back to you' delay."
+icon: "comment-question"
+---
+
+## The strategy
+
+Coverage questions are the most frequent and most time-sensitive servicing interaction. A client calls and asks: "Am I covered if...?" "Does my policy include...?" "What happens when...?" The quality and speed of the answer determines how the client perceives their broker's expertise.
+
+The traditional workflow looks like this: the client asks a question, the account manager says "let me check and get back to you," they pull out the 80-page policy PDF, search through it manually, maybe consult a colleague, draft a response, have it reviewed, and send it back. Best case: same-day response. Common case: one to three business days. And even then, the response is often a summary without citations, which means the client has to trust the broker's interpretation without seeing the underlying language.
+
+Qumis eliminates the delay and the ambiguity. You upload the client's policy (or it's already in the Vault), ask the coverage question in a Chat session, and get a citation-backed answer in seconds. You can respond to the client while they're still on the phone or within minutes of receiving their email. And the answer includes the exact policy language, so the client can see for themselves where the coverage applies or doesn't.
+
+This isn't just about speed. It's about credibility. A broker who can answer a complex coverage question in real time, with citations, is demonstrably more valuable than one who says "I'll get back to you tomorrow."
+
+## The Qumis workflow
+
+<Steps>
+  <Step title="Ensure the client's program is in Document Vault">
+    The fastest way to answer a coverage question is to have the client's policies already loaded in the Document Vault. If you've been following the broking and stewardship playbooks, they're already there.
+
+    If not, upload the relevant policy before starting the analysis. For most coverage questions, you only need the specific policy related to the question (the GL policy for a liability question, the property policy for a building damage question), but having the full program available lets you check whether other policies might also respond.
+
+    <Tip>
+      Make it a standard practice to upload every client's full program to the Vault at binding. The upfront investment of 15 minutes saves hours across the policy period because every coverage question, contract review, and stewardship meeting starts instantly instead of with a document hunt.
+    </Tip>
+  </Step>
+
+  <Step title="Ask the coverage question in Chats">
+    Open a Chat session with the relevant policy or policies loaded and ask the question the same way the client asked it. You don't need to translate the question into insurance jargon — Qumis understands both plain language and technical terminology.
+
+    **General coverage question prompt:**
+    ```
+    A client is asking: "[paste the client's exact question here]"
+
+    Based on the uploaded policy, answer this question by:
+
+    1. Identifying whether the described scenario is covered, not
+       covered, or potentially covered with conditions.
+
+    2. Citing the specific policy language that applies, including
+       the relevant insuring agreement, any applicable exclusions,
+       any relevant definitions, and any conditions that affect
+       coverage.
+
+    3. If coverage is subject to conditions (notice requirements,
+       cooperation clauses, deductible application), explain what
+       the insured needs to do to preserve their coverage rights.
+
+    4. If the answer is not clear-cut, explain the ambiguity and
+       identify the specific language that creates the uncertainty.
+
+    5. If other policies in the program might also respond to this
+       scenario (e.g., the umbrella drops down, or a cyber policy
+       overlaps with the GL), identify those as well.
+
+    Write the answer in language that a business professional (not
+    an insurance expert) can understand, but include the technical
+    citations so they can see the source.
+    ```
+
+    <Warning>
+      Qumis provides coverage analysis, not coverage opinions or legal advice. Always frame your response to the client as an analysis of the policy language, not as a definitive coverage determination. If the question involves an actual claim or potential litigation, recommend the client consult with coverage counsel.
+    </Warning>
+  </Step>
+
+  <Step title="Supplement with Legal Search when relevant">
+    For coverage questions that involve ambiguous language or potential disputes, use Legal Search to find case law that addresses how similar language has been interpreted by courts.
+
+    **When to use Legal Search:**
+
+    - The policy language is ambiguous and could be read two ways
+    - The client is asking about an unusual or emerging risk scenario
+    - The question involves an exclusion whose scope is debatable
+    - The answer could have significant financial implications and the client needs more than just a policy read
+
+    **Example Legal Search prompt:**
+    ```
+    Find cases interpreting the "expected or intended" exclusion
+    in CGL policies as applied to claims arising from construction
+    defects where the insured did not intend to cause property
+    damage but the work itself was intentional
+    ```
+
+    <Tip>
+      Legal Search context is powerful but should be used selectively. For straightforward coverage questions ("Does my policy cover water damage?"), the policy language is usually sufficient. Reserve Legal Search for questions where the answer genuinely depends on interpretation, or where the client is making a significant business decision based on the answer.
+    </Tip>
+  </Step>
+
+  <Step title="Format and deliver the response">
+    Translate the Qumis analysis into a client-ready response. The format depends on the complexity of the question and the client's preference.
+
+    **For simple questions (clear yes/no answer):** respond via email or phone with a concise answer and one to two citations.
+
+    **For complex questions (ambiguous or multi-policy):** generate a Report and send it as an attachment with a summary email.
+
+    **For questions with claim implications:** generate a Report, flag that it's an analysis and not a coverage opinion, and recommend the client share it with their legal counsel or claims team.
+  </Step>
+
+  <Step title="Save the Q&A for future reference">
+    Save the Chat session and any Reports generated in the client's Document Vault folder. This creates a searchable library of coverage questions and answers for each account.
+
+    This library is valuable in three ways:
+
+    - **Stewardship input:** recurring questions about the same coverage area signal that the client needs better understanding of their program or that the coverage itself should be improved.
+    - **Renewal intelligence:** a pattern of coverage questions can inform what to negotiate at renewal.
+    - **Institutional knowledge:** if the account manager changes, the Q&A history means the new team member can see every coverage conversation that's happened.
+  </Step>
+</Steps>
+
+## Coverage question prompts by scenario
+
+<Tabs>
+  <Tab title="'Am I covered for...?' questions">
+    The most common type. The client describes a scenario and wants to know if their policy responds.
+
+    **Prompt template:**
+    ```
+    The client is asking whether their policy covers the following
+    scenario: [describe the scenario].
+
+    Analyze the uploaded policy to determine: (1) whether the
+    insuring agreement provides coverage for this scenario,
+    (2) whether any exclusions apply that would eliminate or
+    limit coverage, (3) whether any exceptions to exclusions
+    restore coverage, (4) what deductible or retention applies,
+    and (5) what the applicable limits would be. Cite every
+    relevant provision.
+    ```
+
+    **Example scenarios and what to look for:**
+
+    | Client question | Key provisions to analyze |
+    |---|---|
+    | "Am I covered if a customer slips on our sidewalk?" | Premises liability insuring agreement, medical payments, any exclusions for the specific location type |
+    | "Am I covered if my employee causes a car accident using their personal vehicle for work?" | Hired and non-owned auto coverage, any endorsement restrictions, interaction with the employee's personal auto policy |
+    | "Am I covered if we get sued for a product defect from three years ago?" | Products-completed operations, occurrence vs. claims-made trigger, retroactive date, statute of limitations interaction |
+    | "Am I covered if a vendor we hired causes damage to a client's property?" | Vicarious liability, independent contractor exclusions, additional insured obligations flowing upstream |
+  </Tab>
+
+  <Tab title="'What are my limits for...?' questions">
+    Clients often need to know specific limits for contracts, financing requirements, or risk management decisions.
+
+    **Prompt template:**
+    ```
+    The client needs to know their exact coverage limits for
+    [specific coverage type or scenario]. Review the uploaded
+    policy and identify: (1) the per-occurrence or per-claim
+    limit, (2) the aggregate limit and whether it's shared with
+    other coverages, (3) any sublimits that apply to this specific
+    exposure, (4) whether defense costs erode the limit, and
+    (5) if the umbrella/excess provides additional limits for
+    this exposure and whether it follows form. Present the full
+    tower of available limits with citations.
+    ```
+  </Tab>
+
+  <Tab title="'Does this exclusion apply to...?' questions">
+    Exclusion questions often arise when a client is evaluating a new business opportunity or contract and wants to understand their risk.
+
+    **Prompt template:**
+    ```
+    The client is asking whether the [specific exclusion, e.g.,
+    "pollution exclusion" or "professional services exclusion"]
+    in their policy would apply to the following situation:
+    [describe the situation].
+
+    Analyze: (1) the exact scope of the exclusion as written,
+    (2) whether any exceptions to the exclusion might apply to
+    this situation, (3) whether the situation as described falls
+    within or outside the exclusion's language, (4) if the
+    language is ambiguous, explain both possible interpretations,
+    and (5) whether any other policy or endorsement might provide
+    coverage that the exclusion removes from the primary. Cite
+    all relevant language.
+    ```
+  </Tab>
+
+  <Tab title="'What happens if...?' process questions">
+    Clients often ask about the mechanics of how their coverage works in practice: notice requirements, claim procedures, cancellation provisions, and other operational questions.
+
+    **Prompt template:**
+    ```
+    The client is asking about the process or mechanics of their
+    coverage: [describe the question, e.g., "What do I need to
+    do if I want to add a new location mid-term?" or "How much
+    notice do I need to give before cancelling?" or "What happens
+    if I discover a claim after the policy expires?"].
+
+    Review the policy conditions, definitions, and any relevant
+    endorsements to explain: (1) the exact process or requirement
+    as stated in the policy, (2) any deadlines or timeframes the
+    insured must meet, (3) any consequences of failing to follow
+    the process, and (4) your recommendation for how the client
+    should proceed. Cite the specific policy provisions.
+    ```
+  </Tab>
+
+  <Tab title="Multi-policy questions">
+    Some questions involve potential coverage from multiple policies. These are the most complex and the most valuable to answer well.
+
+    **Prompt template:**
+    ```
+    The client is asking about coverage for a scenario that may
+    involve multiple policies: [describe the scenario].
+
+    Review ALL uploaded policies to determine: (1) which policies
+    potentially respond to this scenario, (2) the order in which
+    policies apply (primary, excess, other insurance provisions),
+    (3) whether any policy exclusions eliminate coverage that
+    another policy might provide, (4) the total available limits
+    across all responding policies, and (5) any coordination
+    issues between policies (gaps, overlaps, or conflicting
+    provisions). Present the full coverage picture across the
+    program.
+    ```
+  </Tab>
+</Tabs>
+
+## Real-time response framework
+
+The biggest advantage Qumis provides for coverage questions is speed. Here's how to structure your response workflow to maximize it.
+
+<AccordionGroup>
+  <Accordion title="While the client is on the phone">
+    If a client calls with a coverage question and their policies are already in the Vault, you can answer in real time.
+
+    1. Open a Chat session with their policies loaded (keep a browser tab open to the Vault during business hours)
+    2. Type the question while the client is still explaining the scenario
+    3. Review the Qumis output (15–30 seconds)
+    4. Summarize the answer verbally: "Based on what I'm seeing in your policy, [answer]. The relevant language is in [section/endorsement]. I'll send you a written summary with the citations after we hang up."
+    5. Generate a brief Report or copy the Chat output into an email as the follow-up
+
+    **Talk track for the follow-up send:**
+    > "As promised, here's the written summary of the coverage analysis we discussed on the phone. The key language is cited in the attached so you can see exactly where the answer comes from. Let me know if any follow-up questions come up."
+  </Accordion>
+
+  <Accordion title="Responding to email questions">
+    For email questions, the goal is a same-hour response whenever possible.
+
+    1. Read the client's question
+    2. Open a Chat session with the relevant policies
+    3. Run the appropriate prompt
+    4. Draft your email response using the Qumis output
+    5. Attach the Qumis Report if the question is complex
+
+    **Target turnaround times:**
+
+    - Simple yes/no questions: respond within 1 hour
+    - Complex multi-provision questions: respond within 2–4 hours
+    - Questions requiring Legal Search context: respond within 4–8 hours (same business day)
+  </Accordion>
+
+  <Accordion title="Escalating ambiguous questions">
+    When Qumis identifies genuinely ambiguous policy language where the answer could go either way, escalate appropriately.
+
+    1. Share both interpretations with the client
+    2. Cite the specific language that creates the ambiguity
+    3. If Legal Search provides relevant case law, include it
+    4. Recommend that the client consult coverage counsel if the stakes are high
+    5. Offer to request a coverage clarification from the carrier if appropriate
+
+    **Escalation language:**
+    > "The policy language here is ambiguous, and reasonable interpretations could go either way. [Explain both interpretations with citations.] Given the potential financial impact, I'd recommend having your counsel review this specific provision. We can also request a written coverage interpretation from the carrier if that would be helpful. In the meantime, here's the relevant case law we found on how courts have interpreted similar language."
+  </Accordion>
+</AccordionGroup>
+
+## Building a coverage Q&A knowledge base
+
+Over time, the coverage questions you answer with Qumis become a powerful asset for your team and your client relationships.
+
+<Steps>
+  <Step title="Tag and categorize each Q&A">
+    After answering a coverage question, tag the saved Chat or Report with the coverage type, the question category, and the outcome (covered, not covered, ambiguous). Over time, this creates a searchable database of coverage answers.
+  </Step>
+
+  <Step title="Identify patterns across accounts">
+    Review your Q&A library quarterly. If multiple clients are asking the same type of question (e.g., "does my cyber policy cover social engineering fraud?"), this signals an opportunity to proactively address the topic across your book through stewardship reviews or a targeted communication.
+  </Step>
+
+  <Step title="Feed patterns into renewal strategy">
+    Coverage questions reveal what clients are worried about. If a client asks three questions about pollution exposure during the policy period, that's a signal to focus on pollution liability at renewal. Share the Q&A history with the producer so renewal strategy is informed by what actually came up during servicing.
+  </Step>
+
+  <Step title="Use the library for team training">
+    The Q&A library is an excellent training resource for new account managers. Real coverage questions with real policy analysis are more instructive than any textbook. Use them in team meetings or onboarding.
+  </Step>
+</Steps>
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Average response time | Time from client question to initial response | Under 2 hours for standard questions; under 4 hours for complex |
+| Same-day resolution rate | Percentage of coverage questions fully answered the same business day | 90%+ |
+| Citation inclusion rate | Percentage of coverage answers that include specific policy language citations | 100% |
+| Client satisfaction on responsiveness | Client feedback on speed and quality of coverage question responses | Track via NPS or direct feedback |
+| "Let me get back to you" rate | Percentage of phone calls where you couldn't answer in real time | Below 20% (for accounts with policies already in the Vault) |
+| Questions requiring escalation | Percentage of questions where the answer was genuinely ambiguous and required counsel or carrier input | Track to understand complexity distribution |
+| Q&A library growth | Number of categorized coverage Q&As in the Vault per quarter | Growing steadily as the team adopts the workflow |
+
+<Note>
+  The single most impactful change you can make is eliminating the "let me get back to you" response for standard coverage questions. When a client calls and you can answer with citations while they're still on the phone, it changes how they think about your value as a broker. That moment, repeated consistently, is what makes an account uncompetitive for other brokers to pursue.
+</Note>
