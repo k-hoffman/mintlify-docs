@@ -78,7 +78,7 @@
             ]
           },
           {
-            "group": "Setup & Access",
+            "group": "Setup and Access",
             "pages": [
               "get-started/setup/single-sign-on",
               "get-started/setup/navigating-the-dashboard",
@@ -219,10 +219,11 @@
         "icon": "circle-info",
         "pages": [
           {
-            "group": "Help & Support",
+            "group": "Help and Support",
             "pages": [
               "resources/contact-support",
-              "resources/troubleshooting-and-faqs"
+              "resources/troubleshooting-and-faqs",
+              "resources/support-tickets"
             ]
           },
           {
@@ -240,7 +241,7 @@
             ]
           },
           {
-            "group": "Security & Trust",
+            "group": "Security and Trust",
             "pages": [
               "resources/security-and-trust"
             ]
