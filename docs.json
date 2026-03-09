@@ -170,8 +170,10 @@
           {
             "group": "Prospecting",
             "pages": [
-              "playbooks/prospecting/market-analysis",
-              "playbooks/servicing/portfolio-review"
+              "playbooks/prospecting/overview",
+              "playbooks/prospecting/referral-mining",
+              "playbooks/prospecting/renewal-outreach",
+              "playbooks/prospecting/event-networking"
             ]
           },
           {
@@ -191,6 +193,7 @@
             "group": "Servicing",
             "pages": [
               "playbooks/servicing/mid-term-coverage-check",
+              "playbooks/servicing/portfolio-review",
               "platform/research/coverage-determination",
               "platform/research/building-your-case"
             ]
