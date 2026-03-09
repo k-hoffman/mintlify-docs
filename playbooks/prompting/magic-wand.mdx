@@ -1,5 +1,161 @@
 ---
 title: "Magic Wand"
+description: "Click the wand icon to instantly transform a rough idea into a polished, analysis-ready prompt — no prompting expertise required."
 icon: "wand-sparkles"
-mode: "default"
 ---
+
+The magic wand is Qumis's one-click prompt enhancement tool. Type what you want — even a rough idea or a few words — and click the wand icon. Qumis rewrites your input into a structured, insurance-grade prompt that produces better analysis, clearer output, and more useful citations.
+
+You'll find the wand anywhere you type a prompt: in **Chats**, in **Report creation** workflows, and in the **Prompt Library** editor.
+
+---
+
+## Why it matters
+
+Most users know what they want from Qumis but underestimate how much the phrasing of their question affects the quality of the answer. A prompt that says "review this policy" produces a generic overview. A prompt that specifies the coverage areas, output format, audience, and purpose produces a targeted deliverable you can hand to a client.
+
+The gap between those two prompts is what the magic wand closes. It takes your intent and adds the structure, specificity, and insurance context that drive better results — without requiring you to learn prompting techniques first.
+
+<Info>
+  The magic wand doesn't change how Qumis analyzes your documents. It improves the instruction you're giving Qumis so the analysis is more focused, structured, and actionable.
+</Info>
+
+---
+
+## When to use the magic wand
+
+The wand works best on **high-level, broad questions** — the kind where you know the goal but haven't worked out the details of how to ask for it.
+
+**Great fit for the wand:**
+
+- "Compare these two policies" — the wand adds structure around which coverage areas to compare, what format to use, and what differences to highlight.
+- "Summarize this quote" — the wand shapes this into a structured summary with specific sections, limits, exclusions, and key terms.
+- "Check if this claim is covered" — the wand adds instructions to cite the relevant policy language, evaluate conditions and exclusions, and present the reasoning.
+- "Review this contract's insurance requirements" — the wand expands this into a systematic extraction of each requirement with a compliance assessment against the current program.
+
+**When to use meta prompting instead:**
+
+The wand is a single-click enhancement — it works on one prompt at a time. For more complex work, [Meta Prompting](/meta-prompting) gives you greater control:
+
+- Multi-step analyses that require a specific sequence of operations
+- Highly specific deliverables where you need to dictate the exact structure, sections, and format
+- Complex multi-document comparisons across layered programs or tower structures
+- Situations where you want to review and edit the generated prompt before running it
+
+Think of the wand as "make this better instantly" and meta prompting as "help me design the right approach."
+
+<Tip>
+  Start with the wand. If the enhanced prompt doesn't fully capture what you need, copy it and use meta prompting to refine it further. The two techniques complement each other.
+</Tip>
+
+---
+
+## How to use it
+
+<Steps>
+  <Step title="Type your idea">
+    In any prompt field — Chats, a report workflow, or the Prompt Library editor — type what you want Qumis to do. Don't worry about precision or structure. A rough idea is enough.
+
+    ```
+    compare these two GL quotes for my client meeting tomorrow
+    ```
+  </Step>
+
+  <Step title="Click the wand icon">
+    Click the **wand icon** to the right of the prompt field. Qumis instantly rewrites your input into an enhanced prompt.
+  </Step>
+
+  <Step title="Review the enhanced prompt">
+    The wand replaces your text with a refined version. Read through it to confirm it captures your intent. The enhanced prompt will typically be more specific about coverage areas, output format, and analysis focus than what you originally typed.
+
+    For example, the rough input above might become:
+
+    ```
+    Compare these two General Liability quotes side by side. For each
+    major coverage area, identify differences in limits, deductibles,
+    and sublimits. Flag any exclusions or conditions that differ between
+    the two quotes. Highlight any coverage gaps or narrowing language.
+    Present the comparison in a structured table format suitable for
+    a client-facing renewal meeting, with a brief executive summary
+    of the most significant differences.
+    ```
+  </Step>
+
+  <Step title="Edit if needed">
+    The enhanced prompt is fully editable. Add, remove, or adjust any part before running it. If you need something specific that the wand didn't include — a particular coverage line, a format preference, or a focus area — type it in.
+  </Step>
+
+  <Step title="Run your prompt">
+    Submit the prompt as you normally would. In Chats, press **Enter** or click **Send**. In a report workflow, proceed to the next step.
+  </Step>
+</Steps>
+
+---
+
+## Where you'll find it
+
+The magic wand appears in three places across the platform:
+
+| Location | How to access | Best for |
+|---|---|---|
+| **Chats** | Wand icon in the message input field | Quick analysis questions and ad-hoc research |
+| **Report creation** | Wand icon in the prompt step of any report workflow | Sharpening report instructions before generation |
+| **Prompt Library** | Wand icon in the prompt editor | Polishing saved prompts for team-wide reuse |
+
+The wand works identically in all three locations. The only difference is what happens after you submit — Chats produces a conversational response, reports produce a formatted deliverable, and the Prompt Library saves the enhanced prompt for later.
+
+---
+
+## Tips for getting the most from the wand
+
+**Start broad.** The wand adds the most value when your starting point is general. "Review this policy" gives the wand room to add structure. A prompt that's already highly specific may not change much — and that's fine.
+
+**Use it to learn.** Compare your original input to the enhanced version. Over time, you'll start to notice the patterns the wand applies — specifying coverage areas, requesting citations, defining output format — and you'll naturally write stronger prompts on your own.
+
+**Save the results.** When the wand produces an enhanced prompt that works well for a particular workflow, save it to the [Prompt Library](/platform/prompt-library). This turns a one-off improvement into a reusable team asset.
+
+**Run it more than once.** You can click the wand again on an already-enhanced prompt. Each pass may refine the language further or add additional structure. This is particularly useful when you've edited the prompt after the first enhancement and want to smooth out the changes.
+
+**Combine with follow-up questions.** Use the wand to sharpen your opening prompt, then ask follow-up questions in the conversation to drill deeper. The [Tips and Best Practices](/playbooks/prompting/best-practices) page covers how to build on initial responses effectively.
+
+---
+
+## Magic wand vs. meta prompting
+
+Both tools help you write better prompts, but they serve different situations.
+
+| | Magic Wand | Meta Prompting |
+|---|---|---|
+| **How it works** | One-click enhancement of your existing text | You describe the task and Qumis generates a complete prompt |
+| **Best for** | High-level questions, quick refinement, broad starting points | Complex analyses, multi-step workflows, specific deliverables |
+| **Speed** | Instant — click and go | Conversational — you review and refine the generated prompt |
+| **Control** | Qumis decides how to improve your prompt | You guide the prompt design through a dialogue |
+| **Where it lives** | Wand icon in Chats, Reports, and Prompt Library | Any Chat session |
+
+Neither approach is better than the other — they're designed for different moments in your workflow. Use the wand when you want to move fast. Use [meta prompting](/meta-prompting) when you want to be precise.
+
+<Note>
+  Both the magic wand and meta prompting build on the same principles covered in [Tips and Best Practices](/playbooks/prompting/best-practices). Reading that page first will help you understand why the enhanced prompts look the way they do.
+</Note>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The wand didn't change my prompt">
+    If your prompt is already specific and well-structured, the wand may determine that no significant improvement is needed. This is a sign that your prompting skills are strong. If you still want changes, try broadening your prompt or removing some detail, then clicking the wand again.
+  </Accordion>
+
+  <Accordion title="The enhanced prompt doesn't match my intent">
+    The wand infers your intent from what you typed. If it went in the wrong direction, edit the enhanced prompt to correct it — or start over with a slightly more descriptive input. Adding one sentence about your goal or audience usually steers the wand in the right direction.
+  </Accordion>
+
+  <Accordion title="I want more control over the enhancement">
+    The wand is designed for speed, not customization. If you want to guide how the prompt is built — specifying the exact structure, sections, or analytical approach — use [Meta Prompting](/meta-prompting) instead. You can describe your requirements in detail and review the generated prompt before running it.
+  </Accordion>
+
+  <Accordion title="Can I undo the wand's changes?">
+    The wand replaces your text in the prompt field. If you want to keep your original, copy it before clicking the wand. In the Prompt Library, you can also use version history to revert to a previous version of a saved prompt.
+  </Accordion>
+</AccordionGroup>
