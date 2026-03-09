@@ -443,7 +443,7 @@ div[class*="size-7"][class*="rounded-full"][class*="bg-gray-50"] {
 
 #content-container {
   position: relative !important;
-  overflow: hidden !important;
+  overflow: clip !important;
 }
 
 #content-container::after {
