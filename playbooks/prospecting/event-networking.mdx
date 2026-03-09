@@ -1,28 +1,241 @@
 ---
 title: "Playbook: Event Networking"
-description: "Stand out at conferences and association events by showing live policy intelligence instead of handing out capabilities decks."
+description: "Stand out at industry events by demonstrating live policy intelligence instead of handing out capabilities decks."
 icon: "users"
 ---
 
-*This page is under development. Check back soon for the full guide.*
+## The strategy
 
-Stand out at industry conferences, association events, and networking functions by demonstrating live Qumis analysis instead of handing out capabilities decks. When a prospect can see their own coverage questions answered in real time, the conversation shifts from "what do you do?" to "how do I get access to this?"
+Every broker at a conference booth or association dinner says the same thing: "We're different. We're consultative. We go deeper." Nobody believes it because everyone says it.
 
----
+Qumis gives you something to show instead of something to say. A producer who can pull up Qumis during a conversation, upload a sample policy on the spot, and walk through a structured coverage analysis in 90 seconds is operating on a completely different level than the one handing out a trifold brochure.
 
-## What you'll learn
-
-This guide will walk you through preparing Qumis for live event demos, running real-time policy analysis in front of prospects, converting event conversations into follow-up meetings, and building a repeatable conference playbook for your team.
+The goal of this playbook is to create a repeatable "demo moment" you can deploy at any event, from a national conference booth to a one-on-one dinner with a prospect. You prepare the demo assets in advance, execute a quick live analysis during the conversation, and follow up with a personalized deliverable that converts a business card into a pipeline opportunity.
 
 ---
 
-## Coming soon
+## Pre-event preparation
 
-<CardGroup cols={2}>
-  <Card title="Referral Mining" icon="handshake" href="/playbooks/prospecting/referral-mining">
-    Turn client touchpoints into referral opportunities
-  </Card>
-  <Card title="Renewal Outreach" icon="calendar-clock" href="/playbooks/prospecting/renewal-outreach">
-    Insight-led outreach timed to prospect renewal windows
-  </Card>
-</CardGroup>
+<Steps>
+  <Step title="Identify the audience and vertical">
+    Before any event, confirm who will be in the room. Is this a construction association conference? A healthcare risk management summit? A general industry event with mixed verticals? Your demo needs to be relevant to the audience.
+
+    Pick one to two verticals that will dominate the event and prepare demo assets for those.
+  </Step>
+
+  <Step title="Build demo-ready policy sets in Document Vault">
+    For each target vertical, upload two to three sanitized, anonymized sample policies into a dedicated folder in the Document Vault. These should be representative of the types of programs your prospects carry.
+
+    **Folder naming convention:**
+    ```
+    Event Demos/
+    ├── RIMS 2026 - Construction/
+    │   ├── sample-GL-construction.pdf
+    │   ├── sample-excess-tower.pdf
+    │   └── sample-builders-risk.pdf
+    └── RIMS 2026 - Healthcare/
+        ├── sample-med-mal.pdf
+        └── sample-cyber-healthcare.pdf
+    ```
+
+    <Warning>
+      Never use a real client's policy in a demo, even if you anonymize it. Use specimen forms, sample policies from carriers, or synthetic documents. The risk of accidentally exposing client data at an event is not worth it.
+    </Warning>
+  </Step>
+
+  <Step title="Pre-build your demo prompts">
+    Create and save prompts in the Prompt Library that are designed to produce impressive, concise output in under 60 seconds. These are your "show prompts," optimized for speed and visual impact rather than exhaustive analysis.
+
+    **Example show prompt:**
+    ```
+    Review this commercial general liability policy and identify the
+    three most significant coverage limitations or gaps that the
+    insured is most likely unaware of. For each, explain in two
+    sentences why it matters and cite the specific policy language.
+    Keep the response concise and focused.
+    ```
+
+    <Tip>
+      Test your demo prompts before the event. Run them three to four times against different documents to make sure the output is consistently strong and finishes quickly. Nothing kills a demo moment like waiting 90 seconds for a response.
+    </Tip>
+  </Step>
+
+  <Step title="Prepare a one-page leave-behind">
+    Generate a report from one of your pre-built demo analyses. This is your physical or digital leave-behind: a one-page coverage intelligence summary for the prospect's vertical. Print 20–30 copies or have the PDF ready to share via email or AirDrop.
+
+    The leave-behind should include:
+    - Two to three key coverage findings for the vertical
+    - A brief description of how the analysis was generated
+    - Your contact information and a clear call to action ("Send us any policy and we'll run this analysis on your actual program")
+  </Step>
+
+  <Step title="Rehearse the 90-second demo">
+    Practice the following flow until you can do it naturally in a conversation:
+
+    1. **Hook** (10 seconds) — "Let me show you something we've been doing for our clients."
+    2. **Open Qumis** (5 seconds) — Navigate to your pre-loaded demo folder.
+    3. **Run the analysis** (30–45 seconds) — Execute your show prompt on the sample policy.
+    4. **Walk through findings** (30 seconds) — Highlight the top two findings and show the citations.
+    5. **Transition** (10 seconds) — "This is what it looks like on a sample. Imagine this on your actual program."
+
+    <Note>
+      The demo should feel conversational, not rehearsed. You're showing a tool you use every day, not delivering a pitch. If the prospect asks questions mid-demo, follow their curiosity rather than sticking to the script.
+    </Note>
+  </Step>
+</Steps>
+
+---
+
+## At the event
+
+<Tabs>
+  <Tab title="Booth / expo setup">
+    If you have a booth or table, set up a laptop or tablet with Qumis pre-loaded to the demo folder. Have the demo prompt ready to go. When someone stops by, skip the elevator pitch and go straight to the demo.
+
+    **Booth conversation flow:**
+    > **Visitor:** "So what does your firm do?"
+    >
+    > **You:** "We're a [vertical]-focused brokerage. But rather than tell you about it, let me show you something. [Turn laptop] We use AI-powered policy analysis that was built by insurance attorneys. Watch this."
+    >
+    > [Run the 90-second demo]
+    >
+    > **You:** "That's what it looks like on a sample policy. We do this on every account in our book. If you want to see what it finds on your program, send me any policy and we'll run it for free."
+    >
+    > [Hand them the leave-behind or send it to their phone]
+
+    <Tip>
+      If you're sharing a booth with colleagues, designate one person as the "demo runner" at all times. The demo works best when one person owns the screen and the conversation.
+    </Tip>
+  </Tab>
+
+  <Tab title="One-on-one conversations">
+    At dinners, cocktail receptions, and hallway conversations, you won't have a laptop open. Use your phone or tablet to show Qumis, or simply reference the output verbally and offer to send it.
+
+    **Conversation flow:**
+    > **Prospect:** "Who do you work with?"
+    >
+    > **You:** "Mostly [vertical] accounts. We've actually been finding some interesting things using AI-powered policy analysis. For example, across the [vertical] programs we've reviewed, [reference your top finding from the pre-built brief]. We had a client last quarter whose [brief anonymized example of the finding mattering in practice]."
+    >
+    > **Prospect:** "That's interesting. Our broker hasn't flagged that."
+    >
+    > **You:** "Most haven't. I've got a one-page brief that lays out the top three things we're seeing. Can I send it to you? And if you want, send me any policy from your program and I'll run the full analysis. Takes about 24 hours."
+
+    The key is to have the findings memorized so you can reference them without a screen. The brief and the full analysis offer are your follow-up hooks.
+  </Tab>
+
+  <Tab title="Speaking / panel opportunities">
+    If you're speaking on a panel or giving a presentation, weave Qumis findings into your content. Don't pitch the tool — present the insights as your firm's perspective on the market.
+
+    **Example panel talking point:**
+    > "One thing we've been seeing across [vertical] programs — and we've analyzed hundreds of these using structured AI tools — is that [finding]. In fact, there's recent case law where [brief legal reference]. If you're a risk manager in this space, that's a question worth asking your broker before your next renewal."
+
+    This positions you as someone with data-driven market intelligence, not just opinions. The audience will approach you after the session to ask how you're doing the analysis.
+
+    <Tip>
+      After a speaking engagement, have the one-page brief ready to hand out or email to anyone who approaches you. The transition from "great talk" to "here's something actionable" is where pipeline gets created.
+    </Tip>
+  </Tab>
+</Tabs>
+
+---
+
+## Post-event follow-up
+
+The event is where you create the connection. The follow-up is where you create the opportunity. Move fast — follow up within 48 hours while the conversation is still fresh.
+
+<Steps>
+  <Step title="Send the coverage intelligence brief">
+    Within 24 hours of the event, email every meaningful contact the one-page brief you prepared. Personalize the note based on your conversation.
+
+    **Follow-up email template:**
+
+    **Subject:** Coverage brief from [event name]
+
+    > Hi [Name],
+    >
+    > Good meeting you at [event]. As I mentioned, we've been running AI-powered coverage analysis across [vertical] programs and finding some patterns worth knowing about.
+    >
+    > Attached is the brief I referenced. The three findings on page one are the ones we see most consistently.
+    >
+    > If you'd like to see what the analysis looks like on your actual program, send me any policy and I'll run it through our platform. Takes about 24 hours and there's no cost or commitment. It's the fastest way to see whether there's something worth a deeper conversation.
+    >
+    > Happy to jump on a call this week if easier.
+  </Step>
+
+  <Step title="Run a personalized analysis if they send a policy">
+    If the prospect sends you a policy, treat it like a tryout. Upload it to the Document Vault, run a comprehensive analysis using Chats, and generate a polished report. This is your audition — the quality of this deliverable determines whether you earn a full discovery meeting.
+
+    Use Legal Search to add case law context to your top findings. This is the extra layer that most competitors can't replicate.
+
+    <Tip>
+      Turn the analysis around in 24 hours or less. Speed is a signal of capability. If you tell them 24 hours and deliver in 12, you've already differentiated yourself.
+    </Tip>
+  </Step>
+
+  <Step title="Deliver the analysis and propose a discovery meeting">
+    Send the report with a note that positions the findings as a starting point for a broader conversation about their program.
+
+    **Delivery email template:**
+
+    **Subject:** Your coverage analysis is ready
+
+    > Hi [Name],
+    >
+    > I ran your [policy type] through our analysis platform. Attached is the report.
+    >
+    > A few things stood out that I think are worth discussing, particularly [brief reference to the top finding]. I'd love to walk you through the full analysis and hear how your program is structured overall.
+    >
+    > Do you have 30 minutes this week or next?
+  </Step>
+</Steps>
+
+---
+
+## Event preparation checklist
+
+Use this checklist before every event to make sure you're ready to execute.
+
+<AccordionGroup>
+  <Accordion title="One week before">
+    - Confirm the event's audience and dominant verticals
+    - Upload sample policies to Document Vault in event-specific folders
+    - Create or update demo prompts in the Prompt Library
+    - Test demo prompts for speed and output quality (run three to four times each)
+    - Generate the one-page leave-behind report
+    - Print leave-behinds or prepare digital versions for sharing
+    - Rehearse the 90-second demo flow
+  </Accordion>
+
+  <Accordion title="Day of the event">
+    - Charge all devices and confirm Qumis loads properly on event Wi-Fi
+    - Open Document Vault to the demo folder so it's one click away
+    - Have leave-behinds accessible (physical copies or phone-ready PDF)
+    - Review your top two to three findings so you can reference them from memory
+    - Bring a simple way to collect contact info (phone camera for business cards, notes app)
+  </Accordion>
+
+  <Accordion title="Within 48 hours after">
+    - Send the coverage brief to every meaningful contact from the event
+    - Personalize each follow-up based on the conversation
+    - Log all contacts in your CRM with event source and conversation notes
+    - Flag any prospects who expressed interest in a policy analysis
+    - Run and deliver analyses for any policies received within 24 hours
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Events attended per quarter | Conferences, association meetings, dinners with demo capability | 2–4 per quarter |
+| Demos delivered at events | Number of times you ran the 90-second demo for a prospect | 10–15 per event |
+| Leave-behinds distributed | Briefs shared (physical or digital) | 20–30 per event |
+| Policies received for analysis | Prospects who sent a policy after the event | 3–5 per event |
+| Discovery meetings booked | Meetings secured from event follow-up | 2–3 per event |
+| Pipeline created from events | Estimated premium from event-sourced prospects | Track quarterly |
+
+<Note>
+  The most common mistake is preparing great demo assets and then not actually using them at the event. The demo only works if you do it. Commit to showing Qumis to the first five people you talk to. After that, it becomes natural.
+</Note>
