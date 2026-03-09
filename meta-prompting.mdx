@@ -1,5 +1,243 @@
 ---
 title: "Meta Prompting"
+description: "Describe the analysis you need and let Qumis write the expert prompt for you — then review, refine, and run it."
 icon: "wand-magic-sparkles"
 ---
 
+Meta prompting is a technique where you describe what you want to accomplish and ask Qumis to write the detailed prompt for itself. Instead of crafting the perfect instruction from scratch, you tell Qumis the goal, the context, and the output you need — and it generates a purpose-built prompt that you can review, edit, and execute.
+
+This is especially useful when you know *what* you want but aren't sure *how* to ask for it in a way that produces the best results.
+
+---
+
+## Why meta prompting works
+
+Writing a great prompt requires thinking through structure, specificity, output format, and edge cases. That's a skill that takes practice. Meta prompting offloads that work to Qumis itself — the AI already knows what makes a strong prompt, so it can draft one tailored to your exact situation.
+
+The result is typically more thorough than what most users would write on their own, because the generated prompt includes details you might not think to specify: output structure, what to include versus exclude, how to handle ambiguity, and where to cite sources.
+
+<Info>
+  Meta prompting doesn't change how Qumis analyzes your documents. It simply helps you create a better instruction so the analysis is more targeted, structured, and useful.
+</Info>
+
+---
+
+## When to use meta prompting
+
+Meta prompting is most valuable when:
+
+- **You're new to Qumis** and haven't yet developed your own prompting style. Describe your task in plain English and let Qumis show you what a strong prompt looks like.
+- **The analysis is complex** — multi-document comparisons, layered coverage programs, or cross-referencing policy language with contractual requirements.
+- **You need a specific output format** — a table, a memo, a checklist, or a structured breakdown — but you're not sure how to describe it precisely.
+- **You want consistency** — generate a prompt once, save it to the [Prompt Library](/platform/prompt-library), and reuse it across similar analyses.
+- **You're building prompts for your team** — use meta prompting to create standardized workflows that less experienced colleagues can run confidently.
+
+---
+
+## How to write an effective meta prompt
+
+A meta prompt doesn't need to be polished. It's a description of what you need, written in your own words. Qumis translates it into a structured instruction.
+
+### What to include
+
+The more context you provide, the better the generated prompt will be. Think of these five elements:
+
+| Element | What to describe | Example |
+|---|---|---|
+| **Your goal** | What you're trying to accomplish | "I need to compare two competing quotes for a renewal" |
+| **Your role** | Who you are and how you'll use the output | "I'm a broker preparing a recommendation for a CFO" |
+| **The documents** | What files are involved | "I have the expiring policy and two renewal quotes" |
+| **The output you want** | Format, structure, level of detail | "A side-by-side table I can paste into an email" |
+| **What matters most** | Priorities, concerns, things to flag | "Focus on liability limits, deductible changes, and any new exclusions" |
+
+You don't need all five every time — even two or three will produce a useful prompt. But the more you include, the more targeted the result.
+
+---
+
+## Step-by-step walkthrough
+
+<Steps>
+  <Step title="Open a chat and load your documents">
+    Start a new chat in **Chats** and upload or select the documents you want to analyze.
+  </Step>
+
+  <Step title="Describe what you need">
+    Instead of asking your analysis question directly, ask Qumis to write the prompt for you. Start with something like:
+
+    *"Write me a prompt that..."* or *"Generate a detailed instruction to..."*
+
+    Then describe your goal, role, documents, desired output, and priorities.
+  </Step>
+
+  <Step title="Review the generated prompt">
+    Qumis will return a detailed, structured prompt. Read through it and check that it captures your intent — the right focus areas, the right output format, and the right level of detail.
+  </Step>
+
+  <Step title="Edit if needed">
+    Adjust anything that doesn't match what you had in mind. You might add a section, change the output format, or sharpen the focus on a specific coverage area.
+  </Step>
+
+  <Step title="Run the prompt">
+    Copy the generated prompt and paste it into a new message in the same chat (or a new chat). Qumis will execute it against your documents and return the analysis.
+  </Step>
+
+  <Step title="Save to your Prompt Library">
+    If the prompt works well, save it to your [Prompt Library](/platform/prompt-library) so you can reuse it for similar analyses without starting from scratch.
+  </Step>
+</Steps>
+
+<Tip>
+  You can iterate. If the generated prompt isn't quite right, tell Qumis what to change — "Make it focus more on exclusions" or "Add a section that flags anything unusual" — and it will revise.
+</Tip>
+
+---
+
+## Meta prompt examples
+
+<AccordionGroup>
+  <Accordion title="Quote comparison for a renewal">
+    **What you type:**
+
+    "Write me a prompt that compares two renewal quotes against the expiring policy. I'm a broker and I need a table showing what changed — limits, deductibles, exclusions, and pricing. Flag anything the client should know about before making a decision."
+
+    **What Qumis generates:** A detailed instruction that compares all three documents systematically, produces a structured comparison table, highlights material changes, and flags items requiring client attention — with citations to the specific policy language.
+  </Accordion>
+
+  <Accordion title="Coverage gap analysis for a risk manager">
+    **What you type:**
+
+    "Generate a prompt that reviews a commercial property policy and identifies coverage gaps for a manufacturing company with multiple locations. I want the output organized by location risk, with a section on business interruption and one on equipment breakdown."
+
+    **What Qumis generates:** A structured analysis prompt that reviews the policy against common manufacturing exposures, organizes findings by risk category, and includes specific sections for BI and equipment breakdown with sublimit and waiting period details.
+  </Accordion>
+
+  <Accordion title="Claims coverage determination">
+    **What you type:**
+
+    "Write a prompt for analyzing whether a slip-and-fall claim at a restaurant is covered under a CGL policy. I'm a claims adjuster and I need to document my coverage position with policy citations. Check the insuring agreement, exclusions, and any relevant endorsements."
+
+    **What Qumis generates:** A step-by-step analysis prompt that walks through the insuring agreement, applies the facts to each potentially relevant exclusion, checks endorsements for modifications, and produces a structured coverage determination with citations.
+  </Accordion>
+
+  <Accordion title="Contract compliance check">
+    **What you type:**
+
+    "Create a prompt that checks whether our insurance program meets the requirements in a vendor contract. I'm a risk manager. I need a line-by-line comparison of the contract's insurance requirements against what our current policies actually provide, with any gaps clearly called out."
+
+    **What Qumis generates:** A compliance-focused prompt that extracts every insurance requirement from the contract, maps each to the corresponding coverage in the uploaded policies, and flags gaps, shortfalls, or areas where the policy language doesn't exactly match the contractual wording.
+  </Accordion>
+
+  <Accordion title="Board-ready executive summary">
+    **What you type:**
+
+    "Generate a prompt that creates an executive summary of our insurance program for a board presentation. Keep it non-technical — the audience is executives, not insurance professionals. Cover the major coverages, total limits, key exclusions, and our biggest exposure gaps in two pages."
+
+    **What Qumis generates:** A presentation-focused prompt that summarizes the program in plain language, organizes findings by business impact rather than policy structure, and formats the output in concise sections suitable for executive review.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Strategies for stronger meta prompts
+
+### Specify the audience
+
+The same analysis needs different language for a CFO versus a claims adjuster. Tell Qumis who will read the output:
+
+- *"...for a client who isn't familiar with insurance terminology"*
+- *"...for an internal coverage memo that will be reviewed by legal"*
+- *"...for a board presentation — keep it high-level and non-technical"*
+
+### Define the output structure
+
+If you have a format in mind, describe it:
+
+- *"...as a numbered checklist"*
+- *"...in a table with columns for coverage, limit, deductible, and notes"*
+- *"...as a two-page memo with an executive summary at the top"*
+- *"...organized by coverage section, not by document"*
+
+### Set boundaries
+
+Tell Qumis what to include and what to skip:
+
+- *"...focus only on liability coverages, skip property"*
+- *"...don't summarize the whole policy, just flag the unusual exclusions"*
+- *"...compare only the terms that changed from the expiring policy"*
+
+### Ask for edge case handling
+
+Strong prompts anticipate ambiguity. Tell Qumis how to handle it:
+
+- *"...if a coverage is silent on something, call it out as a potential gap"*
+- *"...if the policy language is ambiguous, explain both possible interpretations"*
+- *"...flag anything that seems non-standard compared to typical CGL policies"*
+
+---
+
+## Meta prompting vs. direct prompting
+
+| | Direct prompting | Meta prompting |
+|---|---|---|
+| **You write** | The exact instruction Qumis executes | A description of the instruction you need |
+| **Best for** | Quick questions, simple analyses, experienced users | Complex workflows, specific output formats, building reusable prompts |
+| **Effort** | More upfront effort to get the wording right | Less effort — describe the goal and let Qumis handle the structure |
+| **Output** | Immediate analysis | A prompt you review first, then run |
+| **Learning curve** | Requires familiarity with prompting techniques | Works well even if you're new to AI prompting |
+
+Both approaches work well, and most users develop a mix. Use direct prompting for straightforward questions and meta prompting when the task is complex, the output format matters, or you want a reusable prompt.
+
+---
+
+## Best practices
+
+- **Start messy, refine later.** Your meta prompt doesn't need to be perfect. A rough description of what you need is enough for Qumis to generate a strong first draft.
+- **Iterate on the generated prompt.** Treat the first output as a starting point. Ask Qumis to adjust focus, change the format, or add sections before running it.
+- **Save what works.** When a generated prompt produces great results, save it to your [Prompt Library](/platform/prompt-library) so you and your team can reuse it.
+- **Use meta prompting to learn.** Reading the prompts Qumis generates teaches you what makes a strong instruction. Over time, you'll start writing better direct prompts too.
+- **Combine with the prompt formula.** The [Role + Action + Document + Purpose](/playbooks/prompting/best-practices) formula from Best Practices works as a meta prompt structure too — just describe each component and ask Qumis to build the full prompt.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The generated prompt is too generic">
+    Add more context to your meta prompt. Specify your role, the document types, the output format, and what matters most. The more specific your description, the more targeted the generated prompt will be.
+  </Accordion>
+
+  <Accordion title="The generated prompt is too long or detailed">
+    Ask Qumis to simplify: "Make this prompt more concise — focus on the three most important areas." Or edit it yourself before running it.
+  </Accordion>
+
+  <Accordion title="The analysis from the generated prompt missed something important">
+    Go back to the generated prompt and add what was missing: "Add a section that checks for cyber liability exclusions." Then run the updated version.
+  </Accordion>
+
+  <Accordion title="I'm not sure if I should use meta prompting or just ask my question directly">
+    If your question is straightforward — "What are the exclusions in this policy?" — ask it directly. If you need a specific format, a multi-step analysis, or a reusable workflow, meta prompting will give you a better result.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Where meta prompting fits in the Qumis platform
+
+Meta prompting bridges the gap between knowing what you need and knowing how to ask for it. It connects directly to the [Prompt Library](/platform/prompt-library) (where you save generated prompts for reuse), [Tips and Best Practices](/playbooks/prompting/best-practices) (the underlying techniques Qumis applies when writing prompts), and [Chats](/platform/chats) (where you run the generated prompts against your documents).
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Tips and Best Practices" icon="lightbulb" href="/playbooks/prompting/best-practices">
+    Learn the prompting techniques that Qumis applies when generating prompts
+  </Card>
+  <Card title="Prompt Library" icon="book-open" href="/platform/prompt-library">
+    Save and reuse the prompts you generate with meta prompting
+  </Card>
+  <Card title="Chats" icon="files" href="/platform/chats">
+    Run your generated prompts against uploaded documents
+  </Card>
+  <Card title="Checklist Templates" icon="list-check" href="/playbooks/best-practices/coverage-checklists">
+    Build reusable coverage checklists from your best prompts
+  </Card>
+</CardGroup>
