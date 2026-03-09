@@ -1,0 +1,379 @@
+---
+title: "Renewal Marketing"
+description: "Go to market with precision by using your coverage analysis to target the right carriers, negotiate better terms, and compress the marketing cycle."
+icon: "bullhorn"
+---
+
+## The strategy
+
+Renewal marketing operates under constraints that new business placement doesn't. You have an incumbent relationship to manage, a ticking clock, a client with expectations shaped by last year's program, and carriers who know whether the account has been shopped before. The margin for error is smaller and the consequences of a poorly run process are immediate: a carrier non-renewal, a missed deadline, or a subpar result that makes the client question your value.
+
+The advantage you have at renewal is information. You know the program. You know the client. You've spent 12 months servicing the account. The question is whether you use that information effectively when you go back to market.
+
+Qumis makes the difference by converting your accumulated intelligence into a precise, data-driven marketing process. Your submissions reference specific coverage gaps you've identified. Your negotiations cite the exact policy language you want improved. Your carrier conversations are grounded in analysis, not anecdote. The result is better quotes, faster turnaround, and terms that actually reflect what you asked for.
+
+## Prerequisites
+
+<Info>
+  This playbook picks up where the [Renewal Strategy](/playbooks/renewing/strategy) playbook ends. The strategy document defines what you're trying to achieve. This playbook is how you execute it. If you haven't built the renewal strategy yet, go back and do that first. Marketing without a strategy produces activity without direction.
+</Info>
+
+Before starting, you should have:
+
+- A completed renewal strategy document with prioritized recommendations
+- The client's full program in Document Vault
+- Updated exposure data from the client (loss runs, SOVs, revenue figures, headcount, vehicle schedules, etc.)
+- A target carrier list and a clear plan for which lines to remarket vs. negotiate with incumbents
+- Timeline: begin marketing at 90 days before expiration
+
+## The Qumis workflow
+
+<Steps>
+  <Step title="Build line-by-line submission packages">
+    For each line being remarketed, use Qumis to build a submission package that goes beyond the standard ACORD application. This follows the same approach as the [Marketing the Account](/playbooks/broking/marketing-account) broking playbook, but with renewal-specific intelligence layered in.
+
+    **Renewal submission narrative prompt:**
+    ```
+    Based on the renewal strategy and the analysis of the expiring
+    program, generate a submission narrative for the [specific line
+    of business] renewal. The narrative should:
+
+    1. Describe the insured's operations and risk profile, noting
+       any material changes from the prior year (growth, new
+       operations, acquisitions, divestitures).
+
+    2. Summarize the expiring terms: carrier, limits, retention,
+       key endorsements, and premium.
+
+    3. Describe the renewal objectives: what specific coverage
+       improvements, term changes, or structural modifications
+       are being requested and why.
+
+    4. Present the account favorably: highlight positive risk
+       characteristics including loss experience, risk management
+       practices, and any improvements made during the current
+       policy period.
+
+    5. Specify any required endorsements, minimum terms, or
+       deal-breaker provisions.
+
+    Write as a professional broker-to-underwriter submission cover
+    letter. Keep to one page per line of business.
+    ```
+
+    <Tip>
+      Reference the specific coverage findings from your Qumis analysis when describing renewal objectives. Instead of "we'd like to explore broader coverage," write "the expiring policy's pollution exclusion at Section I.2.f includes language that was recently interpreted by the [X] Circuit to exclude coverage for indoor air quality claims. We need the renewal to include the limited pollution exception endorsed under CG 24 01." That level of specificity gets underwriters' attention.
+    </Tip>
+  </Step>
+
+  <Step title="Prepare incumbent negotiation points">
+    For lines staying with the incumbent carrier, use Qumis to build a structured negotiation brief. This is where your year of servicing intelligence becomes leverage.
+
+    **Incumbent negotiation prompt:**
+    ```
+    Based on the expiring program and the renewal strategy, build
+    a negotiation brief for the incumbent carrier on [line of
+    business]. Include:
+
+    1. ACCOUNT VALUE SUMMARY: Premium history, years with the
+       carrier, loss ratio, and any positive claims experience
+       that supports retention.
+
+    2. TERM IMPROVEMENTS REQUESTED: List every coverage
+       modification, endorsement addition, or limit change being
+       requested. For each, cite the specific expiring policy
+       language that needs to change and explain why. Reference
+       stewardship findings, coverage questions, or contract
+       requirements that surfaced the need.
+
+    3. RATE EXPECTATIONS: Based on market conditions for this class,
+       what rate outcome is reasonable? Is this a line where you
+       expect flat, a decrease, or a modest increase? Justify with
+       market context.
+
+    4. COMPETITIVE CONTEXT: Without bluffing, indicate whether the
+       line is being competitively marketed. If it is, frame the
+       incumbent negotiation as their opportunity to retain the
+       account with improved terms rather than lose it on price
+       alone.
+
+    5. DECISION CRITERIA: What factors will determine whether the
+       account stays with the incumbent? (Terms, price, service,
+       willingness to negotiate manuscript changes.)
+
+    Write as an internal strategy document for the broker's use
+    in carrier conversations.
+    ```
+
+    <Warning>
+      Never misrepresent competitive activity to an incumbent. If you're not remarketing the line, don't imply that you are. Underwriters talk. Your credibility with carriers is a long-term asset that no single renewal negotiation is worth damaging.
+    </Warning>
+  </Step>
+
+  <Step title="Analyze incoming quotes against renewal objectives">
+    As quotes come back from carriers, upload each one to the Document Vault and run a targeted analysis that measures the quote against your specific renewal objectives, not just against the expiring.
+
+    **Renewal quote analysis prompt:**
+    ```
+    Compare this carrier quote against both the expiring policy and
+    the renewal objectives defined in our strategy. For each renewal
+    objective, determine:
+
+    1. MET: The quote satisfies the objective. Cite the specific
+       language in the quote that addresses it.
+
+    2. PARTIALLY MET: The quote addresses the objective but not
+       fully. Explain the gap between what was requested and what
+       was offered.
+
+    3. NOT MET: The quote does not address this objective. Note
+       whether this is a deal-breaker or a negotiable item.
+
+    4. UNEXPECTED: The quote includes terms or provisions not
+       present in the expiring that were not part of our renewal
+       objectives. Flag whether these are improvements or
+       restrictions.
+
+    Also compare the quote against the expiring on all standard
+    dimensions: limits, deductibles, coverage grants, exclusions,
+    endorsements, conditions, and premium. Cite all differences.
+    ```
+
+    This analysis is different from a standard quote comparison because it measures against your stated objectives, not just against the status quo. It answers the question "did the market give us what we asked for?" rather than just "what changed from last year?"
+  </Step>
+
+  <Step title="Run iterative negotiation rounds">
+    Use the gap analysis from each quote to structure your counter-negotiation. For every objective marked "partially met" or "not met," go back to the carrier with the specific language you need.
+
+    **Counter-negotiation prompt:**
+    ```
+    Based on the quote analysis, generate a counter-negotiation
+    request for [carrier name]. For each renewal objective that was
+    not fully met, draft the specific ask:
+
+    1. State what was requested (cite the renewal strategy).
+    2. State what was offered (cite the quote language).
+    3. State what needs to change, with the specific language or
+       terms you need to see in the revised quote.
+
+    Prioritize the asks: lead with the items that are most
+    important to the client and most likely to be negotiable.
+    Separate must-haves from nice-to-haves.
+
+    Format as a professional email to the underwriter.
+    ```
+
+    <Tip>
+      Qumis accelerates the negotiation cycle because every counter-request is specific and documented. Instead of vague asks like "we need broader coverage," you're sending the underwriter exact language references and precise modification requests. This reduces the rounds of back-and-forth from three or four to one or two.
+    </Tip>
+  </Step>
+
+  <Step title="Build the final options matrix">
+    Once all quotes are finalized (including any negotiated revisions), run a comprehensive comparison that will feed directly into the renewal presentation.
+
+    **Final options matrix prompt:**
+    ```
+    Produce a final renewal options matrix comparing all carrier
+    quotes against the expiring program. For each option, show:
+
+    1. CARRIER AND PREMIUM: Total premium and change from expiring
+       (dollars and percentage).
+
+    2. RENEWAL OBJECTIVES SCORECARD: For each renewal objective
+       from the strategy, indicate whether the option meets it
+       (Met / Partially Met / Not Met).
+
+    3. COVERAGE IMPROVEMENTS OVER EXPIRING: Specific terms that
+       are better than what the client has today.
+
+    4. COVERAGE CONCESSIONS FROM EXPIRING: Specific terms that are
+       worse than what the client has today.
+
+    5. NET ASSESSMENT: On balance, does this option represent an
+       improvement, a lateral move, or a step back from the
+       expiring program? Consider both coverage and cost.
+
+    6. RECOMMENDATION: Which option do you recommend and why?
+       State the top three reasons.
+
+    Cite policy language for every finding. Structure the output
+    for direct inclusion in a client presentation.
+    ```
+  </Step>
+</Steps>
+
+## Carrier communication templates
+
+<Tabs>
+  <Tab title="Submission cover email">
+    **Subject:** Renewal submission – [Account Name] – [Line of business] – Effective [date]
+
+    > Hi [Underwriter Name],
+    >
+    > Attached is our renewal submission for [Account Name], a [brief description of the insured] with an expiring [line of business] program currently placed with [incumbent carrier].
+    >
+    > The submission includes the ACORD application, current dec pages, five-year loss history, and a cover narrative outlining the risk profile and our specific renewal objectives.
+    >
+    > Key points for your review:
+    > - [Highlight 1, e.g., "We're seeking a broader additional insured endorsement (CG 20 10 04 13 or equivalent) to meet the insured's contractual requirements."]
+    > - [Highlight 2, e.g., "Loss experience is favorable: 45% loss ratio over five years with no claims exceeding $50K."]
+    > - [Highlight 3, e.g., "The account has grown 30% since the last placement. Updated exposure data is included."]
+    >
+    > Target quote deadline: [date, ideally 45–60 days before expiration].
+    >
+    > Happy to schedule a call to walk through the account if that would be helpful.
+  </Tab>
+
+  <Tab title="Incumbent negotiation email">
+    **Subject:** [Account Name] – Renewal discussion – [Line of business]
+
+    > Hi [Underwriter Name],
+    >
+    > As we approach the [Account Name] renewal, I wanted to share our objectives for this cycle and get the conversation started early.
+    >
+    > The account has been with [carrier] for [X] years with a [X]% loss ratio. We value the relationship and want to give you the first opportunity to address a few things we've identified.
+    >
+    > **Renewal objectives:**
+    > 1. [Specific ask with citation, e.g., "Revise the pollution exclusion to include the limited exception for hostile fire, consistent with the market standard we're seeing on comparable accounts."]
+    > 2. [Specific ask, e.g., "Increase the per-project aggregate from $1M to $2M to align with the insured's current contract requirements."]
+    > 3. [Rate expectation, e.g., "Given the favorable loss experience and current market conditions in this class, we're targeting flat to a 5% reduction."]
+    >
+    > We're beginning the marketing process at 90 days. I'd appreciate your initial indication by [date] so we can have a productive discussion about terms before we finalize our options for the client.
+  </Tab>
+
+  <Tab title="Counter-negotiation email">
+    **Subject:** Re: [Account Name] – Quote follow-up – [Line of business]
+
+    > Hi [Underwriter Name],
+    >
+    > Thank you for the quote on [Account Name]. We've reviewed it against our renewal objectives and the expiring terms. The pricing is [competitive/in range/above target], and there are a few terms we'd like to discuss before we can finalize:
+    >
+    > 1. **[Item]:** The quote includes [describe what was offered]. Our objective was [describe what was requested]. The specific language we need is [cite the provision or endorsement]. Can this be accommodated?
+    >
+    > 2. **[Item]:** [Same format as above.]
+    >
+    > 3. **[Item]:** [Same format as above.]
+    >
+    > Items 1 and 2 are priorities for the client. Item 3 is a strong preference but we understand if there are constraints.
+    >
+    > Can we schedule a call this week to work through these? I'd like to have finalized options for the client by [date].
+  </Tab>
+</Tabs>
+
+## Managing the marketing timeline
+
+Renewal marketing operates under time pressure. Here's how to keep the process on track.
+
+<AccordionGroup>
+  <Accordion title="Submission phase (90–60 days pre-renewal)">
+    All submissions should go out within the first two weeks of this phase. The Qumis-powered submission narratives are pre-built from the strategy work, so assembly is fast.
+
+    **Checklist:**
+    - [ ] All submission packages assembled with Qumis-generated narratives
+    - [ ] Incumbent negotiation emails sent
+    - [ ] Quote deadlines communicated to all carriers (target: 45–60 days pre-renewal)
+    - [ ] Client kept informed of which markets are seeing the submission
+  </Accordion>
+
+  <Accordion title="Quote collection and analysis (60–45 days pre-renewal)">
+    As quotes arrive, upload them immediately and run the renewal objective analysis. Don't wait until all quotes are in to start analyzing the early ones.
+
+    **Checklist:**
+    - [ ] Each quote uploaded to Vault and analyzed within 24 hours of receipt
+    - [ ] Gap analysis completed for each quote against renewal objectives
+    - [ ] Counter-negotiation requests sent for any partially met or unmet objectives
+    - [ ] Quote tracker updated and shared with the producer
+  </Accordion>
+
+  <Accordion title="Negotiation and finalization (45–30 days pre-renewal)">
+    This is where the back-and-forth happens. Use the Qumis gap analysis to keep negotiations focused and specific.
+
+    **Checklist:**
+    - [ ] All counter-negotiations completed
+    - [ ] Revised quotes uploaded and re-analyzed
+    - [ ] Final options matrix generated
+    - [ ] Recommendation finalized internally before presenting to client
+  </Accordion>
+
+  <Accordion title="Presentation preparation (30–20 days pre-renewal)">
+    Build the renewal presentation (next playbook) using the final options matrix and the full body of Qumis analysis.
+
+    **Checklist:**
+    - [ ] Final options matrix completed with all carrier quotes
+    - [ ] Renewal presentation built using Qumis Reports
+    - [ ] Client presentation meeting scheduled
+    - [ ] All options confirmed as available (carrier quotes not expired)
+  </Accordion>
+</AccordionGroup>
+
+## When the market doesn't cooperate
+
+Not every renewal goes as planned. Here's how to use Qumis when the marketing results are challenging.
+
+<Tabs>
+  <Tab title="Carrier non-renewal or declination">
+    If the incumbent or a target market declines, use Qumis to quickly assess alternative program structures.
+
+    **Alternative structure prompt:**
+    ```
+    The [carrier/line] has been non-renewed or declined. Based on
+    the remaining available options, analyze: (1) whether any
+    current quotes can be restructured to fill the gap, (2) what
+    alternative program structures are possible (higher retentions,
+    different tower architecture, surplus lines options), and
+    (3) what coverage concessions the client would need to accept
+    under each alternative. Present with pros, cons, and your
+    recommendation.
+    ```
+  </Tab>
+
+  <Tab title="All quotes significantly above expiring">
+    When the market has hardened and every option is more expensive, use Qumis to help the client understand what they're paying for.
+
+    **Rate increase context prompt:**
+    ```
+    All renewal quotes for [line of business] represent a
+    significant premium increase over expiring. Analyze the
+    quotes to determine: (1) whether any of the increased cost
+    is offset by improved coverage terms, (2) what retention or
+    limit adjustments could bring the premium closer to the
+    expiring level and what coverage impact those changes would
+    have, (3) rank the available options by value (coverage
+    quality per premium dollar), not just by price. Help the
+    client understand whether they're paying more for the same
+    thing or paying more for something better.
+    ```
+  </Tab>
+
+  <Tab title="Quotes missing key renewal objectives">
+    When no carrier meets a critical renewal objective, you need to reassess the ask or find creative solutions.
+
+    **Unmet objective analysis prompt:**
+    ```
+    No carrier quote has met the renewal objective of [describe
+    the unmet objective]. Analyze: (1) whether any quote comes
+    close and could be negotiated further, (2) whether the
+    objective can be met through a different mechanism (separate
+    policy, endorsement from a different carrier, contractual
+    risk transfer), and (3) what the client's actual risk
+    exposure is if this objective remains unmet. Include any
+    relevant Legal Search context on how this gap has played
+    out in claims scenarios.
+    ```
+  </Tab>
+</Tabs>
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Submissions with Qumis narratives | Percentage of renewal submissions that included a Qumis-generated cover narrative and specific renewal objectives | 90%+ |
+| Quote turnaround | Average days from submission to quote receipt | Under 30 days |
+| Renewal objectives met | Percentage of stated renewal objectives addressed in the final bound program | 80%+ |
+| Negotiation rounds | Average rounds of back-and-forth before final terms | 1–2 rounds (down from 3–4) |
+| Marketing cycle duration | Days from first submission to final options matrix | Under 45 days |
+| Client options presented | Number of viable options in the final presentation | 2–4 per line |
+
+<Note>
+  The single biggest efficiency gain in renewal marketing is specificity. When your submissions cite exact policy language and your counter-negotiations reference specific provisions, carriers respond faster and more accurately. Qumis eliminates the vague back-and-forth that stretches marketing cycles from weeks into months.
+</Note>

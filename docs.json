@@ -197,8 +197,10 @@
           {
             "group": "Renewing Playbooks",
             "pages": [
-              "playbooks/renewing/renewal-preparation",
-              "playbooks/renewing/renewal-analysis"
+              "playbooks/renewing/overview",
+              "playbooks/renewing/strategy",
+              "playbooks/renewing/marketing",
+              "playbooks/renewing/presentation"
             ]
           }
         ]
@@ -304,16 +306,18 @@
     { "source": "/report/verify/coverage-verification", "destination": "/platform/contract-review" },
     { "source": "/platform/verify", "destination": "/platform/contract-review" },
     { "source": "/report/workflows/preparing-a-client-presentation", "destination": "/playbooks/broking/overview" },
-    { "source": "/report/workflows/renewal-analysis", "destination": "/playbooks/renewing/renewal-analysis" },
-    { "source": "/report/workflows/portfolio-review", "destination": "/playbooks/servicing/portfolio-review" },
+    { "source": "/report/workflows/renewal-analysis", "destination": "/playbooks/renewing/overview" },
+    { "source": "/report/workflows/portfolio-review", "destination": "/playbooks/servicing/overview" },
     { "source": "/platform/workflows/client-presentation", "destination": "/playbooks/broking/overview" },
-    { "source": "/platform/workflows/renewal-analysis", "destination": "/playbooks/renewing/renewal-analysis" },
-    { "source": "/platform/workflows/portfolio-review", "destination": "/playbooks/servicing/portfolio-review" },
+    { "source": "/platform/workflows/renewal-analysis", "destination": "/playbooks/renewing/overview" },
+    { "source": "/platform/workflows/portfolio-review", "destination": "/playbooks/servicing/overview" },
     { "source": "/playbooks/broking/competitive-quoting", "destination": "/playbooks/broking/quote-comparison" },
     { "source": "/playbooks/broking/client-presentation", "destination": "/playbooks/broking/overview" },
     { "source": "/playbooks/binding/pre-bind-review", "destination": "/playbooks/broking/binding-review" },
     { "source": "/playbooks/servicing/mid-term-coverage-check", "destination": "/playbooks/servicing/stewardship" },
-    { "source": "/playbooks/servicing/portfolio-review", "destination": "/playbooks/servicing/overview" }
+    { "source": "/playbooks/servicing/portfolio-review", "destination": "/playbooks/servicing/overview" },
+    { "source": "/playbooks/renewing/renewal-preparation", "destination": "/playbooks/renewing/overview" },
+    { "source": "/playbooks/renewing/renewal-analysis", "destination": "/playbooks/renewing/overview" }
   ],
   "seo": {
     "indexing": "navigable"

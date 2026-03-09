@@ -1,0 +1,347 @@
+---
+title: "Renewal Strategy"
+description: "Build renewal strategies grounded in a full analysis of what changed in the client's program, exposures, and market conditions since the last placement."
+icon: "compass"
+---
+
+## The strategy
+
+Most brokers start the renewal by pulling up the expiring dec pages, checking the claims history, and asking the client "has anything changed?" That question puts the burden on the client to identify their own evolving risks, which most aren't equipped to do. It also signals that the broker hasn't been paying close attention since the last placement.
+
+Qumis flips this dynamic. Instead of asking the client what changed, you show them. You run a comparative analysis between the current program and the intelligence you've gathered throughout the policy period — including stewardship findings, coverage questions, contract reviews, and market developments. The renewal strategy conversation becomes "here's what we've identified, here's what the market is doing, and here's our recommendation for how to approach the next 12 months."
+
+This positions you as the expert driving the process, not a broker waiting for instructions. It also surfaces coverage needs and expansion opportunities that a standard "has anything changed?" conversation would miss entirely.
+
+## Prerequisites
+
+<Info>
+  This playbook is most effective when you've been running the [Servicing Playbooks](/playbooks/servicing/overview) throughout the policy period. Stewardship findings, coverage Q&A history, and contract reviews all feed directly into the renewal strategy. If you haven't, you can still run this playbook by starting with a fresh program analysis, but you'll be building the intelligence from scratch rather than compounding what you've already gathered.
+</Info>
+
+Before starting, you should have:
+
+- The client's full active program uploaded in Document Vault
+- Any stewardship reports, coverage Q&As, or contract reviews from the current policy period
+- Claims data for the current and prior periods
+- A general understanding of current market conditions for the client's class of business
+- A timeline: start this playbook 120 to 150 days before the renewal date
+
+## The Qumis workflow
+
+<Steps>
+  <Step title="Compile the renewal intelligence package in Document Vault">
+    Before running any analysis, organize everything you have on this account into a renewal-specific folder. This is the intelligence that will inform your strategy.
+
+    **Folder structure:**
+    ```
+    Acme Corp/
+    ├── Active Program/
+    │   ├── GL-Policy-2025-2026.pdf
+    │   ├── Property-Policy-2025-2026.pdf
+    │   ├── Umbrella-Policy-2025-2026.pdf
+    │   └── [all other active policies]
+    ├── Stewardship/
+    │   ├── Q1-2026-Health-Check-Report.pdf
+    │   └── Q3-2025-Health-Check-Report.pdf
+    ├── Coverage-QA/
+    │   ├── [saved Chat sessions and Reports]
+    ├── Contracts/
+    │   ├── [contracts reviewed during the period]
+    └── 2026 Renewal/
+        ├── Claims-Summary-2025-2026.pdf
+        └── [renewal-specific documents as they arrive]
+    ```
+
+    <Tip>
+      If you've been running the servicing playbooks consistently, most of this is already in the Vault. The renewal folder is just a staging area for new documents specific to this cycle (updated SOVs, new loss runs, exposure data from the client).
+    </Tip>
+  </Step>
+
+  <Step title="Run a year-over-year program evolution analysis">
+    Open a Chat session with the full active program and any prior-year program documents (if available). Run an evolution analysis that identifies how the client's risk profile has changed.
+
+    **Program evolution prompt:**
+    ```
+    Analyze the client's current insurance program and identify how
+    the risk profile has likely evolved since the program was placed.
+    Based on the policies, stewardship reports, coverage questions,
+    and contract reviews available, determine:
+
+    1. EXPOSURE CHANGES: What new exposures may have emerged based
+       on the coverage questions asked, contracts reviewed, and
+       stewardship findings from the current policy period? What
+       existing exposures may have grown or shrunk?
+
+    2. COVERAGE PERFORMANCE: Which coverage areas performed well
+       (claims paid, questions answered affirmatively)? Which areas
+       showed gaps or ambiguities during the policy period?
+
+    3. UNRESOLVED ISSUES: What stewardship findings were categorized
+       as "monitor" or "discuss at renewal"? What coverage gaps
+       were identified but not yet addressed?
+
+    4. PROGRAM STRUCTURE: Based on everything observed during the
+       policy period, does the current program structure (carriers,
+       limits, retentions, tower architecture) still fit the
+       client's risk profile? What structural changes should be
+       considered?
+
+    5. COVERAGE ENHANCEMENTS DEFERRED: Were any mid-term
+       recommendations (endorsement additions, limit increases,
+       new policies) not acted upon? These should be revisited
+       at renewal.
+
+    Cite specific findings from stewardship reports, coverage Q&As,
+    and contract reviews where applicable. Organize by priority:
+    what must change, what should change, and what to monitor.
+    ```
+  </Step>
+
+  <Step title="Assess the expiring program against current market conditions">
+    Use a follow-up Chat prompt to frame the program analysis within the current market. This is where you combine your client-specific intelligence with broader market awareness.
+
+    **Market context prompt:**
+    ```
+    Based on the current program and the evolution analysis, assess
+    the renewal from a market perspective:
+
+    1. RATE ENVIRONMENT: For each line of business in the program,
+       what is the general rate trend (hardening, softening, flat)?
+       How should this affect the renewal strategy (push for
+       reductions where soft, prepare the client for increases
+       where hard)?
+
+    2. CARRIER APPETITE: Based on the risk profile, which lines are
+       likely to see strong carrier competition and which may face
+       restricted markets? Are there any coverage areas where the
+       incumbent carrier has been tightening terms industry-wide?
+
+    3. TERMS AND CONDITIONS TRENDS: Are carriers adding new
+       exclusions, requiring higher retentions, or modifying
+       coverage terms in this class of business? Flag any trends
+       that could affect the renewal.
+
+    4. COVERAGE AVAILABILITY: Are there new coverage products or
+       endorsements available in the market that didn't exist at
+       the last placement? Should any be considered?
+
+    5. COMPETITIVE POSITIONING: If the account were being marketed
+       by a competing broker, what would they identify as weaknesses
+       in the current program? Address those proactively.
+
+    Frame each point as a strategic recommendation, not just an
+    observation.
+    ```
+
+    <Note>
+      The market context prompt works with the intelligence Qumis can derive from the uploaded policies and your prior analysis. For real-time market data (specific rate changes, carrier financial ratings, recent M&A activity), supplement with your own market knowledge and carrier relationships. The value Qumis adds here is connecting market trends to the specific provisions in the client's actual policies.
+    </Note>
+  </Step>
+
+  <Step title="Use Legal Search for emerging risk context">
+    For the one to two biggest strategic themes in the renewal (e.g., the client needs to address cyber exposure, or the pollution exclusion scope is becoming a market issue), use Legal Search to find recent developments that support your recommendation.
+
+    **Example Legal Search queries:**
+    ```
+    Recent decisions expanding corporate officer personal liability
+    for cyber breaches and data privacy violations 2025-2026
+    ```
+    ```
+    Cases where courts interpreted climate-related exclusions in
+    commercial property policies to deny wildfire or flood claims
+    ```
+    ```
+    Regulatory developments requiring expanded professional
+    liability coverage for AI-related professional services
+    ```
+
+    Legal context transforms your renewal strategy from "we think you should consider this" to "here's what's happening in the legal landscape that makes this a priority." Clients — especially those with in-house counsel or a board to report to — respond to evidence.
+  </Step>
+
+  <Step title="Generate the renewal strategy document">
+    Package everything into a Report that serves as both the internal strategy document and the client-facing renewal kick-off presentation.
+
+    **Renewal strategy report prompt:**
+    ```
+    Generate a renewal strategy document with the following sections:
+
+    1. EXECUTIVE SUMMARY: Three to five sentences capturing the key
+       themes for this renewal. What's the story? (E.g., "The
+       client has grown significantly, the current program structure
+       hasn't kept pace, and the market environment creates both
+       risks and opportunities we need to address.")
+
+    2. PROGRAM EVOLUTION SINCE LAST PLACEMENT: Summarize the key
+       changes in the client's risk profile, organized by the
+       findings from stewardship, coverage Q&As, and contract
+       reviews conducted during the policy period.
+
+    3. MARKET OUTLOOK BY LINE: For each line of business, summarize
+       the rate environment, carrier appetite, and terms trends.
+       Translate each into a specific strategic action.
+
+    4. RECOMMENDED PROGRAM CHANGES: A prioritized list of coverage
+       modifications, limit adjustments, carrier changes, and
+       structural improvements. For each, explain the rationale
+       and cite the specific analysis or finding that supports it.
+
+    5. MARKETING APPROACH: Which lines to remarket competitively,
+       which to negotiate with the incumbent, and why. Include
+       target carriers for any competitive lines.
+
+    6. TIMELINE: Key dates from now through binding, including
+       when submissions go out, when quotes are due, when the
+       client presentation happens, and the bind deadline.
+
+    7. RISKS AND CONTINGENCIES: What could go wrong in this renewal
+       (carrier non-renewal, market capacity issues, client budget
+       constraints) and how to mitigate each.
+
+    The tone should be strategic and advisory. The audience is the
+    producer, account manager, and client (for the kick-off meeting).
+    ```
+  </Step>
+
+  <Step title="Deliver the renewal strategy kick-off meeting">
+    Present the strategy document to the client 90 to 120 days before the renewal date. This meeting sets the tone for the entire renewal cycle.
+
+    **Meeting agenda (30–45 minutes):**
+
+    1. **What we've observed this year** (10 min): Walk through the program evolution section. Reference specific stewardship findings, coverage questions, and contract reviews. This demonstrates that you've been actively managing their program, not just waiting for the renewal.
+
+    2. **Market conditions that affect you** (5 min): Share the market outlook relevant to their lines. Be specific: "Cyber rates are softening 10–15% in your class, which means we have leverage to negotiate better terms" is more valuable than "the market is competitive."
+
+    3. **Our recommendations** (10 min): Walk through the recommended program changes. For each one, explain why you're recommending it and what happens if they don't act on it.
+
+    4. **Marketing approach and timeline** (5 min): Explain which lines you plan to remarket, which you'll negotiate with the incumbent, and the key dates.
+
+    5. **Client input and priorities** (10 min): This is where you ask what the client's priorities are: cost, coverage breadth, carrier stability, or program restructuring. Their input shapes how you weight the marketing decisions.
+
+    <Tip>
+      The best renewal kick-off meetings end with the client saying "you've clearly been thinking about this." That reaction is the direct result of leading with intelligence rather than asking "has anything changed?" The Qumis-powered analysis is what makes the difference visible.
+    </Tip>
+  </Step>
+</Steps>
+
+## Strategy prompts by account complexity
+
+<Tabs>
+  <Tab title="Simple renewals (1–3 lines, single carrier)">
+    For straightforward accounts where the program is working and the market is stable, the strategy can be streamlined.
+
+    **Simplified strategy prompt:**
+    ```
+    Review this commercial insurance program and produce a concise
+    renewal strategy. Focus on: (1) any coverage gaps or
+    endorsement improvements to request, (2) whether the current
+    limits and deductibles still fit, (3) the one or two most
+    important things to negotiate with the incumbent, and
+    (4) whether there's any reason to consider remarketing.
+    Keep the output to one page. The audience is a small business
+    owner who wants clear, practical recommendations.
+    ```
+  </Tab>
+
+  <Tab title="Mid-complexity renewals (3–5 lines, mixed carriers)">
+    For mid-market accounts with multiple lines across different carriers, the strategy needs to address coordination and optimization.
+
+    **Mid-complexity strategy prompt:**
+    ```
+    Review this multi-line commercial insurance program and produce
+    a renewal strategy that addresses: (1) program architecture
+    and whether consolidating carriers would improve coverage
+    coordination, (2) line-by-line assessment of what to remarket
+    vs. negotiate with incumbents, (3) coverage gaps identified
+    during the policy period and how to address them at renewal,
+    (4) limit adequacy across the full program including the
+    umbrella/excess tower, and (5) cost optimization opportunities
+    (restructuring retentions, adjusting sublimits, or rebundling
+    lines). The audience is a risk manager or CFO.
+    ```
+  </Tab>
+
+  <Tab title="Complex renewals (5+ lines, layered towers, manuscript terms)">
+    For large, complex accounts, the strategy is a multi-dimensional exercise that requires deep analysis.
+
+    **Complex strategy prompt:**
+    ```
+    Review this complex commercial insurance program including all
+    primary, excess, and specialty lines. Produce a comprehensive
+    renewal strategy covering: (1) tower architecture analysis
+    and whether the current structure optimizes capacity and cost,
+    (2) follow-form analysis across all excess layers identifying
+    any gaps or exclusion mismatches that should be corrected at
+    renewal, (3) manuscript endorsement inventory and whether any
+    negotiated terms should be updated or expanded, (4) carrier
+    performance assessment across all lines (claims handling,
+    responsiveness, willingness to negotiate), (5) alternative
+    program structures to model (higher retentions, captive
+    layers, parametric options, program consolidation),
+    (6) emerging exposure analysis with legal context for the
+    client's industry, and (7) a detailed marketing plan with
+    target carriers by layer. The audience includes the producer,
+    risk manager, CFO, and potentially the board.
+    ```
+  </Tab>
+</Tabs>
+
+## Integrating servicing intelligence into the strategy
+
+The renewal strategy is where all the work you've done during the policy period pays off. Here's how each servicing activity feeds the strategy.
+
+<AccordionGroup>
+  <Accordion title="Stewardship findings → Renewal priorities">
+    Every finding from your mid-term stewardship reviews that was categorized as "address at renewal" or "monitor" should appear in the renewal strategy. Pull these directly from the stewardship reports saved in the Vault.
+
+    The client has already seen these findings. Referencing them at renewal shows continuity: "In our Q1 review, we identified the gap in your cyber coverage. Here's how we're planning to address it at renewal." This is far more compelling than presenting the same finding as if it's new.
+  </Accordion>
+
+  <Accordion title="Coverage Q&As → Program weak points">
+    The coverage questions your client asked during the policy period reveal which parts of their program they're uncertain about or worried about. If the client asked three questions about professional liability scope, that's a signal to focus on strengthening PL terms at renewal.
+
+    Review the Q&A history in the Vault and include a section in your strategy about coverage areas where the client sought clarification, along with your recommendation for how to improve clarity or breadth at renewal.
+  </Accordion>
+
+  <Accordion title="Contract reviews → Compliance-driven changes">
+    If contract reviews during the policy period identified compliance gaps that were addressed with mid-term endorsements or remain unresolved, incorporate them into the renewal strategy. The renewal is the cleanest time to restructure coverage to meet contractual requirements rather than layering on one-off endorsements.
+
+    Review the contract compliance checks in the Vault and flag any recurring themes (e.g., "multiple contracts required $5M umbrella limits but the current program only provides $3M").
+  </Accordion>
+
+  <Accordion title="Claims experience → Coverage and retention adjustments">
+    Claims that occurred during the policy period inform both coverage strategy (was the claim covered as expected? were there any surprises?) and retention/limit strategy (does the claims pattern suggest the retention is too low or the limits are insufficient?).
+
+    If you have claims data in the Vault, include it in the analysis. If not, request loss runs from the carrier 150 days before renewal to give yourself time to incorporate them.
+  </Accordion>
+</AccordionGroup>
+
+## Renewal timeline
+
+<Info>
+  Start the renewal strategy process at 120 to 150 days before expiration. Compressed timelines lead to reactive renewals that don't serve the client well and don't give you leverage with carriers.
+</Info>
+
+| Days before renewal | Activity | Owner |
+|---|---|---|
+| 150 | Request loss runs and updated exposure data from client | Account manager |
+| 140 | Compile renewal intelligence package in Document Vault | Account manager |
+| 130 | Run program evolution analysis and market assessment in Qumis | Producer / Account manager |
+| 120 | Generate renewal strategy document | Producer |
+| 110 | Deliver renewal strategy kick-off meeting with client | Producer + Account manager |
+| 100 | Finalize marketing approach based on client input | Producer |
+| 90 | Begin renewal marketing (next playbook) | Placement team |
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Renewal strategies delivered | Percentage of accounts that received a Qumis-powered renewal strategy document | 100% of accounts above $25K premium |
+| Strategy kick-off meetings held | Percentage of accounts with a formal strategy meeting before marketing begins | 90%+ |
+| Servicing intelligence utilized | Number of stewardship findings, Q&As, and contract reviews referenced in the strategy | 3+ per renewal for accounts with active servicing |
+| Client priorities captured | Percentage of strategies that document client input on renewal priorities | 100% |
+| Proactive recommendations | Number of coverage changes recommended before the client asked | 2–3 per renewal |
+| Timeline adherence | Percentage of renewals where marketing began by 90 days pre-expiration | 95%+ |
+
+<Note>
+  The renewal strategy document is the single most important deliverable in the renewal cycle. Everything downstream — the marketing approach, the negotiation priorities, the presentation structure — flows from the strategy. Invest the time to get it right. A two-hour Qumis analysis at 120 days saves 20 hours of reactive scrambling at 30 days.
+</Note>
