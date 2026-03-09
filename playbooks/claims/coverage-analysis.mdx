@@ -1,0 +1,414 @@
+---
+title: "Coverage Analysis"
+description: "Use the Claims Analysis report and Legal Search to build a structured coverage assessment grounded in the policy language, local laws, and the specific facts of the claim."
+icon: "magnifying-glass-chart"
+---
+
+## The strategy
+
+When a claim is reported, the first question everyone asks is "are we covered?" The answer to that question shapes everything that follows: whether the carrier accepts or denies, how reserves are set, whether counsel gets involved, and how the client manages the financial exposure.
+
+Most brokers answer this question informally. They read the relevant policy sections, form a view based on experience, and share it verbally or in a short email. The problem is that coverage analysis isn't just about reading the insuring agreement. It requires analyzing the interplay between the insuring agreement, the exclusions, the exceptions to exclusions, the definitions, the conditions, and critically, the applicable law in the jurisdiction where the claim arises. Two identical policy provisions can produce opposite coverage outcomes depending on whether you're in California or Texas.
+
+Qumis transforms this from a memory-and-experience exercise into a structured, documented analysis. The Claims Analysis report lets you load the policy, input the specific facts of the claim, and produce a coverage assessment that walks through every relevant provision, applies the jurisdictional rules, and cites both the policy language and the legal authority. The result is an analysis that stands up to scrutiny from carriers, counsel, and courts.
+
+This isn't just about getting the right answer. It's about being able to show your work. A broker who can hand a client a citation-backed coverage analysis within 24 hours of a loss report is delivering a fundamentally different level of service than one who says "I think you're covered, but let me check with the carrier."
+
+## The Qumis workflow
+
+<Steps>
+  <Step title="Create a Claims Analysis report">
+    When a loss is reported, open a new Claims Analysis report in Qumis. Upload the relevant policy (or policies) from the Document Vault into the report. If the policy is already in the Vault from your broking and servicing work, you can pull it directly.
+
+    Upload every document that's relevant to the coverage analysis:
+    - The policy declarations page
+    - The policy form (the full coverage part, not just the dec)
+    - All endorsements
+    - Any manuscript amendments
+    - The schedule of underlying insurance (if the claim involves excess layers)
+
+    <Tip>
+      Upload endorsements individually rather than as part of a combined PDF. The Claims Analysis report can reference specific endorsements more precisely when they're separate documents, and your citations will point to the exact endorsement rather than a page number in a merged file.
+    </Tip>
+  </Step>
+
+  <Step title="Input the facts of the claim">
+    In the report's Chat, provide a structured summary of the claim facts. The more specific you are about the facts, the more precise the coverage analysis will be. Include everything you know at the time, even if the facts are still developing.
+
+    **Claim facts input prompt:**
+    ```
+    Here are the facts of the claim for coverage analysis:
+
+    INSURED: [Name and relationship to the policy]
+    DATE OF LOSS: [Date the loss occurred or was discovered]
+    DATE REPORTED: [Date the loss was reported to the insured/broker]
+    JURISDICTION: [State and, if relevant, county where the loss occurred]
+    CLAIM TYPE: [Brief classification: bodily injury, property damage,
+      professional liability, cyber breach, etc.]
+
+    FACTS:
+    [Provide a detailed narrative of what happened. Include:
+    - What caused the loss
+    - Who was involved (insured, third parties, employees, contractors)
+    - Where it happened (on premises, at a job site, online, etc.)
+    - What damage or injury resulted
+    - Any actions taken by the insured before or after the loss
+    - Any prior knowledge the insured had of the condition or risk
+    - Any relevant contractual relationships
+    - The estimated amount of the loss or claim demand]
+
+    SPECIFIC COVERAGE QUESTIONS:
+    [List any specific questions about coverage, e.g.,
+    "Does the pollution exclusion apply to this indoor mold claim?"
+    or "Is the claimant an additional insured under the blanket AI
+    endorsement?"]
+    ```
+
+    <Note>
+      Facts evolve as a claim develops. You can update the analysis as new information becomes available by adding facts to the Chat within the report. Qumis will incorporate the new information into its analysis. Document each update so the report reflects the full timeline of the analysis.
+    </Note>
+  </Step>
+
+  <Step title="Generate the initial coverage assessment">
+    With the policy and facts loaded, prompt the report's Chat to produce a structured coverage assessment.
+
+    **Coverage assessment prompt:**
+    ```
+    Based on the uploaded policy and the claim facts provided,
+    produce a comprehensive coverage analysis. Structure the
+    analysis as follows:
+
+    1. INSURING AGREEMENT ANALYSIS
+       Does the claim fall within the scope of the insuring
+       agreement? Analyze each element required to trigger coverage
+       (e.g., "bodily injury," "property damage," "occurrence,"
+       "during the policy period") against the specific facts.
+       Cite the policy definitions and the insuring agreement
+       language. Identify whether every required element is met,
+       and if any element is uncertain, explain why.
+
+    2. EXCLUSION ANALYSIS
+       For every exclusion in the policy that could potentially
+       apply to this claim, analyze whether it applies based on
+       the facts. Don't limit the analysis to the obvious
+       exclusions. Check every exclusion and explain why each
+       does or does not apply. Cite the exclusion language.
+
+    3. EXCEPTIONS TO EXCLUSIONS
+       For any exclusion that applies, check whether an exception
+       restores coverage. Cite the exception language and analyze
+       whether the facts trigger the exception.
+
+    4. DEFINITIONS ANALYSIS
+       Identify every defined term in the policy that is relevant
+       to the coverage determination. Analyze whether the facts
+       satisfy each definition. Flag any definitions that are
+       ambiguous as applied to these facts.
+
+    5. CONDITIONS ANALYSIS
+       Identify any policy conditions that could affect coverage
+       (notice requirements, cooperation clause, voluntary payments,
+       no-action clause). Analyze whether the insured has complied
+       with the conditions based on the known facts.
+
+    6. LIMITS AND DEDUCTIBLES
+       Identify the applicable limits, sublimits, and deductibles
+       for this claim. If the claim could erode aggregates, note
+       the current aggregate status if known.
+
+    7. COVERAGE DETERMINATION
+       Based on the analysis above, state your overall assessment:
+       COVERED, NOT COVERED, or COVERAGE UNCERTAIN. If uncertain,
+       identify the specific provisions or factual gaps that create
+       the uncertainty.
+
+    Cite the specific policy language for every finding. Use
+    exact quotes from the policy with section references.
+    ```
+  </Step>
+
+  <Step title="Apply jurisdictional law using Legal Search">
+    This is where the Claims Analysis report becomes significantly more powerful than a standard policy read. Use Legal Search within the report's Chat to find the applicable legal rules in the claim's jurisdiction that affect how the policy language is interpreted.
+
+    **Jurisdictional analysis prompt:**
+    ```
+    For the coverage issues identified in the analysis, research
+    the applicable law in [state] that governs the interpretation
+    of these provisions. Specifically:
+
+    1. INTERPRETATION RULES: How does [state] interpret ambiguous
+       policy language? Does the state follow the doctrine of
+       contra proferentem (construing ambiguity against the
+       insurer)? What standard does the state apply?
+
+    2. EXCLUSION BURDEN: In [state], who bears the burden of
+       proving that an exclusion applies? What is the standard?
+
+    3. NOTICE REQUIREMENTS: How does [state] treat late notice?
+       Is prejudice required before an insurer can deny coverage
+       based on late notice? What constitutes prejudice?
+
+    4. SPECIFIC COVERAGE ISSUES: For each coverage question
+       identified in the analysis, find [state] case law that
+       addresses how courts have interpreted the same or similar
+       policy language in comparable fact patterns. Focus on:
+       [list the specific provisions at issue, e.g.,
+       - "the absolute pollution exclusion as applied to indoor
+         air quality claims"
+       - "the 'expected or intended' exclusion as applied to
+         construction defect claims"
+       - "the definition of 'occurrence' in progressive damage
+         scenarios"]
+
+    For each legal finding, cite the case name, court, year, and
+    the relevant holding. Explain how the legal rule applies to
+    the specific facts and policy language in this claim.
+    ```
+
+    <Warning>
+      Legal Search provides legal research, not legal opinions. The cases and holdings it surfaces are analytical inputs that support the coverage assessment. For claims with significant financial exposure or where litigation is likely, the client should engage coverage counsel to review the analysis and provide a formal opinion. The Qumis analysis is an excellent foundation for counsel's work and can significantly reduce the time and cost of a formal coverage opinion.
+    </Warning>
+  </Step>
+
+  <Step title="Refine the analysis through iterative dialogue">
+    The initial assessment rarely captures every nuance. Use the report's Chat to refine the analysis by exploring specific issues in depth.
+
+    **Example follow-up prompts:**
+
+    **Exploring an ambiguous exclusion:**
+    ```
+    The pollution exclusion analysis identified potential ambiguity
+    in the phrase "discharge, dispersal, seepage, migration, release
+    or escape." Based on the facts (indoor mold from a plumbing leak
+    in a commercial building), does the mold constitute a "pollutant"
+    under [state] law? Find cases in [state] that have addressed
+    whether indoor mold falls within the standard CGL pollution
+    exclusion.
+    ```
+
+    **Testing an alternative fact pattern:**
+    ```
+    If the facts were slightly different and the insured had prior
+    knowledge of the plumbing issue but did not repair it, how would
+    that affect the coverage analysis? Specifically, would the
+    "expected or intended" exclusion apply under [state] law given
+    that the insured knew of the condition but did not intend the
+    resulting damage?
+    ```
+
+    **Analyzing additional insured coverage:**
+    ```
+    The claimant is seeking coverage as an additional insured under
+    the blanket additional insured endorsement. Based on the
+    endorsement language and the contractual relationship described
+    in the facts, analyze whether the claimant qualifies as an
+    additional insured. Check whether the endorsement requires a
+    written contract, whether the contract was in place at the time
+    of the occurrence, and whether the claimed injury arises out of
+    the named insured's operations.
+    ```
+
+    <Tip>
+      The iterative dialogue is where the Claims Analysis report delivers the most value. Each follow-up question deepens the analysis and creates a documented record of the reasoning. When you eventually share the analysis with the client, counsel, or the carrier, the full dialogue trail shows the thoroughness of the work.
+    </Tip>
+  </Step>
+
+  <Step title="Finalize and deliver the coverage assessment">
+    Once the analysis is complete, the Claims Analysis report serves as the deliverable. It contains the full policy analysis, the jurisdictional legal research, and the iterative refinements — all in one documented package.
+
+    Deliver the analysis based on the audience:
+
+    **To the client:** Provide a summary of the coverage determination with the key findings and recommended next steps. Include the full report as a reference document.
+
+    **To coverage counsel:** Share the full report as a starting point for a formal coverage opinion. The structured analysis and legal citations reduce the scope of work counsel needs to perform.
+
+    **To the carrier:** Use the analysis to support a coverage position or to respond to a reservation of rights letter. The citations to policy language and jurisdictional law demonstrate that the coverage position is well-founded.
+  </Step>
+</Steps>
+
+## Coverage analysis prompts by claim type
+
+<Tabs>
+  <Tab title="Bodily injury / premises liability">
+    ```
+    Analyze coverage for this bodily injury claim under the CGL
+    policy. Focus on: (1) whether the injury constitutes "bodily
+    injury" as defined, (2) whether it was caused by an
+    "occurrence" as defined, (3) whether the location falls within
+    the policy territory, (4) the applicability of the
+    premises/operations insuring agreement vs. products/completed
+    operations, (5) whether any of the following exclusions apply:
+    expected or intended injury, liquor liability, employer's
+    liability, contractual liability, and (6) whether any
+    additional insured is implicated. Apply [state] law to any
+    ambiguities.
+    ```
+  </Tab>
+
+  <Tab title="Property damage / construction defect">
+    ```
+    Analyze coverage for this property damage claim arising from
+    alleged construction defects. Focus on: (1) whether the alleged
+    defects constitute "property damage" as defined (including the
+    distinction between damage to the insured's own work vs.
+    damage to other property), (2) whether there is an
+    "occurrence" under [state] law (note: states differ on whether
+    faulty workmanship constitutes an occurrence), (3) the
+    applicability of the "your work" exclusion and the
+    subcontractor exception, (4) the "impaired property" exclusion,
+    (5) the "damage to your product" exclusion, (6) the scope of
+    products/completed operations coverage, and (7) the effect of
+    any additional insured obligations. Apply [state] law,
+    particularly regarding the occurrence question and the
+    economic loss doctrine.
+    ```
+  </Tab>
+
+  <Tab title="Professional liability / E&O">
+    ```
+    Analyze coverage for this professional liability claim. Focus
+    on: (1) whether the alleged act constitutes a "wrongful act"
+    or "professional service" as defined, (2) whether the claim
+    was first made during the policy period (claims-made trigger),
+    (3) whether the retroactive date affects coverage, (4) whether
+    the insured had prior knowledge of the claim or circumstances
+    that could give rise to it before the policy inception
+    (prior knowledge exclusion), (5) the scope of the "insured
+    vs. insured" exclusion if applicable, (6) defense cost
+    treatment (inside or outside limits), and (7) consent to
+    settle provisions. Apply [state] law regarding claims-made
+    policy interpretation.
+    ```
+  </Tab>
+
+  <Tab title="Cyber / data breach">
+    ```
+    Analyze coverage for this cyber incident. Focus on: (1) first-
+    party coverages triggered (business interruption, data
+    restoration, crisis management, notification costs, extortion),
+    (2) third-party coverages triggered (regulatory proceedings,
+    privacy liability, media liability), (3) whether the incident
+    falls within the policy definition of "security event" or
+    "privacy event," (4) the war/infrastructure exclusion and
+    whether state-sponsored actors are implicated, (5) prior
+    knowledge and pending/prior litigation exclusions, (6) whether
+    vendor/supply chain provisions apply if the breach originated
+    with a third-party service provider, (7) waiting period and
+    retroactive date for business interruption, and (8) sublimits
+    applicable to specific coverage parts. Apply [state] law and
+    any applicable federal regulations (HIPAA, state breach
+    notification statutes, PCI DSS requirements).
+    ```
+  </Tab>
+
+  <Tab title="Excess / umbrella claim">
+    ```
+    Analyze coverage for this claim under the excess/umbrella
+    program. Focus on: (1) whether the underlying policy limits
+    have been exhausted (or will be), triggering the excess layer,
+    (2) whether the excess policy follows form to the underlying
+    or has its own coverage terms, (3) if follow-form, whether
+    there are any exclusions in the excess that don't exist in
+    the underlying (creating a gap), (4) drop-down provisions
+    and whether they're triggered by any applicable underlying
+    exhaustion scenario, (5) whether the claim triggers any
+    per-occurrence or per-claim limits distinct from the
+    underlying, (6) defense cost treatment at the excess layer
+    vs. the primary, and (7) whether additional insureds under
+    the primary are also covered by the excess. Analyze each
+    layer of the tower separately and then as a coordinated
+    program.
+    ```
+  </Tab>
+</Tabs>
+
+## Jurisdictional considerations that change outcomes
+
+Different states interpret the same policy language in fundamentally different ways. Here are the issues where jurisdiction matters most.
+
+<AccordionGroup>
+  <Accordion title="The 'occurrence' question in construction defect cases">
+    Whether faulty workmanship constitutes an "occurrence" under a CGL policy varies dramatically by state. Some states hold that defective work is never an occurrence because the resulting damage is foreseeable. Others distinguish between the defective work itself (not covered) and consequential damage to other property (covered). A few treat all construction defect claims as occurrences. Legal Search can identify where your jurisdiction falls on this spectrum and how recent decisions have shifted the line.
+  </Accordion>
+
+  <Accordion title="Late notice and the prejudice requirement">
+    When an insured reports a claim late, some states allow the carrier to deny coverage for late notice regardless of whether the delay caused harm. Other states require the carrier to demonstrate actual prejudice before denying on notice grounds. The distinction can be outcome-determinative. Legal Search finds the applicable rule in the claim's jurisdiction and any recent changes.
+  </Accordion>
+
+  <Accordion title="Pollution exclusion scope">
+    The absolute pollution exclusion has been one of the most litigated provisions in insurance law. States differ on whether it applies only to traditional environmental pollution or extends to any substance that could be characterized as a "pollutant" (carbon monoxide, lead paint, mold, fumes, dust). Some states have adopted the "hostile environment" test. Others apply the exclusion literally. Legal Search surfaces the controlling precedent in the claim's jurisdiction.
+  </Accordion>
+
+  <Accordion title="Number of occurrences">
+    When a single course of conduct causes multiple injuries or when a continuous condition causes progressive damage, the question of how many "occurrences" exist determines the available limits and deductibles. States use different tests: the "cause" test, the "effect" test, and the "unfortunate event" test. Each produces different outcomes on the same facts. Legal Search identifies which test the jurisdiction applies.
+  </Accordion>
+
+  <Accordion title="Allocation in long-tail claims">
+    For claims spanning multiple policy periods (environmental, asbestos, latent defect), states apply different allocation methods: all sums (the insured can select any triggered policy period to respond for the entire loss), pro rata by time on risk, or pro rata by limits. The allocation method can swing millions of dollars. Legal Search identifies the jurisdiction's rule and any recent developments.
+  </Accordion>
+</AccordionGroup>
+
+## Delivering the analysis to different audiences
+
+<Tabs>
+  <Tab title="To the client">
+    > Hi [Client Name],
+    >
+    > We've completed our initial coverage analysis for the [claim type] reported on [date]. Here's a summary of our findings.
+    >
+    > **Coverage determination: [COVERED / NOT COVERED / COVERAGE UNCERTAIN]**
+    >
+    > **Key findings:**
+    > - [Finding 1, e.g., "The claim falls within the CGL insuring agreement as 'property damage' caused by an 'occurrence' as both terms are defined in the policy."]
+    > - [Finding 2, e.g., "The pollution exclusion does not apply. Under [state] law, indoor mold from a plumbing leak does not constitute a 'pollutant' within the meaning of the standard CGL exclusion, per [case citation]."]
+    > - [Finding 3, e.g., "The applicable sublimit for water damage is $500K, and the $10K deductible applies."]
+    >
+    > **Recommended next steps:**
+    > - [e.g., "Report the claim to the carrier with our coverage analysis attached. This positions you as having done the analytical work and sets the expectation that the claim should be accepted."]
+    > - [e.g., "If the claim exceeds $[threshold], we recommend engaging coverage counsel to provide a formal opinion based on our analysis."]
+    >
+    > The full analysis with policy citations and legal references is attached. Let me know if you have questions or if any new facts develop.
+  </Tab>
+
+  <Tab title="To coverage counsel">
+    > [Counsel Name],
+    >
+    > Attached is our coverage analysis for the [claim type] claim reported by [insured] under their [policy type] with [carrier]. We've structured the analysis as a starting point for your formal opinion.
+    >
+    > The analysis covers: insuring agreement, exclusions, exceptions, definitions, conditions, applicable limits, and jurisdictional law in [state]. The key coverage questions are:
+    >
+    > 1. [Question 1, e.g., "Whether the pollution exclusion applies to indoor mold from a plumbing leak under [state] law."]
+    > 2. [Question 2, e.g., "Whether late notice (45 days) prejudices the carrier's position under [state]'s notice-prejudice rule."]
+    >
+    > We've included case citations for each issue. We'd appreciate your review and opinion on these questions. Please let us know if you need additional policy documents or facts.
+  </Tab>
+
+  <Tab title="To the carrier (proactive submission)">
+    > Hi [Adjuster/Examiner Name],
+    >
+    > We're submitting a claim on behalf of our insured, [Name], under policy [number], effective [dates]. Please find attached the notice of loss, supporting documentation, and our coverage analysis.
+    >
+    > Based on our review of the policy language and applicable [state] law, we believe this claim is covered under the [specific insuring agreement]. We've addressed the key coverage provisions in the attached analysis, including [briefly reference the provisions you expect the carrier to evaluate].
+    >
+    > We look forward to your prompt review and acknowledgment. Please direct any questions to me directly.
+
+    <Tip>
+      Submitting a coverage analysis with the initial claim report signals to the carrier that you've done your homework. Adjusters and coverage examiners take these claims more seriously because they know the broker will push back intelligently if the claim is denied or reserved improperly.
+    </Tip>
+  </Tab>
+</Tabs>
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Coverage analyses completed | Number of claims with a Qumis-powered coverage assessment | 100% of claims above $25K |
+| Analysis turnaround | Time from loss report to coverage analysis delivered to client | Under 24 hours for standard claims; under 48 hours for complex |
+| Jurisdictional research included | Percentage of analyses that include applicable state law citations | 100% for claims above $50K or with coverage uncertainty |
+| Coverage position accuracy | Percentage of analyses where the broker's coverage determination was consistent with the carrier's final position | 85%+ (discrepancies should trigger review of the analysis methodology) |
+| Client satisfaction with claims support | Feedback on the speed, depth, and clarity of the coverage analysis | Track via direct feedback |
+| Counsel time savings | Reduction in billable hours for coverage opinions when Qumis analysis is provided as a starting point | 30–50% reduction |
+
+<Note>
+  The coverage analysis is the foundation of everything else in the claims playbooks. Whether you're identifying responding policies or rebutting a denial, the quality of the initial analysis determines the strength of your position. Invest the time to get it right. A thorough analysis at the front end saves exponentially more time and money downstream.
+</Note>

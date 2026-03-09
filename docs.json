@@ -202,6 +202,15 @@
               "playbooks/renewing/marketing",
               "playbooks/renewing/presentation"
             ]
+          },
+          {
+            "group": "Claims Playbooks",
+            "pages": [
+              "playbooks/claims/overview",
+              "playbooks/claims/coverage-analysis",
+              "playbooks/claims/policy-identification",
+              "playbooks/claims/rebuttal"
+            ]
           }
         ]
       },
