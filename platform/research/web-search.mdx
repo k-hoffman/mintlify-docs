@@ -1,6 +1,124 @@
 ---
 title: "Web Search"
-icon: "search"
+description: "Give Qumis access to public web sources so it can enrich document analysis with real-time market data, carrier information, and industry context."
+icon: "globe"
 ---
 
-placeholder
+Web Search is a toggle that lets Qumis reach beyond your uploaded documents and pull in information from the public internet. When enabled, Qumis can look up carrier ratings, regulatory bulletins, industry benchmarks, and other external context to give you richer, more informed answers — all within the same chat conversation.
+
+---
+
+## What Web Search does
+
+With Web Search **off** (the default), Qumis answers questions using only the documents you've uploaded. This is ideal when you need analysis that stays strictly within the four corners of your policy language.
+
+With Web Search **on**, Qumis can supplement its answers with publicly available information from the web. This is useful when your question requires context that isn't in the document itself — carrier financial strength, current regulatory guidance, market trends, or standard industry practices.
+
+<Note>
+  Web Search adds external context to support your analysis. It does not replace your uploaded documents as the primary source — Qumis still anchors its answers in your policy language and cites your documents first.
+</Note>
+
+---
+
+## When to turn Web Search on
+
+Toggle Web Search on when your question benefits from information that lives outside your documents:
+
+- **Carrier research** — "What is the AM Best rating for this carrier?" or "Has this insurer had any recent regulatory actions?"
+- **Market benchmarks** — "How does this premium compare to current market rates for similar risks?"
+- **Regulatory context** — "Are there any recent state bulletins affecting this type of coverage?"
+- **Industry standards** — "What is the standard retention for a D&O policy in this industry sector?"
+- **Emerging risks** — "What are current cyber insurance trends that might affect this renewal?"
+- **Terminology and definitions** — "What does 'occurrence' mean in the context of environmental liability claims?"
+
+---
+
+## When to keep Web Search off
+
+Keep Web Search off when you want answers based solely on your documents:
+
+- **Coverage determinations** — When you need analysis tied strictly to your policy language
+- **Contract compliance** — When checking whether a policy meets specific contractual requirements
+- **Exclusion analysis** — When examining what your policy does and does not cover
+- **Claims assessment** — When evaluating coverage for a specific claim based on policy terms
+- **Confidential work** — When you want to ensure the analysis uses only the materials you've provided
+
+---
+
+## How to use Web Search
+
+<Steps>
+  <Step title="Open a chat">
+    Start a new chat or open an existing conversation in **Chats**. Upload or select the documents you want to work with.
+  </Step>
+
+  <Step title="Toggle Web Search on">
+    Look for the **Web Search** toggle near the chat input. Click it to turn it on — the toggle will indicate that web access is active.
+  </Step>
+
+  <Step title="Ask your question">
+    Type your question as you normally would. Qumis will search the web for relevant context and combine it with your document analysis in the response.
+  </Step>
+
+  <Step title="Review the response">
+    Qumis clearly distinguishes between information drawn from your documents and information found on the web. Review both sources to form your complete picture.
+  </Step>
+</Steps>
+
+<Tip>
+  You can turn Web Search on and off between questions in the same chat. Start with document-only analysis, then toggle it on for a follow-up that needs external context.
+</Tip>
+
+---
+
+## Best practices
+
+- **Start with documents first.** Ask your core coverage questions with Web Search off, then toggle it on for supplementary context like carrier ratings or market comparisons.
+- **Be specific about what you need.** Instead of "Tell me about this carrier," ask "What is the current AM Best rating and outlook for [carrier name]?"
+- **Combine sources deliberately.** Use Web Search to validate or contextualize findings from your policy analysis — for example, checking whether an exclusion you've identified is standard in the current market.
+- **Verify external information.** Web Search pulls from public sources that may change over time. For critical decisions, confirm key facts (ratings, regulatory actions, financial data) against primary sources.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Web Search doesn't seem to be returning web results">
+    Confirm the toggle is on (it should show as active near the chat input). If the toggle is on but results only reference your documents, try rephrasing your question to ask explicitly for external information — for example, "Search the web for the current AM Best rating of [carrier name]."
+  </Accordion>
+
+  <Accordion title="I'm getting too much external information and not enough document analysis">
+    Turn Web Search off and re-ask your question. This forces Qumis to answer exclusively from your uploaded documents. You can then follow up with Web Search on for supplementary context.
+  </Accordion>
+
+  <Accordion title="The web information seems outdated">
+    Web Search pulls from publicly indexed sources, which may not reflect the very latest changes. For time-sensitive data like carrier ratings or regulatory actions, verify against the primary source (e.g., AM Best's website, your state's DOI).
+  </Accordion>
+
+  <Accordion title="I want to use Web Search without uploading any documents">
+    Web Search works in any chat, even without documents. Start a new chat, toggle Web Search on, and ask your question. This is useful for general industry research or quick carrier lookups.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Where Web Search fits in the Qumis platform
+
+Web Search complements **Chats** and **Legal Search** by adding a third layer of intelligence. Chats analyzes your uploaded documents, Legal Search researches case law and legal precedent, and Web Search brings in real-time public information. Together, they give you document analysis, legal authority, and market context in one workflow.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Chats" icon="files" href="/platform/chats">
+    Ask questions about your documents and get cited answers
+  </Card>
+  <Card title="Legal Search" icon="scale-balanced" href="/platform/research/legal-search">
+    Research case law and legal precedent for coverage positions
+  </Card>
+  <Card title="Tips and Best Practices" icon="lightbulb" href="/playbooks/prompting/best-practices">
+    Write better prompts to get more from every analysis
+  </Card>
+  <Card title="Document Vault" icon="folder" href="/platform/document-vault">
+    Upload and manage the documents you analyze
+  </Card>
+</CardGroup>
