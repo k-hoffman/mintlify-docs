@@ -117,7 +117,6 @@
             "group": "Generate Deliverables",
             "pages": [
               "platform/populate",
-              "platform/verify",
               "platform/contract-review",
               "platform/coming-soon/proposal-generator",
               "platform/custom-report"
@@ -296,8 +295,9 @@
     { "source": "/report/types/custom-report", "destination": "/platform/custom-report" },
     { "source": "/report/populate/data-extraction", "destination": "/platform/populate" },
     { "source": "/report/populate/client-template-guide", "destination": "/platform/populate" },
-    { "source": "/report/verify/contract-compliance", "destination": "/platform/verify" },
-    { "source": "/report/verify/coverage-verification", "destination": "/platform/verify" },
+    { "source": "/report/verify/contract-compliance", "destination": "/platform/contract-review" },
+    { "source": "/report/verify/coverage-verification", "destination": "/platform/contract-review" },
+    { "source": "/platform/verify", "destination": "/platform/contract-review" },
     { "source": "/report/workflows/preparing-a-client-presentation", "destination": "/playbooks/broking/client-presentation" },
     { "source": "/report/workflows/renewal-analysis", "destination": "/playbooks/renewing/renewal-analysis" },
     { "source": "/report/workflows/portfolio-review", "destination": "/playbooks/servicing/portfolio-review" },
