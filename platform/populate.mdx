@@ -1,82 +1,304 @@
 ---
-title: "Populate Spreadsheets"
-description: "Extract structured data from insurance policies into spreadsheets or automatically fill client templates using Qumis Populate."
+title: "Coverage Table"
+description: "Extract structured coverage data from insurance policies into clear, side-by-side tables for proposals, renewals, and client presentations."
 icon: "table"
+sidebarTitle: "Coverage Table"
 ---
 
 Populate turns insurance policies into structured data. Upload documents and tell Qumis what to extract — whether you need clean spreadsheet data for portfolio reviews or want to automatically fill your existing client templates. The result is consistent, accurate data you can use immediately in client presentations, renewals, compliance tracking, and management reporting.
 
 ---
 
-## When to populate
+## What this report does
 
-Use Populate whenever you need to move data from documents into structured formats. Extract key information from policies for portfolio reviews and annual coverage summaries. Automate renewal management by pulling current policy details to pre-populate marketing submissions and renewal comparisons. Verify compliance across your vendor and tenant base by batch-extracting certificate data. Build management reports and executive dashboards by extracting premium, limits, and coverage data across your book of business. Rather than reading through policies manually or retyping data into spreadsheets, Populate handles the extraction automatically while maintaining accuracy and consistency.
+The Coverage Table provides a clear, line-by-line view of coverage features across one or more policies. It's most helpful when preparing proposals, renewals, or side-by-side comparisons for clients.
+
+With this report, you can:
+
+- Extract coverage details, limits, and terms directly from uploaded policies or quotes.
+- Compare key terms such as limits, retentions, and coverages across multiple documents.
+- Identify where the language matches, differs, or requires review.
+- Download the finished report for inclusion in client-facing materials.
+
+It's best to create separate Coverage Table reports for each line of business (e.g., Cyber, General Liability, Property) using a relevant checklist.
 
 ---
 
-## How it works
+## Before you start
+
+- Have at least one policy document ready (quote, policy, binder, or application).
+- If comparing multiple documents, have them all ready to upload (1–5 documents supported).
+- Decide whether to use automatic extraction or a custom coverage checklist.
+- If using a custom checklist, have your list of fields ready or saved in the Prompt Library. See the [Checklist Template Guide](/reports/template-guide) for how to write templates with repeating groups and nesting.
+
+---
 
 <Steps>
-  <Step title="Upload your documents">
-    Upload one or more insurance documents — policies, quotes, certificates, or schedules. Populate can process multiple documents in batch or individually, depending on your workflow.
+  <Step title="Access the Coverage Table tool">
+    1. From the sidebar, click **Coverage Table (BETA)**.
+    2. You'll see a list of existing reports and the option to start a new one.
+    3. Click **Create Coverage Table** to begin.
+
+    Each generated table is saved automatically for future reference.
+
+    <Frame caption="Coverage Table dashboard showing existing reports and create button">
+      <img style={{ width:"100%" }} />
+    </Frame>
   </Step>
-  <Step title="Define what to extract">
-    You can either use a standard extraction template for common scenarios (policy summary, certificate verification, quote comparison, claims data) or define custom extraction fields. Tell Qumis exactly what you need: policy numbers and effective dates, coverage types and limits, deductibles and self-insured retentions, named insureds and additional insureds, carrier information, endorsements, or any specialized fields your business requires.
+
+  <Step title="Upload your policy documents">
+    A three-step workflow guides you through creating your coverage table:
+
+    - **Step 1: Policy Documents**
+    - **Step 2: Add Checklist Items**
+    - **Step 3: Generate Report**
+
+    On **Step 1: Policy Documents**, add the documents you want to analyze:
+
+    1. You can add documents in two ways:
+       - Click **Search and Add Documents From Vault** to pull previously uploaded documents from your Vault, or
+       - Drag and drop files into the **Drop files here** area, or click to select files from your computer.
+    2. Supported file types include PDF, Word, Excel, and images (JPG, PNG, TIFF).
+    3. You can upload between 1 and 5 policy documents.
+    4. Qumis reads and parses the uploaded documents to extract key coverage items.
+
+    <Frame caption="Document upload interface with vault search and file drop options">
+      <img style={{ width:"100%" }} />
+    </Frame>
   </Step>
-  <Step title="Map to your template (optional)">
-    If you're using a client template, define how fields map from policy documents to your template structure. Train Qumis on where to find each piece of information, then save the configuration for reuse. This eliminates future manual data entry while keeping your team's standard formats intact.
+
+  <Step title="Add checklist items">
+    On **Step 2: Add Checklist Items**, choose how you want Qumis to build your coverage table.
+
+    You have two options:
+
+    ### Option A — Auto-Generate Checklist (Recommended for beginners)
+
+    1. Toggle **Auto-Generate Checklist Items** **on** (enabled).
+    2. Qumis will automatically identify relevant fields and terms based on the uploaded documents.
+    3. This is the fastest way to create a table if you don't have a checklist defined.
+
+    <Frame caption="Auto-generate checklist toggle enabled">
+      <img style={{ width:"100%" }} />
+    </Frame>
+
+    ### Option B — Use a Defined Checklist
+
+    1. Toggle **Auto-Generate Checklist Items** **off** (disabled).
+    2. You now have two ways to add your checklist:
+
+    **Method 1: Type or paste your checklist**
+
+    - Copy and paste the checklist items from your proposal template or coverage checklist.
+    - Enter the list of coverage items, limits, and/or terms you want to include in the coverage table.
+    - Example fields include:
+      - Policy Term
+      - Carrier
+      - Intermediary
+      - AM Best Rating
+      - Coverage limits and deductibles
+      - Specific coverage types relevant to the line of business
+
+    **Method 2: Use a saved checklist from Prompt Library**
+
+    - If you've saved your coverage checklists to the Prompt Library, click the **book icon**.
+    - Select the appropriate checklist from your saved prompts.
+    - The checklist fields will populate automatically.
+
+    <Frame caption="Custom checklist input with Prompt Library integration">
+      <img style={{ width:"100%" }} />
+    </Frame>
   </Step>
-  <Step title="Review and export">
-    Qumis extracts the data and presents it in your chosen format — raw spreadsheet or populated template. Review the results, make any manual corrections needed, and export as Excel, PDF, or your preferred format for use in your workflows.
+
+  <Step title="Best practices for checklist creation">
+    <AccordionGroup>
+      <Accordion title="Create line-of-business-specific checklists">
+        - Create separate Coverage Table reports for each line of business (e.g., General Liability, Commercial Property, Workers Compensation, Cyber).
+        - Use checklists that ask for information relevant to that specific line of business.
+        - Don't use your General Liability checklist on a Commercial Property policy — the fields won't match.
+      </Accordion>
+
+      <Accordion title="Save frequently-used checklists">
+        - Save your most-used coverage checklists to the Prompt Library for quick reuse.
+        - Name them clearly (e.g., "GL Coverage Checklist," "Commercial Property Limits and Deductibles").
+        - Update them as your proposals or client needs evolve.
+        - If you'd like your agency's standard checklists added to the Prompt Library for all users in your organization to access, contact your customer success manager.
+      </Accordion>
+
+      <Accordion title="Include relevant fields">
+        - Policy information (carrier, term, admitted status, ratings)
+        - Key limits and sublimits
+        - Deductibles and retentions
+        - Important coverage types and endorsements
+        - Territory and jurisdictional information
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+
+  <Step title="Generate your coverage table">
+    Once documents are uploaded and checklist items are defined:
+
+    1. Click **Generate Coverage Table** at the bottom right.
+    2. Qumis begins analyzing the uploaded documents, matching field values across policies, and identifying alignment or discrepancies.
+    3. Report generation typically takes 5–10 minutes as Qumis validates and extracts data using a multi-agent AI process.
+    4. You can leave the page and return later — the report will be ready when processing completes.
+
+    <Frame caption="Generate Coverage Table button initiating the analysis process">
+      <img style={{ width:"100%" }} />
+    </Frame>
+  </Step>
+
+  <Step title="Review your completed coverage table">
+    When ready, the coverage table displays each policy side by side with fields such as:
+
+    - Writing Company
+    - AM Best Rating
+    - Effective Dates
+    - Limits and Retentions
+    - Coverage Inclusions and Exclusions
+
+    Each row indicates the status of that field:
+
+    - **Match** — Values are aligned across policies.
+    - **Partial** — Some differences exist.
+    - **Mismatch** — Policies differ on key details.
+
+    You can sort or filter by status, impact, or confidence level for quick review.
+
+    <Frame caption="Completed coverage table showing side-by-side policy comparison with match status">
+      <img style={{ width:"100%" }} />
+    </Frame>
   </Step>
 </Steps>
 
 ---
 
-## What Qumis extracts
+## 7) Chat with your coverage table
 
-Populate can extract any data field from insurance documents. Standard extractions include named insureds and additional insureds, policy numbers and effective dates, coverage types, limits by coverage type, aggregate limits, deductibles and self-insured retentions, carrier information, retroactive dates, endorsements and special provisions, and premium amounts. For specialized needs, define custom extractions — for example, whether defense costs are inside or outside limits, specific sublimit information, or coverage-specific conditions. Qumis structures the output to match your specified fields and maintains consistency across batch processing.
+Each coverage table includes an interactive chat assistant powered by **Qumis Clerk**.
 
----
+You can ask questions such as:
 
-## What you get
+- "Which limits differ across these policies?"
+- "What's the main difference between the two carriers?"
+- "Show me where the Cyber Extortion coverage is located."
+- "Explain the cyber coverage limits in each document."
+- "What exclusions differ between these quotes?"
 
-Two output options depending on your needs. Raw data extraction delivers clean, structured spreadsheet data organized by the fields you specified — ideal for analysis, reporting, and cross-document comparison. Populated client templates automatically fill your existing spreadsheet formats and deliverable structures with the extracted data, maintaining your firm's standard formats while eliminating manual data entry. You can review results before exporting, make corrections as needed, and save successful template configurations for future reuse across your team.
-
----
-
-## Tips for your role
-
-<Tabs>
-  <Tab title="Brokers & Producers">
-    Create templates for proposal schedules and market submission summaries. Extract key information from competing quotes into structured comparison spreadsheets — faster than manual side-by-side reading and ensures you don't miss important differences. Automatically pre-populate renewal submissions to markets with current policy details from expiring policies.
-  </Tab>
-  <Tab title="Account Managers">
-    Build templates for renewal summaries and annual coverage schedules that you deliver to clients. Extract key data from every policy in a client's program into a comprehensive summary spreadsheet, maintaining consistency while reducing time spent on data entry. Batch-extract certificate data to verify compliance across your client's vendor or tenant base.
-  </Tab>
-  <Tab title="Claims Professionals">
-    Develop templates for claims coverage matrices and loss run extractions. Extract policy details relevant to open claims — limits, deductibles, coverage grants, exclusions — into a structured tracking format. Quickly populate claims analysis spreadsheets with the information you need to make faster coverage decisions.
-  </Tab>
-  <Tab title="Risk Managers">
-    Create templates for program compliance spreadsheets and risk transfer matrices. Extract data from every policy in your insurance program to build a comprehensive coverage inventory that becomes your baseline for gap analysis and renewal planning. Extract limits and premium data across your portfolio to populate executive dashboards and board presentations.
-  </Tab>
-</Tabs>
+Chats are saved, and you can create multiple threads per table, making collaboration and deep dives effortless.
 
 ---
 
-## Next steps
+## 8) Download your coverage table
 
-<CardGroup cols={2}>
-  <Card title="Policy Analysis" icon="align-left" href="/platform/summarize">
-    Generate policy analyses and renewal briefs
-  </Card>
-  <Card title="Compare" icon="code-compare" href="/platform/compare">
-    Compare coverage across multiple policies
-  </Card>
-  <Card title="Document Vault" icon="folder-open" href="/platform/document-vault">
-    Organize and manage policy documents
-  </Card>
-  <Card title="Custom Report" icon="chart-bar" href="/platform/custom-report">
-    Build customized reports from your data
-  </Card>
-</CardGroup>
+When satisfied, click **Download** to export the table for inclusion in client presentations or proposal documents.
+
+The exported coverage table provides a professional summary of your analysis that can be shared with clients or underwriters. You can:
+
+- Add the table to your client proposals
+- Include it in renewal presentations
+- Customize formatting for your brand
+- Add your own notes and recommendations
+
+---
+
+## 9) Use the coverage table in client presentations
+
+Once you have your Coverage Table, use it to:
+
+**For quote presentations**
+
+- Show clients side-by-side coverage comparisons of competing quotes
+- Highlight where one option provides better coverage or value
+- Demonstrate which insurer offers the best fit for their needs
+
+**For renewal discussions**
+
+- Compare renewal terms to expiring policy
+- Show what's changing year-over-year
+- Identify coverage improvements or areas of concern
+
+**For marketing and proposals**
+
+- Create professional coverage summaries for prospects
+- Demonstrate thoroughness and expertise
+- Provide clear documentation of coverage options
+
+**Build credibility**
+
+- Professional formatting shows attention to detail
+- Clear comparisons make complex information accessible
+- AI-backed extraction ensures accuracy
+
+---
+
+## 10) Access previous coverage tables
+
+Your previously generated Coverage Tables are saved and listed on the Coverage Table dashboard.
+
+1. Go to **Coverage Table** in the left sidebar.
+2. You'll see a table of all your coverage tables showing:
+   - NAME — Table name
+   - FILES — The documents analyzed
+   - LAST MODIFIED — When the table was created or last accessed
+3. Click any table to open it, review the comparison, download it, or add new chat questions.
+
+---
+
+## Best practices
+
+- **One line of business per table.** Create separate tables for GL, Property, Workers Comp, Cyber, etc., to ensure relevant fields are extracted.
+- **Use saved checklists for consistency.** Save your frequently-used checklists to Prompt Library so you can reuse them across multiple clients.
+- **Match checklist to documents.** Make sure your checklist asks for fields that actually exist in the documents you're analyzing.
+- **Start with auto-generate.** If you're new to Coverage Tables or unsure what to extract, use auto-generate first to see what Qumis finds.
+- **Review Partial and Mismatch rows closely.** These highlight coverage differences that are important to discuss with clients.
+- **Refine over time.** After running a few tables, refine your checklists to focus on the fields most important to your clients.
+- **Download for proposals.** Always download the table to include in professional client-facing materials.
+- **Use chat for clarification.** If extracted information seems unclear, ask Qumis to explain specific fields or coverage provisions.
+- **Combine multiple reports.** Create separate tables for each line of business and include them all in comprehensive proposals.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My table didn't extract the information I expected">
+    Check that your checklist fields match what's actually in the documents. If you asked for "Cyber Limits" but uploaded a GL policy, Qumis won't find that information.
+  </Accordion>
+
+  <Accordion title="Some fields show 'Not Available'">
+    This means Qumis couldn't find that information in the document. The field may not exist in that policy, or it may be described differently.
+  </Accordion>
+
+  <Accordion title="My coverage table is taking too long to generate">
+    Average generation time is 5–10 minutes. If it exceeds 15 minutes, refresh the page or re-upload the documents.
+  </Accordion>
+
+  <Accordion title="How do I create a checklist for a new line of business?">
+    Look at a sample policy for that line and list all the key coverage items, limits, deductibles, and terms you want to track. Save it as a prompt for future use.
+  </Accordion>
+
+  <Accordion title="Can I compare more than 5 documents?">
+    No, Coverage Table supports 1–5 documents per table. If you need to compare more, create multiple tables.
+  </Accordion>
+
+  <Accordion title="Where are my saved checklists?">
+    Checklists saved to the Prompt Library can be accessed by clicking the book icon during checklist creation.
+  </Accordion>
+
+  <Accordion title="Can I edit the table after it's generated?">
+    You can download the table and edit it in Excel or your preferred tool. The table in Qumis is fixed once generated.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Where Coverage Table fits in the Qumis platform
+
+The **Coverage Table** complements **Comparisons** for policy-level differences and **Single Policy Analysis** for detailed individual policy review. Use Coverage Tables when you need clean, client-ready summaries of coverage information to include in proposals and presentations.
+
+---
+
+### Why use Coverage Table?
+
+The Coverage Table simplifies what used to be a manual, time-intensive process of reviewing and comparing multiple policies. With Qumis, you can generate consistent, professional coverage summaries in minutes, identify coverage gaps or differences instantly, and provide clear, visual insights to clients and producers. Transform your policy comparison workflow — from manual spreadsheets to AI-powered precision.
