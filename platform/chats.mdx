@@ -12,95 +12,228 @@ icon: "files"
   allowFullScreen
 ></iframe>
 
-## What Are Chats?
+## What you can do with Chats (at a glance)
 
-Chats is a conversational AI interface that lets you ask natural language questions about your uploaded insurance documents. Instead of manually reviewing pages of policy language, you can have a real-time conversation with Qumis about your coverage, exclusions, conditions, and more. Every answer is backed by specific citations to your documents, so you can trust the sources behind each response.
+- Ask plain-English questions about policies, quotes, binders, applications, contracts, and claims docs.
+- Get structured answers with legal-grade reasoning and references.
+- Keep documents private; data in Qumis is **not used to train** the AI and is stored in a private encrypted vault.
 
-Chats work with any document in your Document Vault—policies, endorsements, declarations, certificates, and contracts. Ask follow-up questions, refine your searches, and build a complete understanding of your coverage in minutes instead of hours.
+---
 
-## Start Your First Chat
+## Before you start
+
+- Have one or more documents ready (PDF, Word, Excel, images: JPG/PNG/TIFF).
+- If your files are already in **Vault**, you can pull them directly into a chat later.
+
+---
+
+## 1) Open the Chats workspace
 
 <Steps>
-  <Step title="Upload or Select Documents">
-    Upload your insurance documents to the Vault, or select documents you've already uploaded. You can chat with a single policy or ask questions across multiple documents simultaneously.
-  </Step>
-  <Step title="Type Your Question">
-    Ask your question in natural language. Be specific about what you want to know: coverage details, exclusions, conditions, trigger language, or how terms interact across different sections.
-  </Step>
-  <Step title="Review Your Answer">
-    Qumis returns a cited answer with direct references to the source language in your documents. Each citation shows exactly where the information appears, so you can verify the response instantly.
-  </Step>
-  <Step title="Ask Follow-Ups">
-    Continue the conversation. Ask for clarification, explore related topics, or dig deeper into specific sections. Your chat history maintains context across multiple questions.
+  <Step title="Navigate to Chats">
+    From the left sidebar, click **Chats**.
+
+    On **Home**, you'll also see other tools like *Chat with Documents*, *Compare Documents*, *Claims*, *Policy Analysis*, and *Contracts* (all accessible from the same sidebar later).
   </Step>
 </Steps>
 
-## Asking Effective Questions
+<Frame caption="Qumis Home screen showing navigation and feature cards">
+    <img src="/_mintlify/image/qumis/images/screenshots/home-dashboard.png" alt="Qumis Home screen showing navigation and feature cards" />
+</Frame>
 
-The quality of your answer depends on how you frame your question. Here are examples of strong questions:
+---
 
-- "What are the exclusions listed under the Cyber Liability section?"
-- "Does this policy cover business interruption from a network outage?"
-- "What conditions must be met before the Excess Liability coverage triggers?"
-- "How do the definitions in the Commercial General Liability section compare to the umbrella policy?"
+## 2) Start a new chat
+
+<Steps>
+  <Step title="Create a new chat">
+    In **Chats**, click **New Chat** at the top of the list.
+  </Step>
+
+  <Step title="Choose how to add files">
+    You'll see a welcome message and two ways to add files:
+
+    - **Search and Add Documents From Vault** (pull existing files), or
+    - **Drop files here** (drag & drop from your computer).
+  </Step>
+</Steps>
+
+<Frame caption="New Chat empty view with upload options">
+    <img src="/_mintlify/image/qumis/images/screenshots/chats-policy-analysis.png" alt="New Chat empty view with upload options" />
+</Frame>
 
 <Tip>
-  The more specific your question, the more precise the answer. Instead of "What does this policy cover?" try "What are the exclusions under the CGL coverage section?" Qumis performs best when you reference specific sections, coverage types, or conditions you're interested in.
+  You can add more than one file to the same chat to ask cross-document questions (e.g., compare a quote to a policy).
 </Tip>
 
-## Understanding Your Responses
+---
 
-Each answer Qumis provides includes:
+## 3) Add documents
 
-- **Direct citations**: Exact language from your documents, showing where the answer comes from
-- **Source references**: Which document(s) the information appears in, plus page numbers when available
-- **Confidence indicators**: Qumis signals when it's confident in the answer versus when additional verification may be helpful
-- **Follow-up suggestions**: Related questions you might want to ask to build a fuller picture
+### Option A — Upload from your computer
 
-If a response includes a low confidence indicator or seems incomplete, refine your question or ask a follow-up. You can also manually check the cited sections in your Document Vault.
+1. Drag a file into the **Drop files here** box, or click it to select a file.
 
-## Managing Chat History
+### Option B — Pull from Vault
 
-Qumis saves your chats automatically. To find a past conversation:
+1. Click in the **Search and Add Documents From Vault** bar.
+2. Search by file name and select the document(s) you want.
 
-- Browse your recent chats in the interface
-- Use the search function to find chats by document name or topic
-- Return to any previous chat thread and continue asking questions from where you left off
-- Start a new chat when you want to focus on a different document or topic
+<Note>
+  **Security note:** Documents live in your private, encrypted **Vault**; they remain protected and reusable across workflows.
+</Note>
 
-## Multi-Document Chats
+---
 
-One of Qumis's most powerful features is the ability to ask questions across multiple documents at once. For example:
+## 4) Wait for automatic OCR & ingestion
 
-- "Does the Excess Liability policy respond where the Primary GL is silent?"
-- "How does the Umbrella coverage language address gaps in the underlying limits?"
-- "Which endorsements modify the CGL exclusions?"
+- After you add files, Qumis runs OCR and parsing automatically.
+- You'll see a **Processing OCR** progress window with a checkmark when each file finishes.
 
-When chatting with multiple documents, Qumis identifies relevant information from each document and synthesizes a complete answer. This is especially valuable when analyzing complex coverage programs where multiple policies interact.
+<Frame caption="Processing OCR window showing document extraction progress">
+    <img src="/_mintlify/image/qumis/images/screenshots/chats-ocr-processing.png" alt="Processing OCR window showing document extraction progress" />
+</Frame>
+
+If you close the window accidentally, don't worry — processing continues in the background and you can start typing your question once the file shows as loaded.
+
+---
+
+## 5) Get oriented to the chat screen
+
+Once at least one document is loaded, the chat view shows:
+
+- **Documents** menu (top-right of the chat pane) with a badge count (e.g., "1").
+- **Hide Citations** toggle (top-right). Turn this off to **see** reference citations in responses.
+- **Suggested actions** (buttons) to help you get started, such as:
+  - *Analyze policy coverage*
+  - *Identify key exclusions*
+  - *Compare coverage to industry standards*
+  - *Check for specific endorsements*
+
+<Frame caption="Chats interface showing loaded document and suggested actions">
+    <img src="/_mintlify/image/qumis/images/screenshots/chats-overview.png" alt="Chats interface showing loaded document and suggested actions" />
+</Frame>
+
+- **Chat list** (left sidebar) with your recent and older chats. Click any item to reopen it. You'll also see pagination at the bottom of the list.
+
+---
+
+## 6) Ask your first question
+
+<Steps>
+  <Step title="Enter your question">
+    Click a suggested action **or** type a question in your own words.
+
+    Example: *"Does this policy cover independent contractors?"*
+  </Step>
+
+  <Step title="Submit and review the answer">
+    Press **Ask ↵**.
+
+    Qumis reads the uploaded document(s) and replies with an answer. If citations are visible, click them to see the exact source passages extracted from your files.
+  </Step>
+</Steps>
 
 <Info>
-  Your chats are saved within your Qumis account. You can revisit any conversation, export chat transcripts, and use them as documentation for coverage decisions and client communications.
+  **What kinds of analyses can I ask for?** Coverage checks, exclusions, policy requirements, legal compliance, claims assessments, and more.
 </Info>
 
-## Tips for Your Role
+---
 
-<Tabs>
-  <Tab title="Brokers & Producers">
-    Use Chats to quickly answer client questions about coverage before binding, compare terms across competing quotes, and spot exclusions or conditions that might affect the client's risk profile. Save time by asking for summaries of coverage rather than manually reviewing every page.
-  </Tab>
-  <Tab title="Account Managers">
-    Ask about renewal changes and new endorsements to identify coverage gaps for your client advisory. Use Chats to prepare renewal strategies and stewardship meeting agendas by researching coverage adequacy before the meeting.
-  </Tab>
-  <Tab title="Claims Professionals">
-    Interrogate policy language for coverage positions on specific claims. Use Chats to quickly locate relevant exclusions, conditions, and trigger language, and ask follow-up questions about how different sections interact.
-  </Tab>
-  <Tab title="Risk Managers">
-    Verify that contractual insurance requirements are met by your current coverage. Use Chats to check coverage adequacy against your exposure profiles and understand the impact of endorsements on your total program.
-  </Tab>
-</Tabs>
+## 7) Refine, dig deeper, and compare
 
-## Next Steps
+- **Follow-ups:** Ask clarifying questions ("Show me where that exclusion is") or ask Qumis to *quote the wording* that supports the answer.
+- **Multiple docs:** Add additional files via the **Documents** menu and ask cross-document questions (e.g., *"Compare this quote to the binder and list material differences."*).
+- **Explain it simply:** Ask for plain-language summaries to share with clients or teammates.
+- **Turn citations on:** If the **Hide Citations** toggle is on, click it to turn citations **off** (so references show).
 
-- Learn more about asking effective questions: [Tips and Best Practices](/platform/tips-and-best-practices)
-- Manage your documents: [Document Vault](/platform/document-vault)
-- Understand how Qumis evaluates confidence in answers: [Accuracy and Confidence](/get-started/genai/accuracy-and-confidence)
+---
+
+## 8) Save and find your work later
+
+- Every conversation is saved automatically in the **Chats** list on the left with a timestamp.
+- Click any past chat to reopen it and continue where you left off.
+
+---
+
+## Best practices
+
+- **Start broad, then narrow.** Begin with a big question ("Summarize key coverages and limits"), then follow with specifics ("List all sublimits and deductibles with page cites").
+- **Ask for the 'why'.** If you're unfamiliar with an answer, ask Qumis to *explain* it or *show the exact policy wording.*
+- **Use Vault for organization.** Keep your latest policy, quote, binder, and endorsements in Vault so you can pull them into a chat quickly.
+- **Respect privacy standards.** Qumis is SOC 2 Type I and does **not** train on your data. You can safely analyze client materials.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="I don't see my document after uploading">
+    Wait for the **Processing OCR** window to finish. If it stalls, remove the file and re-add it. Check that the file type is supported (PDF, Word, Excel, JPG/PNG/TIFF).
+  </Accordion>
+
+  <Accordion title="Responses don't show citations">
+    Toggle **Hide Citations** off (top-right).
+  </Accordion>
+
+  <Accordion title="My question seems too broad">
+    Use a suggested action (buttons under the chat box) to guide the analysis, then ask follow-ups.
+  </Accordion>
+
+  <Accordion title="I need to find an older conversation">
+    Scroll the chat list on the left, or use pagination at the bottom to move between pages.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Example prompts you can copy
+
+<CodeGroup>
+  ```text Coverage Summary
+  Summarize all coverages and limits in this policy. Include a short explanation for each.
+  ```
+
+  ```text Exclusions Analysis
+  List every exclusion and where it appears. Flag anything unusual.
+  ```
+
+  ```text Policy Comparison
+  Compare the quote to the policy and tell me material differences and potential gaps.
+  ```
+
+  ```text Coverage Verification
+  Does this cover independent contractors? Cite the clause.
+  ```
+
+  ```text Requirements Extraction
+  Extract all policy requirements and obligations I need to track.
+  ```
+
+  ```text Plain Language Explanation
+  Explain the deductible and sublimit structure like I'm new to insurance.
+  ```
+</CodeGroup>
+
+---
+
+## Where Chats fits in the Qumis platform
+
+Chats sits alongside **Compare Documents**, **Claims**, **Policy Analysis**, and **Contracts** to cover end-to-end insurance analysis. Many users start in Chats, then move to comparisons or report generation for client-facing deliverables.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Tips and Best Practices" icon="lightbulb" href="/playbooks/prompting/best-practices">
+    Get more from every prompt with proven techniques and example questions
+  </Card>
+  <Card title="Document Vault" icon="folder" href="/platform/document-vault">
+    Upload, organize, and manage the documents you chat with
+  </Card>
+  <Card title="Compare Documents" icon="files" href="/platform/compare">
+    Run side-by-side comparisons across policies, quotes, and binders
+  </Card>
+  <Card title="Legal Search" icon="scale-balanced" href="/platform/research/legal-search">
+    Search case law and legal references to support your coverage analysis
+  </Card>
+</CardGroup>
