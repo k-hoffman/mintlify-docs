@@ -1,20 +1,20 @@
 ---
 title: "Batch Extraction"
-description: "Extract policy information at scale — process entire portfolios through automated SFTP or API-based workflows."
+description: "Extract policy information at scale — process entire portfolios through automated API-based workflows."
 icon: "layer-group"
 ---
 
-Extract structured policy data from large document sets without manual uploads. Qumis supports two integration methods — **SFTP batch processing** and **API-based processing** — so your team can choose the approach that fits your existing infrastructure.
+Extract structured policy data from large document sets without manual uploads. Qumis supports automated API-based processing so your team can integrate extraction directly into existing workflows.
+
+<Info>
+  Batch Extraction is not included in the standard Qumis license. Contact your Qumis Client Partner or email [support@qumis.ai](mailto:support@qumis.ai) if you're interested in using this feature.
+</Info>
 
 ---
 
 ## How it works
 
-Both methods follow a similar pipeline: documents are ingested, validated, converted to PDF if needed, processed through OCR and data extraction, and returned as structured JSON. The key difference is how files get to Qumis and how results get back to you.
-
-### Core pipeline stages
-
-Regardless of integration method, every document passes through the same processing stages:
+Documents are ingested, validated, converted to PDF if needed, processed through OCR and data extraction, and returned as structured JSON. Every document passes through the same processing stages:
 
 1. **File validation** — Qumis confirms the file type is supported and checks for pre-existing records to avoid duplicate processing.
 2. **OCR processing** — Scanned documents and images are converted to machine-readable text.
@@ -66,60 +66,9 @@ The API process lets your organization send documents to Qumis individually via 
 
 ---
 
-## SFTP batch process
-
-The SFTP batch process lets your organization send documents to Qumis in bulk and retrieve structured extraction results from an S3 output directory. This method is ideal for scheduled batch jobs, portfolio migrations, and high-volume processing.
-
-<Steps>
-  <Step title="Upload to DMS">
-    An employee uploads policy documents to your Document Management System (DMS).
-  </Step>
-  <Step title="Backend picks up files">
-    Your backend job detects new documents and converts them to PDF format if needed.
-  </Step>
-  <Step title="SFTP transfer">
-    Converted PDFs are transferred via SFTP to the Qumis S3 Batches directory.
-  </Step>
-  <Step title="Qumis validates">
-    Qumis validates the file type is supported and checks for pre-existing records to prevent duplicate processing.
-  </Step>
-  <Step title="OCR & extraction">
-    Documents are processed through OCR (if scanned) and Qumis extracts structured policy data.
-  </Step>
-  <Step title="JSON output">
-    Extracted data is saved as structured JSON to the S3 Output directory. An exception report is also generated for any documents that could not be processed.
-  </Step>
-  <Step title="Backend retrieval">
-    Your backend polls the S3 Output directory, retrieves the JSON results, and loads the data into your data warehouse.
-  </Step>
-</Steps>
-
-### SFTP integration requirements
-
-| Component | Details |
-|---|---|
-| **SFTP access** | Qumis provides SFTP credentials for your S3 Batches directory |
-| **File format** | PDF (your backend handles conversion from native formats) |
-| **S3 polling** | Your backend polls the Output directory on a schedule you define |
-| **Exception handling** | Your team monitors the exception report and handles remediation |
-
----
-
-## Choosing an integration method
-
-| Consideration | SFTP Batch | API |
-|---|---|---|
-| **Processing model** | Scheduled batch runs | Real-time, per-document |
-| **Result delivery** | Poll S3 output directory | Webhook notification + API retrieval |
-| **Best for** | High-volume portfolio migrations, nightly batch jobs | On-demand extraction, real-time workflows |
-| **Infrastructure** | SFTP client, S3 access | REST API client, webhook endpoint |
-| **Exception handling** | Exception report in S3 | Error response via API + team alerts |
-
----
-
 ## Exception handling
 
-When documents fail validation or extraction, Qumis flags them with detailed error information — either in an S3 exception report (SFTP) or in the API error response. Your team reviews flagged documents and manually remedies them before reprocessing.
+When documents fail validation or extraction, Qumis flags them with detailed error information in the API error response. Your team reviews flagged documents and remedies them before reprocessing.
 
 Common exception reasons include unsupported file types, duplicate documents, OCR failures from poor scan quality, and extraction confidence falling below threshold.
 
@@ -127,4 +76,4 @@ Common exception reasons include unsupported file types, duplicate documents, OC
 
 ## Getting started
 
-Batch extraction is configured during implementation with your Qumis team. To set up a new integration or discuss which method is right for your organization, reach out to your account team or [contact support](/resources/contact-support).
+Batch Extraction is configured during implementation with your Qumis team. To set up a new integration, reach out to your Client Partner or [contact support](/resources/contact-support).
