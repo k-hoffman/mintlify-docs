@@ -4,117 +4,409 @@ description: "Build a tailored report with custom prompts, sections, and analysi
 icon: "file-pen"
 ---
 
-## What Custom Reports Are
+Custom Report lets you go beyond Qumis's standard report types to build exactly the analysis you need. Write your own prompt — or select one from the Prompt Library — upload your documents, and Qumis generates a structured report tailored to your specifications. Whether you need an executive coverage summary, a regulatory compliance checklist, or a deep-dive into specific policy provisions, Custom Report adapts to your exact requirements and delivers professional, client-ready output in minutes.
 
-The Custom Report builder allows you to create tailored analysis and documentation without being limited to predefined report templates. Define your own analysis scope, sections, and output format to match your specific needs. Whether you need specialized analysis, unique client deliverables, or ad hoc research compilation, custom reports adapt to your exact requirements.
+## What this report does
 
-Custom reports leverage Qumis' AI analysis capabilities with your own prompts and instructions, enabling you to extract and structure information exactly as you need it.
+The Custom Report is the most flexible tool in Qumis, allowing you to create tailored analyses for any insurance-related task. It's most helpful for **account managers**, **brokers**, and **producers**, but can benefit any Qumis user who needs specialized analysis beyond the standard report types.
 
-## When to Use Custom Reports
+With Custom Reports, you can:
 
-Use custom reports when:
+- Define exactly what you want Qumis to analyze and how
+- Create specialized reports for unique client situations
+- Generate custom policy reviews with specific focus areas
+- Produce analysis formatted exactly for your needs
+- Combine multiple analytical perspectives in one report
+- Tailor the analysis and output to your specific client or document set
+- Generate reports suitable for client-facing materials or internal insights
 
-- **Standard Report Types Don't Fit**: Your analysis needs fall outside the scope of predefined reports
-- **Specialized Analysis Requirements**: You need domain-specific analysis that standard reports don't provide
-- **Unique Client Deliverables**: You want to create branded or customized output formats for client delivery
-- **Ad Hoc Research Compilation**: You need to gather and structure information from multiple documents around a specific question or topic
+You can also chat directly with the report to explore findings in more depth. Each chat is saved, and multiple threads can be maintained per report for different topics or follow-up analyses.
 
-## How to Build a Custom Report
+<Note>
+  You will need **at least one document** and **a prompt** to create a Custom Report.
+</Note>
+
+---
+
+## Before you start
+
+- Have at least one document ready to analyze (policy, quote, contract, claim document, etc.).
+- Know what analysis or output you want Qumis to produce.
+- Consider whether you have a saved prompt in the Prompt Library or need to write a custom prompt.
+- Think about your audience—is this for internal review or client presentation?
+
+---
+
+## 1) Access Custom Report
 
 <Steps>
-<Step title="Start a New Custom Report">
-Open the Custom Report builder from your dashboard and select the documents you want to analyze.
-</Step>
+  <Step title="Navigate to Custom Report">
+    Click **Custom Report** from the left sidebar. You'll see the Custom Report workspace with a card to "Generate Custom Report."
+  </Step>
 
-<Step title="Define Your Analysis Prompt">
-Write clear instructions describing what you want Qumis to analyze. Be specific about:
-- What information to extract or analyze
-- How to structure the output
-- Any special considerations or focus areas
-- The tone and format of the results
-</Step>
+  <Step title="View your report history">
+    Below the card, you'll see a list of your previously generated custom reports with timestamps and associated documents.
+  </Step>
 
-<Step title="Select Documents">
-Choose which documents to include in the analysis. You can upload multiple documents, and Qumis will analyze them as a collection.
-</Step>
-
-<Step title="Configure Output Sections">
-Define how you want the results organized:
-- Section headings
-- Subsection structure
-- Summary format
-- Any custom data fields or tables
-</Step>
-
-<Step title="Generate the Report">
-Run the analysis. Qumis processes your documents against your custom prompt and returns structured results.
-</Step>
-
-<Step title="Refine and Iterate">
-Review the output. If needed, adjust your prompt or configuration and regenerate to optimize the results.
-</Step>
+  <Step title="Start a new report">
+    Click the **Generate Custom Report** card to begin.
+  </Step>
 </Steps>
 
-## Customization Options
+<Frame caption="Custom Report dashboard showing the Generate Custom Report card and previous reports">
+  <img style={{ width:"100%" }} />
+</Frame>
 
-### Custom Prompts
-Write your own analysis instructions that tell Qumis exactly what to look for and how to present findings. Your prompt becomes the core logic driving the report.
+<Info>
+  Each generated report is stored automatically and can be reopened or expanded later.
+</Info>
 
-### Section Structure
-Organize output into custom sections that match your internal processes or client requirements. Create hierarchical structures with headings, subheadings, and detailed sections.
+---
 
-### Output Formatting
-Control how information is presented:
-- Narrative summaries
-- Bulleted lists
-- Tables and matrices
-- Executive summaries with detailed appendices
-- Risk ratings or scoring systems
+## 2) Enter a report title
 
-### Multiple Document Support
-Include multiple documents in a single custom report. Qumis synthesizes analysis across all documents and presents findings in your chosen structure.
+A four-step workflow guides you through creating your custom report:
+
+- **Step 1: Report Title**
+- **Step 2: Upload Documents**
+- **Step 3: Description**
+- **Step 4: Generate Report**
+
+On **Step 1: Report Title**, provide a name for your report:
+
+<Steps>
+  <Step title="Enter a descriptive title">
+    Enter a descriptive title in the text box (e.g., "Sample Custom Report," "GL Policy Executive Summary," "Cyber Coverage Gap Analysis"). This title will help you identify the report later in your saved reports list.
+  </Step>
+
+  <Step title="Proceed to document upload">
+    Click **Upload Documents** to proceed to Step 2.
+  </Step>
+</Steps>
+
+<Frame caption="Step 1: Report Title input field">
+  <img style={{ width:"100%" }} />
+</Frame>
 
 <Tip>
-Once you've built a custom report that works well, save the prompt to your Prompt Library so you can reuse it. This creates consistent analysis outputs and reduces setup time for similar requests in the future.
+  Titles should describe the goal of the analysis (e.g., "Cyber Policy Risk Commentary" or "Property Policy Limit Review").
 </Tip>
 
-## Tips for Effective Custom Reports
+---
 
-**Be Specific in Your Prompt**: The more detailed your instructions, the better the results. Include context about your audience and desired output format.
+## 3) Upload documents
 
-**Iterate on Results**: Review the first version and refine your prompt if the output needs adjustments. Small prompt refinements often significantly improve results.
+On **Step 2: Upload Documents**, add the documents you want Qumis to analyze:
 
-**Save Successful Configurations**: Keep a library of prompts and settings that produce high-quality outputs for reuse with similar analysis requests.
+<Steps>
+  <Step title="Add documents">
+    You can add documents in two ways:
 
-**Define Success Criteria**: When setting up a custom report, clarify what "good" output looks like to guide your iterations.
+    - Click **Search and Add Documents From Vault** to pull previously uploaded documents from your Vault, or
+    - Drag and drop files into the **Drop files here** area, or click to select files from your computer.
+  </Step>
 
-## Limitations
+  <Step title="Upload multiple files if needed">
+    Supported file types include PDF, Word, Excel, and images (JPG, PNG, TIFF). You can upload multiple documents if your analysis requires comparing or synthesizing information from several sources.
+  </Step>
 
-**Complex Multi-Step Analysis**: Very complex analyses that require sequential reasoning across many document sections may benefit from breaking into multiple simpler reports rather than one complex custom report.
+  <Step title="Verify uploads">
+    Once uploaded, your documents appear in green boxes with checkmarks showing they're ready.
+  </Step>
+</Steps>
 
-**Extremely Long Documents**: Analysis quality may decrease on documents exceeding 500+ pages. Consider splitting into multiple reports if needed.
+<Frame caption="Step 2: Upload Documents interface with drag-and-drop area and Vault search">
+  <img style={{ width:"100%" }} />
+</Frame>
 
-**Highly Domain-Specific Terminology**: If your analysis requires industry-specific terms not commonly found in the Qumis knowledge base, include context and definitions in your prompt.
+<Note>
+  Uploading at least one document is required before you can move to the prompt step.
+</Note>
 
-<Tabs>
-<Tab title="Brokers & Producers">
-Create custom client deliverables that match your firm's brand and analysis framework. Build specialized reports for complex risk assessments, multi-line programs, or industry-specific analysis that standard reports don't cover.
-</Tab>
+---
 
-<Tab title="Account Managers">
-Develop specialized renewal analyses tailored to specific clients, industries, or risk profiles. Use custom reports to deliver unique advisory insights that demonstrate your value during renewals.
-</Tab>
+## 4) Create your report description (prompt)
 
-<Tab title="Claims Professionals">
-Build custom coverage memoranda for complex claims, synthesizing information from multiple policy documents and claim files. Create structured analysis supporting coverage opinions or claims decisions.
-</Tab>
+On **Step 3: Description**, you define what you want Qumis to analyze and how you want the output formatted. This is the most important step for getting great results.
 
-<Tab title="Risk Managers">
-Generate tailored compliance reports, risk assessment summaries, or program reviews that fit your organization's governance and reporting requirements. Adapt output formats to match internal templates and processes.
-</Tab>
-</Tabs>
+### Choose your approach
 
-## Related Articles
+You have two options:
 
-- [Prompt Library](/platform/prompt-library)
-- [Choosing the Right Report](/platform/what-can-you-do)
+**Option A: Use a saved prompt from Prompt Library**
+
+1. Click the **Select A Report Template** dropdown.
+2. Choose from your saved prompts in the Prompt Library.
+3. The prompt will populate automatically, and you can edit it if needed.
+
+**Option B: Write a custom prompt**
+
+1. Type directly in the large text box.
+2. Follow the guidance provided to create an effective prompt.
+
+<Frame caption="Step 3: Description with prompt template selector and custom prompt input">
+  <img style={{ width:"100%" }} />
+</Frame>
+
+<Info>
+  - You can write your own prompt or select one from your **Prompt Library** using the dropdown.
+  - Prompts from the library are great for consistency across teams.
+  - If your organization would like standard report prompts automatically added to every user's Prompt Library, please contact your **Customer Success Manager**.
+</Info>
+
+### How to write an effective prompt
+
+Your prompt should include:
+
+**1. Context** — Describe the documents you uploaded
+
+- Example: "You will be provided with 1 document: \[Policy Name] - \[Description]"
+
+**2. Task** — What would you like Qumis to analyze and answer
+
+- Be specific about what you want analyzed
+- Define the scope and focus areas
+- Specify any particular angles or perspectives
+
+**3. Output Style** — How you want the results presented
+
+- Specify format preferences (e.g., narrative summary, table, bullet points)
+- Define the level of detail needed
+- Indicate the intended audience and appropriate tone
+
+### Example: Writing an effective prompt
+
+Here's an example of how a detailed, context-rich prompt might look:
+
+*"You will be provided with 1 document: General liability insurance policy for a construction company operating in the Southeastern United States.*
+
+*Task: Analyze the provided general liability insurance policy for a construction company offering general construction, design/build, construction management, and upfit/renovation services in the Southeastern United States. The analysis should be comprehensive and objective, identifying potential biases or limitations in the policy's coverage. The report should be suitable for a construction company executive seeking to understand the policy's strengths and weaknesses. The analysis should focus on the following aspects:*
+
+- *Named Insureds: List all named insureds and verify their accuracy.*
+- *Coverage Territory: Clearly define the geographical coverage of the policy.*
+- *Class Codes and Exposures: Create a table listing all class codes, their corresponding exposure bases, and the locations they apply to.*
+- *Policy Form: Determine if the policy is occurrence-based, claims-made, or claims-made and reported. Justify your conclusion.*
+- *Limits, Deductibles, and Retentions: List all policy limits, deductibles, and retentions, clarifying their application..."*
+
+<Frame caption="Example of a detailed, well-structured custom report prompt">
+  <img style={{ width:"100%" }} />
+</Frame>
+
+<Tip>
+  The more specific your prompt, the more precise and useful your report will be.
+</Tip>
+
+---
+
+## 5) Generate your custom report
+
+Once the report title, documents, and description are complete:
+
+<Steps>
+  <Step title="Generate the report">
+    Click **Generate Custom Report** at the bottom right. Qumis begins analyzing the documents according to your instructions.
+  </Step>
+
+  <Step title="Wait for processing">
+    The process takes approximately 5–10 minutes depending on document complexity and the scope of your prompt. You'll see a progress screen with status updates.
+  </Step>
+
+  <Step title="Return when ready">
+    You can leave the page and return later—the report will be ready when processing completes.
+  </Step>
+</Steps>
+
+<Frame caption="Report generation progress screen">
+  <img style={{ width:"100%" }} />
+</Frame>
+
+<Info>
+  Reports typically complete within 5–10 minutes. You'll receive a notification when your report is ready.
+</Info>
+
+---
+
+## 6) Review your completed custom report
+
+When complete, you'll see your custom analysis formatted according to your prompt:
+
+### Report tabs
+
+- **Report** — The full written analysis (default view)
+- **Documents** — The source documents used for the analysis
+
+### Report structure
+
+The report structure will match what you specified in your prompt. Sections and subheadings are automatically created based on your prompt and the extracted information. Common sections might include:
+
+- Executive summary
+- Detailed analysis organized by your specified topics
+- Tables or structured data as requested
+- Conclusions and recommendations
+- Any other sections you defined in your prompt
+
+<Frame caption="Completed custom report with structured sections and analysis">
+  <img style={{ width:"100%" }} />
+</Frame>
+
+The report will follow your instructions for tone, format, and content focus, making it suitable for your intended audience.
+
+You can:
+
+- Review and edit the content directly in Qumis
+- Show or hide citations to view where Qumis pulled information from
+- Download the full report for client or internal use
+
+<Info>
+  Each report can contain multiple pages of analysis, policy references, and custom commentary.
+</Info>
+
+---
+
+## 7) Chat with your custom report
+
+Every custom report includes an interactive chat assistant—**Qumis Clerk**—that helps you explore the analysis in more depth.
+
+You can ask questions such as:
+
+- "Explain the coverage territory analysis in more detail."
+- "What are the most critical weaknesses you identified?"
+- "Can you provide more examples of the exclusions?"
+- "How does this compare to industry standards?"
+- "Summarize the key findings for a client email."
+- "Summarize this section in simpler language."
+- "Highlight any coverage gaps."
+- "Compare this policy to the other one I uploaded."
+
+<Tip>
+  Chats are saved and threaded — you can revisit or start new conversations for deeper exploration of the same report.
+</Tip>
+
+---
+
+## 8) Use your custom report
+
+Once you have your Custom Report, use it according to your original purpose:
+
+**For client presentations**
+
+- Share comprehensive policy analysis with prospects or clients
+- Provide detailed coverage reviews formatted for executive audiences
+- Demonstrate expertise through thorough, professional analysis
+
+**For internal review**
+
+- Deep-dive analysis of complex policies
+- Coverage adequacy assessments
+- Risk identification and documentation
+
+**For specialized needs**
+
+- Industry-specific analysis (construction, healthcare, technology, etc.)
+- Regulatory compliance reviews
+- Coverage gap identification for specific operations
+
+**Download and customize**
+
+- Click the Download button to export the report
+- Add your branding and additional commentary
+- Include in proposals or coverage recommendations
+
+---
+
+## 9) Access previous custom reports
+
+Your previously generated Custom Reports are saved and listed on the Custom Report dashboard.
+
+1. Go to **Custom Report** in the left sidebar.
+2. You'll see a table of all your reports showing:
+   - NAME — Report title you provided
+   - FILES — The documents analyzed
+   - LAST MODIFIED — When the report was created or last accessed
+3. Click any report to open it, review the analysis, download it, or add new chat questions.
+
+---
+
+## Best practices
+
+- **Be specific in your prompts.** The more detailed your instructions, the better Qumis can tailor the output to your needs.
+- **Define your audience.** Specify whether the report is for executives, underwriters, clients, or internal use—this affects tone and detail level.
+- **Keep prompts focused on a single objective** (e.g., exclusions analysis, policy comparison) for clearer results.
+- **Request specific formats.** If you want tables, bullet points, or particular section structures, state this clearly in your prompt.
+- **Upload relevant, complete documents** for more accurate results.
+- **Save successful prompts.** When you create a prompt that works well, save it to the Prompt Library for future use.
+- **Iterate and refine.** If the first report isn't quite right, use the chat feature to refine the analysis, then update your prompt for next time.
+- **Use for unique situations.** Custom Reports excel when standard report types don't quite fit your needs.
+- **Leverage the magic wand.** Use the magic wand icon to refine your prompt if you're unsure how to structure it.
+- **Test with different formats.** Experiment with different prompt structures to find what works best for your use cases.
+
+---
+
+## Example prompts for different use cases
+
+**For executive coverage summary:** *"Analyze this commercial property policy and create an executive summary suitable for a C-suite audience. Focus on: total limits and deductibles, major coverage grants, critical exclusions that create risk, and 3–5 key recommendations for coverage improvements. Use clear, non-technical language."*
+
+**For regulatory compliance review:** *"Review this workers compensation policy for compliance with \[State] requirements. Create a checklist showing: required coverages (met/not met), statutory limits, mandatory endorsements, and any deficiencies that need immediate attention."*
+
+**For prospect analysis:** *"Compare this prospect's current general liability policy to industry best practices for \[Industry]. Identify: coverage gaps, inadequate limits, missing endorsements, and 5 specific improvements we could provide. Format as a competitive analysis suitable for a sales presentation."*
+
+**For coverage adequacy assessment:** *"Assess whether this cyber insurance policy adequately protects a \[Company Type] with \[Annual Revenue] in revenue. Evaluate: first-party vs third-party coverage balance, limits relative to company size, critical exclusions for this industry, and specific coverage enhancements needed."*
+
+**For exclusions analysis:** *"Analyze the attached General Liability policy and identify all exclusions related to subcontractors. Summarize each exclusion in plain language and note whether the policy provides any exceptions or carve-backs. Present findings in bullet points."*
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My report didn't produce the output I expected">
+    - Review your prompt for clarity. Did you specify exactly what you wanted and how you wanted it formatted?
+    - Use the chat feature to ask Qumis to reformat or refocus specific sections.
+  </Accordion>
+
+  <Accordion title="The report is too general or not detailed enough">
+    - Your prompt may need more specificity. Add detailed instructions about what to analyze and how deep to go.
+    - Specify that you want "detailed" or "comprehensive" analysis with examples.
+  </Accordion>
+
+  <Accordion title="My custom report is taking too long to generate">
+    - Average generation time is 5–10 minutes. Very complex prompts may take longer.
+    - If it exceeds 15 minutes, refresh the page or simplify your prompt.
+  </Accordion>
+
+  <Accordion title="I want to reuse a successful prompt">
+    Save effective prompts to the Prompt Library so you can select them from the dropdown for future reports.
+  </Accordion>
+
+  <Accordion title="Where are my past custom reports?">
+    All completed reports appear on the **Custom Report dashboard**. Go to **Custom Report** in the left sidebar to access them.
+  </Accordion>
+
+  <Accordion title="Can I update a report after it's generated?">
+    The report itself is fixed, but you can use the chat feature to get additional analysis or clarifications, which are saved with the report.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Where Custom Report fits in the Qumis platform
+
+The **Custom Report** is the most flexible tool in Qumis, filling the gaps when specialized analysis is needed beyond the standard report types. Use it alongside **Single Policy Analysis** for general policy reviews, **Comparisons** for side-by-side analysis, **Contract Reviews** for compliance checks, and **Claims Analysis** for coverage opinions—but turn to Custom Reports when you need something uniquely tailored to your situation.
+
+---
+
+### Why use Custom Reports?
+
+The Custom Report is Qumis's most flexible report type — giving you full control over the scope, tone, and depth of the analysis powered by Qumis's deep reasoning and contextual understanding of insurance policies.
+
+Use it when you need:
+
+- A **tailored deep-dive** into one or more policies
+- To **automate repetitive reporting** tasks
+- Or to create **client-ready deliverables** using Qumis's deep policy understanding
+
+Custom Reports give you the power to create exactly the analysis you need, formatted precisely for your audience. Whether you're preparing executive summaries, conducting specialized industry analysis, or creating unique client deliverables, Custom Reports let you leverage Qumis's deep analytical capabilities while maintaining complete control over the output. The result is professional, tailored insurance analysis that would take hours to produce manually, delivered in minutes and ready for your specific use case.
+
+<Tip>
+  The Custom Report unlocks the full analytical power of Qumis — driven entirely by your expertise and creativity.
+</Tip>
