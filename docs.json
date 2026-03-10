@@ -157,14 +157,7 @@
               "playbooks/prompting/best-practices",
               "playbooks/best-practices/coverage-checklists",
               "playbooks/prompting/magic-wand",
-              {
-                "group": "Advanced Techniques",
-                "icon": "diagram-next",
-                "expanded": true,
-                "pages": [
-                  "meta-prompting"
-                ]
-              }
+              "playbooks/prompting/meta-prompting"
             ]
           },
           {
@@ -276,6 +269,7 @@
     { "source": "/research/legal-search", "destination": "/platform/research/legal-search" },
     { "source": "/research/coverage-determination", "destination": "/platform/research/coverage-determination" },
     { "source": "/research/building-your-case", "destination": "/platform/research/building-your-case" },
+    { "source": "/meta-prompting", "destination": "/playbooks/prompting/meta-prompting" },
     { "source": "/features/prompt-library", "destination": "/platform/prompt-library" },
     { "source": "/features/reports", "destination": "/platform/what-can-you-do" },
     { "source": "/reports/claims", "destination": "/platform/evaluate" },
