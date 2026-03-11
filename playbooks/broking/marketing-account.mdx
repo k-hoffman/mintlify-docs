@@ -45,15 +45,7 @@ The result is a placement process that's faster, more rigorous, and produces bet
 
     Having the complete expiring in one place means Qumis can reference every document when you ask questions downstream.
 
-    **Coverage Table extraction prompt:**
-    ```
-    From each policy in this program, extract: carrier, policy number,
-    effective dates, coverage type, per-occurrence limit, aggregate limit,
-    deductible/retention, key sublimits, and annual premium. Include all
-    endorsements that modify limits or coverage scope.
-    ```
-
-    The Coverage Table gives you a structured inventory of the entire program — limits, deductibles, sublimits, and key terms — in a format you can review at a glance and share with your team. This becomes the foundation for every step that follows.
+    When you create a Coverage Table, you can either provide a [Checklist Template](/playbooks/best-practices/coverage-checklists) that defines exactly which data points to extract, or let Qumis auto-generate a checklist based on the documents you've uploaded. Either way, the result is a structured inventory of the entire program — limits, deductibles, sublimits, and key terms — in a format you can review at a glance and share with your team. This becomes the foundation for every step that follows.
 
     <Tip>
       Upload endorsements as separate documents rather than as part of a single combined PDF. Qumis can reference them more precisely when they're individually uploaded, and your citations will point to the specific endorsement rather than a page number in a merged file.
