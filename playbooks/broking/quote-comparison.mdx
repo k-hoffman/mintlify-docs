@@ -40,7 +40,7 @@ Once quotes are in hand and you've analyzed the options, the quote presentation 
 
     **Qumis features:**
 
-    - [Proposal Generator](/platform/coming-soon/proposal-generator) <sup>Beta</sup> — Combines policy data, market research, and the organization's branded templates to produce professional, client-ready proposals. It pulls in coverage comparisons, market insights, and competitive positioning directly from your Qumis workspace, so the proposal is grounded in the actual analysis work completed during the marketing phase rather than built from scratch. Output can be exported as Word or PDF, ready for client delivery.
+    - [Proposal Generator](/platform/coming-soon/proposal-generator) — Combines policy data, market research, and the organization's branded templates to produce professional, client-ready proposals. It pulls in coverage comparisons, market insights, and competitive positioning directly from your Qumis workspace, so the proposal is grounded in the actual analysis work completed during the marketing phase rather than built from scratch. Output can be exported as Word or PDF, ready for client delivery.
 
     → [Proposal Generator](/platform/coming-soon/proposal-generator)
   </Step>
@@ -52,8 +52,26 @@ Once quotes are in hand and you've analyzed the options, the quote presentation 
 
     - [Chats](/platform/chats) — Use a Chat session to generate a self-contained HTML microsite from your Proposal Generator output. The Chat reads the proposal data and produces a branded, interactive presentation page — complete with an executive summary, side-by-side coverage comparisons, and your recommendation — that you can share as a link or screen-share during the client meeting. This gives the client a polished digital experience rather than a static PDF, and the self-contained format means it works without any hosting or special software.
 
+    **Microsite generation prompt:**
+    ```
+    Using the attached proposal, create a self-contained HTML page that
+    presents this quote comparison as an interactive microsite. Include:
+
+    1. A fixed navigation bar with anchor links to each section
+    2. An executive summary with our recommendation and top three reasons
+    3. A side-by-side coverage comparison table organized by dimension
+       (limits, deductibles, coverage grants, exclusions, conditions)
+    4. A premium breakdown showing each carrier's total and the change
+       from expiring
+    5. A recommendation section with the rationale and next steps
+
+    Use a clean, professional design. The audience is a risk manager and
+    CFO. All content should come from the proposal — do not add or
+    fabricate any coverage data.
+    ```
+
     <Tip>
-      Ask the Chat to structure the microsite with navigation anchors for each section (executive summary, coverage comparison, premium breakdown, recommendation) so you can jump directly to the relevant section when a stakeholder asks a question during the presentation.
+      Ask the Chat to structure the microsite with navigation anchors for each section so you can jump directly to the relevant section when a stakeholder asks a question during the presentation.
     </Tip>
 
     → [Chats](/platform/chats)
@@ -86,7 +104,7 @@ Once quotes are in hand and you've analyzed the options, the quote presentation 
 
     **Qumis features:**
 
-    - [Chrome Extension](/platform/coming-soon/chrome-extension) <sup>Beta</sup> — Lets the broker access Qumis capabilities directly from the browser without leaving their current workflow. The broker can use the extension to streamline getting the insured's bind order over to the carrier — triggering actions directly from the browser when working in a DMS or email — rather than toggling between systems.
+    - [Chrome Extension](/platform/coming-soon/chrome-extension) — Lets the broker access Qumis capabilities directly from the browser without leaving their current workflow. The broker can use the extension to streamline getting the insured's bind order over to the carrier — triggering actions directly from the browser when working in a DMS or email — rather than toggling between systems.
 
     → [Chrome Extension](/platform/coming-soon/chrome-extension)
   </Step>
@@ -94,7 +112,7 @@ Once quotes are in hand and you've analyzed the options, the quote presentation 
 
 ---
 
-## Related playbooks
+## Related pages
 
 <CardGroup cols={2}>
   <Card title="Marketing the Account" icon="paper-plane" href="/playbooks/broking/marketing-account">
