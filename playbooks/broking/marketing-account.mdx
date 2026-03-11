@@ -1,78 +1,98 @@
 ---
 title: "Marketing the Account"
-description: "Use Qumis to build stronger submissions and select smarter markets by analyzing your client's program before you go out to carriers."
+description: "Use Qumis across the full marketing lifecycle — from gathering submission data through negotiating final terms — to place better coverage, faster."
 icon: "paper-plane"
 ---
 
 ## The strategy
 
-Marketing an account is the first real test of a broker's expertise. Most brokers approach it the same way: pull together the ACORD apps, loss runs, and supplementals, pick carriers based on relationship and appetite, and send the submission out. The quality of the submission package varies wildly depending on who assembled it and how much time they had.
+Marketing an account is where broking expertise meets execution. The process spans everything from assembling the submission package to negotiating the final bound terms, and each step creates an opportunity to differentiate yourself through better analysis, sharper submissions, and more informed carrier conversations.
 
-Qumis changes this by letting you analyze the client's existing program before you go to market. Instead of simply forwarding the expiring to carriers and hoping they quote competitively, you can identify the specific coverage areas where the current program is weakest, flag endorsements that should be requested, and tailor your submission narrative to highlight the exposures that matter most. This means better quotes come back because underwriters receive better information. It also means you can be more strategic about which markets you approach and what you ask for.
+Most brokers run this process on a combination of institutional memory, manual document reads, and spreadsheet comparisons. The quality varies depending on who's handling the account and how much time they have. The result is inconsistent submissions, reactive negotiations, and coverage decisions that rely more on pricing than on actual policy language.
 
-The result is fewer wasted submissions, stronger negotiating positions, and a client who sees that you understood their program before you started shopping it.
+Qumis changes this by embedding structured analysis into every stage of the marketing lifecycle. You gather submission data faster using automated extraction. You assess risk with citation-backed policy analysis. You build submissions grounded in specific coverage findings. You select markets using structured data rather than relationships alone. And when quotes come back, you negotiate from a position of analytical authority — comparing terms across carriers with precision and supporting every ask with cited policy language.
+
+The result is a placement process that's faster, more rigorous, and produces better outcomes for your client.
 
 ---
 
 ## The Qumis workflow
 
 <Steps>
-  <Step title="Upload the expiring program to Document Vault">
-    Before you touch the submission, upload the client's full expiring program into the Document Vault. This includes the policy itself, all endorsements, the dec pages, any manuscript endorsements, and the schedule of underlying insurance if it's an excess or umbrella placement.
+  <Step title="Gather submission information">
+    Start by building a complete picture of the client's existing program. Upload the expiring policies, endorsements, dec pages, and schedules into the [Document Vault](/platform/document-vault), then use the [Coverage Table](/platform/populate) to extract structured data from every document at once.
 
-    Create a folder for the account and renewal cycle (e.g., `Acme Corp - 2026 Renewal / Expiring Program`). Having the complete expiring in one place means Qumis can reference every document when you ask questions about the program.
+    Create a folder for the account and renewal cycle (e.g., `Acme Corp - 2026 Renewal / Expiring Program`). Having the complete expiring in one place means Qumis can reference every document when you ask questions downstream.
+
+    **Coverage Table extraction prompt:**
+    ```
+    From each policy in this program, extract: carrier, policy number,
+    effective dates, coverage type, per-occurrence limit, aggregate limit,
+    deductible/retention, key sublimits, and annual premium. Include all
+    endorsements that modify limits or coverage scope.
+    ```
+
+    The Coverage Table gives you a structured inventory of the entire program — limits, deductibles, sublimits, and key terms — in a format you can review at a glance and share with your team. This becomes the foundation for every step that follows.
 
     <Tip>
       Upload endorsements as separate documents rather than as part of a single combined PDF. Qumis can reference them more precisely when they're individually uploaded, and your citations will point to the specific endorsement rather than a page number in a merged file.
     </Tip>
+
+    → [Coverage Table](/platform/populate)
   </Step>
 
-  <Step title="Run a pre-marketing coverage audit">
-    Open a Chat session with the expiring program documents and run an audit prompt. The goal is to understand what the client actually has before you start asking carriers for something different.
+  <Step title="Assess risk and develop strategy">
+    With the program data in hand, use [Policy Analysis](/platform/summarize) to run a deep review of each major line of coverage. Then open a [Chat](/platform/chats) session with the program documents to ask follow-up questions and develop your marketing strategy. Supplement your analysis with [Web Search](/platform/research/web-search) to research market conditions, industry exposures, and emerging risks relevant to the account.
 
-    **Pre-marketing audit prompt:**
+    **Policy Analysis focus areas:**
+
+    - Coverage gaps and exclusions that are unusually broad or restrictive
+    - Endorsements that narrow the base form versus those that broaden it
+    - Sublimits that appear inadequate relative to the risk profile
+    - Coordination issues between underlying and excess layers
+    - Definitions or conditions that could create problems at the time of a claim
+
+    **Risk assessment Chat prompt:**
     ```
-    Review this expiring commercial insurance program in its entirety.
-    Produce a pre-marketing audit that includes:
-
-    1. COVERAGE SUMMARY: For each coverage part, summarize the key
-       terms including limits, deductibles/retentions, and notable
-       sublimits or coverage extensions.
-
-    2. COVERAGE GAPS: Identify any exposures that are not addressed,
-       any exclusions that are unusually broad, any sublimits that
-       appear inadequate relative to the risk profile, and any
-       endorsements that narrow standard coverage.
-
-    3. ENDORSEMENT INVENTORY: List every endorsement on the program
-       and flag any that restrict coverage versus the base form.
-
-    4. AREAS FOR IMPROVEMENT: Based on the gaps identified, recommend
-       specific coverage enhancements, endorsement additions, or
-       limit increases that should be requested in the renewal
-       marketing.
-
-    Cite the specific policy language for every finding.
+    Based on the Policy Analysis findings for this program, identify the
+    top five coverage issues that should drive our marketing strategy.
+    For each issue: (1) cite the specific policy language, (2) explain
+    why it matters for this client's risk profile, and (3) recommend
+    what we should request from carriers to address it. Prioritize by
+    impact — which gaps create the most exposure if left unaddressed?
     ```
 
-    This output becomes your roadmap for the submission. You now know exactly what to ask carriers for, which coverage areas to emphasize, and where the expiring program falls short.
+    **Web Search for market context:**
+    ```
+    Current market conditions for [line of business] in [industry sector].
+    Rate trends, capacity changes, and any emerging coverage issues
+    affecting this class of business.
+    ```
+
+    This step produces your marketing roadmap: you now know exactly what to ask carriers for, which coverage areas to emphasize, and where the expiring program falls short.
+
+    <Note>
+      The combination of Policy Analysis and follow-up Chat questions is powerful. Policy Analysis gives you the structured findings. Chat lets you explore the implications, ask "what if" questions, and develop the narrative that connects the findings to your client's specific situation.
+    </Note>
+
+    → [Policy Analysis](/platform/summarize) · [Chats](/platform/chats) · [Web Search](/platform/research/web-search)
   </Step>
 
-  <Step title="Build a market-specific submission narrative">
-    Use the audit findings to write a submission narrative that goes beyond the standard ACORD application. Most submissions arrive at an underwriter's desk as a stack of forms with no context. A narrative that explains the risk, highlights the coverage needs you've identified, and positions the account strategically will get better attention and better terms.
+  <Step title="Build the submission">
+    Use [Chats](/platform/chats) to draft a submission narrative that goes beyond the standard ACORD application. Most submissions arrive at an underwriter's desk as a stack of forms with no context. A narrative that explains the risk, highlights the coverage needs you've identified, and positions the account strategically will get better attention and better terms.
 
     **Submission narrative prompt:**
     ```
-    Based on the pre-marketing audit, draft a submission narrative
+    Based on the coverage analysis findings, draft a submission narrative
     for this account that I can include with the ACORD application.
     The narrative should:
 
-    1. Describe the insured's operations and risk profile in 3-4
+    1. Describe the insured's operations and risk profile in 3–4
        sentences.
     2. Summarize the expiring program structure (carrier, limits,
        key terms).
-    3. Identify the specific coverage enhancements we are requesting
-       in the renewal, with justification for each.
+    3. Identify the specific coverage enhancements we are requesting,
+       with justification for each based on the policy analysis findings.
     4. Note any positive risk characteristics (loss history, risk
        management practices, contractual requirements) that support
        favorable terms.
@@ -82,35 +102,86 @@ The result is fewer wasted submissions, stronger negotiating positions, and a cl
     ```
 
     <Tip>
-      Save your best submission narrative prompts to the Prompt Library, organized by line of business. A strong GL submission narrative reads differently than a professional liability narrative. Build a library of templates your team can reuse.
+      Save your best submission narrative prompts to the [Prompt Library](/platform/prompt-library), organized by line of business. A strong GL submission narrative reads differently than a professional liability narrative — build a library of templates your team can reuse.
+    </Tip>
+
+    → [Chats](/platform/chats)
+  </Step>
+
+  <Step title="Select markets">
+    Use [Batch Extraction](/platform/batch-extraction) to pull structured program data that feeds your market selection process and any upstream BI tools your team uses for carrier appetite matching. Supplement with [Web Search](/platform/research/web-search) to research carrier appetite, recent market entries or exits, and specialty markets that align with the coverage needs your analysis identified.
+
+    **Batch Extraction prompt:**
+    ```
+    From each policy and quote document in this account folder, extract:
+    carrier name, line of business, policy form (ISO or manuscript),
+    limits structure, deductible/retention, key endorsements, premium,
+    and any unique coverage features or restrictions. Output as a
+    structured table.
+    ```
+
+    Use the extraction output to match markets to needs. Instead of submitting to every carrier you have a relationship with, target the carriers whose forms and appetite align with the specific coverage enhancements you've identified.
+
+    For example, if your analysis revealed that the expiring program has an overly broad professional services exclusion, prioritize carriers known for offering a more favorable version of that endorsement. If the analysis flagged inadequate cyber sublimits, include a standalone cyber market in your submission strategy.
+
+    <Note>
+      The structured data from Batch Extraction also feeds downstream workflows — renewal tracking, benchmarking, and portfolio analytics. Extracting it here means you're building institutional data while doing placement work.
+    </Note>
+
+    → [Batch Extraction](/platform/batch-extraction) · [Web Search](/platform/research/web-search)
+  </Step>
+
+  <Step title="Submit to carriers">
+    Assemble the full submission package and send it to your selected markets. This step happens outside of Qumis — through your agency management system, email, or carrier portals — but the quality of what you're sending is dramatically higher because of the work in the preceding steps.
+
+    **Your Qumis-powered submission package includes:**
+
+    - ACORD applications (completed and signed)
+    - Current dec pages and policy forms
+    - Five-year loss history with loss runs valued within 60 days
+    - Supplemental applications (by line of business)
+    - Exposure schedules (SOVs, vehicle schedules, headcount, revenue)
+    - **Submission cover narrative** generated from your coverage analysis, positioning the account and highlighting specific coverage needs
+    - **Coverage enhancement request list** with citations to the expiring policy language that needs improvement
+    - **Program structure summary** from the Coverage Table, mapping the full program so carriers can see where they fit
+
+    <Tip>
+      Underwriters notice when a broker has analyzed the expiring before submitting. It signals that you understand the risk, have a point of view on what needs to change, and will be a productive negotiating partner. This often results in better initial quotes and fewer rounds of back-and-forth.
     </Tip>
   </Step>
 
-  <Step title="Use Legal Search to strengthen your coverage requests">
-    For the coverage enhancements you're requesting, use Legal Search to find case law or regulatory guidance that supports why those enhancements matter. This is especially powerful for manuscript endorsement negotiations.
+  <Step title="Negotiate terms and quotes">
+    As quotes come back from carriers, upload each one to the Document Vault and use Qumis to analyze, compare, and negotiate with precision. This step uses multiple Qumis tools together to turn the negotiation cycle from a manual, spreadsheet-driven process into a structured, citation-backed workflow.
 
-    **Example Legal Search queries:**
+    **Compare Documents** — Run a side-by-side comparison of all quotes against each other and against the expiring:
+
     ```
-    Cases where a pollution exclusion in a CGL policy was applied
-    to deny coverage for indoor air quality claims at a commercial
-    building
+    Compare all uploaded carrier quotes against each other and against
+    the expiring policy. For each material difference in coverage terms,
+    limits, deductibles, exclusions, and endorsements, cite the specific
+    language from each quote. Organize findings by coverage dimension,
+    not by carrier. Flag any terms in a quote that are worse than the
+    expiring.
     ```
+
+    **QumisScore** — Use the proprietary quality indicator to quickly identify which quotes provide the strongest coverage and where the most significant gaps lie. The QumisScore cuts through the noise on complex multi-carrier comparisons by surfacing the findings that matter most.
+
+    **Coverage Table** — Generate a comparison table showing limits, deductibles, and key terms across all quotes side by side. Download the table to Excel for further analysis or to share with your team and client.
+
+    **Negotiate with precision** — For every term that doesn't meet your requirements, use Chat to draft a counter-request that cites the specific quote language and states exactly what needs to change:
+
     ```
-    Court interpretations of "professional services" exclusions
-    in general liability policies for technology consulting firms
+    Based on the quote comparison, generate counter-negotiation points
+    for [carrier name]. For each term that is worse than the expiring
+    or that doesn't meet our coverage enhancement requests: (1) cite
+    the carrier's quote language, (2) state what we need instead, and
+    (3) provide the justification. Prioritize the asks by importance
+    to the client. Format as a professional email to the underwriter.
     ```
 
-    When you can tell an underwriter "we're requesting this endorsement because of [specific case or regulatory development]," you're negotiating from a position of knowledge rather than preference. Underwriters respect that, and it often moves the needle on terms.
-  </Step>
+    This step feeds directly into the [Quote Comparison](/playbooks/broking/quote-comparison) playbook, which covers the full process of analyzing quotes, building a client-ready recommendation, and presenting the comparison. Use both playbooks together for the strongest placement outcomes.
 
-  <Step title="Select markets strategically based on your audit">
-    Use the findings from your coverage audit to match markets to needs. Instead of submitting to every carrier you have a relationship with, target the carriers whose forms and appetite align with the specific coverage enhancements you've identified.
-
-    For example, if the audit revealed that the expiring program has an overly broad professional services exclusion, prioritize carriers known for offering a more favorable version of that endorsement. If the audit flagged inadequate cyber sublimits, include a standalone cyber market in your submission strategy.
-
-    <Note>
-      The pre-marketing audit often reveals that the client needs coverage the expiring carrier doesn't offer well. This is where you add value as a broker: not just re-marketing the same program, but restructuring it based on what the analysis revealed.
-    </Note>
+    → [Compare Documents](/platform/compare) · [Coverage Table](/platform/populate) · [Chats](/platform/chats)
   </Step>
 </Steps>
 
@@ -120,7 +191,7 @@ The result is fewer wasted submissions, stronger negotiating positions, and a cl
 
 <Tabs>
   <Tab title="Commercial Property">
-    **Pre-marketing audit prompt:**
+    **Pre-marketing analysis prompt:**
     ```
     Review this commercial property policy including all endorsements.
     Identify: (1) valuation basis and whether it appears adequate,
@@ -131,12 +202,12 @@ The result is fewer wasted submissions, stronger negotiating positions, and a cl
     exclusions or limitations on ordinance or law coverage,
     (6) vacancy provisions, and (7) any endorsements that restrict
     coverage from the base form. Flag the top five issues to address
-    in the renewal marketing.
+    in the marketing.
     ```
   </Tab>
 
   <Tab title="General Liability">
-    **Pre-marketing audit prompt:**
+    **Pre-marketing analysis prompt:**
     ```
     Review this commercial general liability policy including all
     endorsements. Identify: (1) additional insured endorsement scope
@@ -148,12 +219,12 @@ The result is fewer wasted submissions, stronger negotiating positions, and a cl
     limitations, (6) per-project or per-location aggregates if
     applicable, and (7) any endorsements that restrict coverage
     from the ISO base form. Flag the top five issues to address
-    in the renewal marketing.
+    in the marketing.
     ```
   </Tab>
 
   <Tab title="Umbrella / Excess">
-    **Pre-marketing audit prompt:**
+    **Pre-marketing analysis prompt:**
     ```
     Review this umbrella/excess liability program including all
     layers. Identify: (1) whether each layer is true follow-form
@@ -171,7 +242,7 @@ The result is fewer wasted submissions, stronger negotiating positions, and a cl
   </Tab>
 
   <Tab title="Professional Liability / E&O">
-    **Pre-marketing audit prompt:**
+    **Pre-marketing analysis prompt:**
     ```
     Review this professional liability/E&O policy including all
     endorsements. Identify: (1) definition of "professional
@@ -182,13 +253,12 @@ The result is fewer wasted submissions, stronger negotiating positions, and a cl
     (5) definition of "claim" and whether it includes regulatory
     proceedings, (6) exclusions for specific services, industries,
     or client types, and (7) extended reporting period options
-    and cost. Flag the top five issues to address in the renewal
-    marketing.
+    and cost. Flag the top five issues to address in the marketing.
     ```
   </Tab>
 
   <Tab title="Cyber Liability">
-    **Pre-marketing audit prompt:**
+    **Pre-marketing analysis prompt:**
     ```
     Review this cyber liability policy including all endorsements.
     Identify: (1) first-party vs. third-party coverage scope and
@@ -199,7 +269,7 @@ The result is fewer wasted submissions, stronger negotiating positions, and a cl
     penalties, (6) vendor/supply chain incident coverage scope,
     (7) war and infrastructure exclusions and how broadly they're
     drafted, and (8) retroactive date and prior acts coverage.
-    Flag the top five issues to address in the renewal marketing.
+    Flag the top five issues to address in the marketing.
     ```
   </Tab>
 </Tabs>
@@ -208,7 +278,7 @@ The result is fewer wasted submissions, stronger negotiating positions, and a cl
 
 ## Structuring the submission package
 
-Use this framework to organize every submission you send out. The Qumis-powered components are the differentiators that set your submission apart from every other broker's.
+Use this framework to organize every submission you send out. The Qumis-powered components are the differentiators that set your submission apart.
 
 <AccordionGroup>
   <Accordion title="Standard submission components (table stakes)">
@@ -226,13 +296,13 @@ Use this framework to organize every submission you send out. The Qumis-powered 
   <Accordion title="Qumis-powered submission enhancements">
     These are the components that elevate your submission and show underwriters you've done the analytical work.
 
-    - **Submission cover narrative** generated from your pre-marketing audit, positioning the account and highlighting specific coverage needs
+    - **Submission cover narrative** generated from your coverage analysis, positioning the account and highlighting specific coverage needs
     - **Coverage enhancement request list** with citations to the expiring policy language that needs improvement, giving underwriters a clear target rather than vague asks
-    - **Risk context from Legal Search** that justifies why specific endorsements or coverage modifications are being requested, grounding your asks in real-world outcomes
-    - **Program structure summary** that maps the full tower (if applicable) and identifies where each carrier sits, making it easy for excess markets to understand the program without reading every underlying policy
+    - **Market context from Web Search** that grounds your coverage requests in current market conditions, industry trends, and emerging risk factors
+    - **Program structure summary** from the Coverage Table that maps the full tower (if applicable) and identifies where each carrier sits, making it easy for excess markets to understand the program without reading every underlying policy
 
     <Tip>
-      Underwriters notice when a broker has clearly analyzed the expiring before submitting. It signals that you understand the risk, have a point of view on what needs to change, and will be a productive negotiating partner. This often results in better initial quotes and fewer rounds of back-and-forth.
+      The combination of a clear narrative and cited coverage requests signals to underwriters that you've done the work. This often results in faster turnaround and more competitive initial quotes because underwriters can focus their time on pricing rather than trying to figure out what you actually want.
     </Tip>
   </Accordion>
 </AccordionGroup>
@@ -243,12 +313,13 @@ Use this framework to organize every submission you send out. The Qumis-powered 
 
 | Metric | What to track | Target |
 |---|---|---|
-| Pre-marketing audits completed | Number of accounts where you ran a Qumis audit before going to market | 100% of accounts above $25K premium |
+| Coverage Tables generated | Number of accounts where you built a Coverage Table before marketing | 100% of accounts above $25K premium |
 | Submission narratives included | Percentage of submissions sent with a Qumis-generated cover narrative | 80%+ |
 | Quote response rate | Percentage of carriers who return a quote (vs. decline or NTU) | 10–15% improvement over baseline |
 | Rounds of negotiation | Average number of back-and-forth rounds before binding | Decrease by 1–2 rounds |
+| Time from quote receipt to comparison | Hours from last quote received to structured comparison completed | 50% reduction vs. manual process |
 | Coverage enhancements achieved | Number of requested improvements that carriers agreed to | Track per placement |
 
 <Note>
-  The pre-marketing audit is the single highest-leverage activity in this playbook. Even if you don't use the submission narrative or Legal Search on every account, the audit alone will change how you approach every placement because it forces you to understand the expiring before you market it.
+  The first two steps — gathering submission data with the Coverage Table and assessing risk with Policy Analysis — are the highest-leverage activities in this playbook. Even if you don't use every Qumis tool on every account, these two steps alone will change how you approach every placement because they force you to understand the expiring program before you market it.
 </Note>
