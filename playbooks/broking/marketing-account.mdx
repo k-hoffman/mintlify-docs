@@ -109,26 +109,17 @@ The result is a placement process that's faster, more rigorous, and produces bet
   </Step>
 
   <Step title="Select markets">
-    Use [Batch Extraction](/platform/batch-extraction) to pull structured program data that feeds your market selection process and any upstream BI tools your team uses for carrier appetite matching. Supplement with [Web Search](/platform/research/web-search) to research carrier appetite, recent market entries or exits, and specialty markets that align with the coverage needs your analysis identified.
+    Market selection is where your coverage analysis meets your firm's placement intelligence. Use the findings from the previous steps — the coverage gaps, enhancement requests, and risk assessment — to target carriers whose forms and appetite align with what this account actually needs, rather than submitting to every market you have a relationship with.
 
-    **Batch Extraction prompt:**
-    ```
-    From each policy and quote document in this account folder, extract:
-    carrier name, line of business, policy form (ISO or manuscript),
-    limits structure, deductible/retention, key endorsements, premium,
-    and any unique coverage features or restrictions. Output as a
-    structured table.
-    ```
-
-    Use the extraction output to match markets to needs. Instead of submitting to every carrier you have a relationship with, target the carriers whose forms and appetite align with the specific coverage enhancements you've identified.
+    Reference your firm's benchmarking data to identify which carriers are writing this class of business, what rate trends look like, and where capacity is tightening or expanding. Use [Web Search](/platform/research/web-search) to supplement with current market intelligence: carrier appetite changes, recent market entries or exits, and specialty markets that align with the specific coverage enhancements your analysis identified.
 
     For example, if your analysis revealed that the expiring program has an overly broad professional services exclusion, prioritize carriers known for offering a more favorable version of that endorsement. If the analysis flagged inadequate cyber sublimits, include a standalone cyber market in your submission strategy.
 
     <Note>
-      The structured data from Batch Extraction also feeds downstream workflows — renewal tracking, benchmarking, and portfolio analytics. Extracting it here means you're building institutional data while doing placement work.
+      If your firm uses Qumis [Batch Extraction](/platform/batch-extraction), the structured program data it produces can feed your benchmarking and BI tools, giving you carrier-level placement intelligence to inform market selection. Batch Extraction is a separate capability from the standard Qumis license — check with your administrator if you're unsure whether your firm has access.
     </Note>
 
-    → [Batch Extraction](/platform/batch-extraction) · [Web Search](/platform/research/web-search)
+    → [Web Search](/platform/research/web-search)
   </Step>
 
   <Step title="Submit to carriers">
