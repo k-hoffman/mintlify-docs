@@ -1,16 +1,18 @@
 ---
 title: "Presenting Quotes"
-description: "A step-by-step guide to the quote presentation phase — from building the proposal through binding instructions, with Qumis features mapped to each step."
+description: "Use Qumis to turn your quote analysis into a polished client presentation — from building the proposal through issuing binding instructions."
 icon: "presentation-screen"
 ---
 
 ## The strategy
 
-Once quotes are in hand and you've analyzed the options, the quote presentation phase is where you turn that analysis into a client decision. This playbook walks through the five steps of presenting quotes to an insured — from building the proposal through issuing binding instructions — and maps the Qumis features that support each step.
+Presenting quotes is where your analytical work meets the client relationship. You've marketed the account, received quotes, and run your comparisons. Now you need to translate all of that into a clear recommendation the client can act on — and defend that recommendation through stakeholder questions, objections, and negotiations before arriving at a binding decision.
 
-<Note>
-  The analytical work of organizing, comparing, and evaluating competing quotes is covered in the [Marketing the Account](/playbooks/broking/marketing-account) playbook under the "Negotiate terms and quotes" step. This playbook picks up where that one leaves off.
-</Note>
+Most brokers handle this phase with a spreadsheet comparison and a verbal walkthrough. The spreadsheet shows limits and premiums but doesn't explain *why* one option is stronger. The verbal presentation depends entirely on the broker's memory of the analysis they did days or weeks earlier. When the CFO asks a pointed question about an exclusion, the broker either has the answer or says "let me get back to you" — and momentum stalls.
+
+Qumis changes this by connecting the presentation phase directly to the analysis that preceded it. The [Proposal Generator](/platform/coming-soon/proposal-generator) builds the formal proposal from the same data you used during marketing. [Chats](/platform/chats) turns that proposal into a polished, interactive presentation you can share or screen-share. And when client questions arise, [Compare Documents](/platform/compare) gives you instant access to the citation-backed findings that answer them.
+
+The result is a presentation phase where you never lose credibility, never lose momentum, and never have to circle back.
 
 ---
 
@@ -26,8 +28,8 @@ Once quotes are in hand and you've analyzed the options, the quote presentation 
   <Card title="3. Handle Questions" icon="comments" href="/platform/compare">
     Compare Documents
   </Card>
-  <Card title="4. Secure Decision" icon="handshake">
-    Negotiation phase
+  <Card title="4. Secure Decision" icon="handshake" href="/platform/compare">
+    Compare Documents
   </Card>
   <Card title="5. Bind" icon="paper-plane" href="/platform/coming-soon/chrome-extension">
     Chrome Extension
@@ -36,21 +38,23 @@ Once quotes are in hand and you've analyzed the options, the quote presentation 
 
 <Steps>
   <Step title="Build the proposal">
-    The broker assembles a formal proposal document that presents the options in a clear, digestible format. For middle market and larger accounts, this typically includes an executive summary, a side-by-side coverage and premium comparison, a breakdown of key terms and conditions by line, a summary of what changed from the expiring program (if renewal), and the broker's recommendation with rationale. The proposal is designed to help the client make an informed decision without needing to read the underlying quote documents.
+    Start by assembling the formal proposal document your client will review. For middle market and larger accounts, this typically includes an executive summary, a side-by-side coverage and premium comparison, a breakdown of key terms and conditions by line, a summary of what changed from the expiring program (if renewal), and your recommendation with rationale. The goal is a document that helps the client make an informed decision without needing to read the underlying quote documents.
 
-    **Qumis features:**
+    Use the [Proposal Generator](/platform/coming-soon/proposal-generator) to build the proposal directly from your Qumis workspace. It combines the policy data, market research, and coverage analysis from the marketing phase with your organization's branded templates to produce a professional, client-ready document. Because the proposal pulls from the same analysis you've already done — coverage comparisons, market insights, competitive positioning — you're assembling rather than rebuilding from scratch.
 
-    - [Proposal Generator](/platform/coming-soon/proposal-generator) — Combines policy data, market research, and the organization's branded templates to produce professional, client-ready proposals. It pulls in coverage comparisons, market insights, and competitive positioning directly from your Qumis workspace, so the proposal is grounded in the actual analysis work completed during the marketing phase rather than built from scratch. Output can be exported as Word or PDF, ready for client delivery.
+    Export the proposal as Word or PDF for client delivery, or keep it in Qumis to feed the next step.
+
+    <Tip>
+      Build a Proposal Generator template for each major account type your team handles (middle market, large commercial, specialty). The template defines the structure and branding. Qumis fills in the analysis. This makes proposal quality consistent across your team regardless of who's handling the account.
+    </Tip>
 
     → [Proposal Generator](/platform/coming-soon/proposal-generator)
   </Step>
 
   <Step title="Deliver the presentation">
-    The broker presents the proposal to the client, usually in a scheduled meeting (in-person or virtual). They walk through the options, explain the tradeoffs, highlight where the recommended option is stronger, and address coverage nuances the client needs to understand. For larger accounts, this may involve multiple stakeholders — the CFO, risk manager, legal, operations — each with different concerns. The broker acts as the advisor, not just a messenger.
+    Present the proposal to the client in a scheduled meeting — in-person or virtual. Walk through the options, explain the tradeoffs, highlight where the recommended option is stronger, and address coverage nuances the client needs to understand. For larger accounts, this may involve multiple stakeholders — CFO, risk manager, legal, operations — each with different concerns.
 
-    **Qumis features:**
-
-    - [Chats](/platform/chats) — Use a Chat session to generate a self-contained HTML microsite from your Proposal Generator output. The Chat reads the proposal data and produces a branded, interactive presentation page — complete with an executive summary, side-by-side coverage comparisons, and your recommendation — that you can share as a link or screen-share during the client meeting. This gives the client a polished digital experience rather than a static PDF, and the self-contained format means it works without any hosting or special software.
+    Use [Chats](/platform/chats) to generate a self-contained HTML microsite from your Proposal Generator output. The Chat reads the proposal data and produces a branded, interactive presentation page — complete with an executive summary, side-by-side coverage comparisons, and your recommendation — that you can share as a link or screen-share during the meeting. This gives the client a polished digital experience rather than a static PDF, and the self-contained format means it works without any hosting or special software.
 
     **Microsite generation prompt:**
     ```
@@ -78,13 +82,11 @@ Once quotes are in hand and you've analyzed the options, the quote presentation 
   </Step>
 
   <Step title="Handle client questions and objections">
-    After the presentation, the client typically has follow-up questions: "Why is Carrier A more expensive?", "Can we get the sublimit on X increased?", "What happens if we raise the retention?", "How does this compare to what we had last year?" The broker needs to address these quickly and confidently.
+    After the presentation, the client will have follow-up questions: "Why is Carrier A more expensive?", "Can we get the sublimit on X increased?", "What happens if we raise the retention?", "How does this compare to what we had last year?" You need to address these quickly and confidently.
 
-    **Qumis features:**
+    Run [Compare Documents](/platform/compare) ahead of the meeting to get fully educated on the options you're presenting. The structured coverage analysis identifies every material difference in coverage, limits, exclusions, and terms, so you walk into the presentation already knowing the answers to most comparison questions the client will raise. The QumisScore benchmarking across six dimensions also gives you a framework for explaining why one option is stronger than another.
 
-    - [Compare Documents](/platform/compare) — Should be used ahead of the meeting to get fully educated on the options being presented. The structured coverage analysis identifies every material difference in coverage, limits, exclusions, and terms, so the broker walks into the presentation already knowing the answers to most comparison questions the client will raise. The QumisScore benchmarking across six dimensions also gives the broker a framework for explaining why one option is stronger than another.
-    - [Chats](/platform/chats) — When the client raises a question the broker didn't anticipate, they can quickly query the underlying quote documents in real-time to get a precise, cited answer.
-    - [Web Search](/platform/research/web-search) — Supplements by pulling in carrier ratings, regulatory context, or market benchmarks when the client asks broader questions about a carrier's financial strength, claims reputation, or market pricing.
+    When the client raises a question you didn't anticipate, open a [Chat](/platform/chats) session to query the underlying quote documents in real-time. You'll get a precise, cited answer you can relay immediately rather than promising to follow up later. For broader questions about a carrier's financial strength, claims reputation, or market pricing, use [Web Search](/platform/research/web-search) to pull in carrier ratings, regulatory context, or market benchmarks.
 
     <Tip>
       Compare Documents is the strongest tool for this step because client questions are almost always comparative in nature. [Policy Analysis](/platform/summarize) can also analyze individual quotes in depth, but Compare Documents is the better starting point since it directly addresses side-by-side tradeoffs.
@@ -94,21 +96,71 @@ Once quotes are in hand and you've analyzed the options, the quote presentation 
   </Step>
 
   <Step title="Secure the client's decision">
-    The broker works through any remaining concerns, negotiates final adjustments with carriers if needed, and gets the client to a binding decision. This may involve multiple rounds of back-and-forth — revised quotes, adjusted terms, updated proposals — before the client signs off. For larger accounts with multiple lines, the client may approve some lines immediately and ask for further negotiation on others.
+    Work through any remaining concerns, negotiate final adjustments with carriers if needed, and get the client to a binding decision. This may involve multiple rounds of back-and-forth — revised quotes, adjusted terms, updated proposals — before the client signs off. For larger accounts with multiple lines, the client may approve some lines immediately and ask for further negotiation on others.
 
-    Qumis doesn't directly address this step. This is a negotiation and relationship management exercise. The tools used in the marketing phase ([Compare Documents](/platform/compare), [Coverage Table](/platform/populate), [Chats](/platform/chats)) remain useful if the broker needs to re-evaluate revised quotes that come back from carriers during this back-and-forth.
+    If carriers come back with revised quotes during this back-and-forth, upload the new versions to the [Document Vault](/platform/document-vault) and re-run [Compare Documents](/platform/compare) to see exactly what changed. Use [Chats](/platform/chats) to draft counter-requests that cite the specific carrier language and state exactly what needs to change, the same way you did during the negotiation step in the [Marketing the Account](/playbooks/broking/marketing-account) playbook.
+
+    <Note>
+      The QumisScore is especially useful during late-stage negotiations. When a carrier revises terms to secure the business, re-running the comparison lets you instantly see whether the revision actually closed the gap or just moved numbers around without addressing the underlying coverage issue.
+    </Note>
+
+    → [Compare Documents](/platform/compare) · [Chats](/platform/chats)
   </Step>
 
   <Step title="Issue binding instructions">
-    Once the client has made their selection, the broker sends formal binding instructions to the carrier(s), confirming effective dates, coverage terms, named insureds, and any outstanding subjectivities. This is the handoff from the sales/advisory phase to the operational/servicing phase.
+    Once the client has made their selection, send formal binding instructions to the carrier(s) confirming effective dates, coverage terms, named insureds, and any outstanding subjectivities. This is the handoff from the sales/advisory phase to the operational/servicing phase.
 
-    **Qumis features:**
+    Use the [Chrome Extension](/platform/coming-soon/chrome-extension) to access Qumis capabilities directly from the browser without leaving your current workflow. The extension lets you streamline getting the insured's bind order over to the carrier — triggering actions directly from the browser when working in a DMS or email — rather than toggling between systems.
 
-    - [Chrome Extension](/platform/coming-soon/chrome-extension) — Lets the broker access Qumis capabilities directly from the browser without leaving their current workflow. The broker can use the extension to streamline getting the insured's bind order over to the carrier — triggering actions directly from the browser when working in a DMS or email — rather than toggling between systems.
+    <Tip>
+      Before sending binding instructions, run a final check of the Compare Documents report against the terms you're confirming. This catches last-minute discrepancies between what was agreed verbally and what the carrier's latest quote actually says — the kind of mismatch that creates E&O exposure if it makes it into the binder unchecked.
+    </Tip>
 
     → [Chrome Extension](/platform/coming-soon/chrome-extension)
   </Step>
 </Steps>
+
+---
+
+## Presenting the comparison to your client
+
+Use this framework for structuring the client conversation. The proposal and microsite give you the content. This is how to deliver it.
+
+<AccordionGroup>
+  <Accordion title="Opening — lead with the recommendation (2 minutes)">
+    Start with your recommendation, not the comparison. "We received quotes from [X] carriers and our recommendation is [Carrier]. Here's why." Your client wants to know what you think they should do. The detailed comparison is there for validation, not discovery.
+  </Accordion>
+
+  <Accordion title="Top findings — coverage, not just price (10 minutes)">
+    Walk through the two to three coverage differences that drove your recommendation. Use the microsite or Report as a visual aid, pointing to the specific citations. Don't read the report to your client — use it as a reference while you explain the findings in your own words.
+
+    Present the premium comparison, but frame it relative to coverage: "Carrier A is $12K less, but here's what you'd be giving up for that savings. In our view, the broader products-completed operations coverage in Carrier B's form is worth the difference."
+  </Accordion>
+
+  <Accordion title="Client questions — use citations, not memory (10 minutes)">
+    This is where the Qumis citations pay off. When a client asks "why does this matter?" or "are you sure about this difference?", you can point directly to the policy language in the Compare Documents report. No hedging, no "let me get back to you."
+  </Accordion>
+
+  <Accordion title="Decision and next steps (5 minutes)">
+    Confirm the client's selection and outline the binding process. If the client needs time to decide, set a clear timeline and note any quote expiration dates that create urgency.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Measuring success
+
+| Metric | What to track | Target |
+|---|---|---|
+| Proposals generated with Qumis | Percentage of placements where the proposal was built with Proposal Generator | 80%+ of placements above $15K premium |
+| Client questions answered on the spot | Percentage of client questions resolved during the presentation vs. requiring follow-up | 90%+ |
+| Time from last quote to client presentation | Business days from final quote received to proposal delivered | 50% reduction vs. baseline |
+| Rounds of revision before binding | Average number of back-and-forth rounds before the client signs off | Decrease by 1–2 rounds |
+| E&O documentation | Percentage of placements with a documented recommendation and rationale on file | 100% |
+
+<Note>
+  The Compare Documents report and Proposal Generator output together serve as your placement documentation. They record what was analyzed, what was recommended, and why — which is valuable for E&O defense, renewal benchmarking, and demonstrating the depth of your brokerage service at stewardship reviews.
+</Note>
 
 ---
 
