@@ -12,7 +12,7 @@ The most common E&O exposures in broking don't originate from bad coverage advic
 
 Most brokers handle this phase with a manual side-by-side read: the binder in one window, the quote in another, checking line by line. On a simple monoline policy this is manageable. On a complex placement with manuscript endorsements, layered programs, and negotiated terms across multiple submissions, things get missed. And the issued policy review — weeks later, with the broker already deep into the next account — often gets less attention than it deserves.
 
-Qumis changes this by turning every verification into a structured comparison with citations to the exact language in both documents. [Compare Documents](/platform/compare) identifies every difference between what was quoted and what was bound, categorized by severity. [Chats](/platform/chats) drafts the bind order and carrier correction requests grounded in the specific language that needs to change. The result is a binding process where discrepancies surface immediately, corrections happen before delivery, and every review is documented for the file.
+Qumis changes this by turning every verification into a structured extraction with citations to the exact language in both documents. The [Coverage Table](/platform/populate) pulls limits, deductibles, sublimits, endorsements, and key terms from both the quote and the binder into a single side-by-side view, so every difference is visible immediately. [Chats](/platform/chats) drafts the bind order and carrier correction requests grounded in the specific language that needs to change. The result is a binding process where discrepancies surface immediately, corrections happen before delivery, and every review is documented for the file.
 
 ---
 
@@ -22,11 +22,11 @@ Qumis changes this by turning every verification into a structured comparison wi
   <Card title="1. Send Bind Order" icon="paper-plane" href="/platform/chats">
     Chats
   </Card>
-  <Card title="2. Check the Binder" icon="magnifying-glass" href="/platform/compare">
-    Compare Documents
+  <Card title="2. Check the Binder" icon="magnifying-glass" href="/platform/populate">
+    Coverage Table
   </Card>
-  <Card title="3. Check the Policy" icon="file-shield" href="/platform/compare">
-    Compare Documents
+  <Card title="3. Check the Policy" icon="file-shield" href="/platform/populate">
+    Coverage Table
   </Card>
   <Card title="4. Deliver to Insured" icon="envelope-circle-check" href="/platform/chats">
     Chats
@@ -63,45 +63,53 @@ Qumis changes this by turning every verification into a structured comparison wi
   </Step>
 
   <Step title="Check the binder against the proposal and application">
-    When the binder arrives, upload it to the [Document Vault](/platform/document-vault) alongside the accepted quote and your bind order. Run [Compare Documents](/platform/compare) with the binder and the accepted quote to surface every difference between what was quoted and what was bound. Compare Documents automatically generates a Coverage Table and a QumisScore for each document, giving you a structured side-by-side view of limits, deductibles, and key terms alongside the detailed analysis.
+    When the binder arrives, upload it to the [Document Vault](/platform/document-vault) alongside the accepted quote and your bind order. Run a [Coverage Table](/platform/populate) with the binder and the accepted quote to extract structured data from both documents into a single side-by-side view. You can provide a [Checklist Template](/playbooks/best-practices/coverage-checklists) that defines exactly which data points to verify, or let Qumis auto-generate a checklist based on the documents. The result is a structured comparison of limits, deductibles, sublimits, endorsements, and key terms that makes every discrepancy visible at a glance.
 
-    For any discrepancies Compare Documents flags, open a [Chat](/platform/chats) session to draft a correction request that cites the specific binder language and states exactly what needs to change. Attach the relevant section of the comparison report so the carrier can see the finding directly.
+    For any discrepancies the Coverage Table surfaces, open a [Chat](/platform/chats) session to draft a correction request that cites the specific binder language and states exactly what needs to change. Attach the relevant section of the Coverage Table so the carrier can see the finding directly.
 
-    **Binder verification prompt:**
+    **Binder verification checklist template:**
     ```
-    Compare this binder against the accepted carrier quote. For every
-    difference between the two documents, cite the exact language from
-    both and categorize the discrepancy as:
+    Extract and compare the following from the binder and the accepted
+    quote. For every difference, cite the exact language from both
+    documents:
+
+    1. Named insured (exact entity name, subsidiaries, additional
+       named insureds)
+    2. Policy period (effective and expiration dates)
+    3. Every limit and sublimit
+    4. Deductibles and SIRs
+    5. Premium (including installment terms)
+    6. Endorsements (form numbers and edition dates)
+    7. Coverage terms, definitions, and conditions
+    8. Any negotiated manuscript changes
+
+    Categorize each discrepancy as:
     - CRITICAL (affects coverage scope, limits, or could result in
       claim denial)
     - MODERATE (affects terms or conditions but unlikely to affect
       claim outcomes)
     - MINOR (administrative, formatting, or non-substantive)
-
-    Check: named insured, policy period, every limit and sublimit,
-    deductibles, premium, endorsements (form numbers and edition dates),
-    coverage terms, definitions, and any negotiated manuscript changes.
     ```
 
     <Warning>
       Don't wait for the full issued policy to start your review. Run the verification on the binder as soon as it arrives. Corrections are far easier at the binder stage than after the policy has been issued. Target completing the review and sending any correction requests within 48 hours of receiving the binder.
     </Warning>
 
-    → [Compare Documents](/platform/compare) · [Chats](/platform/chats)
+    → [Coverage Table](/platform/populate) · [Chats](/platform/chats)
   </Step>
 
   <Step title="Check the policy against the proposal and application">
-    When the full issued policy arrives — typically four to eight weeks after binding — upload it to the [Document Vault](/platform/document-vault) and add it to the Compare Documents report you ran at the binder stage. Open the History tab in Qumis, find the binder comparison report, and click **Add Documents** to include the issued policy. Qumis re-runs the comparison across all the documents — the accepted quote, the binder, and now the issued policy — so you can see exactly what changed between binder and issuance without starting from scratch.
+    When the full issued policy arrives — typically four to eight weeks after binding — upload it to the [Document Vault](/platform/document-vault) and add it to the Coverage Table you ran at the binder stage. Open the History tab in Qumis, find the binder-stage Coverage Table, and click **Add Documents** to include the issued policy. Qumis re-runs the extraction across all the documents — the accepted quote, the binder, and now the issued policy — so you can see exactly what changed between binder and issuance without starting from scratch.
 
     This is where you confirm that any corrections you requested at the binder stage were actually implemented. Carriers sometimes introduce changes between binder and issuance, especially on endorsement language, and this second pass catches anything that shifted. Pay special attention to endorsement edition dates — carriers sometimes issue a policy with a newer edition than what was quoted, and a different edition date can mean different coverage terms even if the form number is the same.
 
     For any new discrepancies, use [Chats](/platform/chats) to draft correction requests the same way you did at the binder stage. The carrier needs to issue an endorsement or corrected policy before you deliver to the client.
 
     <Tip>
-      Building on the existing report instead of starting a new comparison has two advantages: you preserve the full audit trail from binder through issuance in a single report, and Qumis already has context on the original quote terms and any discrepancies you flagged earlier.
+      Building on the existing Coverage Table instead of starting a new one has two advantages: you preserve the full audit trail from binder through issuance in a single report, and Qumis already has context on the original quote terms and any discrepancies you flagged earlier.
     </Tip>
 
-    → [Compare Documents](/platform/compare) · [Chats](/platform/chats)
+    → [Coverage Table](/platform/populate) · [Chats](/platform/chats)
   </Step>
 
   <Step title="Deliver the policy to the insured">
@@ -130,7 +138,7 @@ Qumis changes this by turning every verification into a structured comparison wi
     ```
 
     <Tip>
-      The comparison reports and correction correspondence from Steps 2 and 3 serve as your placement documentation. They record what was verified, what was corrected, and what was delivered — which is valuable for E&O defense, renewal benchmarking, and stewardship reviews.
+      The Coverage Tables and correction correspondence from Steps 2 and 3 serve as your placement documentation. They record what was verified, what was corrected, and what was delivered — which is valuable for E&O defense, renewal benchmarking, and stewardship reviews.
     </Tip>
 
     → [Chats](/platform/chats)
@@ -162,8 +170,8 @@ Qumis changes this by turning every verification into a structured comparison wi
   <Card title="Presenting Quotes" icon="presentation-screen" href="/playbooks/broking/quote-comparison">
     The upstream workflow: from building the proposal through securing the client's decision
   </Card>
-  <Card title="Compare Documents" icon="scale-balanced" href="/platform/compare">
-    Deep dive into structured side-by-side document analysis
+  <Card title="Coverage Table" icon="table" href="/platform/populate">
+    Extract and compare structured coverage data across documents
   </Card>
   <Card title="Contract Review" icon="file-contract" href="/platform/contract-review">
     Check contracts against insurance requirements for certificate compliance
