@@ -43,22 +43,25 @@ Qumis compresses this workflow with the [Contract Analysis](/platform/contract-r
 
     The report covers limits, deductibles, additional insured status, waiver of subrogation, primary and noncontributory provisions, notice of cancellation, carrier rating requirements, and any other insurance-related conditions in the contract.
 
-    One area that requires extra attention is whether excess and umbrella layers would respond as primary when the insured's underlying policy has granted additional insured status to another party. Most umbrella forms contain "other insurance" clauses stating they are excess of any other liability policy — which can conflict with a contractual promise of primary and noncontributory coverage across all layers. The Contract Analysis report flags additional insured and primary/noncontributory requirements, but confirming how the umbrella responds to those provisions requires validation. Use the embedded [Chat](/platform/chats) to analyze whether the umbrella's "other insurance" clause creates a conflict:
+    <Note>
+      When a contract requires primary and noncontributory coverage across all layers, pay extra attention to the umbrella. Most umbrella forms contain "other insurance" clauses stating they are excess of any other liability policy — which can conflict with a contractual promise of primary and noncontributory coverage when additional insured status is granted on the underlying GL. The Contract Analysis report flags these requirements, but use the embedded [Chat](/platform/chats) to validate whether the umbrella's language creates a conflict:
 
-    ```
-    The contract requires primary and noncontributory coverage across all
-    layers. Review the umbrella/excess policy's "other insurance" clause
-    and determine whether it would respond as primary when the underlying
-    GL has granted additional insured status to the certificate holder.
-    Cite the specific "other insurance" language in the umbrella and
-    explain whether it conflicts with the contractual primary and
-    noncontributory requirement. If there is a conflict, recommend how
-    to address it — whether through an endorsement to the umbrella,
-    clarification from the carrier, or a coverage opinion.
-    ```
+      ```
+      The contract requires primary and noncontributory coverage across
+      all layers. Review the umbrella/excess policy's "other insurance"
+      clause and determine whether it would respond as primary when the
+      underlying GL has granted additional insured status to the
+      certificate holder. Cite the specific "other insurance" language
+      in the umbrella and explain whether it conflicts with the
+      contractual primary and noncontributory requirement. If there is
+      a conflict, recommend how to address it — whether through an
+      endorsement to the umbrella, clarification from the carrier, or
+      a coverage opinion.
+      ```
+    </Note>
 
     <Warning>
-      The Contract Analysis report is an analysis tool, not legal advice. Always note that the client should have their legal counsel review any contractual insurance provisions alongside your analysis. Your role is to identify whether the insurance program can satisfy the requirements, not to interpret the broader contractual obligations.
+      The Contract Analysis report is an analysis tool, not legal advice. Always note that the client should have their legal counsel review any contractual insurance provisions alongside your analysis. Qumis identifies whether the insurance program can satisfy the requirements — it does not interpret the broader contractual obligations.
     </Warning>
 
     → [Contract Analysis](/platform/contract-review)
@@ -101,14 +104,14 @@ Qumis compresses this workflow with the [Contract Analysis](/platform/contract-r
     ```
 
     <Tip>
-      When you find non-compliance, present the solution alongside the problem. Instead of just flagging the gap, tell the client what you can do about it and how quickly — for example, that you can get an endorsement to increase a limit or adjust the umbrella to drop down, with pricing within 48 hours. This turns a problem into a demonstration of responsiveness.
+      Use the Chat to present solutions alongside problems. When the report identifies a gap, ask the Chat to draft language that explains what's missing and recommends a specific fix — for example: *"The contract requires $2M per occurrence on GL but the current limit is $1M. Draft a client email that explains the gap and recommends either an endorsement to increase the limit or an adjustment to the umbrella to drop down, and note that we'll have pricing within 48 hours."* The Chat already has the full analysis context, so it can cite the exact requirement and the exact policy language in the communication it drafts.
     </Tip>
 
     → [Chat](/platform/chats)
   </Step>
 
   <Step title="Issue the certificate or evidence of insurance">
-    Once all requirements are confirmed compliant — or the client has acknowledged and accepted any gaps — issue the certificate of insurance or evidence of insurance. If your agency management system or carrier portal is browser-based, you can use the [Browser Extension](/platform/coming-soon/chrome-extension) to instruct Qumis to create the certificate directly from the browser, keeping the workflow within Qumis and reducing the manual data entry that leads to certificate errors.
+    Once all requirements are confirmed compliant — or the client has acknowledged and accepted any gaps — issue the certificate of insurance or evidence of insurance. If your agency management system or certificate of insurance creation tool is browser-based, you can use the [Browser Extension](/platform/coming-soon/chrome-extension) to instruct Qumis to create the certificate directly from the browser, keeping the workflow within Qumis and reducing the manual data entry that leads to certificate errors.
 
     Save the Contract Analysis report in the [Document Vault](/platform/document-vault) as a record of the analysis that supported the certificate. This creates an audit trail showing that every item on the certificate was verified against the actual policy, which is valuable for E&O protection, renewal reference, and stewardship reviews.
 
@@ -157,10 +160,8 @@ Qumis compresses this workflow with the [Contract Analysis](/platform/contract-r
 | Metric | What to track | Target |
 |---|---|---|
 | Contract review turnaround | Time from client request to compliance analysis delivered | Under 4 hours for standard contracts |
-| Certificate issuance turnaround | Time from request to certificate sent | Under 2 hours for compliant accounts; under 24 hours when modifications are needed |
 | First-time accuracy | Percentage of certificates issued correctly without revision | 95%+ |
 | Compliance gaps identified proactively | Number of gaps found in contract reviews that the client didn't know about | Track per review |
-| Mid-term policy modifications from contract reviews | Endorsements or coverage additions triggered by contract requirements | Track quarterly |
 | Documentation completeness | Percentage of issued certificates with a Contract Analysis report in the Vault | 100% |
 
 ---
