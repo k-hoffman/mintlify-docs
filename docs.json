@@ -200,8 +200,8 @@
             "group": "Claims Playbooks",
             "pages": [
               "playbooks/claims/overview",
-              "playbooks/claims/coverage-analysis",
               "playbooks/claims/policy-identification",
+              "playbooks/claims/coverage-analysis",
               "playbooks/claims/rebuttal"
             ]
           }
