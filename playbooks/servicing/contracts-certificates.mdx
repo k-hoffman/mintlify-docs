@@ -44,21 +44,23 @@ Qumis compresses this workflow with the [Contract Analysis](/platform/contract-r
     The report covers limits, deductibles, additional insured status, waiver of subrogation, primary and noncontributory provisions, notice of cancellation, carrier rating requirements, and any other insurance-related conditions in the contract.
 
     <Note>
-      When a contract requires primary and noncontributory coverage across all layers, pay extra attention to the umbrella. Most umbrella forms contain "other insurance" clauses stating they are excess of any other liability policy — which can conflict with a contractual promise of primary and noncontributory coverage when additional insured status is granted on the underlying GL. The Contract Analysis report flags these requirements, but use the embedded [Chat](/platform/chats) to validate whether the umbrella's language creates a conflict:
-
-      ```
-      The contract requires primary and noncontributory coverage across
-      all layers. Review the umbrella/excess policy's "other insurance"
-      clause and determine whether it would respond as primary when the
-      underlying GL has granted additional insured status to the
-      certificate holder. Cite the specific "other insurance" language
-      in the umbrella and explain whether it conflicts with the
-      contractual primary and noncontributory requirement. If there is
-      a conflict, recommend how to address it — whether through an
-      endorsement to the umbrella, clarification from the carrier, or
-      a coverage opinion.
-      ```
+      When a contract requires primary and noncontributory coverage across all layers, pay extra attention to the umbrella. Most umbrella forms contain "other insurance" clauses stating they are excess of any other liability policy — which can conflict with a contractual promise of primary and noncontributory coverage when additional insured status is granted on the underlying GL. Use the embedded [Chat](/platform/chats) to validate whether the umbrella's language creates a conflict.
     </Note>
+
+    If the report flags a primary and noncontributory requirement, use the following prompt in the Chat to check whether the umbrella responds correctly:
+
+    ```
+    The contract requires primary and noncontributory coverage across
+    all layers. Review the umbrella/excess policy's "other insurance"
+    clause and determine whether it would respond as primary when the
+    underlying GL has granted additional insured status to the
+    certificate holder. Cite the specific "other insurance" language
+    in the umbrella and explain whether it conflicts with the
+    contractual primary and noncontributory requirement. If there is
+    a conflict, recommend how to address it — whether through an
+    endorsement to the umbrella, clarification from the carrier, or
+    a coverage opinion.
+    ```
 
     <Warning>
       The Contract Analysis report is an analysis tool, not legal advice. Always note that the client should have their legal counsel review any contractual insurance provisions alongside your analysis. Qumis identifies whether the insurance program can satisfy the requirements — it does not interpret the broader contractual obligations.
@@ -104,7 +106,7 @@ Qumis compresses this workflow with the [Contract Analysis](/platform/contract-r
     ```
 
     <Tip>
-      Use the Chat to present solutions alongside problems. When the report identifies a gap, ask the Chat to draft language that explains what's missing and recommends a specific fix — for example: *"The contract requires $2M per occurrence on GL but the current limit is $1M. Draft a client email that explains the gap and recommends either an endorsement to increase the limit or an adjustment to the umbrella to drop down, and note that we'll have pricing within 48 hours."* The Chat already has the full analysis context, so it can cite the exact requirement and the exact policy language in the communication it drafts.
+      Use the Chat to present solutions alongside problems. When the report identifies a gap, ask the Chat to draft language that explains what's missing and recommends a specific fix. For example, if the contract requires a higher GL limit than the current program carries, ask the Chat to draft a client email explaining the gap and recommending an endorsement to increase the limit or an adjustment to the umbrella, with a timeline for pricing. The Chat already has the full analysis context, so it can cite the exact requirement and the exact policy language in the communication it drafts.
     </Tip>
 
     → [Chat](/platform/chats)
