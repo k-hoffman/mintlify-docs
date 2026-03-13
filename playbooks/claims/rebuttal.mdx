@@ -82,71 +82,60 @@ Before starting, you should have:
   </Step>
 
   <Step title="Research legal precedent through iterative dialogue">
-    This is the core of the rebuttal process. For each basis of denial, use Legal Search within the report's Chat to find case law in the applicable jurisdiction that supports the insured's coverage position. The iterative dialogue allows you to test arguments, refine search queries, and build your legal foundation before writing the rebuttal.
+    This is the core of the rebuttal process. For each basis of denial, use Legal Search within the report's Chat to find case law in the applicable jurisdiction that supports the insured's coverage position. Legal Search performs best when you ask one question at a time.
 
-    **Initial legal research prompt:**
+    **Find cases interpreting the policy language at issue:**
     ```
-    The carrier denied coverage on the following basis:
-    [Quote the carrier's first basis for denial]
-
-    The carrier relies on the following policy language:
-    [Quote the policy provision]
-
-    In [state], find case law that supports the insured's position
-    that this denial is incorrect. Specifically, search for:
-
-    1. Cases where courts interpreted the same or similar policy
-       language and found coverage under comparable facts.
-
-    2. Cases establishing the applicable rules of policy
-       interpretation in [state] (e.g., contra proferentem,
-       reasonable expectations doctrine, strict construction
-       of exclusions against the insurer).
-
-    3. Cases addressing the specific coverage issue (e.g., cases
-       holding that [describe the specific issue, like "indoor
-       mold does not constitute a 'pollutant' under the standard
-       CGL pollution exclusion"]).
-
-    4. Any regulatory guidance, department of insurance bulletins,
-       or statutory provisions in [state] that are relevant.
-
-    For each case, provide: case name, court, year, key holding,
-    and the specific language from the opinion that supports
-    the insured's position.
+    The carrier denied coverage based on [quote the policy
+    provision]. Find cases in [state] where courts interpreted
+    the same or similar language and found coverage under
+    comparable facts.
     ```
 
-    **Then iterate.** The first search gives you a foundation. Follow up with targeted queries that deepen the research:
+    **Find the applicable rules of policy interpretation:**
+    ```
+    What are the controlling rules of policy interpretation in
+    [state]? Specifically, does the state follow contra
+    proferentem and strict construction of exclusions against
+    the insurer?
+    ```
+
+    **Find cases on the specific coverage issue:**
+    ```
+    Find [state] case law addressing [the specific issue, e.g.,
+    "whether indoor mold constitutes a 'pollutant' under the
+    standard CGL pollution exclusion"].
+    ```
+
+    **Find relevant regulatory guidance:**
+    ```
+    Are there any department of insurance bulletins or statutory
+    provisions in [state] relevant to [the coverage issue]?
+    ```
+
+    Once you've completed the Legal Search queries, toggle Legal Search off in the Chat and continue the iterative dialogue to refine your arguments:
 
     **Narrowing on the strongest argument:**
     ```
     The [case name] decision looks directly on point. Are there
-    any subsequent decisions in [state] that followed or
-    distinguished this holding? Has the ruling been cited by
-    other courts in the jurisdiction? I want to make sure this
-    authority is still good law and hasn't been narrowed.
+    subsequent decisions in [state] that followed or distinguished
+    this holding? I want to make sure this authority is still
+    good law.
     ```
 
     **Addressing the carrier's likely counter-argument:**
     ```
     The carrier might argue that [describe the anticipated
-    counter-argument, e.g., "the insured had prior knowledge of
-    the condition, which takes the claim outside the 'occurrence'
-    definition"]. Find cases in [state] that address this counter-
-    argument and hold that [describe the favorable position, e.g.,
-    "an insured's knowledge of a defective condition does not
-    negate the fortuitous nature of the resulting damage where
-    the insured did not intend or expect the specific injury
-    that occurred"].
+    counter-argument]. How would the cases we've found respond
+    to that position?
     ```
 
     **Exploring a secondary argument:**
     ```
     Even if the carrier's primary exclusion argument has some
     merit, is there an exception to the exclusion that restores
-    coverage? The policy includes [describe the exception].
-    Find cases in [state] interpreting this exception and applying
-    it to restore coverage in similar circumstances.
+    coverage? Analyze the exception language in the policy
+    against the facts.
     ```
 
     <Tip>
@@ -191,78 +180,29 @@ Before starting, you should have:
 
     **Rebuttal letter generation prompt:**
     ```
-    Based on the full analysis in this report, including the denial
-    deconstruction, the legal research, and the stress test, generate
-    a formal rebuttal letter to the carrier. Structure the letter
-    as follows:
+    Using the Claims Analysis report, the uploaded source documents
+    (policies, denial letter, claim facts), and our full chat
+    history, generate a formal rebuttal letter to the carrier.
 
-    HEADER:
-    - Date
-    - Carrier name and address
-    - Re: [Insured name], [Policy number], [Claim number],
-      [Date of loss]
-    - "Response to Coverage Denial Dated [date of denial letter]"
+    Address every basis of denial identified in the deconstruction.
+    For each, quote the carrier's position from the denial letter,
+    cite the actual policy language, explain why the carrier's
+    interpretation is incorrect, and cite the case law from our
+    legal research that supports the insured's position.
 
-    OPENING:
-    State that you are writing on behalf of the insured to respond
-    to the carrier's denial. Reference the denial letter by date
-    and summarize the carrier's position in one to two sentences.
-    State that the denial is not supported by the policy language
-    or applicable law.
+    Include the applicable rules of policy interpretation in
+    [state] (contra proferentem, burden on the insurer to prove
+    exclusions, strict construction of exclusions) with citations.
 
-    FACTS:
-    Provide a concise statement of the claim facts. Correct any
-    factual inaccuracies from the denial letter. Note any facts
-    the carrier omitted that are material to the coverage
-    determination.
-
-    REBUTTAL — ADDRESS EACH BASIS OF DENIAL:
-    For each basis of denial identified in the deconstruction:
-    1. State the carrier's position (quote the denial letter).
-    2. Quote the actual policy language.
-    3. Explain why the carrier's interpretation is incorrect.
-    4. Cite the applicable case law from [state] that supports
-       the insured's position, with specific holdings and quotes
-       from the opinions.
-    5. If the carrier failed to address a provision that supports
-       coverage (an exception to an exclusion, a favorable
-       definition, or an applicable endorsement), raise it here.
-
-    LEGAL FRAMEWORK:
-    Remind the carrier of the applicable rules of policy
-    interpretation in [state]:
-    - Ambiguity is construed against the insurer
-    - The insurer bears the burden of proving an exclusion applies
-    - Exclusions are strictly construed
-    - The reasonable expectations of the insured are considered
-    Cite the controlling authority for each rule.
-
-    DEMAND:
-    State clearly that the insured demands that the carrier
-    reconsider and reverse the denial. Specify the relief sought:
-    acceptance of coverage, payment of the claim, appointment of
-    defense counsel, or whatever is appropriate. Set a response
-    deadline (typically 30 days).
-
-    BAD FAITH RESERVATION:
-    If appropriate under [state] law, note that the insured
-    reserves all rights and remedies, including claims for bad
-    faith denial of coverage, and that the insured expects the
-    carrier to reevaluate its position in light of the authority
-    cited.
-
-    CLOSING:
-    Professional close requesting a written response by the
-    deadline.
+    Close with a demand that the carrier reconsider and reverse
+    the denial, a reservation of all rights and remedies, and
+    a response deadline.
 
     The tone should be firm, professional, and authoritative.
-    Not adversarial, not deferential. The letter should demonstrate
-    that the insured's position is well-researched and that the
-    carrier's denial will not go unchallenged.
     ```
 
     <Warning>
-      The rebuttal letter is a significant document that can affect the client's legal rights. Before sending, review the letter carefully for accuracy. If the claim involves significant financial exposure (generally $100K+) or if bad faith is being reserved, have the client's coverage counsel review the letter before it's sent. The Qumis-generated letter provides the analytical foundation and draft language, which reduces counsel's review time, but counsel should approve the final version on high-stakes claims.
+      The rebuttal letter is a significant document that can affect the client's legal rights. Before sending, review the letter carefully for accuracy. If the claim involves significant financial exposure or if bad faith is being reserved, have the client's coverage counsel review the letter before it's sent.
     </Warning>
   </Step>
 
@@ -451,10 +391,8 @@ Before starting, you should have:
 | Metric | What to track | Target |
 |---|---|---|
 | Rebuttal letters generated | Number of denials challenged with a Qumis-powered rebuttal | 100% of denials where the coverage analysis supports the insured |
-| Rebuttal turnaround | Time from denial received to rebuttal letter sent | Under 5 business days for standard denials; under 10 for complex |
-| Reversal rate | Percentage of rebuttals that result in full or partial reversal | 40–60% (varies by denial type and jurisdiction) |
 | Dollars recovered | Claim dollars recovered through successful rebuttals | Track quarterly |
-| Counsel cost savings | Reduction in coverage counsel fees when Qumis analysis is provided as rebuttal foundation | 30–50% reduction in outside counsel hours |
+| Counsel cost savings | Reduction in coverage counsel fees when Qumis analysis is provided as rebuttal foundation | Track per engagement |
 | Client awareness of advocacy | Percentage of clients who are informed of the rebuttal effort and outcome | 100% |
 
 <Note>
