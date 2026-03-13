@@ -62,7 +62,11 @@
               "get-started/genai/how-generative-ai-works",
               "get-started/genai/how-qumis-reads-documents",
               "get-started/genai/accuracy-and-confidence",
-              "get-started/genai/data-privacy-and-security"
+              {
+                "title": "Data Privacy and Security",
+                "icon": "shield",
+                "url": "https://trust.qumis.ai/"
+              }
             ]
           },
           {
