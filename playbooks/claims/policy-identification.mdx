@@ -29,294 +29,70 @@ Before starting, you should have:
 ## The Qumis workflow
 
 <Steps>
-  <Step title="Load the entire program into a Claims Analysis report">
-    Create a new Claims Analysis report and upload every active policy in the client's program. Not just the policy you think applies. All of them.
+  <Step title="Load the entire program and loss facts into a Claims Analysis report">
+    Create a new Claims Analysis report and upload every active policy in the client's program — not just the policy you think applies. Include the dec pages, the form, and all endorsements for each policy.
 
-    **Typical program load:**
-    - Commercial general liability (primary)
-    - Commercial property (including inland marine, if separate)
-    - Commercial auto
-    - Workers' compensation / employers' liability
-    - Umbrella / excess liability (every layer)
-    - Professional liability / E&O
-    - Directors & officers liability
-    - Employment practices liability
-    - Cyber liability
-    - Crime / fidelity
-    - Pollution liability (if standalone)
-    - Any specialty or manuscript policies
-
-    For each policy, include the dec pages, the form, and all endorsements.
+    Once loaded, provide the loss facts in the report's Chat: the insured, date of loss, date reported, jurisdiction, claim type, a detailed narrative, and the estimated loss amount. Qumis will automatically analyze every loaded policy against the loss facts and identify which policies are potentially responsive, which are not, and which are uncertain.
 
     <Tip>
-      Loading the full program feels like overkill on a straightforward claim. It isn't. The five minutes it takes to include every policy is nothing compared to the cost of discovering six months later that the inland marine policy had $500K of coverage that nobody checked. Make the full load your default.
+      Loading the full program feels like overkill on a straightforward claim. It isn't. The five minutes it takes to include every policy is nothing compared to the cost of discovering six months later that the inland marine policy had coverage that nobody checked. Make the full load your default.
     </Tip>
   </Step>
 
-  <Step title="Input the loss facts and request a full-program scan">
-    In the report's Chat, provide the loss facts and ask Qumis to evaluate every loaded policy for potential coverage.
+  <Step title="Build a responsive carriers table">
+    In the report's Chat, ask Qumis to create a table of the potentially responsive and uncertain carriers. This gives you a complete picture of available coverage for the loss in a format you can reference quickly when coordinating with carriers and communicating with the client.
 
-    **Full-program identification prompt:**
     ```
-    A loss has been reported with the following facts:
-
-    [Insert the loss facts using the same structured format from
-    the Coverage Analysis playbook: insured, date of loss, date
-    reported, jurisdiction, claim type, detailed narrative,
-    estimated loss amount]
-
-    I have loaded the insured's complete active insurance program
-    into this report. Analyze EVERY policy in the program and
-    determine which policies may provide coverage for this loss.
-    For each policy:
-
-    1. POTENTIALLY RESPONSIVE: If the policy may provide coverage,
-       explain which insuring agreement is triggered and why.
-       Identify the applicable limits, deductibles, and any
-       sublimits. Note any exclusions that could apply and whether
-       exceptions to those exclusions might restore coverage.
-
-    2. NOT RESPONSIVE: If the policy does not apply to this loss,
-       briefly explain why (wrong coverage type, excluded risk,
-       wrong policy period, etc.). Keep the explanation to one
-       or two sentences.
-
-    3. UNCERTAIN: If coverage is possible but depends on facts
-       not yet known or on disputed legal questions, classify
-       the policy as uncertain and explain what additional
-       information or analysis is needed to make the determination.
-
-    After analyzing each policy individually, assess the program
-    as a whole:
-
-    - STACKING: Can limits from multiple policies be stacked for
-      this loss? Identify any "other insurance" clauses that
-      affect priority and allocation between responding policies.
-
-    - TOWER: If excess/umbrella layers are implicated, map the
-      tower showing which primary policies the excess follows
-      form to and at what point each layer attaches.
-
-    - GAPS: Are there any exposures created by this loss that
-      are not addressed by any policy in the program? Identify
-      any coverage holes.
-
-    - CONFLICTS: Are there any conflicting provisions between
-      policies (e.g., one policy's "other insurance" clause
-      conflicts with another's)?
-
-    Cite specific policy language for every finding.
+    Create a table of the potentially responsive and uncertain
+    carriers for this loss. For each carrier, include the policy
+    type, applicable limits, deductible/SIR, and a brief summary
+    of why coverage may apply or why it's uncertain.
     ```
-  </Step>
-
-  <Step title="Map the coverage tower for the specific loss">
-    For losses that are large enough to implicate excess layers, or where multiple policies respond, ask the Chat to produce a visual coverage map specific to this claim.
-
-    **Coverage tower mapping prompt:**
-    ```
-    Based on the policy identification analysis, produce a coverage
-    map for this specific loss that shows:
-
-    1. LAYER STRUCTURE: Which policies respond and in what order,
-       from first dollar to the top of the tower. Show the
-       attachment point and limit of each layer.
-
-    2. PRIMARY POLICIES: For each primary policy that responds,
-       show the applicable per-occurrence/per-claim limit, the
-       deductible/SIR, and the remaining aggregate (if known
-       or estimable).
-
-    3. EXCESS/UMBRELLA: For each excess layer, show whether it
-       follows form to the applicable primary, whether it has
-       its own terms for this type of loss, and any exclusions
-       that could create a gap in the tower.
-
-    4. TOTAL AVAILABLE COVERAGE: Sum the available limits across
-       all responding policies and layers for this loss. Note
-       any aggregate erosion, sublimit caps, or "other insurance"
-       provisions that reduce the total.
-
-    5. ALLOCATION: If multiple policies respond and the loss
-       must be allocated (e.g., between GL and professional
-       liability, or between multiple triggered policy periods),
-       identify the allocation issue and the applicable rule
-       in [jurisdiction].
-
-    Present this as a structured diagram or table that shows the
-    complete picture of available coverage for this loss.
-    ```
-  </Step>
-
-  <Step title="Identify additional insured and third-party coverage">
-    For claims involving third parties (contractors, landlords, vendors, joint venture partners), check whether any additional insured provisions extend coverage.
-
-    **Additional insured analysis prompt:**
-    ```
-    This claim involves the following third parties:
-    [List all third parties and their relationship to the insured]
-
-    For each third party, check every policy in the program to
-    determine:
-
-    1. Whether the third party qualifies as an additional insured
-       under any policy (check blanket AI endorsements, scheduled
-       AI endorsements, and any manuscript provisions).
-
-    2. The scope of the additional insured coverage (ongoing
-       operations only, completed operations, both, or limited
-       to specific activities).
-
-    3. Whether the additional insured coverage is primary and
-       noncontributory or excess over the third party's own
-       insurance.
-
-    4. Whether any contractual requirement between the insured
-       and the third party affects the coverage obligation.
-
-    Cite the specific endorsement language for each finding.
-    ```
-
-    <Note>
-      Additional insured identification is frequently overlooked and frequently litigated. Getting this right at the outset avoids costly disputes later and ensures that the client meets their contractual obligations. If you've been running the [Contracts and Certificates](/playbooks/servicing/contracts-certificates) servicing playbook, you already have a record of the client's contractual AI obligations that you can reference here.
-    </Note>
   </Step>
 
   <Step title="Document the findings and communicate to the client">
-    The Claims Analysis report now contains a complete picture of every policy that may respond to the loss. Use it to guide the claims reporting strategy.
+    The Claims Analysis report now contains a complete picture of every policy that may respond to the loss. Use it to guide the claims reporting strategy: which carriers to notify, the order of coverage, the reporting sequence across primary and excess layers, and whether to coordinate defense and indemnity across multiple carriers.
 
-    **Key decisions informed by the policy identification:**
+    Every carrier whose policy was identified as potentially responsive or uncertain should receive a notice of claim. Late notice to a potentially responding policy is an avoidable error.
+  </Step>
 
-    - **Which carriers to notify:** Every carrier whose policy was identified as "potentially responsive" or "uncertain" should receive a notice of claim or reservation of rights. Late notice to a potentially responding policy is an avoidable error.
+  <Step title="Draft the first notice of loss">
+    In the report's Chat, ask Qumis to draft a first notice of loss for each carrier you need to notify. Tailor each notice to the specific policy and coverage that may apply.
 
-    - **Order of coverage:** If multiple primary policies respond, determine which is primary, which is excess, and whether any contribute pro rata.
+    ```
+    Draft a first notice of loss for [carrier name] under the
+    [policy type] policy. Include the relevant loss facts, the
+    insuring agreement that may be triggered, and a reservation
+    of the insured's rights under the policy.
+    ```
 
-    - **Reporting sequence:** Report to the primary carrier first, then notify excess layers. For claims that could be large, provide early notice to all layers to preserve rights.
-
-    - **Coordination strategy:** If multiple carriers are involved, consider whether to coordinate the defense and indemnity or allow each carrier to handle its layer independently. Your coverage analysis should inform this strategy.
+    <Note>
+      If the claim involves multiple responding carriers, draft and send notices to all of them. Don't wait for one carrier's response before notifying the next — timely notice preserves the insured's rights across every potentially responding policy.
+    </Note>
   </Step>
 </Steps>
 
-## Policy identification scenarios
+## Structuring loss facts for the best results
 
-<Tabs>
-  <Tab title="Property loss with business interruption">
-    A fire damages a client's manufacturing facility. The obvious policy is commercial property, but the full analysis should check:
+The quality of Qumis's policy identification depends on the detail in your loss facts. Preliminary facts are sufficient to start — you don't need a complete investigation before running the analysis — but the more context you provide, the more policies Qumis can evaluate accurately.
 
-    ```
-    Identify all policies that may respond to a fire at the
-    insured's manufacturing facility. Check for:
+<AccordionGroup>
+  <Accordion title="What to include in every loss submission">
+    At minimum, provide the insured name, date of loss, date reported, jurisdiction, claim type, a narrative of what happened, and the estimated loss amount. If third parties are involved (contractors, landlords, vendors, joint venture partners), name them and describe their relationship to the insured so Qumis can check additional insured provisions across the program.
+  </Accordion>
 
-    - Property policy: building damage, contents, business
-      personal property
-    - Business interruption / loss of income (often on the
-      property policy, sometimes separate)
-    - Extra expense coverage
-    - Equipment breakdown (if the fire was caused by or resulted
-      in equipment failure)
-    - Inland marine (for specialized equipment or goods in transit
-      affected by the shutdown)
-    - Builders risk (if any portion of the facility was under
-      construction or renovation)
-    - Environmental/pollution (if the fire released hazardous
-      materials)
-    - GL (if third parties were injured or their property was
-      damaged)
-    - Workers' comp (if employees were injured)
-    - Umbrella/excess (for GL and possibly employers' liability)
-    - Crime (if arson is suspected)
+  <Accordion title="When facts are still developing">
+    You don't need to wait for the full picture. Run the initial analysis with what you have, then follow up in the Chat as new facts emerge. Qumis will refine its assessment as you provide additional detail — a second round after depositions or expert reports can surface coverage that wasn't apparent from the initial report.
+  </Accordion>
 
-    Analyze each policy and map the full coverage picture.
-    ```
-  </Tab>
+  <Accordion title="Losses that cross policy lines">
+    For losses that could implicate multiple coverage types — a fire that causes pollution, a cyber incident that triggers regulatory action, a workplace injury with third-party exposure — include every dimension of the loss in your narrative. Qumis identifies responding policies based on the facts you provide. If you describe only the property damage from a fire, it won't flag the pollution policy. Describe the full scope.
+  </Accordion>
 
-  <Tab title="Multi-party construction claim">
-    A general contractor faces a claim for property damage at a completed project. The claim involves the GC, two subcontractors, the project owner, and the architect.
-
-    ```
-    Identify all policies across the GC's program that may respond
-    to this construction defect claim. Also identify coverage
-    obligations owed to third parties. Check:
-
-    - GC's CGL: primary coverage for property damage, products/
-      completed operations, additional insured obligations to
-      the project owner
-    - GC's umbrella/excess: follow-form analysis for CGL coverage
-    - GC's professional liability (if the GC provided any design
-      or engineering services)
-    - Subcontractor default insurance (if the GC carries SDI)
-    - Builder's risk (if still in effect or if the claim relates
-      to the construction period)
-    - Contractor's pollution liability
-    - Any wrap-up / OCIP policy (if the project was wrapped)
-
-    For each subcontractor, identify whether the GC is an
-    additional insured under their policies and whether the
-    subcontractors' policies are primary and noncontributory.
-
-    Map the full coverage picture including all parties and all
-    policies.
-    ```
-  </Tab>
-
-  <Tab title="Cyber incident with regulatory exposure">
-    A client suffers a data breach affecting customer records. The incident triggers regulatory investigation and potential class-action litigation.
-
-    ```
-    Identify all policies that may respond to this data breach
-    and its consequences. Check:
-
-    - Cyber liability: first-party (breach response, notification,
-      forensics, business interruption) and third-party (privacy
-      liability, regulatory defense and fines)
-    - CGL: personal and advertising injury coverage for privacy
-      violations (noting that many CGL policies now exclude
-      cyber, but check the specific language)
-    - D&O: if the breach leads to shareholder derivative suits
-      or regulatory actions against officers
-    - E&O/Professional liability: if the breach arose from
-      professional services delivered to a client
-    - Crime/fidelity: if the breach involved social engineering,
-      funds transfer fraud, or employee dishonesty
-    - Media liability: if the breach involved unauthorized
-      publication of private information
-    - Umbrella/excess: for any primary layer that is implicated
-
-    Pay special attention to the interplay between the cyber policy
-    and the CGL. Many brokers assume the cyber policy is the only
-    response, but depending on the CGL's exclusionary language,
-    there may be overlapping coverage worth pursuing.
-    ```
-  </Tab>
-
-  <Tab title="Employer liability / workplace claim">
-    An employee is seriously injured on the job. The claim involves workers' comp, a potential third-party suit, and OSHA involvement.
-
-    ```
-    Identify all policies that may respond to this workplace
-    injury. Check:
-
-    - Workers' compensation: Part A (statutory benefits)
-    - Employers' liability: Part B (common-law claims by the
-      employee, cross-suits, third-party-over claims)
-    - CGL: third-party claims arising from the same incident
-      (injury to non-employees, property damage)
-    - Umbrella/excess: follow-form to employers' liability and
-      GL
-    - Auto: if the injury involved a company vehicle or occurred
-      during vehicle operation
-    - EPLI: if the claim involves allegations of unsafe working
-      conditions tied to discriminatory practices or retaliation
-    - Professional liability: if the injury occurred during the
-      delivery of professional services to a client
-    - D&O: if OSHA enforcement actions result in personal
-      liability for officers
-
-    Also check whether any contractual indemnification obligations
-    exist that would shift defense or indemnity obligations to
-    a third party.
-    ```
-  </Tab>
-</Tabs>
+  <Accordion title="Additional insured and third-party obligations">
+    If the claim involves third parties, tell Qumis who they are and what their contractual relationship is to the insured. Qumis will check blanket and scheduled additional insured endorsements, primary and noncontributory language, and any waiver of subrogation provisions across the program. If you've been running the [Contracts and Certificates](/playbooks/servicing/contracts-certificates) servicing playbook, you already have a record of the client's contractual obligations that you can reference here.
+  </Accordion>
+</AccordionGroup>
 
 ## Common missed-policy scenarios
 
@@ -350,8 +126,6 @@ Before starting, you should have:
 | Additional responding policies identified | Number of claims where the analysis found coverage under a policy that was not initially identified | Track quarterly; even one per quarter represents significant value |
 | Total coverage identified per claim | Sum of available limits across all responding policies vs. the limit of the single "obvious" policy | Consistently higher than single-policy analysis |
 | Third-party / additional insured findings | Number of claims where AI or third-party coverage was identified and pursued | Track per claim |
-| Reporting completeness | Percentage of claims where all potentially responding carriers received timely notice | 100% |
-| Coverage tower accuracy | Percentage of tower maps that were consistent with carrier behavior (correct attachment, correct follow-form) | 95%+ |
 
 <Note>
   The cost of missing a responding policy is measured in unrecovered claims dollars. A single missed policy on a single claim can cost the client more than a year of Qumis licensing. Make the full-program load your default on every claim, regardless of how straightforward it appears.
