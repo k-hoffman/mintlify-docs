@@ -6,11 +6,9 @@ icon: "presentation-screen"
 
 ## The strategy
 
-The renewal presentation is the moment where all your work becomes visible to the client. It's also the moment where most brokers underperform. The typical renewal presentation is a spreadsheet with carrier names, premiums, limits, and deductibles. The producer walks through it, points out the cheapest option, maybe mentions a few coverage differences, and asks the client to decide. The client, who doesn't read policy language for a living, picks based on price because that's the only dimension they can evaluate with confidence.
+The renewal presentation is the moment where all your work becomes visible to the client. The quality of the presentation determines whether the client sees you as a strategic advisor or a vendor who collected some quotes.
 
-This is a failure of communication, not analysis. The broker may have done excellent work during marketing and negotiation, but if the presentation doesn't convey the depth of that work, the client can't appreciate it. Worse, a price-driven decision might leave the client with a weaker program than what they could have had.
-
-Qumis changes the presentation by giving you a structured, citation-backed recommendation that the client can see and verify. Instead of "Carrier B has broader coverage," you show them the exact language in both quotes and explain what the difference means in practice. The client makes a decision based on understanding, not guesswork. And the presentation itself becomes a permanent record that documents your recommendation and the reasoning behind it.
+Most of the analytical work is already done by this point — the strategy identified what to fix, the marketing process addressed it, and the quotes are analyzed. The presentation challenge isn't generating more analysis. It's assembling what you already have into a clear narrative with a confident recommendation. Qumis helps you do that by structuring the story arc, generating the client-facing proposal, and giving you a reference sheet for the detailed coverage comparisons so your team can speak to the specifics during the meeting.
 
 ## Prerequisites
 
@@ -27,6 +25,18 @@ Before starting, you should have:
 - A scheduled meeting with the client's decision-makers
 
 ## The Qumis workflow
+
+<CardGroup cols={3}>
+  <Card title="1. Story Arc" icon="pen-nib" href="/platform/chats">
+    Chat
+  </Card>
+  <Card title="2. Build Proposal" icon="file-lines" href="/platform/coming-soon/proposal-generator">
+    Proposal Generator
+  </Card>
+  <Card title="3. Prep Crib Sheet" icon="clipboard-list" href="/platform/chats">
+    Chat
+  </Card>
+</CardGroup>
 
 <Steps>
   <Step title="Generate the renewal story arc">
@@ -61,302 +71,81 @@ Before starting, you should have:
     Write as a presentation script. Each section should be three
     to five sentences. The tone is confident and advisory.
     ```
+
+    → [Chat](/platform/chats)
   </Step>
 
-  <Step title="Build the executive summary">
-    The executive summary is the first page the client sees and the page they'll reference after the meeting. It needs to work as a standalone document.
+  <Step title="Use the Proposal Generator to create the quote presentation">
+    Use the [Proposal Generator](/platform/coming-soon/proposal-generator) to build the client-facing renewal proposal. The Proposal Generator pulls from the quotes and analysis already in the Document Vault to produce a structured presentation that includes the executive summary, line-by-line options, premium comparisons, and your recommendation.
 
-    **Executive summary prompt:**
-    ```
-    Generate a one-page renewal executive summary with:
+    Feed the story arc from Step 1 into the Proposal Generator to frame the narrative sections. The generator handles the formatting and structure — your job is to review the output and ensure the recommendation language reflects how your team wants to position each option.
 
-    1. PROGRAM OVERVIEW: Current lines, carriers, total premium
-       (expiring vs. proposed), and effective dates.
-
-    2. KEY CHANGES FROM EXPIRING: The three to five most
-       significant coverage improvements in the recommended
-       program. For each, cite what the expiring said and what
-       the renewal says.
-
-    3. PREMIUM IMPACT: Total premium change (dollars and
-       percentage). Break down by line if the changes vary
-       significantly across lines.
-
-    4. RECOMMENDATION: One clear sentence: "We recommend [option]
-       because [top reason]."
-
-    5. DECISION DEADLINE: When the client needs to decide to
-       ensure binding before expiration.
-
-    Format for a CFO or business owner who will scan before reading.
-    Lead with the recommendation and the premium number.
-    ```
-
-    <Tip>
-      The executive summary should be understandable in 60 seconds. If a client's CFO picks up this page without attending the meeting, they should know what you recommend, what it costs, and what's different from last year. Everything else in the presentation supports this page.
-    </Tip>
+    → [Proposal Generator](/platform/coming-soon/proposal-generator)
   </Step>
 
-  <Step title="Generate the detailed options comparison">
-    This is the core analytical section. Use the final options matrix from marketing and enhance it for client consumption.
+  <Step title="Generate a detailed options crib sheet for the team">
+    The Proposal Generator creates the client-facing deliverable. This step creates the internal reference document that the presenting team uses to handle questions during the meeting — the detailed coverage comparisons, risk context, and trade-off analysis that may not all appear in the proposal but that the team needs at their fingertips.
 
-    **Detailed comparison prompt:**
+    **Crib sheet prompt:**
     ```
-    Using the final options matrix, generate a client-facing
-    comparison of all renewal options. Structure as follows:
+    Using the final options matrix, generate an internal reference
+    document for the presenting team. Structure as follows:
 
     FOR EACH LINE OF BUSINESS:
 
-    1. OPTIONS TABLE: Show each carrier option with premium,
-       limits, deductibles, and key terms in a scannable format.
+    1. OPTIONS TABLE: Each carrier option with premium, limits,
+       deductibles, and key terms.
 
     2. COVERAGE COMPARISON: For the three to five most significant
-       coverage differences between options, show the exact
-       language from each carrier's quote side by side. Explain
-       in plain language what each difference means for the client.
+       coverage differences between options, show the exact language
+       from each carrier's quote side by side. Explain in plain
+       language what each difference means for the client.
 
     3. RENEWAL OBJECTIVES SCORECARD: For each renewal objective
        from the strategy, show which options met it and which
-       didn't. Use clear indicators (Met / Partially Met / Not Met).
+       didn't (Met / Partially Met / Not Met).
 
-    4. VISUAL ANALYSIS: Use QumisScore and Visual Analysis to
-       highlight the coverage quality differences at a glance.
-
-    5. LINE-LEVEL RECOMMENDATION: For each line, state which
-       option you recommend and the primary reason.
+    4. LINE-LEVEL RECOMMENDATION: For each line, state which
+       option the team recommends and the primary reason.
 
     THEN, AT THE PROGRAM LEVEL:
 
-    6. TOTAL PROGRAM VIEW: Show the recommended program across
-       all lines, total premium, and the net coverage position
-       vs. expiring (improved, lateral, or reduced, and why).
+    5. TOTAL PROGRAM VIEW: The recommended program across all
+       lines, total premium, and the net coverage position vs.
+       expiring (improved, lateral, or reduced, and why).
 
-    7. ALTERNATIVE PROGRAM STRUCTURES: If applicable, show one
-       alternative configuration (e.g., "if the client wants to
-       minimize cost, here's what the program looks like with
-       higher retentions and different carrier selections, and
-       here's what coverage they'd give up").
+    6. COST-OF-SAVINGS ANALYSIS: If the recommended option is
+       not the cheapest, show every coverage difference where the
+       cheaper option provides less protection. Quantify the
+       exposure shift where possible.
 
-    Cite policy language for every coverage difference. The
-    audience needs to see the evidence, not just the conclusion.
-    ```
-  </Step>
+    7. RISK CONTEXT: For the one to two coverage differences that
+       matter most, include a relevant case, claim scenario, or
+       industry example that illustrates why the difference matters.
+       Present in two to three sentences a non-insurance audience
+       can understand.
 
-  <Step title="Add risk context for the recommendation">
-    For the one to two coverage differences that matter most to the recommendation, add context that helps the client understand the real-world implications.
-
-    Use Legal Search to find a relevant case or scenario:
-
-    **Risk context prompt:**
-    ```
-    For the top coverage difference driving our recommendation
-    ([describe the difference, e.g., "Carrier A's cyber policy
-    excludes social engineering fraud; Carrier B covers it"]),
-    find a relevant case, claim scenario, or industry example
-    that illustrates why this difference matters. Present it in
-    two to three sentences that a non-insurance audience can
-    understand.
+    This document is for internal use during the presentation
+    meeting. It should be comprehensive enough that the team can
+    answer any client question about coverage differences, trade-
+    offs, or risk context without needing to look anything up.
     ```
 
-    This is the moment in the presentation where the client goes from "I see the difference" to "I understand why it matters." It's often the deciding factor between a price-driven decision and a value-driven one.
-  </Step>
-
-  <Step title="Prepare a what-you're-giving-up analysis for the cheaper option">
-    Clients will always look at the cheapest option. Rather than hoping they don't, prepare a clear analysis of what the cost savings would actually mean in coverage terms.
-
-    **Trade-off analysis prompt:**
-    ```
-    The client's lowest-cost option is [carrier/premium]. The
-    recommended option is [carrier/premium], which is $[X] more.
-    Generate a "cost of savings" analysis that shows:
-
-    1. Every coverage difference between the two options where
-       the cheaper option provides less protection.
-
-    2. For each difference, quantify the potential exposure if
-       possible (e.g., "the cheaper option has a $250K sublimit
-       on water damage vs. $1M in the recommended option, meaning
-       $750K of exposure shifts from the carrier to the client").
-
-    3. A total risk assessment: on balance, is the premium
-       savings worth the coverage concessions?
-
-    Frame this as information for the client's decision, not as
-    pressure. The client may have legitimate reasons to accept
-    more risk for lower cost. Your job is to make sure they
-    understand the trade-off.
-    ```
-
-    <Note>
-      This analysis is one of the most valuable things you can do in a renewal presentation. It respects the client's autonomy while ensuring they make an informed decision. Clients remember the broker who showed them what they'd be giving up, whether they took the savings or not.
-    </Note>
-  </Step>
-
-  <Step title="Generate the final presentation Report">
-    Compile everything into a single Report that serves as both the meeting document and the permanent record.
-
-    **Final report structure:**
-    ```
-    Generate the complete renewal presentation report with these
-    sections in order:
-
-    1. Executive Summary (one page)
-    2. Renewal Story: Where We Started → What We Did → Market
-       Results → Recommendation
-    3. Detailed Options Comparison by Line of Business
-       - Options table
-       - Coverage comparison with citations
-       - Renewal objectives scorecard
-       - Visual Analysis / QumisScore
-       - Line-level recommendation
-    4. Total Program View with Recommended Configuration
-    5. Alternative Program Structure (if applicable)
-    6. Cost of Savings Analysis (cheapest vs. recommended)
-    7. Risk Context for Key Coverage Differences
-    8. Timeline and Next Steps (decision deadline, binding
-       process, certificate issuance, policy delivery)
-
-    The document should be comprehensive enough to stand alone
-    but structured so that each section can be presented in
-    two to three minutes during the meeting.
-    ```
+    → [Chat](/platform/chats)
   </Step>
 </Steps>
 
-## Delivering the renewal presentation
-
-The presentation meeting is where your analysis meets the client's decision. Here's the recommended flow.
-
-<Tabs>
-  <Tab title="Standard presentation (30–45 minutes)">
-    **Meeting structure:**
-
-    1. **Renewal story** (5 min): Recap the strategy, the marketing approach, and the market response. This sets the context and reminds the client of the journey.
-
-    2. **Executive summary and recommendation** (5 min): State your recommendation and the premium impact up front. The client knows immediately where you're headed, and the rest of the meeting is about supporting the recommendation.
-
-    3. **Line-by-line comparison** (15–20 min): Walk through each line, focusing on the two to three most significant coverage differences per line. Use the Qumis Report as a visual aid, pointing to specific citations when the client asks "are you sure?" or "why does that matter?"
-
-    4. **Cost of savings analysis** (5 min): If the recommended option isn't the cheapest, walk through the trade-off analysis. Let the client see exactly what they'd gain or lose at each price point.
-
-    5. **Risk context** (3 min): Share the one to two legal or real-world examples that illustrate why the key coverage differences matter.
-
-    6. **Decision and next steps** (5 min): Confirm the client's selection, set the binding timeline, and outline post-binding activities (certificates, policy review, first stewardship meeting).
-  </Tab>
-
-  <Tab title="Board or committee presentation (60 minutes)">
-    For accounts where the decision requires board or risk committee approval, expand the presentation to include additional context.
-
-    **Additional sections for board presentations:**
-
-    - **Market conditions briefing** (5 min): Broader market context that explains why rates moved the way they did. Board members want to know whether the client's experience is in line with the market.
-
-    - **Peer benchmarking** (5 min): If available, how does this program compare to similarly sized companies in the same industry? This helps board members calibrate.
-
-    - **Three-year program trajectory** (5 min): Where was the program three years ago, where is it now, and where is it headed? This demonstrates long-term stewardship.
-
-    - **Risk heat map** (5 min): A visual summary of the client's top exposures and how the recommended program addresses each one. Use Qumis findings to populate the heat map with specific policy references.
-
-    <Tip>
-      Board members and risk committees are less interested in policy language than in business impact. Translate every coverage finding into a business consequence: "This exclusion means a $2M exposure that's currently uninsured" resonates more than "this exclusion is broader than the standard ISO form."
-    </Tip>
-  </Tab>
-
-  <Tab title="Virtual presentation">
-    Virtual renewal presentations require tighter pacing and more visual emphasis because you can't read the room as easily.
-
-    **Virtual presentation adjustments:**
-
-    - **Share the Report on screen** rather than referencing a printed document. Walk the client through it visually, highlighting key sections.
-
-    - **Lead with the executive summary** and pause for reactions before moving deeper. In virtual settings, silence often means confusion, so check in more frequently.
-
-    - **Use the QumisScore and Visual Analysis** as the anchor visuals. These are easier to digest on screen than dense text comparisons.
-
-    - **Send the full Report 15 minutes before the meeting** so the client can have it open alongside the screen share. This lets them flip ahead if they want to, and ensures they have the document if the connection drops.
-
-    - **Record the meeting** (with permission) so decision-makers who couldn't attend can review the recommendation with the full context.
-  </Tab>
-</Tabs>
-
-## Handling client objections during the presentation
-
-<AccordionGroup>
-  <Accordion title="'Why is it more expensive?'">
-    This is the most common objection. Use the Qumis analysis to separate price from value.
-
-    **Response framework:**
-    > "The premium increase breaks down into two components. First, there's market-driven rate change: carriers across this class are adjusting rates by [X]%, so part of the increase is market movement that would apply regardless of carrier. Second, part of the increase reflects the coverage improvements we requested in our renewal strategy, specifically [reference the improvements]. The alternative is to keep the expiring coverage and terms, which would reduce the increase to approximately [X]%, but you'd still have [reference the gaps identified in the strategy]. Here's the exact comparison."
-
-    Then show the cost-of-savings analysis you prepared.
-  </Accordion>
-
-  <Accordion title="'My friend's broker got them a better rate'">
-    Anecdotal comparisons are common and usually unhelpful because the programs aren't comparable. Use Qumis to reframe the conversation.
-
-    **Response framework:**
-    > "Rates vary significantly based on the specific program structure, limits, retentions, and coverage breadth. What often looks like a better rate is actually a different product: lower limits, higher retentions, or narrower coverage. Without seeing their actual policy language, it's impossible to compare. What I can show you is exactly what your program covers, what each option costs, and what you'd be giving up at a lower price point. That way you're comparing apples to apples on your own program."
-  </Accordion>
-
-  <Accordion title="'Can you go back and get one more quote?'">
-    Sometimes the client wants more options. Assess whether the request is productive or a delay tactic.
-
-    **Response framework:**
-    > "We can absolutely approach additional markets. Let me share what that looks like: we submitted to [X] carriers, [Y] quoted, and [Z] declined. The carriers who declined did so because [reason]. Adding another carrier at this point would take approximately [X] weeks, which puts us [close to/past] the expiration date. My recommendation is [option], and here's why I'm confident in it. But if you'd like us to test one more market, we can do that as long as we keep the current best option held. Which specific concern would the additional quote need to address?"
-  </Accordion>
-
-  <Accordion title="'Let's just stay with the incumbent and keep it simple'">
-    When the client wants to default to the path of least resistance, use the Qumis analysis to show them what they'd be leaving on the table.
-
-    **Response framework:**
-    > "The incumbent is a legitimate option, and we've included them in the analysis. Here's what the comparison shows: [reference specific findings]. Staying with the incumbent means [describe what stays the same and what doesn't improve]. The recommended option provides [specific improvements] for [premium difference]. I want you to make the decision that's right for your business. Let me walk you through the two options side by side so you can see exactly what the difference is."
-
-    Then use the Qumis Report to walk through the head-to-head comparison.
-  </Accordion>
-
-  <Accordion title="'I need to think about it'">
-    Respect the client's process, but make sure they have everything they need to decide and that the timeline is clear.
-
-    **Response framework:**
-    > "Absolutely. You have the full analysis in the report I've shared. The key decision points are on pages [X] and [Y]. I'd just flag that the quotes expire on [date] and we need to bind by [date] to ensure no lapse. Can we schedule a follow-up call for [date] to answer any remaining questions and finalize?"
-  </Accordion>
-</AccordionGroup>
-
-## Post-decision workflow
-
-<Steps>
-  <Step title="Document the decision and rationale">
-    After the client makes their selection, save the final presentation Report in the Vault with a note documenting the decision, who made it, and the stated rationale. This is your E&O documentation and your baseline for the next renewal cycle.
-  </Step>
-
-  <Step title="Communicate binding instructions to carriers">
-    Send binding instructions to the selected carrier immediately. Reference the specific terms, endorsements, and premium from the finalized quote to prevent any discrepancies at the binder stage.
-  </Step>
-
-  <Step title="Run the binding review">
-    When the binder arrives, follow the [Binding and Policy Review](/playbooks/broking/binding-review) playbook to verify that everything matches what was presented and agreed upon.
-  </Step>
-
-  <Step title="Schedule the first stewardship meeting">
-    Before the renewal cycle closes, schedule the first stewardship review for 90 days into the new policy period. This maintains continuity and starts the next renewal cycle's intelligence gathering immediately.
-
-    <Tip>
-      The best time to schedule the first stewardship meeting is during the renewal presentation meeting itself. The client is engaged, they see the value of ongoing analysis, and putting it on the calendar before the meeting ends ensures it actually happens.
-    </Tip>
-  </Step>
-</Steps>
+---
 
 ## Measuring success
 
 | Metric | What to track | Target |
 |---|---|---|
-| Presentations with Qumis Reports | Percentage of renewal presentations that included a Qumis-powered options comparison and recommendation | 100% |
-| Client decision at first presentation | Percentage of clients who make a decision during or immediately after the presentation | 70%+ |
-| Recommendation acceptance rate | Percentage of clients who selected the broker's recommended option | 65–75% |
-| Presentation-to-bind time | Days from presentation meeting to confirmed bind | Under 10 days |
+| Proposals built with Proposal Generator | Percentage of renewal presentations built using the Proposal Generator | Track adoption across accounts |
 | Client satisfaction with process | Feedback on clarity of the presentation and confidence in the decision | Track via direct feedback or NPS |
-| Renewal retention rate | Percentage of accounts successfully renewed | 90%+ overall; 95%+ for accounts with full lifecycle Qumis usage |
+| Crib sheets generated in Qumis | Percentage of renewal presentations where the team had a Qumis-generated internal reference document | 100% for remarketed lines |
+| Renewal objectives referenced in proposal | Percentage of proposals that explicitly tied options back to the stated renewal objectives from the strategy phase | 100% |
 
 <Note>
-  The renewal presentation is the moment where 12 months of work — from servicing through strategy through marketing — becomes visible to the client. A Qumis-powered presentation doesn't just win the renewal. It sets the standard for what the client expects from their broker going forward. That standard is your moat.
+  The renewal presentation is the moment where 12 months of work — from servicing through strategy through marketing — becomes visible to the client.
 </Note>
