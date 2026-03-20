@@ -45,6 +45,17 @@
   --q-blue600: #2563EB;
 }
 
+/* ---- 0. Sidebar — warm Paper background ---- */
+/* Now that the page background is white, force the sidebar to keep
+   the original warm-gray Paper tone so it still feels distinct. */
+#sidebar-content {
+  background-color: var(--q-paper) !important;
+}
+
+#sidebar > ul {
+  background-color: var(--q-paper) !important;
+}
+
 /* ---- 1. Hide TOC rail — widen content ---- */
 aside[class*="toc"],
 div[class*="TableOfContents"],
