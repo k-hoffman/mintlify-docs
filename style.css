@@ -49,17 +49,20 @@
 /* Now that the page background is white, force the sidebar to keep
    the original warm-gray Paper tone so it still feels distinct.
    The sidebar is position:fixed ~32 px from the left edge (parent padding),
-   so we also paint a Paper strip behind it via body::before. */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 19rem;
-  background-color: var(--q-paper);
-  z-index: 0;
-  pointer-events: none;
+   so we also paint a Paper strip behind it via body::before.
+   Only at lg+ (≥ 1024 px) where the sidebar is visible. */
+@media (min-width: 1024px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 19rem;
+    background-color: var(--q-paper);
+    z-index: 0;
+    pointer-events: none;
+  }
 }
 
 #sidebar {
@@ -72,6 +75,14 @@ body::before {
 
 #sidebar > ul {
   background-color: var(--q-paper) !important;
+}
+
+/* Override the top fade gradient inside the sidebar so it fades
+   from Paper (not white) to transparent. */
+#sidebar-content > .bg-gradient-to-b,
+#sidebar-content .from-background-light {
+  --tw-gradient-from: var(--q-paper) !important;
+  background-image: linear-gradient(to bottom, var(--q-paper), transparent) !important;
 }
 
 /* ---- 1. Hide TOC rail — widen content ---- */
