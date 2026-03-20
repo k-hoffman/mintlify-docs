@@ -47,7 +47,21 @@
 
 /* ---- 0. Sidebar — warm Paper background ---- */
 /* Now that the page background is white, force the sidebar to keep
-   the original warm-gray Paper tone so it still feels distinct. */
+   the original warm-gray Paper tone so it still feels distinct.
+   The sidebar is position:fixed ~32 px from the left edge (parent padding),
+   so we also paint a Paper strip behind it via body::before. */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 19rem;
+  background-color: var(--q-paper);
+  z-index: 0;
+  pointer-events: none;
+}
+
 #sidebar {
   background-color: var(--q-paper) !important;
 }
