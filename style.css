@@ -48,6 +48,10 @@
 /* ---- 0. Sidebar — warm Paper background ---- */
 /* Now that the page background is white, force the sidebar to keep
    the original warm-gray Paper tone so it still feels distinct. */
+#sidebar {
+  background-color: var(--q-paper) !important;
+}
+
 #sidebar-content {
   background-color: var(--q-paper) !important;
 }
