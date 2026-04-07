@@ -118,7 +118,7 @@
             "pages": [
               "platform/populate",
               "platform/contract-review",
-              "platform/coming-soon/proposal-generator",
+              "platform/proposal-generator",
               "platform/custom-report"
             ]
           },
@@ -323,7 +323,8 @@
     { "source": "/playbooks/servicing/mid-term-coverage-check", "destination": "/playbooks/servicing/stewardship" },
     { "source": "/playbooks/servicing/portfolio-review", "destination": "/playbooks/servicing/overview" },
     { "source": "/playbooks/renewing/renewal-preparation", "destination": "/playbooks/renewing/overview" },
-    { "source": "/playbooks/renewing/renewal-analysis", "destination": "/playbooks/renewing/overview" }
+    { "source": "/playbooks/renewing/renewal-analysis", "destination": "/playbooks/renewing/overview" },
+    { "source": "/platform/coming-soon/proposal-generator", "destination": "/platform/proposal-generator" }
   ],
   "seo": {
     "indexing": "navigable"

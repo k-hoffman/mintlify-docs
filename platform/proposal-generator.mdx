@@ -1,0 +1,304 @@
+---
+title: "Proposal Generator"
+description: "Create polished, branded insurance proposals from your policy documents and reusable templates — complete with coverage tables, executive summaries, and a built-in editor."
+icon: "file-check"
+sidebarTitle: "Proposal Generator"
+---
+
+The Proposal Generator turns your uploaded policy documents into professional, client-ready proposals. Choose a template, customize the sections to fit your account, and Qumis produces a fully formatted document you can edit, brand, and export as PDF — all in minutes instead of hours.
+
+---
+
+## What this tool does
+
+The Proposal Generator is built for brokers and producers who need to deliver polished proposals quickly. With this tool, you can:
+
+- Generate multi-section proposals from uploaded policies, quotes, and supporting documents.
+- Apply branded templates with your organization's themes, colors, and logo.
+- Include coverage comparison tables, executive summaries, marketing logs, and recommendations — all extracted from your source documents.
+- Edit the generated proposal in a rich document editor with formatting controls similar to Microsoft Word or Google Docs.
+- Switch individual sections between portrait and landscape orientation for wide tables.
+- Export to PDF or print directly from the editor.
+
+Templates are reusable, shareable, and lockable — so your team produces consistent proposals every time.
+
+---
+
+## Before you start
+
+<Note>
+  **Prerequisites:**
+
+  - Have your policy documents ready (quotes, binders, applications, expiring policies). Qumis supports up to 20 attachments or 1,000 pages in the aggregate.
+  - Know what sections you want in the proposal (e.g., executive summary, coverage comparison, recommended program, binding instructions).
+  - If you plan to use an existing template, confirm it's available under **My Templates** or **Organization Templates**.
+  - Have 10–15 minutes for generation and fine-tuning.
+</Note>
+
+---
+
+<Steps>
+  <Step title="Start a Proposal Generator workflow">
+    You can access the Proposal Generator in two ways:
+
+    1. **From the Workflows page** — Click the **Proposal Generator** card on the Workflows dashboard.
+    2. **From the Studio tab** — Click **Studio** in the left sidebar, then select **Proposal Generator**.
+
+    The Studio page also lists your previously generated proposals, which you can reopen and continue editing at any time.
+
+    <Frame caption="Proposal Generator card on the Workflows dashboard">
+      <img src="/images/screenshots/proposal-workflows.png" alt="Workflows dashboard showing the Proposal Generator card among other workflow options" />
+    </Frame>
+
+    <Frame caption="Studio tab showing the Proposal Generator and previously created documents">
+      <img src="/images/screenshots/proposal-studio.png" alt="Studio page with Proposal Generator option and list of saved proposals" />
+    </Frame>
+  </Step>
+
+  <Step title="Upload your documents">
+    On **Step 1: Upload Documents**, add the policy documents Qumis will use to generate the proposal.
+
+    1. Drag and drop your files into the upload area, or click to select from your computer or Vault.
+    2. Qumis can handle up to **20 attachments** or **1,000 pages** in the aggregate.
+    3. When all files have been uploaded, click **Next** to proceed.
+
+    <Warning>
+      While Qumis supports up to 20 attachments, any coverage comparison tables included in the proposal can support up to **5 quote options** (in landscape orientation) before the columns become too narrow or the table takes up too much vertical space. Plan your uploads accordingly if your proposal includes a quote comparison section.
+    </Warning>
+  </Step>
+
+  <Step title="Select a proposal template">
+    On **Step 2: Choose Template**, select a template to structure your proposal.
+
+    Templates are organized into three categories:
+
+    - **My Templates** — Private templates you've created.
+    - **Organization Templates** — Shared templates created by you or your team members.
+    - **Qumis Templates** — Default templates provided by Qumis (cannot be edited).
+
+    Each template card shows the template name, number of sections, applied theme, and a brief description.
+
+    Click a template to select it, then click **Next** to proceed.
+
+    <Frame caption="Template selection screen showing My Templates and Organization Templates">
+      <img src="/images/screenshots/proposal-select-template.png" alt="Select a Template interface showing personal and organization templates with Create New Template button" />
+    </Frame>
+  </Step>
+
+  <Step title="Create a new template (optional)">
+    If none of the existing templates fit your needs, click **+ Create New Template** to build one from scratch. The template creation wizard has four steps.
+
+    **Step 1 of 4 — Name and description:**
+    Give the template a clear, descriptive name (e.g., "Cyber Liability Proposal Template") and an optional description explaining when to use it and what sections it includes.
+
+    <Frame caption="New template setup with name and description fields">
+      <img src="/images/screenshots/proposal-template-setup.png" alt="Create New Template dialog showing template name and description fields" />
+    </Frame>
+  </Step>
+
+  <Step title="Select a theme for your template">
+    **Step 2 of 4 — Document Themes:**
+    Select the theme that controls the visual styling of proposals generated with this template — including your organization's logo, colors, fonts, and table styles.
+
+    You can choose from themes listed under **My Designs** or **Qumis Designs**, or click **+ Create Theme** to build a new one.
+
+    <Frame caption="Document Themes selection showing available themes with preview thumbnails">
+      <img src="/images/screenshots/proposal-template-theme.png" alt="Document Themes step showing My Designs and Qumis Designs tabs with theme previews" />
+    </Frame>
+
+    <Note>
+      Only account **Owners** can create themes for the organization. For more information about creating and managing branding and themes, see [Branding and Themes](/platform/branding-and-themes).
+    </Note>
+  </Step>
+
+  <Step title="Define the template sections">
+    **Step 3 of 4 — Template Sections:**
+    The sections you define here become the skeleton of every proposal generated with this template. Think of them as the chapters of your proposal (e.g., Executive Summary, Named Insured List, Marketing Summary, Quote Comparison, Recommended Program, Binding and Next Steps).
+
+    For each section, give it a title and write a prompt that tells Qumis what content to generate. You can click **+ Add Section** to add more, or use **Generate with AI** to have Qumis suggest a starting structure.
+
+    <Frame caption="Template Sections editor with section title, prompt area, and formatting toolbar">
+      <img src="/images/screenshots/proposal-template-sections.png" alt="Template Sections step showing section editor with title field and rich text prompt area" />
+    </Frame>
+
+    ### Writing effective section prompts
+
+    The prompts you write for each section directly control the quality of Qumis's output. Here are key principles to follow:
+
+    **Be more specific than you think is necessary.** If you want Qumis to create a table, specify the columns and their order. If you want a narrative summary, describe exactly what information to include.
+
+    **Use "verbatim" for exact wording.** If there's text you want Qumis to display word-for-word, instruct it clearly — for example, "Show this text verbatim: [your text here]." This is useful for legal disclaimers, standard disclosures, or boilerplate language your firm requires.
+
+    **Lock text with double brackets to prevent editing.** If you want verbatim text to be non-editable once the proposal is generated, add an empty line above and below the text you want to lock. Type `[[` on the empty line above the locked text and `]]` on the empty line below it. Anything between the double brackets cannot be edited by users generating proposals with this template.
+
+    **For coverage comparison tables, list extraction items explicitly.** Tell Qumis to create a table using the source documents, then list each coverage item you want extracted — each item becomes a separate row in the generated table.
+
+    <Tip>
+      Copy and paste checklists you've saved in the [Prompt Library](/platform/prompt-library) to accelerate template development — especially for coverage comparison sections where you already have line-of-business checklists defined.
+    </Tip>
+  </Step>
+
+  <Step title="Set template permissions">
+    **Step 4 of 4 — Sharing & Permissions:**
+    Configure who can access the template and whether its sections can be modified when used.
+
+    - **Shared with Organization** — Toggle on to make the template available to all members of your organization. When off, only you can see and use it.
+    - **Lock Template Sections** — Toggle on to prevent users from editing, adding, or removing sections when they generate a proposal with this template. This ensures consistency across your team's output.
+
+    <Frame caption="Template Sharing and Permissions settings with organization sharing and section locking toggles">
+      <img src="/images/screenshots/proposal-template-permissions.png" alt="Sharing and Permissions step showing Shared with Organization and Lock Template Sections toggles" />
+    </Frame>
+
+    Click **Save** to finish creating the template. You'll be returned to the template selection screen where you can select your new template.
+  </Step>
+
+  <Step title="Review and edit the sections">
+    On **Step 3: Review & Edit Sections**, you'll see all sections from the selected template with their prompts.
+
+    If the template is **unlocked**, you can:
+
+    - Add new sections with **+ Add Section**.
+    - Remove sections that aren't relevant to this account.
+    - Edit the prompts within each section to tailor the output to the specific considerations of this proposal.
+
+    This is where you customize a reusable template for the unique needs of an individual account — adding client-specific context, adjusting focus areas, or refining instructions before generation.
+
+    When you're satisfied with the sections, click the **Proposal Generator** button at the bottom to start generation.
+
+    <Frame caption="Review and Edit Sections view showing expanded section with editable prompt content">
+      <img src="/images/screenshots/proposal-modify-sections.png" alt="Step 3 Review and Edit Sections with Executive Summary section expanded showing detailed prompt" />
+    </Frame>
+  </Step>
+
+  <Step title="Wait for your proposal to generate">
+    Proposals may take up to **10 minutes** to generate depending on the number of documents and complexity of the template.
+
+    During that time, you're free to create additional proposals, run other reports, or start new chats. When your proposal is done processing, you'll see a notification in the app. You can access it by clicking on it in the **history tab** or from the **Studio** page.
+  </Step>
+
+  <Step title="Fine-tune your proposal in the editor">
+    Once the proposal has generated, review it carefully and make any necessary edits. The built-in editor works like a standard document editor — you can select text and use the **ribbon menu** at the top to adjust formatting, font size, color, alignment, and more.
+
+    Key editing capabilities include:
+
+    - Text formatting (bold, italic, underline, font family, size, and color)
+    - Paragraph alignment and list styles
+    - Title and heading styles (Title 1, Title 2, Title 3)
+    - Insert tables, links, and page breaks
+    - Markdown mode for advanced editing
+    - Search and replace across the document
+
+    The **Content Navigation** pane on the left shows the full structure of your proposal, making it easy to jump between sections.
+
+    <Frame caption="Proposal editor with ribbon menu, Content Navigation pane, and formatted cover page">
+      <img src="/images/screenshots/proposal-editor-ribbon.png" alt="Proposal editor showing ribbon menu with formatting controls and Content Navigation sidebar" />
+    </Frame>
+
+    <Info>
+      Any unlocked text in the proposal can be freely edited. Locked text (defined with `[[` and `]]` in the template) cannot be modified.
+    </Info>
+  </Step>
+
+  <Step title="Change page orientation for wide content">
+    If a section contains a wide table (such as a quote comparison), you may need to switch it to landscape orientation.
+
+    1. In the **Content Navigation** pane, click the **three-dot menu** (⋮) next to the section name.
+    2. Select **Switch to Landscape**.
+    3. All pages in that section will automatically switch to landscape orientation.
+
+    <Frame caption="Section context menu showing the Switch to Landscape option">
+      <img src="/images/screenshots/proposal-page-orientation.png" alt="Content Navigation context menu with Switch to Landscape and Delete Section options" />
+    </Frame>
+  </Step>
+
+  <Step title="Save and export your proposal">
+    When you've finished fine-tuning:
+
+    1. Click **Save** in the upper right corner to preserve your edits.
+    2. Click **Export PDF** to download a PDF of the proposal.
+    3. Click **Print** to send it directly to your printer.
+
+    <Frame caption="Save, Export PDF, and Print buttons in the upper right corner of the editor">
+      <img src="/images/screenshots/proposal-download.png" alt="Proposal editor toolbar showing Export PDF, Save, and Print buttons with red arrow highlighting the export options" />
+    </Frame>
+  </Step>
+</Steps>
+
+---
+
+## Best practices
+
+- **Invest time in your templates.** A well-crafted template with detailed section prompts will produce better proposals every time it's used. Front-load the work once, then reuse it across accounts.
+- **Be explicit in section prompts.** Specify exact column names for tables, the order of information, and whether content should be narrative or tabular. The more precise your instructions, the less editing you'll need after generation.
+- **Use the Prompt Library.** Copy checklists from the Prompt Library directly into template sections — especially for coverage comparison tables where you've already defined what to extract.
+- **Lock templates for team consistency.** When sharing templates with your organization, consider locking the sections to ensure everyone produces proposals with the same structure and quality standards.
+- **Review every generated proposal.** AI-generated content should always be reviewed for accuracy. Check that figures, carrier names, and coverage details match the source documents before sending to a client.
+- **Use landscape for comparison tables.** Switch sections with wide tables to landscape orientation so columns remain readable — especially when comparing more than two quote options.
+- **Save before exporting.** Always click Save before Export PDF to ensure your latest edits are captured in the download.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My proposal is taking longer than 10 minutes to generate">
+    Complex proposals with many documents may take slightly longer. If generation exceeds 15 minutes, refresh the page and check the Studio history tab — your proposal may have completed while the page was loading.
+  </Accordion>
+
+  <Accordion title="The coverage comparison table has too many narrow columns">
+    Coverage comparison tables support up to 5 quote options in landscape orientation. If you've uploaded more than 5 documents and the table is too wide, consider splitting the comparison across two proposals or removing less relevant quote options.
+  </Accordion>
+
+  <Accordion title="I can't edit certain text in the proposal">
+    Text enclosed in `[[` and `]]` in the template is locked and cannot be edited after generation. If you need to change locked content, edit the template itself and regenerate the proposal.
+  </Accordion>
+
+  <Accordion title="I don't see any templates to choose from">
+    If no templates appear, you'll need to create one. Click **+ Create New Template** and follow the four-step wizard. You can also ask your team lead or account Owner to share an Organization Template with your team.
+  </Accordion>
+
+  <Accordion title="I can't create a new theme">
+    Only account **Owners** can create themes. Contact your account Owner or reach out to your Qumis Customer Success Manager for assistance with branding setup.
+  </Accordion>
+
+  <Accordion title="Where are my previously generated proposals?">
+    All saved proposals appear on the **Studio** page. Click **Studio** in the left sidebar and look under the **Documents** section. You can filter by "Proposal" to see only proposal documents.
+  </Accordion>
+
+  <Accordion title="Can I reuse a template with different documents?">
+    Yes. Templates are fully reusable. Each time you start a new Proposal Generator workflow, you select a template and upload fresh documents. The template sections and prompts remain the same, but Qumis generates new content from the new documents.
+  </Accordion>
+
+  <Accordion title="How do I update an existing template?">
+    Navigate to the template selection screen, click the three-dot menu on the template card, and select **Edit**. You can modify the name, description, sections, prompts, theme, and permissions at any time. Changes apply to future proposals, not previously generated ones.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Where Proposal Generator fits in the Qumis platform
+
+The **Proposal Generator** is the final step in turning your analysis into a client deliverable. Use **Policy Analysis** and **Compare Documents** to understand coverage, **Coverage Tables** to extract structured data, and the **Proposal Generator** to package it all into a branded, professional proposal. Combined with templates from the **Prompt Library** and themes from **Branding and Themes**, the Proposal Generator lets your team produce consistent, high-quality proposals at scale.
+
+---
+
+### Why use the Proposal Generator?
+
+Building insurance proposals traditionally means hours of copying data between spreadsheets, formatting tables, and assembling documents. The Proposal Generator automates the heavy lifting — reading your source documents, populating sections with extracted data, and formatting everything according to your branded template. What once took an afternoon now takes minutes, freeing you to focus on strategy, client relationships, and winning business.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Coverage Table" icon="table" href="/platform/populate">
+    Extract structured coverage data for use in proposals and presentations
+  </Card>
+  <Card title="Compare Documents" icon="code-compare" href="/platform/compare">
+    Analyze differences between policies before building your proposal
+  </Card>
+  <Card title="Branding and Themes" icon="palette" href="/platform/branding-and-themes">
+    Configure your organization's visual identity for proposals and exports
+  </Card>
+  <Card title="Prompt Library" icon="book-open" href="/platform/prompt-library">
+    Save and reuse checklists and prompts across templates and reports
+  </Card>
+</CardGroup>
