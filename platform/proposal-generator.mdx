@@ -41,14 +41,13 @@ Templates are reusable, shareable, and lockable — so your team produces consis
   <Step title="Start a Proposal Generator workflow">
     You can access the Proposal Generator in two ways:
 
-    1. **From the Workflows page** — Click the **Proposal Generator** card on the Workflows dashboard.
-    2. **From the Studio tab** — Click **Studio** in the left sidebar, then select **Proposal Generator**.
-
-    The Studio page also lists your previously generated proposals, which you can reopen and continue editing at any time.
+    **From the Workflows page** — Click the **Proposal Generator** card on the Workflows dashboard.
 
     <Frame caption="Proposal Generator card on the Workflows dashboard">
       <img src="/images/screenshots/proposal-workflows.png" alt="Workflows dashboard showing the Proposal Generator card among other workflow options" />
     </Frame>
+
+    **From the Studio tab** — Click **Studio** in the left sidebar, then select **Proposal Generator**. The Studio page also lists your previously generated proposals, which you can reopen and continue editing at any time.
 
     <Frame caption="Studio tab showing the Proposal Generator and previously created documents">
       <img src="/images/screenshots/proposal-studio.png" alt="Studio page with Proposal Generator option and list of saved proposals" />
@@ -121,21 +120,9 @@ Templates are reusable, shareable, and lockable — so your team produces consis
       <img src="/images/screenshots/proposal-template-sections.png" alt="Template Sections step showing section editor with title field and rich text prompt area" />
     </Frame>
 
-    ### Writing effective section prompts
-
-    The prompts you write for each section directly control the quality of Qumis's output. Here are key principles to follow:
-
-    **Be more specific than you think is necessary.** If you want Qumis to create a table, specify the columns and their order. If you want a narrative summary, describe exactly what information to include.
-
-    **Use "verbatim" for exact wording.** If there's text you want Qumis to display word-for-word, instruct it clearly — for example, "Show this text verbatim: [your text here]." This is useful for legal disclaimers, standard disclosures, or boilerplate language your firm requires.
-
-    **Lock text with double brackets to prevent editing.** If you want verbatim text to be non-editable once the proposal is generated, add an empty line above and below the text you want to lock. Type `[[` on the empty line above the locked text and `]]` on the empty line below it. Anything between the double brackets cannot be edited by users generating proposals with this template.
-
-    **For coverage comparison tables, list extraction items explicitly.** Tell Qumis to create a table using the source documents, then list each coverage item you want extracted — each item becomes a separate row in the generated table.
-
-    <Tip>
-      Copy and paste checklists you've saved in the [Prompt Library](/platform/prompt-library) to accelerate template development — especially for coverage comparison sections where you already have line-of-business checklists defined.
-    </Tip>
+    <Info>
+      The prompts you write for each section directly control the quality of Qumis's output. See [Writing effective section prompts](#writing-effective-section-prompts) below for detailed guidance and [Example section prompts](#example-section-prompts) for ready-to-use templates.
+    </Info>
   </Step>
 
   <Step title="Set template permissions">
@@ -223,6 +210,171 @@ Templates are reusable, shareable, and lockable — so your team produces consis
     </Frame>
   </Step>
 </Steps>
+
+---
+
+## Writing effective section prompts
+
+The prompts you write for each template section directly control the quality of Qumis's output. Whether you're building a new template or refining an existing one, these principles will help you get the best results.
+
+**Be more specific than you think is necessary.** If you want Qumis to create a table, specify the columns and their order. If you want a narrative summary, describe exactly what information to include. Vague prompts produce generic output; precise prompts produce proposals that need minimal editing.
+
+**Use "verbatim" for exact wording.** If there's text you want Qumis to display word-for-word, instruct it clearly — for example, "Show this text verbatim: [your text here]." This is useful for legal disclaimers, standard disclosures, or boilerplate language your firm requires in every proposal.
+
+**Lock text with double brackets to prevent editing.** If you want verbatim text to be non-editable once the proposal is generated, add an empty line above and below the text you want to lock. Type `[[` on the empty line above the locked text and `]]` on the empty line below it. Anything between the double brackets cannot be edited by users generating proposals with this template.
+
+**For coverage comparison tables, list extraction items explicitly.** Tell Qumis to create a table using the source documents, then list each coverage item you want extracted — each item becomes a separate row in the generated table.
+
+<Tip>
+  Copy and paste checklists you've saved in the [Prompt Library](/platform/prompt-library) to accelerate template development — especially for coverage comparison sections where you already have line-of-business checklists defined.
+</Tip>
+
+---
+
+## Example section prompts
+
+These prompts can be copied directly into your template sections. Adjust them to match your firm's proposal structure and terminology.
+
+<Tabs>
+  <Tab title="Executive Summary">
+    ```
+    The executive summary must contain the following information.
+    Make each item a separate paragraph and use all of the uploaded
+    documents to generate the content.
+
+    1. Agreed Strategy: provide a narrative description of the
+       marketing strategy, including how the account was marketed
+       to insurance carriers.
+    2. Marketing Results: summarize the number of markets approached,
+       the number that provided quotes, and any common reasons
+       carriers declined. If there were common themes in the
+       reason carriers declined to quote, provide a brief
+       explanation.
+    3. Change in Premium: calculate the percentage change in premium
+       relative to the expiring term. Present the results in a table
+       with three columns in this order: Name of Carrier, Percent
+       Difference from Expiring Premium, Reason for Change. Reasons
+       may include exposure changes, rate changes, or changes to
+       the limits.
+    4. Recommended Course of Action: review the quotes obtained and
+       provide a recommendation on which quote the insured should
+       select. Balance the breadth of each quote's coverage against
+       the needs of the business, the exclusions and limitations,
+       the cost, the limits offered, the size and financial stability
+       of each carrier, and the quality of claims handling. Explain
+       your reasoning to the client.
+
+    If the source documents don't provide enough information to
+    complete any item, insert a clearly visible note so the user
+    knows they need to manually enter this information. Make these
+    notes noticeable so the user doesn't accidentally miss them.
+    ```
+  </Tab>
+
+  <Tab title="Named Insured Schedule">
+    ```
+    Extract the full list of named insureds from the source
+    documents. Present them in a table with two columns: First
+    Named Insured and Additional Named Insureds.
+
+    If the documents list subsidiaries, DBA names, or affiliated
+    entities, include those as additional named insureds. If no
+    additional named insureds are found, note that the field
+    requires manual entry.
+    ```
+  </Tab>
+
+  <Tab title="Marketing Summary">
+    ```
+    Create a marketing log table showing each carrier that was
+    approached for this account. The table must have the following
+    columns in this order: Line of Coverage, Carrier Name, Status,
+    and Quoted/Indicated Premium.
+
+    For the Status column, use one of the following values:
+    Quoted, Declined, Indication, or No Response.
+
+    Populate the table from the source documents. Sort the table
+    by line of coverage, then by status with Quoted carriers first,
+    followed by Indication, Declined, and No Response.
+
+    If the source documents don't contain enough information to
+    complete the table, insert a clearly visible note listing
+    which fields need to be filled in manually.
+    ```
+  </Tab>
+
+  <Tab title="Quote Comparison">
+    ```
+    Create a detailed coverage comparison table using the source
+    documents. The table should have one column for each quoted
+    carrier, plus a column for the expiring policy. Present the
+    recommended option in the second column for easy reference.
+    Extract and compare the following items as separate rows:
+
+    - Issuing Company
+    - AM Best Rating
+    - Admitted / Non-Admitted
+    - Policy Period
+    - Premium
+    - Commission
+    - General Aggregate Limit
+    - Per Occurrence Limit
+    - Deductible / Retention
+    - Defense Cost Treatment
+    - Retroactive Date
+    - Extended Reporting Period
+    - Key Exclusions
+    - Notable Endorsements
+
+    Highlight material differences between options in bold.
+    ```
+  </Tab>
+
+  <Tab title="Recommended Program">
+    ```
+    Based on the quotes and coverage analysis in the source
+    documents, present the recommended insurance program.
+    Include:
+
+    1. The recommended carrier and the rationale for selection.
+    2. A summary of the key coverage terms: limits, deductibles,
+       and premium.
+    3. Any coverage enhancements that were negotiated or are
+       available.
+    4. Any residual coverage gaps the insured should be aware of.
+
+    Write this as a professional narrative suitable for a
+    client-facing proposal. Do not use bullet points — use
+    complete paragraphs.
+    ```
+  </Tab>
+
+  <Tab title="Binding Instructions">
+    ```
+    Show the following text verbatim:
+
+    [[
+    To bind this coverage, please confirm the following:
+    1. Review and approve the recommended program outlined
+       in this proposal.
+    2. Sign and return the attached applications and
+       warranties.
+    3. Provide any outstanding documentation requested by
+       the carrier.
+    4. Confirm the effective date and any special billing
+       arrangements.
+
+    Please contact your account team with any questions or
+    to request modifications before binding.
+    ]]
+    ```
+  </Tab>
+</Tabs>
+
+<Tip>
+  These prompts are starting points. The most effective templates are refined over time based on your firm's proposal standards, client expectations, and the feedback you receive from generated output. Save your best versions to the [Prompt Library](/platform/prompt-library) for reuse.
+</Tip>
 
 ---
 
